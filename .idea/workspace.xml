@@ -4,14 +4,72 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="add diagrams">
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="prepare client-server architecture">
+      <change afterPath="$PROJECT_DIR$/server/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/no5_170123_600900.iml" beforeDir="false" afterPath="$PROJECT_DIR$/no6_150323_3846274761835.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/no5_170123_600900.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/no6_150323_3846274761835.ipr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/no5_170123_600900.iws" beforeDir="false" afterPath="$PROJECT_DIR$/no6_150323_3846274761835.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab5-2.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/client/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/CommandExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/CommandExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/CommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/CommandMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/CommandMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/AddCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/AddIfMaxCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/AddIfMaxCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/AddIfMinCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/AddIfMinCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/BaseCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/BaseCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/ClearCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/CountGreaterThanDistanceCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/CountGreaterThanDistanceCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/ExecuteScriptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/ExecuteScriptCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/ExitCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/HelpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/InfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/InfoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/MinByCreationDateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/MinByCreationDateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/PrintFieldDistanceAscendingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/PrintFieldDistanceAscendingCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/RemoveByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/RemoveByIdCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/RemoveGreaterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/RemoveGreaterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/SaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/SaveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/ShowCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/UpdateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/UpdateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exceptions/BuildObjectException.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/exceptions/BuildObjectException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exceptions/CommandInterruptedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/exceptions/CommandInterruptedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exceptions/StreamInterruptedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/exceptions/StreamInterruptedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exceptions/UnknownCommandException.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/exceptions/UnknownCommandException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exceptions/WrongAmountOfArgumentsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/exceptions/WrongAmountOfArgumentsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileLogic/BaseReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/fileLogic/BaseReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileLogic/BaseWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/fileLogic/BaseWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileLogic/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/fileLogic/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileLogic/Saver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/fileLogic/Saver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileLogic/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/fileLogic/XMLReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileLogic/XMLWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/fileLogic/XMLWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileLogic/editors/DateEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/fileLogic/editors/DateEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/main/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/Coordinates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/Route.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/comparators/RouteComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/comparators/RouteComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/comparators/RouteDistanceComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/comparators/RouteDistanceComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/CollectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/handlers/CollectionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/ModuleHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/handlers/ModuleHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/RouteHandlers.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/handlers/RouteHandlers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/RoutesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/handlers/RoutesHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/nonUserMode/RouteNonCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/handlers/nonUserMode/RouteNonCLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/userMode/CoordinatesCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/handlers/userMode/CoordinatesCLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/userMode/LocationCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/handlers/userMode/LocationCLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/handlers/userMode/RouteCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/handlers/userMode/RouteCLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/validators/CoordXValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/validators/CoordXValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/validators/CoordYValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/validators/CoordYValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/validators/DistanceValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/validators/DistanceValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/validators/IdValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/validators/IdValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/validators/LocationNameValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/validators/LocationNameValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/validators/LocationXValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/validators/LocationXValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/validators/LocationYZValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/validators/LocationYZValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/validators/NameValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/validators/NameValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/validators/RouteValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/validators/RouteValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/validators/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/validators/Validator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +90,38 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/server">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="no5_170123_600900" type="f1a62948:ProjectNode" />
+                <item name="no6_150323_3846274761835" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="no6_150323_3846274761835" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="no6_150323_3846274761835" type="f1a62948:ProjectNode" />
+                <item name="server" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="no6_150323_3846274761835" type="f1a62948:ProjectNode" />
+                <item name="server" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="no6_150323_3846274761835" type="f1a62948:ProjectNode" />
+                <item name="server" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -57,9 +141,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$USER_HOME$/.jdks/corretto-17.0.5/lib/src.zip!/java.base/java/io/FileInputStream.java" root0="SKIP_INSPECTION" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -75,30 +157,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "jdk.selected.JAVA_MODULE": "openjdk-17.0.2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="models.handlers" />
       <recent name="models.validators" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server/src" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -111,13 +197,13 @@
       <command value="gradle " />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.no6_150323_3846274761835 [run]">
-    <configuration name="no6_150323_3846274761835 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.no6_150323_3846274761835:server [jar]">
+    <configuration name="no6_150323_3846274761835:server [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/server" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -133,7 +219,68 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="no6_150323_3846274761835 [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="no6_150323_3846274761835:server [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/server" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="no6_150323_3846274761835:server [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/server" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="no6_170123_600900 (client)" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="no6_170123_600900 [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -154,7 +301,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="no6_150323_3846274761835 [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="no6_170123_600900 [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -175,36 +322,21 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="no6_150323_3846274761835" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Gradle.no6_150323_3846274761835" />
-      <item itemvalue="Gradle.no6_150323_3846274761835 [build]" />
-      <item itemvalue="Gradle.no6_150323_3846274761835 [jar]" />
-      <item itemvalue="Gradle.no6_150323_3846274761835 [run]" />
+      <item itemvalue="Gradle.no6_170123_600900 (client)" />
+      <item itemvalue="Gradle.no6_150323_3846274761835:server [build]" />
+      <item itemvalue="Gradle.no6_150323_3846274761835:server [jar]" />
+      <item itemvalue="Gradle.no6_150323_3846274761835:server [run]" />
+      <item itemvalue="Gradle.no6_170123_600900 [jar]" />
+      <item itemvalue="Gradle.no6_170123_600900 [run]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.no6_150323_3846274761835 [run]" />
-        <item itemvalue="Gradle.no6_150323_3846274761835 [jar]" />
-        <item itemvalue="Gradle.no6_150323_3846274761835 [build]" />
+        <item itemvalue="Gradle.no6_150323_3846274761835:server [jar]" />
+        <item itemvalue="Gradle.no6_150323_3846274761835:server [run]" />
+        <item itemvalue="Gradle.no6_150323_3846274761835:server [build]" />
+        <item itemvalue="Gradle.no6_170123_600900 [run]" />
+        <item itemvalue="Gradle.no6_170123_600900 [jar]" />
       </list>
     </recent_temporary>
   </component>
@@ -235,7 +367,6 @@
       <workItem from="1676163071208" duration="294000" />
       <workItem from="1676243165572" duration="7067000" />
       <workItem from="1677709564940" duration="584000" />
-      <workItem from="1679242681608" duration="4118000" />
     </task>
     <task id="LOCAL-00001" summary="add XML Reader">
       <created>1675714633059</created>
@@ -365,18 +496,19 @@
     <MESSAGE value="checkRecursion for script executing added + bug fixes, part 5" />
     <MESSAGE value="bug &amp; docs fixes, part 6" />
     <MESSAGE value="docs fixes, final" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs fixes, final" />
+    <MESSAGE value="prepare client-server architecture" />
+    <option name="LAST_COMMIT_MESSAGE" value="prepare client-server architecture" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/models/handlers/nonUserMode/RouteNonCLIHandler.java</url>
+          <url>file://$PROJECT_DIR$/client/models/handlers/nonUserMode/RouteNonCLIHandler.java</url>
           <line>82</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/models/handlers/nonUserMode/RouteNonCLIHandler.java</url>
+          <url>file://$PROJECT_DIR$/client/models/handlers/nonUserMode/RouteNonCLIHandler.java</url>
           <line>49</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>

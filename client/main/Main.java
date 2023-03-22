@@ -16,8 +16,7 @@ import java.util.HashSet;
  * @since 1.0
  * @author zerumi
  */
-public class
-Main {
+public class Main {
 
     /**
      * Environment key to XML file for store collection.
