@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="add diagrams">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/remote-targets.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/remote-targets.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/AddIfMaxCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/AddIfMaxCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/AddIfMinCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commandManager/commands/AddIfMinCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Route.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/CollectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/CollectionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/RoutesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/handlers/RoutesHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/no5_170123_600900.iml" beforeDir="false" afterPath="$PROJECT_DIR$/no6_150323_3846274761835.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/no5_170123_600900.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/no6_150323_3846274761835.ipr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/no5_170123_600900.iws" beforeDir="false" afterPath="$PROJECT_DIR$/no6_150323_3846274761835.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,8 +111,8 @@
       <command value="gradle " />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.no5_170123_600900 [run]">
-    <configuration name="no5_170123_600900 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.no6_150323_3846274761835 [run]">
+    <configuration name="no6_150323_3846274761835 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -136,59 +133,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="no5_170123_600900 (helios) [jar]" type="GradleRunConfiguration" factoryName="Gradle">
-      <target name="s367837@se.ifmo.ru:2222" />
-      <ExternalSystemSettings>
-        <option name="env">
-          <map>
-            <entry key="lab5" value="&quot;/home/studs/s367837/Programming/lab5/routes.xml&quot;" />
-          </map>
-        </option>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="jar" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="no5_170123_600900 (helios) [run]" type="GradleRunConfiguration" factoryName="Gradle">
-      <target name="s367837@se.ifmo.ru:2222" />
-      <ExternalSystemSettings>
-        <option name="env">
-          <map>
-            <entry key="lab5" value="&quot;/home/studs/s367837/Programming/lab5/routes.xml&quot;" />
-          </map>
-        </option>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="no5_170123_600900 [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="no6_150323_3846274761835 [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -209,7 +154,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="no5_170123_600900 [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="no6_150323_3846274761835 [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -230,7 +175,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="no5_170123_600900" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+    <configuration name="no6_150323_3846274761835" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -250,18 +195,16 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.no5_170123_600900 (helios) [jar]" />
-      <item itemvalue="Gradle.no5_170123_600900" />
-      <item itemvalue="Gradle.no5_170123_600900 (helios) [run]" />
-      <item itemvalue="Gradle.no5_170123_600900 [build]" />
-      <item itemvalue="Gradle.no5_170123_600900 [jar]" />
-      <item itemvalue="Gradle.no5_170123_600900 [run]" />
+      <item itemvalue="Gradle.no6_150323_3846274761835" />
+      <item itemvalue="Gradle.no6_150323_3846274761835 [build]" />
+      <item itemvalue="Gradle.no6_150323_3846274761835 [jar]" />
+      <item itemvalue="Gradle.no6_150323_3846274761835 [run]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.no5_170123_600900 [run]" />
-        <item itemvalue="Gradle.no5_170123_600900 [jar]" />
-        <item itemvalue="Gradle.no5_170123_600900 [build]" />
+        <item itemvalue="Gradle.no6_150323_3846274761835 [run]" />
+        <item itemvalue="Gradle.no6_150323_3846274761835 [jar]" />
+        <item itemvalue="Gradle.no6_150323_3846274761835 [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -292,6 +235,7 @@
       <workItem from="1676163071208" duration="294000" />
       <workItem from="1676243165572" duration="7067000" />
       <workItem from="1677709564940" duration="584000" />
+      <workItem from="1679242681608" duration="4118000" />
     </task>
     <task id="LOCAL-00001" summary="add XML Reader">
       <created>1675714633059</created>
