@@ -32,3 +32,8 @@ bin/
 /build/
 /.gradle/
 /out/
+
+### Gradle server build
+/server/build
+/server/.gradle/
+/server/out/

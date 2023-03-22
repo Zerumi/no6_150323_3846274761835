@@ -4,72 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="prepare client-server architecture">
-      <change afterPath="$PROJECT_DIR$/server/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="apply some fixes">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab5-2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/client/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/CommandExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/CommandExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/CommandManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/CommandMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/CommandMode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/AddCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/AddIfMaxCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/AddIfMaxCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/AddIfMinCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/AddIfMinCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/BaseCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/BaseCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/ClearCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/CountGreaterThanDistanceCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/CountGreaterThanDistanceCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/ExecuteScriptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/ExecuteScriptCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/ExitCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/HelpCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/InfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/InfoCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/MinByCreationDateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/MinByCreationDateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/PrintFieldDistanceAscendingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/PrintFieldDistanceAscendingCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/RemoveByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/RemoveByIdCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/RemoveGreaterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/RemoveGreaterCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/SaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/SaveCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/ShowCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commandManager/commands/UpdateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/commandManager/commands/UpdateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/BuildObjectException.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/exceptions/BuildObjectException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/CommandInterruptedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/exceptions/CommandInterruptedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/StreamInterruptedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/exceptions/StreamInterruptedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/UnknownCommandException.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/exceptions/UnknownCommandException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/WrongAmountOfArgumentsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/exceptions/WrongAmountOfArgumentsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileLogic/BaseReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/fileLogic/BaseReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileLogic/BaseWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/fileLogic/BaseWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileLogic/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/fileLogic/Loader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileLogic/Saver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/fileLogic/Saver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileLogic/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/fileLogic/XMLReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileLogic/XMLWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/fileLogic/XMLWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fileLogic/editors/DateEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/fileLogic/editors/DateEditor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/main/Utilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/Coordinates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/Route.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/comparators/RouteComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/comparators/RouteComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/comparators/RouteDistanceComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/comparators/RouteDistanceComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/CollectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/handlers/CollectionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/ModuleHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/handlers/ModuleHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/RouteHandlers.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/handlers/RouteHandlers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/RoutesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/handlers/RoutesHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/nonUserMode/RouteNonCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/handlers/nonUserMode/RouteNonCLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/userMode/CoordinatesCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/handlers/userMode/CoordinatesCLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/userMode/LocationCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/handlers/userMode/LocationCLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/handlers/userMode/RouteCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/handlers/userMode/RouteCLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/validators/CoordXValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/validators/CoordXValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/validators/CoordYValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/validators/CoordYValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/validators/DistanceValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/validators/DistanceValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/validators/IdValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/validators/IdValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/validators/LocationNameValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/validators/LocationNameValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/validators/LocationXValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/validators/LocationXValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/validators/LocationYZValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/validators/LocationYZValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/validators/NameValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/validators/NameValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/validators/RouteValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/validators/RouteValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/validators/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/validators/Validator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -473,7 +410,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676162797496</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="prepare client-server architecture">
+      <created>1679526385513</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1679526385513</updated>
+    </task>
+    <task id="LOCAL-00017" summary="apply some fixes">
+      <created>1679526414908</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1679526414908</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,7 +448,8 @@
     <MESSAGE value="bug &amp; docs fixes, part 6" />
     <MESSAGE value="docs fixes, final" />
     <MESSAGE value="prepare client-server architecture" />
-    <option name="LAST_COMMIT_MESSAGE" value="prepare client-server architecture" />
+    <MESSAGE value="apply some fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="apply some fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
