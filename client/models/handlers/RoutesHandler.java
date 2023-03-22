@@ -6,7 +6,6 @@ import models.validators.*;
 
 import java.time.Instant;
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * Current implementation of CollectionsHandler for HashSet of Route.

@@ -1,19 +1,14 @@
 package commandManager.commands;
 
-import commandManager.CommandManager;
 import exceptions.BuildObjectException;
-import exceptions.UnknownCommandException;
 import exceptions.WrongAmountOfArgumentsException;
 import main.Utilities;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.ModuleHandler;
-import models.handlers.userMode.RouteCLIHandler;
 import models.handlers.RoutesHandler;
-import models.validators.IdValidator;
-import models.validators.Validator;
+import models.handlers.userMode.RouteCLIHandler;
 
-import java.net.URI;
 import java.util.HashSet;
 import java.util.Objects;
 

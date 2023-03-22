@@ -109,7 +109,7 @@ public class Loader<T extends Collection<E>, E> {
                 fillCollection(parsedValues);
 
         } catch (AccessDeniedException ex) {
-            System.out.println("/ ! \\ File reading failed because application cannot access to this file. Contact your administrator and ask him to write \'sudo chmod 755 $lab5\'");
+            System.out.println("/ ! \\ File reading failed because application cannot access to this file. Contact your administrator and ask him to write 'sudo chmod 755 $lab5'");
         } catch (CharacterCodingException ex) {
             System.out.println("/ ! \\ File reading filed because system cannot understand file-coding. Contact your administrator.");
         } catch (IOException e) {

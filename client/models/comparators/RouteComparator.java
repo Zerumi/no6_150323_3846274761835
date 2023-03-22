@@ -3,7 +3,6 @@ package models.comparators;
 import models.Route;
 
 import java.util.Comparator;
-import java.util.Objects;
 
 /**
  * Compare two Routes by ID (default used)

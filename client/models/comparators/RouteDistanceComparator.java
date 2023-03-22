@@ -3,7 +3,6 @@ package models.comparators;
 import models.Route;
 
 import java.util.Comparator;
-import java.util.Objects;
 
 /**
  * Compare two Routes by Distance. Used in commands, such as remove_greater, add_if max/min
