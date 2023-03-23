@@ -41,5 +41,7 @@ public class Main {
         System.out.println("Now you can enter the commands. Use help for reference.");
         CommandExecutor executor = new CommandExecutor();
         executor.startExecuting(System.in, CommandMode.CLI_UserMode);
+
+        //
     }
 }
