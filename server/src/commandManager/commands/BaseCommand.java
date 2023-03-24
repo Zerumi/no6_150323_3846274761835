@@ -1,6 +1,5 @@
 package commandManager.commands;
 
-import exceptions.BuildObjectException;
 import exceptions.WrongAmountOfArgumentsException;
 
 import java.io.Serializable;
@@ -32,8 +31,7 @@ public interface BaseCommand extends Serializable {
      *
      * @return command arguments pattern
      */
-    default String getArgs()
-    {
+    default String getArgs() {
         return "";
     }
 
@@ -43,5 +41,5 @@ public interface BaseCommand extends Serializable {
      * @param args full array of entered line.
      * @throws IllegalArgumentException when command can't understand given arguments
      */
-    void execute(String[] args) throws IllegalArgumentException, BuildObjectException, WrongAmountOfArgumentsException;
+    void execute(String[] args) throws IllegalArgumentException, WrongAmountOfArgumentsException;
 }

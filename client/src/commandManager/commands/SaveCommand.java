@@ -1,19 +1,14 @@
 package commandManager.commands;
 
 import exceptions.WrongAmountOfArgumentsException;
-import fileLogic.Saver;
-import models.Route;
-import models.handlers.CollectionHandler;
-import models.handlers.RoutesHandler;
-
-import java.util.HashSet;
 
 /**
- * Saves collection to file.
+ * Saves collection to file. Deprecated since 2.0
  *
- * @since 1.0
  * @author Zerumi
+ * @since 1.0
  */
+@Deprecated
 public class SaveCommand implements BaseCommand {
     @Override
     public String getName() {
@@ -22,17 +17,11 @@ public class SaveCommand implements BaseCommand {
 
     @Override
     public String getDescr() {
-        return "Saves collection to file.";
+        return "Deprecated.";
     }
 
     @Override
     public void execute(String[] args) throws WrongAmountOfArgumentsException {
-        System.out.println("Saving...");
-        CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
-        Saver<HashSet<Route>, Route> saver = new Saver<>(Route.class);
-
-        saver.saveCollection(collectionHandler.getCollection(), "lab5");
-
-        System.out.println("Executed.");
+        System.out.println("Save command was removed from client application. Use exit from client application to invoke saving on server side.");
     }
 }

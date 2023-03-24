@@ -1,7 +1,11 @@
 package serverLogic;
 
-import java.io.IOException;
+import requestLogic.StatusRequest;
+
+import java.net.InetAddress;
 
 public interface ServerConnection {
-    void openListening() throws IOException;
+    StatusRequest listenAndGetData();
+
+    void sendData(byte[] data, InetAddress addr);
 }
