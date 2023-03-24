@@ -2,10 +2,14 @@ package models.handlers;
 
 import models.Route;
 import models.comparators.RouteComparator;
-import models.validators.*;
+import models.validators.RouteValidator;
+import models.validators.Validator;
 
 import java.time.Instant;
-import java.util.*;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Iterator;
 
 /**
  * Current implementation of CollectionsHandler for HashSet of Route.

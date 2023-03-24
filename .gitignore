@@ -28,12 +28,17 @@ bin/
 ### Mac OS ###
 .DS_Store
 
-### Gradle build ###
-/build/
-/.gradle/
-/out/
+### Gradle old build ###
+build
+.gradle
+out
 
-### Gradle server build
+### Gradle client build ###
+client/build/
+client/.gradle/
+client/out/
+
+### Gradle server build ###
 /server/build
 /server/.gradle/
 /server/out/

@@ -2,7 +2,9 @@ package commandManager.commands;
 
 import exceptions.BuildObjectException;
 import models.Route;
-import models.handlers.*;
+import models.handlers.CollectionHandler;
+import models.handlers.ModuleHandler;
+import models.handlers.RoutesHandler;
 import models.handlers.userMode.RouteCLIHandler;
 
 import java.util.HashSet;

@@ -4,20 +4,6 @@ apply plugin: 'application'
 
 version '2.0-sp1'
 
-sourceSets.main.java.srcDirs = ['client']
-
-application {
-    mainClass = 'main.Main'
-}
-
-run {
-    standardInput = System.in
-}
-
-jar {
-    manifest {
-        attributes(
-                'Main-Class': 'main.Main'
-        )
-    }
+repositories {
+    mavenCentral()
 }
