@@ -13,7 +13,7 @@ import java.net.InetAddress;
 import java.util.Arrays;
 
 public class DatagramServerConnection implements ServerConnection {
-    private final int BUFFER_SIZE = 1024;
+    private final int BUFFER_SIZE = 4096;
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
     private final int port;
 
@@ -33,7 +33,7 @@ public class DatagramServerConnection implements ServerConnection {
 
             return StatusRequestBuilder.initialize().setObjectStream(new ByteArrayInputStream(dp.getData())).setCallerBack(dp.getAddress(), dp.getPort()).setCode(200).build();
         } catch (IOException e) {
-            logger.error("Something went wrong during I/O.");
+            logger.error("Something went wrong during I/O.", e);
         }
         return StatusRequestBuilder.initialize().setCode(-501).build();
     }

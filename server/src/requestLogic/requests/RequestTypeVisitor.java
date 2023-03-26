@@ -11,10 +11,6 @@ public class RequestTypeVisitor implements RequestVisitor {
         requestType = "CommandClientRequest";
     }
 
-    public <T> void visit(ArgumentClientRequest<T> request) {
-        requestType = "ArgumentClientRequest";
-    }
-
     public String getRequestType() {
         return requestType;
     }

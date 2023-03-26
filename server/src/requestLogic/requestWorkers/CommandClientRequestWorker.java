@@ -1,15 +1,13 @@
 package requestLogic.requestWorkers;
 
 import commandManager.CommandManager;
-import commandManager.commands.BaseCommand;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.modelmapper.ModelMapper;
 import requestLogic.dataTransferObjects.BaseRequestDTO;
 import requestLogic.dataTransferObjects.CommandClientRequestDTO;
+import requestLogic.dtoMappers.DTOMapper;
 import requestLogic.requests.BaseRequest;
 import requestLogic.requests.CommandClientRequest;
-import requestLogic.requests.RequestUtils;
 
 public class CommandClientRequestWorker implements RequestWorker {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
@@ -19,8 +17,7 @@ public class CommandClientRequestWorker implements RequestWorker {
         try {
             CommandClientRequest requestToWork = (CommandClientRequest) request;
             CommandClientRequestDTO requestDTOtoWork = (CommandClientRequestDTO) dto;
-            ModelMapper mapper = new ModelMapper();
-            requestToWork.setCommand((BaseCommand) mapper.map(requestDTOtoWork.getCommand(), Class.forName("commandManager.commands." + RequestUtils.dtoNameConverter(requestDTOtoWork.getCommand().getClass().getSimpleName()))));
+            requestToWork.setCommand(DTOMapper.convertFromDTO(requestDTOtoWork.getCommand(), "commandManager.commands"));
             CommandManager manager = new CommandManager();
             manager.executeCommand(requestToWork);
         } catch (ClassNotFoundException e) {

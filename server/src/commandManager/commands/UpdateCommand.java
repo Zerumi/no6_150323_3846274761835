@@ -5,9 +5,9 @@ import exceptions.WrongAmountOfArgumentsException;
 import main.Utilities;
 import models.Route;
 import models.handlers.CollectionHandler;
-import models.handlers.ModuleHandler;
-import models.handlers.RouteNetworkHandler;
 import models.handlers.RoutesHandler;
+import requestLogic.dataTransferObjects.models.RouteDTO;
+import requestLogic.dtoMappers.RouteDTOMapper;
 
 import java.util.HashSet;
 import java.util.Objects;
@@ -19,26 +19,8 @@ import java.util.Objects;
  * @since 1.0
  */
 public class UpdateCommand implements BaseCommand {
-    CommandResponse response;
-
-    ModuleHandler<Route> handler;
-
-    /**
-     * Default constructor with handler from 1.0
-     */
-    public UpdateCommand() {
-        handler = new RouteNetworkHandler();
-    }
-
-    /**
-     * Provides choosing handler
-     *
-     * @param handler ModuleHandler for operating
-     * @since 1.1
-     */
-    public UpdateCommand(ModuleHandler<Route> handler) {
-        this.handler = handler;
-    }
+    private CommandResponse response;
+    private RouteDTO obj;
 
     @Override
     public String getName() {
@@ -56,7 +38,7 @@ public class UpdateCommand implements BaseCommand {
     }
 
     @Override
-    public void execute(String[] args) throws WrongAmountOfArgumentsException {
+    public void execute(String[] args) throws WrongAmountOfArgumentsException, ClassNotFoundException {
         Utilities.checkArgumentsOrThrow(args.length, 1);
 
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
@@ -68,7 +50,7 @@ public class UpdateCommand implements BaseCommand {
             System.out.println("Element with that id doesn't exists.");
             return;
         }
-        Route newObj = handler.buildObject();
+        Route newObj = RouteDTOMapper.toRoute(obj);
 
         System.out.println("Updated ID value: " + finalId);
         newObj.setId(finalId);

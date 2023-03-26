@@ -12,6 +12,6 @@ import serverLogic.ServerConnectionUtils;
 public class RemoveByIdCommand implements BaseCommand {
     @Override
     public void execute(String[] args) {
-        ServerConnectionUtils.sendNonArgumentCommand(this, args, ServerConnectionHandler.getCurrentConnection());
+        ServerConnectionUtils.sendCommand(this, args, ServerConnectionHandler.getCurrentConnection());
     }
 }

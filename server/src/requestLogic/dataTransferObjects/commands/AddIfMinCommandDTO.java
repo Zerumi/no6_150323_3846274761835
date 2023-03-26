@@ -1,5 +1,7 @@
 package requestLogic.dataTransferObjects.commands;
 
-public class AddIfMinCommandDTO implements BaseCommandDTO {
+import requestLogic.dataTransferObjects.models.RouteDTO;
 
+public class AddIfMinCommandDTO implements BaseCommandDTO {
+    private RouteDTO obj;
 }

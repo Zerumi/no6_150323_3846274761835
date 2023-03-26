@@ -1,5 +1,8 @@
 package commandManager.commands;
 
+import serverLogic.ServerConnectionHandler;
+import serverLogic.ServerConnectionUtils;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -15,6 +18,7 @@ public class ExitCommand implements BaseCommand {
 
     @Override
     public void execute(String[] args) {
+        ServerConnectionUtils.sendCommand(this, args, ServerConnectionHandler.getCurrentConnection());
         myLogger.log(Level.FINE, "Выходим из программы...");
         System.exit(0);
     }

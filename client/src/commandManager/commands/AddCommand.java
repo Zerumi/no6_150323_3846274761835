@@ -4,24 +4,31 @@ import exceptions.BuildObjectException;
 import models.Route;
 import models.handlers.ModuleHandler;
 import models.handlers.userMode.RouteCLIHandler;
+import requestLogic.dataTransferObjects.models.RouteDTO;
+import requestLogic.dtoMappers.RouteDTOMapper;
+import serverLogic.ServerConnectionHandler;
+import serverLogic.ServerConnectionUtils;
 
 /**
  * Adds new element to collection.
  *
- * @since 1.0
  * @author Zerumi
+ * @since 1.0
  */
 public class AddCommand implements BaseCommand {
 
-    ModuleHandler<Route> handler;
+    private RouteDTO obj;
+    private Route route;
+
+    private final ModuleHandler<Route> handler;
 
     /**
      * Default constructor with handler from 1.0
      */
-    public AddCommand()
-    {
+    public AddCommand() {
         handler = new RouteCLIHandler();
     }
+
     /**
      * Provides choosing handler
      *
@@ -33,9 +40,9 @@ public class AddCommand implements BaseCommand {
     }
 
     @Override
-    public void execute(String[] args) throws BuildObjectException {
-        Route obj = handler.buildObject();
-
-
+    public void execute(String[] args) throws BuildObjectException, ClassNotFoundException {
+        route = handler.buildObject();
+        obj = RouteDTOMapper.routeDTOMapper(route);
+        ServerConnectionUtils.sendCommand(this, args, ServerConnectionHandler.getCurrentConnection());
     }
 }

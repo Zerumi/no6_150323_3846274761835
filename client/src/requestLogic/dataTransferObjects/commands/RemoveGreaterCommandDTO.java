@@ -1,5 +1,7 @@
 package requestLogic.dataTransferObjects.commands;
 
-public class RemoveGreaterCommandDTO implements BaseCommandDTO {
+import requestLogic.dataTransferObjects.models.RouteDTO;
 
+public class RemoveGreaterCommandDTO implements BaseCommandDTO {
+    private RouteDTO obj;
 }

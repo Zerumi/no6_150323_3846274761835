@@ -2,6 +2,8 @@ package commandManager.commands;
 
 import exceptions.WrongAmountOfArgumentsException;
 import main.Utilities;
+import serverLogic.ServerConnectionHandler;
+import serverLogic.ServerConnectionUtils;
 
 /**
  * Shows count of the elements greater than distance value.
@@ -22,13 +24,6 @@ public class CountGreaterThanDistanceCommand implements BaseCommand{
             return;
         }
 
-        int greaterThan;
-
-        try {
-            greaterThan = Integer.parseInt(args[1]);
-        } catch (NumberFormatException e)
-        {
-            System.out.println("Provided argument: \"" + args[1] + "\" is too large for distance field. Try again");
-        }
+        ServerConnectionUtils.sendCommand(this, args, ServerConnectionHandler.getCurrentConnection());
     }
 }

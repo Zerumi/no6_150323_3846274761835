@@ -3,9 +3,9 @@ package commandManager.commands;
 import commandManager.commandResponse.CommandResponse;
 import models.Route;
 import models.handlers.CollectionHandler;
-import models.handlers.ModuleHandler;
-import models.handlers.RouteNetworkHandler;
 import models.handlers.RoutesHandler;
+import requestLogic.dataTransferObjects.models.RouteDTO;
+import requestLogic.dtoMappers.RouteDTOMapper;
 
 import java.util.HashSet;
 
@@ -16,24 +16,9 @@ import java.util.HashSet;
  * @since 1.0
  */
 public class AddCommand implements BaseCommand {
-    CommandResponse response;
-    ModuleHandler<Route> handler;
+    private CommandResponse response;
 
-    /**
-     * Default constructor with handler from 1.0
-     */
-    public AddCommand() {
-        handler = new RouteNetworkHandler();
-    }
-
-    /**
-     * Provides choosing handler
-     *
-     * @param handler ModuleHandler for operating
-     */
-    public AddCommand(ModuleHandler<Route> handler) {
-        this.handler = handler;
-    }
+    private RouteDTO obj;
 
     @Override
     public String getName() {
@@ -51,10 +36,10 @@ public class AddCommand implements BaseCommand {
     }
 
     @Override
-    public void execute(String[] args) {
+    public void execute(String[] args) throws ClassNotFoundException {
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
 
-        collectionHandler.addElementToCollection(handler.buildObject());
+        collectionHandler.addElementToCollection(RouteDTOMapper.toRoute(obj));
 
         System.out.println("Element added!");
     }

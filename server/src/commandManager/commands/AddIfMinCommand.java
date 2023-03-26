@@ -4,9 +4,9 @@ import commandManager.commandResponse.CommandResponse;
 import models.Route;
 import models.comparators.RouteDistanceComparator;
 import models.handlers.CollectionHandler;
-import models.handlers.ModuleHandler;
-import models.handlers.RouteNetworkHandler;
 import models.handlers.RoutesHandler;
+import requestLogic.dataTransferObjects.models.RouteDTO;
+import requestLogic.dtoMappers.RouteDTOMapper;
 
 import java.util.HashSet;
 
@@ -17,25 +17,8 @@ import java.util.HashSet;
  * @since 1.0
  */
 public class AddIfMinCommand implements BaseCommand {
-    CommandResponse response;
-    ModuleHandler<Route> handler;
-
-    /**
-     * Default constructor with handler from 1.0
-     */
-    public AddIfMinCommand() {
-        handler = new RouteNetworkHandler();
-    }
-
-    /**
-     * Provides choosing handler
-     *
-     * @param handler ModuleHandler for operating
-     * @since 1.1
-     */
-    public AddIfMinCommand(ModuleHandler<Route> handler) {
-        this.handler = handler;
-    }
+    private CommandResponse response;
+    private RouteDTO obj;
 
     @Override
     public String getName() {
@@ -53,13 +36,13 @@ public class AddIfMinCommand implements BaseCommand {
     }
 
     @Override
-    public void execute(String[] args) {
+    public void execute(String[] args) throws ClassNotFoundException {
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
 
-        Route obj = handler.buildObject();
+        Route route = RouteDTOMapper.toRoute(obj);
 
-        if (obj.compareTo(collectionHandler.getMin(new RouteDistanceComparator())) < 0) {
-            collectionHandler.addElementToCollection(obj);
+        if (route.compareTo(collectionHandler.getMin(new RouteDistanceComparator())) < 0) {
+            collectionHandler.addElementToCollection(route);
             System.out.println("Element added!");
         } else {
             System.out.println("Element not added: it's not lower than min value.");

@@ -4,23 +4,29 @@ import exceptions.BuildObjectException;
 import models.Route;
 import models.handlers.ModuleHandler;
 import models.handlers.userMode.RouteCLIHandler;
+import requestLogic.dataTransferObjects.models.RouteDTO;
+import requestLogic.dtoMappers.RouteDTOMapper;
+import serverLogic.ServerConnectionHandler;
+import serverLogic.ServerConnectionUtils;
 
 /**
  * Add element if it's value greater than max value.
  *
- * @since 1.0
  * @author Zerumi
+ * @since 1.0
  */
 public class AddIfMaxCommand implements BaseCommand {
-    ModuleHandler<Route> handler;
+    private Route route;
+    private RouteDTO obj;
+    private final ModuleHandler<Route> handler;
 
     /**
      * Default constructor with handler from 1.0
      */
-    public AddIfMaxCommand()
-    {
+    public AddIfMaxCommand() {
         handler = new RouteCLIHandler();
     }
+
     /**
      * Provides choosing handler
      *
@@ -33,7 +39,9 @@ public class AddIfMaxCommand implements BaseCommand {
     }
 
     @Override
-    public void execute(String[] args) throws BuildObjectException {
-        Route obj = handler.buildObject();
+    public void execute(String[] args) throws BuildObjectException, ClassNotFoundException {
+        route = handler.buildObject();
+        obj = RouteDTOMapper.routeDTOMapper(route);
+        ServerConnectionUtils.sendCommand(this, args, ServerConnectionHandler.getCurrentConnection());
     }
 }

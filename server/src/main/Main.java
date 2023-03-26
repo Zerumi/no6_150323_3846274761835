@@ -9,8 +9,8 @@ import org.apache.logging.log4j.Logger;
 import requestLogic.RequestReader;
 import requestLogic.StatusRequest;
 import requestLogic.dataTransferObjects.BaseRequestDTO;
+import requestLogic.dtoMappers.RequestDTOMapper;
 import requestLogic.requestWorkers.RequestWorkerManager;
-import requestLogic.requests.RequestDTOMapper;
 import requestLogic.requests.RequestTypeVisitor;
 import serverLogic.DatagramServerConnectionFactory;
 import serverLogic.ServerConnection;
@@ -39,18 +39,15 @@ public class Main {
         System.out.println();
 
         // commands
-        logger.trace("Welcome to CLI server! Now you are operating with collection of type " + handler.getCollection().getClass().getName() + ", filled with elements of type " + handler.getFirstOrNew().getClass().getName());
-        logger.trace("Now server is listening a requests.");
-        //CommandExecutor executor = new CommandExecutor();
-        //executor.startExecuting(System.in, CommandMode.CLI_UserMode);
+        logger.info("Welcome to CLI server! Now you are operating with collection of type " + handler.getCollection().getClass().getName() + ", filled with elements of type " + handler.getFirstOrNew().getClass().getName());
+        logger.info("Now server is listening a requests.");
 
         // connection
         ServerConnection connection = new DatagramServerConnectionFactory().initializeServer(PORT);
         while (true) {
             try {
                 StatusRequest rq = connection.listenAndGetData();
-                if (rq.getCode() < 0) // skip
-                {
+                if (rq.getCode() < 0) {
                     logger.debug("Status code: " + rq.getCode());
                     continue;
                 }

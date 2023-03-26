@@ -42,7 +42,7 @@ public interface BaseCommand extends Serializable {
      * @param args full array of entered line.
      * @throws IllegalArgumentException when command can't understand given arguments
      */
-    void execute(String[] args) throws IllegalArgumentException, WrongAmountOfArgumentsException;
+    void execute(String[] args) throws IllegalArgumentException, WrongAmountOfArgumentsException, ClassNotFoundException;
 
     /**
      * Base method for get command Output

@@ -17,5 +17,5 @@ public interface BaseCommand {
      * @param args full array of entered line.
      * @throws IllegalArgumentException when command can't understand given arguments
      */
-    void execute(String[] args) throws IllegalArgumentException, BuildObjectException, WrongAmountOfArgumentsException;
+    void execute(String[] args) throws IllegalArgumentException, BuildObjectException, WrongAmountOfArgumentsException, ClassNotFoundException;
 }

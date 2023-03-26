@@ -6,22 +6,26 @@ import main.Utilities;
 import models.Route;
 import models.handlers.ModuleHandler;
 import models.handlers.userMode.RouteCLIHandler;
+import requestLogic.dataTransferObjects.models.RouteDTO;
+import requestLogic.dtoMappers.RouteDTOMapper;
+import serverLogic.ServerConnectionHandler;
+import serverLogic.ServerConnectionUtils;
 
 /**
  * Updates element by its ID.
  *
- * @since 1.0
  * @author Zerumi
+ * @since 1.0
  */
 public class UpdateCommand implements BaseCommand {
-
-    ModuleHandler<Route> handler;
+    private Route route;
+    private RouteDTO obj;
+    private final ModuleHandler<Route> handler;
 
     /**
      * Default constructor with handler from 1.0
      */
-    public UpdateCommand()
-    {
+    public UpdateCommand() {
         handler = new RouteCLIHandler();
     }
 
@@ -37,9 +41,11 @@ public class UpdateCommand implements BaseCommand {
     }
 
     @Override
-    public void execute(String[] args) throws BuildObjectException, WrongAmountOfArgumentsException {
+    public void execute(String[] args) throws BuildObjectException, WrongAmountOfArgumentsException, ClassNotFoundException {
         Utilities.checkArgumentsOrThrow(args.length, 1);
 
-        Route newObj = handler.buildObject();
+        route = handler.buildObject();
+        obj = RouteDTOMapper.routeDTOMapper(route);
+        ServerConnectionUtils.sendCommand(this, args, ServerConnectionHandler.getCurrentConnection());
     }
 }
