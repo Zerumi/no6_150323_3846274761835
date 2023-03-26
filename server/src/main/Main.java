@@ -1,15 +1,18 @@
 package main;
 
-import commandManager.commands.BaseCommand;
-import exceptions.WrongAmountOfArgumentsException;
 import fileLogic.Loader;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.modelmapper.ModelMapper;
 import requestLogic.RequestReader;
 import requestLogic.StatusRequest;
+import requestLogic.dataTransferObjects.BaseRequestDTO;
+import requestLogic.requestWorkers.RequestWorkerManager;
+import requestLogic.requests.BaseRequest;
+import requestLogic.requests.RequestTypeVisitor;
 import serverLogic.DatagramServerConnectionFactory;
 import serverLogic.ServerConnection;
 
@@ -52,14 +55,24 @@ public class Main {
                     logger.debug("Status code: " + rq.getCode());
                     continue;
                 }
-                RequestReader<BaseCommand> cmdReader = new RequestReader<>(rq.getInputStream());
-                cmdReader.readObject().execute(new String[0]); // TODO: args
-            } catch (WrongAmountOfArgumentsException e) {
-                logger.error("Wrong amount of arguments.");
+                RequestReader<BaseRequestDTO> rqReader = new RequestReader<>(rq.getInputStream());
+                BaseRequestDTO brDTO = rqReader.readObject();
+                ModelMapper modelMapper = new ModelMapper();
+                modelMapper.getConfiguration().setFieldMatchingEnabled(true).setFieldAccessLevel(org.modelmapper.config.Configuration.AccessLevel.PRIVATE);
+                String typeName = brDTO.getClass().getSimpleName();
+                BaseRequest request = (BaseRequest) modelMapper.map(brDTO, Class.forName("requestLogic.requests." + typeName.substring(0, typeName.length() - 3)));
+                request.setConnection(connection);
+                request.setFrom(rq.getCallerBack());
+                RequestWorkerManager worker = new RequestWorkerManager();
+                RequestTypeVisitor visitor = new RequestTypeVisitor();
+                request.accept(visitor);
+                worker.workWithRequest(request, visitor.getRequestType());
             } catch (IOException e) {
-                logger.error("Something went wrong during I/O.");
+                logger.error("Something went wrong during I/O", e);
             } catch (ClassNotFoundException e) {
-                logger.fatal("Cannot interpreter obj type.");
+                logger.error("Class not Found");
+            } catch (RuntimeException e) {
+                logger.fatal(e);
             }
         }
     }

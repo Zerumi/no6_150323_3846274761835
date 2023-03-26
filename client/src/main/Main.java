@@ -3,6 +3,7 @@ package main;
 import commandManager.commands.HelpCommand;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import requestLogic.dataTransferObjects.CommandClientRequestDTO;
 import serverLogic.ServerConnection;
 import serverLogic.ServerConnectionHandler;
 import serverLogic.UdpServerConnectionFactory;
@@ -40,7 +41,10 @@ public class Main {
 
             ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
             ObjectOutputStream oos = new ObjectOutputStream(byteStream);
-            oos.writeObject(new HelpCommand());
+            CommandClientRequestDTO dto = new CommandClientRequestDTO();
+            dto.setCommand(new HelpCommand());
+            dto.setLineArgs(new String[]{"help"});
+            oos.writeObject(dto);
 
             connection.sendData(byteStream.toByteArray());
             logger.info("sent some data");
