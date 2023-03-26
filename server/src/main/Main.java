@@ -6,12 +6,11 @@ import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.modelmapper.ModelMapper;
 import requestLogic.RequestReader;
 import requestLogic.StatusRequest;
 import requestLogic.dataTransferObjects.BaseRequestDTO;
 import requestLogic.requestWorkers.RequestWorkerManager;
-import requestLogic.requests.BaseRequest;
+import requestLogic.requests.RequestDTOMapper;
 import requestLogic.requests.RequestTypeVisitor;
 import serverLogic.DatagramServerConnectionFactory;
 import serverLogic.ServerConnection;
@@ -57,16 +56,13 @@ public class Main {
                 }
                 RequestReader<BaseRequestDTO> rqReader = new RequestReader<>(rq.getInputStream());
                 BaseRequestDTO brDTO = rqReader.readObject();
-                ModelMapper modelMapper = new ModelMapper();
-                modelMapper.getConfiguration().setFieldMatchingEnabled(true).setFieldAccessLevel(org.modelmapper.config.Configuration.AccessLevel.PRIVATE);
-                String typeName = brDTO.getClass().getSimpleName();
-                BaseRequest request = (BaseRequest) modelMapper.map(brDTO, Class.forName("requestLogic.requests." + typeName.substring(0, typeName.length() - 3)));
+                var request = RequestDTOMapper.toRequest(brDTO);
                 request.setConnection(connection);
                 request.setFrom(rq.getCallerBack());
                 RequestWorkerManager worker = new RequestWorkerManager();
                 RequestTypeVisitor visitor = new RequestTypeVisitor();
                 request.accept(visitor);
-                worker.workWithRequest(request, visitor.getRequestType());
+                worker.workWithRequest(request, brDTO, visitor.getRequestType());
             } catch (IOException e) {
                 logger.error("Something went wrong during I/O", e);
             } catch (ClassNotFoundException e) {

@@ -1,5 +1,7 @@
 package commandManager.commands;
 
+import commandManager.commandResponse.CommandResponse;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -10,6 +12,7 @@ import java.util.logging.Logger;
  * @since 1.0
  */
 public class ExitCommand implements BaseCommand {
+    CommandResponse response;
 
     private static final Logger myLogger = Logger.getLogger("com.github.zerumi.lab5");
 
@@ -27,5 +30,10 @@ public class ExitCommand implements BaseCommand {
     public void execute(String[] args) {
         myLogger.log(Level.FINE, "Выходим из программы...");
         System.exit(0);
+    }
+
+    @Override
+    public CommandResponse getResponse() {
+        return response;
     }
 }

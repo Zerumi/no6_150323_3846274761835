@@ -1,5 +1,6 @@
 package commandManager.commands;
 
+import commandManager.commandResponse.CommandResponse;
 import exceptions.WrongAmountOfArgumentsException;
 import fileLogic.Saver;
 import models.Route;
@@ -15,6 +16,7 @@ import java.util.HashSet;
  * @since 1.0
  */
 public class SaveCommand implements BaseCommand {
+    CommandResponse response;
     @Override
     public String getName() {
         return "save";
@@ -34,5 +36,10 @@ public class SaveCommand implements BaseCommand {
         saver.saveCollection(collectionHandler.getCollection(), "lab5");
 
         System.out.println("Executed.");
+    }
+
+    @Override
+    public CommandResponse getResponse() {
+        return response;
     }
 }

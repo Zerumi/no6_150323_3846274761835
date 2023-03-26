@@ -1,16 +1,14 @@
 package main;
 
-import commandManager.commands.HelpCommand;
+import commandManager.CommandExecutor;
+import commandManager.CommandMode;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import requestLogic.dataTransferObjects.CommandClientRequestDTO;
 import serverLogic.ServerConnection;
 import serverLogic.ServerConnectionHandler;
 import serverLogic.UdpServerConnectionFactory;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
@@ -39,14 +37,10 @@ public class Main {
             ServerConnectionHandler.setServerConnection(connection);
             connection.openConnection();
 
-            ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
-            ObjectOutputStream oos = new ObjectOutputStream(byteStream);
-            CommandClientRequestDTO dto = new CommandClientRequestDTO();
-            dto.setCommand(new HelpCommand());
-            dto.setLineArgs(new String[]{"help"});
-            oos.writeObject(dto);
+            CommandExecutor executor = new CommandExecutor();
+            executor.startExecuting(System.in, CommandMode.CLI_UserMode);
 
-            connection.sendData(byteStream.toByteArray());
+
             logger.info("sent some data");
         } catch (UnknownHostException ex) {
             logger.fatal("Can't find host.");

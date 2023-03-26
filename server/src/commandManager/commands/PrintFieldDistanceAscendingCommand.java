@@ -1,5 +1,6 @@
 package commandManager.commands;
 
+import commandManager.commandResponse.CommandResponse;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
@@ -15,6 +16,7 @@ import java.util.List;
  * @since 1.0
  */
 public class PrintFieldDistanceAscendingCommand implements BaseCommand {
+    CommandResponse response;
 
     @Override
     public String getName() {
@@ -32,5 +34,10 @@ public class PrintFieldDistanceAscendingCommand implements BaseCommand {
         List<Integer> distances = collectionHandler.getCollection().stream().map(Route::getDistance).sorted(Comparator.comparingInt(o -> o)).toList();
 
         distances.forEach(System.out::println);
+    }
+
+    @Override
+    public CommandResponse getResponse() {
+        return response;
     }
 }

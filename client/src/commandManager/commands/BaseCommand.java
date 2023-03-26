@@ -3,8 +3,6 @@ package commandManager.commands;
 import exceptions.BuildObjectException;
 import exceptions.WrongAmountOfArgumentsException;
 
-import java.io.Serializable;
-
 /**
  * Base interface for command implementation. You should implement it before applying command in CommandManager
  *
@@ -12,31 +10,7 @@ import java.io.Serializable;
  * @see commandManager.CommandManager
  * @since 1.0
  */
-public interface BaseCommand extends Serializable {
-    /**
-     * Base method for show command name
-     *
-     * @return command name
-     */
-    String getName();
-
-    /**
-     * Base method for show command description.
-     *
-     * @return command description
-     */
-    String getDescr();
-
-    /**
-     * Base method for show command arguments
-     *
-     * @return command arguments pattern
-     */
-    default String getArgs()
-    {
-        return "";
-    }
-
+public interface BaseCommand {
     /**
      * Base method for command executing.
      *

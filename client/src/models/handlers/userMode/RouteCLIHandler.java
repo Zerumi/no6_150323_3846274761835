@@ -5,7 +5,6 @@ import exceptions.StreamInterruptedException;
 import main.Utilities;
 import models.Route;
 import models.handlers.ModuleHandler;
-import models.handlers.RouteHandlers;
 import models.validators.DistanceValidator;
 import models.validators.NameValidator;
 import models.validators.Validator;
@@ -37,9 +36,6 @@ public class RouteCLIHandler implements ModuleHandler<Route> {
             System.out.println();
 
             Scanner scanner = new Scanner(System.in);
-
-            // id
-            result.setId(RouteHandlers.generateID());
 
             // name
             Validator<String> nameValidator = new NameValidator();

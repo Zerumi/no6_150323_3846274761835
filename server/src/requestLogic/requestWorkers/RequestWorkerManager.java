@@ -3,6 +3,7 @@ package requestLogic.requestWorkers;
 import exceptions.UnsupportedRequestException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import requestLogic.dataTransferObjects.BaseRequestDTO;
 import requestLogic.requests.BaseRequest;
 
 import java.util.LinkedHashMap;
@@ -17,12 +18,11 @@ public class RequestWorkerManager {
     public RequestWorkerManager() {
         workers.put("BaseRequest", new BaseRequestWorker());
         workers.put("CommandClientRequest", new CommandClientRequestWorker());
-        workers.put("ArgumentClientRequest", new ArgumentClientRequestWorker());
     }
 
-    public void workWithRequest(BaseRequest request, String requestType) {
+    public void workWithRequest(BaseRequest request, BaseRequestDTO dto, String requestType) {
         try {
-            Optional.ofNullable(workers.get(requestType)).orElseThrow(() -> new UnsupportedRequestException("Указанный запрос не может быть обработан")).workWithRequest(request);
+            Optional.ofNullable(workers.get(requestType)).orElseThrow(() -> new UnsupportedRequestException("Указанный запрос не может быть обработан")).workWithRequest(request, dto);
         } catch (UnsupportedRequestException ex) {
             logger.error("Got an invalid request.");
         }

@@ -1,5 +1,6 @@
 package commandManager.commands;
 
+import commandManager.commandResponse.CommandResponse;
 import exceptions.WrongAmountOfArgumentsException;
 
 import java.io.Serializable;
@@ -42,4 +43,12 @@ public interface BaseCommand extends Serializable {
      * @throws IllegalArgumentException when command can't understand given arguments
      */
     void execute(String[] args) throws IllegalArgumentException, WrongAmountOfArgumentsException;
+
+    /**
+     * Base method for get command Output
+     *
+     * @return Full command output
+     * @since 2.0
+     */
+    CommandResponse getResponse();
 }

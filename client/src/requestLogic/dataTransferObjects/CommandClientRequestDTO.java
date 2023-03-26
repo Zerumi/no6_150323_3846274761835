@@ -1,18 +1,18 @@
 package requestLogic.dataTransferObjects;
 
-import commandManager.commands.BaseCommand;
+import requestLogic.dataTransferObjects.commands.BaseCommandDTO;
 
 import java.io.Serializable;
 
 public class CommandClientRequestDTO extends BaseRequestDTO implements Serializable {
-    private BaseCommand command;
+    private BaseCommandDTO command;
     private String[] lineArgs;
 
-    public BaseCommand getCommand() {
+    public BaseCommandDTO getCommand() {
         return command;
     }
 
-    public void setCommand(BaseCommand command) {
+    public void setCommand(BaseCommandDTO command) {
         this.command = command;
     }
 

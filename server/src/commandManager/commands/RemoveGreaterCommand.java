@@ -1,5 +1,6 @@
 package commandManager.commands;
 
+import commandManager.commandResponse.CommandResponse;
 import models.Route;
 import models.comparators.RouteDistanceComparator;
 import models.handlers.CollectionHandler;
@@ -16,7 +17,7 @@ import java.util.HashSet;
  * @since 1.0
  */
 public class RemoveGreaterCommand implements BaseCommand {
-
+    CommandResponse response;
     ModuleHandler<Route> handler;
 
     /**
@@ -77,5 +78,10 @@ public class RemoveGreaterCommand implements BaseCommand {
         }
 
         System.out.println("Removed " + count + " elements");
+    }
+
+    @Override
+    public CommandResponse getResponse() {
+        return response;
     }
 }

@@ -1,5 +1,6 @@
 package commandManager.commands;
 
+import commandManager.commandResponse.CommandResponse;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
@@ -14,6 +15,7 @@ import java.util.HashSet;
  * @since 1.0
  */
 public class MinByCreationDateCommand implements BaseCommand {
+    CommandResponse response;
     @Override
     public String getName() {
         return "min_by_creation_date";
@@ -37,5 +39,10 @@ public class MinByCreationDateCommand implements BaseCommand {
                     System.out.println(obj);
             }
         }
+    }
+
+    @Override
+    public CommandResponse getResponse() {
+        return response;
     }
 }

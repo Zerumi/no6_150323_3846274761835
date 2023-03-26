@@ -1,5 +1,6 @@
 package commandManager.commands;
 
+import commandManager.commandResponse.CommandResponse;
 import exceptions.WrongAmountOfArgumentsException;
 import main.Utilities;
 import models.Route;
@@ -16,6 +17,8 @@ import java.util.List;
  * @since 1.0
  */
 public class CountGreaterThanDistanceCommand implements BaseCommand {
+    CommandResponse response;
+
     @Override
     public String getName() {
         return "count_greater_than_distance";
@@ -33,6 +36,7 @@ public class CountGreaterThanDistanceCommand implements BaseCommand {
 
     @Override
     public void execute(String[] args) throws WrongAmountOfArgumentsException {
+
         Utilities.checkArgumentsOrThrow(args.length, 1);
 
         if (Utilities.isNotNumeric(args[1])) {
@@ -58,5 +62,10 @@ public class CountGreaterThanDistanceCommand implements BaseCommand {
 
         int finalGreaterThan = greaterThan;
         System.out.println("Total count: " + distances.stream().map(x -> x.compareTo(finalGreaterThan)).filter(x -> x > 0).count());
+    }
+
+    @Override
+    public CommandResponse getResponse() {
+        return response;
     }
 }

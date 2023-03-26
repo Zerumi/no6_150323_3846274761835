@@ -5,7 +5,6 @@ import models.Coordinates;
 import models.Location;
 import models.Route;
 import models.handlers.ModuleHandler;
-import models.handlers.RouteHandlers;
 import models.validators.RouteValidator;
 import models.validators.Validator;
 
@@ -77,7 +76,6 @@ public class RouteNonCLIHandler implements ModuleHandler<Route> {
         }
 
         try {
-            result.setId(RouteHandlers.generateID());
             result.setName(values.get(0));
             System.out.println("Name: " + result.getName());
             if (values.get(coordsIndex) != null) {

@@ -1,6 +1,7 @@
 package commandManager.commands;
 
 import commandManager.CommandManager;
+import commandManager.commandResponse.CommandResponse;
 
 import java.util.Optional;
 
@@ -11,6 +12,7 @@ import java.util.Optional;
  * @since 1.0
  */
 public class HelpCommand implements BaseCommand {
+    CommandResponse response;
     @Override
     public String getName() {
         return "help";
@@ -33,5 +35,10 @@ public class HelpCommand implements BaseCommand {
                 System.out.println(args[i] + " -- " + Optional.ofNullable(command).map(BaseCommand::getDescr).orElse("This command is not found in manager"));
             }
         }
+    }
+
+    @Override
+    public CommandResponse getResponse() {
+        return response;
     }
 }

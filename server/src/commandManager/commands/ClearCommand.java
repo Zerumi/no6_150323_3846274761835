@@ -1,5 +1,6 @@
 package commandManager.commands;
 
+import commandManager.commandResponse.CommandResponse;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
@@ -13,6 +14,7 @@ import java.util.HashSet;
  * @since 1.0
  */
 public class ClearCommand implements BaseCommand {
+    CommandResponse response;
     @Override
     public String getName() {
         return "clear";
@@ -30,5 +32,10 @@ public class ClearCommand implements BaseCommand {
         collectionHandler.clearCollection();
 
         System.out.println("Cleared!");
+    }
+
+    @Override
+    public CommandResponse getResponse() {
+        return response;
     }
 }

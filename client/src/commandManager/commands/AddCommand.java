@@ -2,12 +2,8 @@ package commandManager.commands;
 
 import exceptions.BuildObjectException;
 import models.Route;
-import models.handlers.CollectionHandler;
 import models.handlers.ModuleHandler;
-import models.handlers.RoutesHandler;
 import models.handlers.userMode.RouteCLIHandler;
-
-import java.util.HashSet;
 
 /**
  * Adds new element to collection.
@@ -16,6 +12,7 @@ import java.util.HashSet;
  * @author Zerumi
  */
 public class AddCommand implements BaseCommand {
+
     ModuleHandler<Route> handler;
 
     /**
@@ -36,26 +33,9 @@ public class AddCommand implements BaseCommand {
     }
 
     @Override
-    public String getName() {
-        return "add";
-    }
-
-    @Override
-    public String getDescr() {
-        return "Adds new element to collection.";
-    }
-
-    @Override
-    public String getArgs() {
-        return "{element}";
-    }
-
-    @Override
     public void execute(String[] args) throws BuildObjectException {
-        CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
+        Route obj = handler.buildObject();
 
-        collectionHandler.addElementToCollection(handler.buildObject());
 
-        System.out.println("Element added!");
     }
 }

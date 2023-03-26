@@ -1,5 +1,6 @@
 package commandManager.commands;
 
+import commandManager.commandResponse.CommandResponse;
 import models.Route;
 import models.comparators.RouteDistanceComparator;
 import models.handlers.CollectionHandler;
@@ -16,7 +17,7 @@ import java.util.HashSet;
  * @since 1.0
  */
 public class AddIfMinCommand implements BaseCommand {
-
+    CommandResponse response;
     ModuleHandler<Route> handler;
 
     /**
@@ -64,5 +65,10 @@ public class AddIfMinCommand implements BaseCommand {
             System.out.println("Element not added: it's not lower than min value.");
         }
 
+    }
+
+    @Override
+    public CommandResponse getResponse() {
+        return response;
     }
 }

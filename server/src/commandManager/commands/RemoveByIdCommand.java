@@ -1,5 +1,6 @@
 package commandManager.commands;
 
+import commandManager.commandResponse.CommandResponse;
 import exceptions.WrongAmountOfArgumentsException;
 import main.Utilities;
 import models.Route;
@@ -16,6 +17,7 @@ import java.util.Objects;
  * @since 1.0
  */
 public class RemoveByIdCommand implements BaseCommand {
+    CommandResponse response;
 
     @Override
     public String getName() {
@@ -44,5 +46,10 @@ public class RemoveByIdCommand implements BaseCommand {
         collectionHandler.getCollection().removeIf(route -> Objects.equals(route.getId(), finalId));
 
         System.out.println("Executed.");
+    }
+
+    @Override
+    public CommandResponse getResponse() {
+        return response;
     }
 }

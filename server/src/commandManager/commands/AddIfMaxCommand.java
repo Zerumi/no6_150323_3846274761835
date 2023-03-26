@@ -1,5 +1,6 @@
 package commandManager.commands;
 
+import commandManager.commandResponse.CommandResponse;
 import models.Route;
 import models.comparators.RouteDistanceComparator;
 import models.handlers.CollectionHandler;
@@ -16,6 +17,7 @@ import java.util.HashSet;
  * @since 1.0
  */
 public class AddIfMaxCommand implements BaseCommand {
+    CommandResponse response;
     ModuleHandler<Route> handler;
 
     /**
@@ -62,5 +64,10 @@ public class AddIfMaxCommand implements BaseCommand {
         } else {
             System.out.println("Element not added: it's not greater than max value.");
         }
+    }
+
+    @Override
+    public CommandResponse getResponse() {
+        return response;
     }
 }

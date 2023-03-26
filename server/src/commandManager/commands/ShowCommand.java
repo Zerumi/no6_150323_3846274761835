@@ -1,5 +1,6 @@
 package commandManager.commands;
 
+import commandManager.commandResponse.CommandResponse;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
@@ -13,6 +14,8 @@ import java.util.HashSet;
  * @since 1.0
  */
 public class ShowCommand implements BaseCommand {
+    CommandResponse response;
+
     @Override
     public String getName() {
         return "show";
@@ -32,5 +35,10 @@ public class ShowCommand implements BaseCommand {
         if (handler.getCollection().isEmpty()) {
             System.out.println("There's nothing to show.");
         }
+    }
+
+    @Override
+    public CommandResponse getResponse() {
+        return response;
     }
 }

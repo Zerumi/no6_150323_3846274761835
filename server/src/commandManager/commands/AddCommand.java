@@ -1,5 +1,6 @@
 package commandManager.commands;
 
+import commandManager.commandResponse.CommandResponse;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.ModuleHandler;
@@ -15,6 +16,7 @@ import java.util.HashSet;
  * @since 1.0
  */
 public class AddCommand implements BaseCommand {
+    CommandResponse response;
     ModuleHandler<Route> handler;
 
     /**
@@ -55,5 +57,10 @@ public class AddCommand implements BaseCommand {
         collectionHandler.addElementToCollection(handler.buildObject());
 
         System.out.println("Element added!");
+    }
+
+    @Override
+    public CommandResponse getResponse() {
+        return response;
     }
 }

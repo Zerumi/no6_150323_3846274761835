@@ -1,12 +1,7 @@
 package commandManager.commands;
 
-import models.Route;
-import models.handlers.CollectionHandler;
-import models.handlers.RoutesHandler;
-
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.List;
+import serverLogic.ServerConnectionHandler;
+import serverLogic.ServerConnectionUtils;
 
 /**
  * Prints all distance fields in ascending sorting.
@@ -15,22 +10,8 @@ import java.util.List;
  * @author Zerumi
  */
 public class PrintFieldDistanceAscendingCommand implements BaseCommand {
-
-    @Override
-    public String getName() {
-        return "print_field_ascending_distance";
-    }
-
-    @Override
-    public String getDescr() {
-        return "Prints all distance fields in ascending sorting.";
-    }
-
     @Override
     public void execute(String[] args) {
-        CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
-        List<Integer> distances = collectionHandler.getCollection().stream().map(Route::getDistance).sorted(Comparator.comparingInt(o -> o)).toList();
-
-        distances.forEach(System.out::println);
+        ServerConnectionUtils.sendNonArgumentCommand(this, args, ServerConnectionHandler.getCurrentConnection());
     }
 }
