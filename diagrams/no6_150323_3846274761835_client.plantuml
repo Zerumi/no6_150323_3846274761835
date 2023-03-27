@@ -1,0 +1,489 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class AddCommand {
+  + AddCommand(ModuleHandler<Route>): 
+  + AddCommand(): 
+  + execute(String[]): void
+}
+class AddCommandDTO {
+  + AddCommandDTO(): 
+}
+class AddIfMaxCommand {
+  + AddIfMaxCommand(): 
+  + AddIfMaxCommand(ModuleHandler<Route>): 
+  + execute(String[]): void
+}
+class AddIfMaxCommandDTO {
+  + AddIfMaxCommandDTO(): 
+}
+class AddIfMinCommand {
+  + AddIfMinCommand(): 
+  + AddIfMinCommand(ModuleHandler<Route>): 
+  + execute(String[]): void
+}
+class AddIfMinCommandDTO {
+  + AddIfMinCommandDTO(): 
+}
+interface BaseCommand << interface >> {
+  + execute(String[]): void
+}
+interface BaseCommandDTO << interface >>
+class BaseRequestDTO {
+  + BaseRequestDTO(): 
+}
+class BaseResponse {
+  + BaseResponse(): 
+}
+class BaseResponseDTO {
+  + BaseResponseDTO(): 
+}
+class BaseResponseWorker {
+  + BaseResponseWorker(): 
+  + workWithResponse(BaseResponse, BaseResponseDTO): void
+}
+class BuildObjectException {
+  + BuildObjectException(String): 
+}
+class ClearCommand {
+  + ClearCommand(): 
+  + execute(String[]): void
+}
+class ClearCommandDTO {
+  + ClearCommandDTO(): 
+}
+class CommandClientRequestDTO {
+  + CommandClientRequestDTO(): 
+  - lineArgs: String[]
+  - command: BaseCommandDTO
+   command: BaseCommandDTO
+   lineArgs: String[]
+}
+class CommandExecutor {
+  + CommandExecutor(): 
+  + startExecuting(InputStream, CommandMode): void
+}
+class CommandInterruptedException {
+  + CommandInterruptedException(Exception): 
+}
+class CommandManager {
+  + CommandManager(CommandMode, Scanner): 
+  + CommandManager(): 
+  ~ commands: LinkedHashMap<String, BaseCommand>
+  + executeCommand(String[]): void
+   commands: LinkedHashMap<String, BaseCommand>
+}
+enum CommandMode << enumeration >> {
+  - CommandMode(): 
+  + values(): CommandMode[]
+  + valueOf(String): CommandMode
+}
+class CommandRequestDTOMapper {
+  + CommandRequestDTOMapper(): 
+  + commandRequestDTOMapper(BaseCommand, String[]): CommandClientRequestDTO
+}
+class CommandRequestSender {
+  + CommandRequestSender(): 
+  + sendCommand(BaseCommand, String[], ServerConnection): void
+}
+class CommandResponseWorker {
+  + CommandResponseWorker(): 
+  + workWithResponse(BaseResponse, BaseResponseDTO): void
+}
+class CommandStatusResponse {
+  + CommandStatusResponse(): 
+  - response: String
+  - statusCode: int
+   response: String
+   statusCode: int
+}
+class CommandStatusResponseDTO {
+  + CommandStatusResponseDTO(): 
+}
+class CoordXValidator {
+  + CoordXValidator(): 
+  + validate(Double): boolean
+}
+class CoordYValidator {
+  + CoordYValidator(): 
+  + validate(Float): boolean
+}
+class Coordinates {
+  + Coordinates(): 
+  - y: Float
+  - x: double
+  + toString(): String
+  + hashCode(): int
+  + equals(Object): boolean
+   y: Float
+   x: double
+}
+class CoordinatesCLIHandler {
+  + CoordinatesCLIHandler(): 
+  + buildObject(): Coordinates
+}
+class CoordinatesDTO {
+  + CoordinatesDTO(): 
+  - y: Float
+  - x: double
+   y: Float
+   x: double
+}
+class CountGreaterThanDistanceCommand {
+  + CountGreaterThanDistanceCommand(): 
+  + execute(String[]): void
+}
+class CountGreaterThanDistanceCommandDTO {
+  + CountGreaterThanDistanceCommandDTO(): 
+}
+class DTOMapper {
+  + DTOMapper(): 
+  + convertToDTO(T, String): Y
+  + dtoNameConverter(String): String
+}
+class DTOMapper {
+  + DTOMapper(): 
+  + convertFromDTO(T, String): Y
+}
+class DistanceValidator {
+  + DistanceValidator(): 
+  + validate(Integer): boolean
+}
+class ExecuteScriptCommand {
+  + ExecuteScriptCommand(): 
+  + execute(String[]): void
+  - checkRecursion(Path, ArrayDeque<Path>): boolean
+}
+class ExitCommand {
+  + ExitCommand(): 
+  + execute(String[]): void
+}
+class ExitCommandDTO {
+  + ExitCommandDTO(): 
+}
+class HelpCommand {
+  + HelpCommand(): 
+  + execute(String[]): void
+}
+class HelpCommandDTO {
+  + HelpCommandDTO(): 
+}
+class InfoCommand {
+  + InfoCommand(): 
+  + execute(String[]): void
+}
+class InfoCommandDTO {
+  + InfoCommandDTO(): 
+}
+class Location {
+  + Location(): 
+  - x: float
+  - z: Long
+  - y: Long
+  - name: String
+  + hashCode(): int
+  + toString(): String
+  + equals(Object): boolean
+   name: String
+   x: float
+   z: Long
+   y: Long
+}
+class LocationCLIHandler {
+  + LocationCLIHandler(): 
+  + buildObject(): Location
+  - handleYZInput(Scanner, Validator<Long>, String): Long
+}
+class LocationDTO {
+  + LocationDTO(): 
+  - y: Long
+  - x: float
+  - z: Long
+  - name: String
+   name: String
+   x: float
+   z: Long
+   y: Long
+}
+class LocationNameValidator {
+  + LocationNameValidator(): 
+  + validate(String): boolean
+}
+class LocationXValidator {
+  + LocationXValidator(): 
+  + validate(Float): boolean
+}
+class LocationYZValidator {
+  + LocationYZValidator(): 
+  + validate(Long): boolean
+}
+class Main {
+  + Main(): 
+  + main(String[]): void
+}
+class MinByCreationDateCommand {
+  + MinByCreationDateCommand(): 
+  + execute(String[]): void
+}
+class MinByCreationDateCommandDTO {
+  + MinByCreationDateCommandDTO(): 
+}
+interface ModuleHandler<T> << interface >> {
+  + buildObject(): T
+}
+class NameValidator {
+  + NameValidator(): 
+  + validate(String): boolean
+}
+class PrintFieldDistanceAscendingCommand {
+  + PrintFieldDistanceAscendingCommand(): 
+  + execute(String[]): void
+}
+class PrintFieldDistanceAscendingCommandDTO {
+  + PrintFieldDistanceAscendingCommandDTO(): 
+}
+class RemoveByIdCommand {
+  + RemoveByIdCommand(): 
+  + execute(String[]): void
+}
+class RemoveByIdCommandDTO {
+  + RemoveByIdCommandDTO(): 
+}
+class RemoveGreaterCommand {
+  + RemoveGreaterCommand(ModuleHandler<Route>): 
+  + RemoveGreaterCommand(): 
+  + execute(String[]): void
+}
+class RemoveGreaterCommandDTO {
+  + RemoveGreaterCommandDTO(): 
+}
+class RequestSender {
+  + RequestSender(): 
+  + sendRequest(BaseRequestDTO, ServerConnection): void
+}
+class ResponseReader<T> {
+  + ResponseReader(InputStream): 
+  + readObject(): T
+}
+interface ResponseWorker << interface >> {
+  + workWithResponse(BaseResponse, BaseResponseDTO): void
+}
+class ResponseWorkerManager {
+  + ResponseWorkerManager(): 
+  + workWithRequest(BaseResponse, BaseResponseDTO, String): void
+}
+class Route {
+  + Route(): 
+  - creationDate: Date
+  - to: Location
+  - name: String
+  - coordinates: Coordinates
+  - from: Location
+  - id: Long
+  - distance: int
+  + compareTo(Route): int
+  + hashCode(): int
+  + toString(): String
+  + equals(Object): boolean
+   distance: int
+   name: String
+   coordinates: Coordinates
+   to: Location
+   id: Long
+   from: Location
+   creationDate: Date
+}
+class RouteCLIHandler {
+  + RouteCLIHandler(): 
+  + buildObject(): Route
+}
+class RouteDTO {
+  + RouteDTO(): 
+  - name: String
+  - to: LocationDTO
+  - from: LocationDTO
+  - distance: int
+  - coordinates: CoordinatesDTO
+   distance: int
+   name: String
+   to: LocationDTO
+   coordinates: CoordinatesDTO
+   from: LocationDTO
+}
+class RouteDTOMapper {
+  + RouteDTOMapper(): 
+  + routeDTOMapper(Route): RouteDTO
+}
+class RouteNonCLIHandler {
+  + RouteNonCLIHandler(Scanner): 
+  + buildObject(): Route
+  - generateLocation(int, ArrayList<String>): Location
+}
+class RouteValidator {
+  + RouteValidator(): 
+  + validate(Route): boolean
+}
+class SaveCommand {
+  + SaveCommand(): 
+  + execute(String[]): void
+}
+interface ServerConnection << interface >> {
+  + openConnection(): void
+  + listenServer(): InputStream
+  + closeConnection(): void
+  + sendData(byte[]): void
+}
+interface ServerConnectionFactory << interface >> {
+  + openConnection(InetAddress, int): ServerConnection
+}
+class ServerConnectionHandler {
+  + ServerConnectionHandler(): 
+  - currentConnection: ServerConnection
+   serverConnection: ServerConnection
+   currentConnection: ServerConnection
+}
+class ShowCommand {
+  + ShowCommand(): 
+  + execute(String[]): void
+}
+class ShowCommandDTO {
+  + ShowCommandDTO(): 
+}
+class StreamInterruptedException {
+  + StreamInterruptedException(String): 
+}
+class UdpConnectionBlockDecorator {
+  + UdpConnectionBlockDecorator(UdpServerConnection, boolean): 
+   lockState: boolean
+}
+class UdpServerConnection {
+  # UdpServerConnection(DatagramChannel, SocketAddress): 
+  + openConnection(): void
+  + listenServer(): ByteArrayInputStream
+  + sendData(byte[]): void
+  + closeConnection(): void
+}
+class UdpServerConnectionFactory {
+  + UdpServerConnectionFactory(): 
+  + openConnection(InetAddress, int): ServerConnection
+}
+class UnknownCommandException {
+  + UnknownCommandException(String): 
+}
+class UnsupportedResponseException {
+  + UnsupportedResponseException(String): 
+}
+class UpdateCommand {
+  + UpdateCommand(): 
+  + UpdateCommand(ModuleHandler<Route>): 
+  + execute(String[]): void
+}
+class UpdateCommandDTO {
+  + UpdateCommandDTO(): 
+}
+class Utilities {
+  + Utilities(): 
+  + hasNextLineOrThrow(Scanner): boolean
+  + handleUserInputID(String): Long
+  + isNotNumeric(String): boolean
+  + checkArgumentsOrThrow(int, int): void
+}
+interface Validator<T> << interface >> {
+  + validate(T): boolean
+}
+class WrongAmountOfArgumentsException {
+  + WrongAmountOfArgumentsException(String): 
+}
+class build {
+  + build(): 
+  + run(): Object
+  + getProperty(String): Object
+  + main(String[]): void
+  + invokeMethod(String, Object): Object
+  + setProperty(String, Object): void
+   metaClass: MetaClass
+}
+
+AddCommand                             -[#008200,dashed]-^  BaseCommand                           
+AddCommand                            "1" *-[#595959,plain]-> "handler\n1" ModuleHandler                         
+AddCommand                            "1" *-[#595959,plain]-> "route\n1" Route                                 
+AddCommand                            "1" *-[#595959,plain]-> "obj\n1" RouteDTO                              
+AddCommandDTO                          -[#008200,dashed]-^  BaseCommandDTO                        
+AddCommandDTO                         "1" *-[#595959,plain]-> "obj\n1" RouteDTO                              
+AddIfMaxCommand                        -[#008200,dashed]-^  BaseCommand                           
+AddIfMaxCommand                       "1" *-[#595959,plain]-> "handler\n1" ModuleHandler                         
+AddIfMaxCommand                       "1" *-[#595959,plain]-> "route\n1" Route                                 
+AddIfMaxCommand                       "1" *-[#595959,plain]-> "obj\n1" RouteDTO                              
+AddIfMaxCommandDTO                     -[#008200,dashed]-^  BaseCommandDTO                        
+AddIfMaxCommandDTO                    "1" *-[#595959,plain]-> "obj\n1" RouteDTO                              
+AddIfMinCommand                        -[#008200,dashed]-^  BaseCommand                           
+AddIfMinCommand                       "1" *-[#595959,plain]-> "handler\n1" ModuleHandler                         
+AddIfMinCommand                       "1" *-[#595959,plain]-> "route\n1" Route                                 
+AddIfMinCommand                       "1" *-[#595959,plain]-> "obj\n1" RouteDTO                              
+AddIfMinCommandDTO                     -[#008200,dashed]-^  BaseCommandDTO                        
+AddIfMinCommandDTO                    "1" *-[#595959,plain]-> "obj\n1" RouteDTO                              
+BaseResponseWorker                     -[#008200,dashed]-^  ResponseWorker                        
+ClearCommand                           -[#008200,dashed]-^  BaseCommand                           
+ClearCommandDTO                        -[#008200,dashed]-^  BaseCommandDTO                        
+CommandClientRequestDTO               "1" *-[#595959,plain]-> "command\n1" BaseCommandDTO                        
+CommandClientRequestDTO                -[#000082,plain]-^  BaseRequestDTO                        
+CommandManager                        "1" *-[#595959,plain]-> "commands\n*" BaseCommand                           
+CommandResponseWorker                  -[#000082,plain]-^  BaseResponseWorker                    
+CommandStatusResponse                  -[#000082,plain]-^  BaseResponse                          
+CommandStatusResponseDTO               -[#000082,plain]-^  BaseResponseDTO                       
+CoordXValidator                        -[#008200,dashed]-^  Validator                             
+CoordYValidator                        -[#008200,dashed]-^  Validator                             
+CoordinatesCLIHandler                  -[#008200,dashed]-^  ModuleHandler                         
+CountGreaterThanDistanceCommand        -[#008200,dashed]-^  BaseCommand                           
+CountGreaterThanDistanceCommandDTO     -[#008200,dashed]-^  BaseCommandDTO                        
+DistanceValidator                      -[#008200,dashed]-^  Validator                             
+ExecuteScriptCommand                   -[#008200,dashed]-^  BaseCommand                           
+ExitCommand                            -[#008200,dashed]-^  BaseCommand                           
+ExitCommandDTO                         -[#008200,dashed]-^  BaseCommandDTO                        
+HelpCommand                            -[#008200,dashed]-^  BaseCommand                           
+HelpCommandDTO                         -[#008200,dashed]-^  BaseCommandDTO                        
+InfoCommand                            -[#008200,dashed]-^  BaseCommand                           
+InfoCommandDTO                         -[#008200,dashed]-^  BaseCommandDTO                        
+LocationCLIHandler                     -[#008200,dashed]-^  ModuleHandler                         
+LocationNameValidator                  -[#008200,dashed]-^  Validator                             
+LocationXValidator                     -[#008200,dashed]-^  Validator                             
+LocationYZValidator                    -[#008200,dashed]-^  Validator                             
+MinByCreationDateCommand               -[#008200,dashed]-^  BaseCommand                           
+MinByCreationDateCommandDTO            -[#008200,dashed]-^  BaseCommandDTO                        
+NameValidator                          -[#008200,dashed]-^  Validator                             
+PrintFieldDistanceAscendingCommand     -[#008200,dashed]-^  BaseCommand                           
+PrintFieldDistanceAscendingCommandDTO  -[#008200,dashed]-^  BaseCommandDTO                        
+RemoveByIdCommand                      -[#008200,dashed]-^  BaseCommand                           
+RemoveByIdCommandDTO                   -[#008200,dashed]-^  BaseCommandDTO                        
+RemoveGreaterCommand                   -[#008200,dashed]-^  BaseCommand                           
+RemoveGreaterCommand                  "1" *-[#595959,plain]-> "handler\n1" ModuleHandler                         
+RemoveGreaterCommand                  "1" *-[#595959,plain]-> "route\n1" Route                                 
+RemoveGreaterCommand                  "1" *-[#595959,plain]-> "obj\n1" RouteDTO                              
+RemoveGreaterCommandDTO                -[#008200,dashed]-^  BaseCommandDTO                        
+RemoveGreaterCommandDTO               "1" *-[#595959,plain]-> "obj\n1" RouteDTO                              
+ResponseWorkerManager                 "1" *-[#595959,plain]-> "workers\n*" ResponseWorker                        
+Route                                 "1" *-[#595959,plain]-> "coordinates\n1" Coordinates                           
+Route                                 "1" *-[#595959,plain]-> "from\n1" Location                              
+RouteCLIHandler                        -[#008200,dashed]-^  ModuleHandler                         
+RouteDTO                              "1" *-[#595959,plain]-> "coordinates\n1" CoordinatesDTO                        
+RouteDTO                              "1" *-[#595959,plain]-> "from\n1" LocationDTO                           
+RouteNonCLIHandler                     -[#008200,dashed]-^  ModuleHandler                         
+RouteValidator                         -[#008200,dashed]-^  Validator                             
+SaveCommand                            -[#008200,dashed]-^  BaseCommand                           
+ServerConnectionHandler               "1" *-[#595959,plain]-> "currentConnection\n1" ServerConnection                      
+ShowCommand                            -[#008200,dashed]-^  BaseCommand                           
+ShowCommandDTO                         -[#008200,dashed]-^  BaseCommandDTO                        
+UdpConnectionBlockDecorator            -[#000082,plain]-^  UdpServerConnection                   
+UdpConnectionBlockDecorator           "1" *-[#595959,plain]-> "baseConnection\n1" UdpServerConnection                   
+UdpServerConnection                    -[#008200,dashed]-^  ServerConnection                      
+UdpServerConnectionFactory             -[#008200,dashed]-^  ServerConnectionFactory               
+UpdateCommand                          -[#008200,dashed]-^  BaseCommand                           
+UpdateCommand                         "1" *-[#595959,plain]-> "handler\n1" ModuleHandler                         
+UpdateCommand                         "1" *-[#595959,plain]-> "route\n1" Route                                 
+UpdateCommand                         "1" *-[#595959,plain]-> "obj\n1" RouteDTO                              
+UpdateCommandDTO                       -[#008200,dashed]-^  BaseCommandDTO                        
+UpdateCommandDTO                      "1" *-[#595959,plain]-> "obj\n1" RouteDTO                              
+@enduml

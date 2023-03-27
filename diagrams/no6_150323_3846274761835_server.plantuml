@@ -1,0 +1,603 @@
+@startuml
+
+!theme plain
+left to right direction
+skinparam linetype ortho
+
+class AddCommand {
+  + AddCommand(): 
+  - response: CommandStatusResponse
+  + execute(String[]): void
+   name: String
+   args: String
+   descr: String
+   response: CommandStatusResponse
+}
+class AddCommandDTO {
+  + AddCommandDTO(): 
+}
+class AddIfMaxCommand {
+  + AddIfMaxCommand(): 
+  - response: CommandStatusResponse
+  + execute(String[]): void
+   name: String
+   args: String
+   descr: String
+   response: CommandStatusResponse
+}
+class AddIfMaxCommandDTO {
+  + AddIfMaxCommandDTO(): 
+}
+class AddIfMinCommand {
+  + AddIfMinCommand(): 
+  - response: CommandStatusResponse
+  + execute(String[]): void
+   name: String
+   args: String
+   descr: String
+   response: CommandStatusResponse
+}
+class AddIfMinCommandDTO {
+  + AddIfMinCommandDTO(): 
+}
+interface BaseCommand << interface >> {
+  + execute(String[]): void
+   name: String
+   args: String
+   descr: String
+   response: CommandStatusResponse
+}
+interface BaseCommandDTO << interface >>
+interface BaseReader << interface >> {
+  + readFromFile(String): LinkedHashMap<String[], String>
+}
+class BaseRequest {
+  + BaseRequest(): 
+  - from: CallerBack
+  - connection: ServerConnection
+   from: CallerBack
+   connection: ServerConnection
+}
+class BaseRequestDTO {
+  + BaseRequestDTO(): 
+}
+class BaseRequestWorker {
+  + BaseRequestWorker(): 
+  + workWithRequest(BaseRequest, BaseRequestDTO): void
+}
+class BaseResponse {
+  + BaseResponse(): 
+}
+class BaseResponseDTO {
+  + BaseResponseDTO(): 
+}
+interface BaseWriter << interface >> {
+  + writeToFile(String, LinkedHashMap<String[], String>): void
+}
+class CallerBack {
+  + CallerBack(InetAddress, int): 
+  - address: InetAddress
+  - port: int
+  + callback(ServerConnection): void
+   address: InetAddress
+   port: int
+}
+class ClearCommand {
+  + ClearCommand(): 
+  - response: CommandStatusResponse
+  + execute(String[]): void
+   name: String
+   response: CommandStatusResponse
+   descr: String
+}
+class ClearCommandDTO {
+  + ClearCommandDTO(): 
+}
+interface CollectionHandler<T, E> << interface >> {
+  + validateElements(): void
+  + getMax(Comparator<E>): E
+  + clearCollection(): void
+  + getMin(Comparator<E>): E
+  + addElementToCollection(E): void
+  + sort(): void
+   lastElement: E
+   firstOrNew: E
+   collection: T
+   initDate: Date
+}
+class CommandClientRequest {
+  + CommandClientRequest(): 
+  - command: BaseCommand
+  - lineArgs: String[]
+   command: BaseCommand
+   lineArgs: String[]
+}
+class CommandClientRequestDTO {
+  + CommandClientRequestDTO(): 
+  - command: BaseCommandDTO
+  - lineArgs: String[]
+   command: BaseCommandDTO
+   lineArgs: String[]
+}
+class CommandClientRequestWorker {
+  + CommandClientRequestWorker(): 
+  + workWithRequest(BaseRequest, BaseRequestDTO): void
+}
+class CommandInterruptedException {
+  + CommandInterruptedException(Exception): 
+}
+class CommandManager {
+  + CommandManager(): 
+  ~ commands: LinkedHashMap<String, BaseCommand>
+  + executeCommand(CommandClientRequest): void
+   commands: LinkedHashMap<String, BaseCommand>
+}
+enum CommandMode << enumeration >> {
+  - CommandMode(): 
+  + valueOf(String): CommandMode
+  + values(): CommandMode[]
+}
+class CommandResponseSender {
+  + CommandResponseSender(): 
+  + sendResponse(CommandStatusResponse, ServerConnection, CallerBack): void
+}
+class CommandStatusResponse {
+  + CommandStatusResponse(String, int): 
+  - response: String
+  + ofString(String): CommandStatusResponse
+   response: String
+}
+class CommandStatusResponseDTO {
+  + CommandStatusResponseDTO(): 
+}
+class Coordinates {
+  + Coordinates(): 
+  - x: double
+  - y: Float
+  + equals(Object): boolean
+  + hashCode(): int
+  + toString(): String
+   y: Float
+   x: double
+}
+class CoordinatesDTO {
+  + CoordinatesDTO(): 
+  - x: double
+  - y: Float
+   y: Float
+   x: double
+}
+class CountGreaterThanDistanceCommand {
+  + CountGreaterThanDistanceCommand(): 
+  - response: CommandStatusResponse
+  + execute(String[]): void
+   name: String
+   args: String
+   descr: String
+   response: CommandStatusResponse
+}
+class CountGreaterThanDistanceCommandDTO {
+  + CountGreaterThanDistanceCommandDTO(): 
+}
+class DTOMapper {
+  + DTOMapper(): 
+  + convertToDTO(T, String): Y
+}
+class DTOMapper {
+  + DTOMapper(): 
+  + dtoNameConverter(String): String
+  + convertFromDTO(T, String): Y
+}
+class DatagramServerConnection {
+  # DatagramServerConnection(int): 
+  + listenAndGetData(): StatusRequest
+  + sendData(byte[], InetAddress, int): void
+}
+class DatagramServerConnectionFactory {
+  + DatagramServerConnectionFactory(): 
+  + initializeServer(int): ServerConnection
+}
+class DateEditor {
+  + DateEditor(): 
+  + supportsCustomEditor(): boolean
+  + addPropertyChangeListener(PropertyChangeListener): void
+  + removePropertyChangeListener(PropertyChangeListener): void
+  + paintValue(Graphics, Rectangle): void
+   asText: String
+   paintable: boolean
+   customEditor: Component
+   javaInitializationString: String
+   value: Object
+   tags: String[]
+}
+class ExitCommand {
+  + ExitCommand(): 
+  - response: CommandStatusResponse
+  + execute(String[]): void
+   name: String
+   response: CommandStatusResponse
+   descr: String
+}
+class ExitCommandDTO {
+  + ExitCommandDTO(): 
+}
+class HelpCommand {
+  + HelpCommand(): 
+  - response: CommandStatusResponse
+  + execute(String[]): void
+   name: String
+   response: CommandStatusResponse
+   descr: String
+}
+class HelpCommandDTO {
+  + HelpCommandDTO(): 
+}
+class InfoCommand {
+  + InfoCommand(): 
+  - response: CommandStatusResponse
+  + execute(String[]): void
+   name: String
+   response: CommandStatusResponse
+   descr: String
+}
+class InfoCommandDTO {
+  + InfoCommandDTO(): 
+}
+class Loader<T, E> {
+  + Loader(Class<T>, Class<E>): 
+  + loadFromFile(String, BaseReader): T
+  - buildElement(): E
+  - fillCollection(LinkedHashMap<String[], String>): void
+  - addFieldToElement(String[], String): void
+  + loadFromXMLbyEnvKey(String): T
+  - convert(Class<?>, String): Object
+  + setupConverter(Class<?>, Class<PropertyEditor>): void
+  - addObjectToCollection(E): void
+  - setField(Class<?>, String[], int, String, U): void
+  - setupConverter(): void
+}
+class Location {
+  + Location(): 
+  - x: float
+  - z: Long
+  - name: String
+  - y: Long
+  + hashCode(): int
+  + toString(): String
+  + equals(Object): boolean
+   name: String
+   x: float
+   z: Long
+   y: Long
+}
+class LocationDTO {
+  + LocationDTO(): 
+  - z: Long
+  - x: float
+  - y: Long
+  - name: String
+   name: String
+   x: float
+   z: Long
+   y: Long
+}
+class Main {
+  + Main(): 
+  + main(String[]): void
+}
+class MinByCreationDateCommand {
+  + MinByCreationDateCommand(): 
+  - response: CommandStatusResponse
+  + execute(String[]): void
+   name: String
+   response: CommandStatusResponse
+   descr: String
+}
+class MinByCreationDateCommandDTO {
+  + MinByCreationDateCommandDTO(): 
+}
+class PrintFieldDistanceAscendingCommand {
+  + PrintFieldDistanceAscendingCommand(): 
+  - response: CommandStatusResponse
+  + execute(String[]): void
+   name: String
+   response: CommandStatusResponse
+   descr: String
+}
+class PrintFieldDistanceAscendingCommandDTO {
+  + PrintFieldDistanceAscendingCommandDTO(): 
+}
+class RemoveByIdCommand {
+  + RemoveByIdCommand(): 
+  - response: CommandStatusResponse
+  + execute(String[]): void
+   name: String
+   args: String
+   descr: String
+   response: CommandStatusResponse
+}
+class RemoveByIdCommandDTO {
+  + RemoveByIdCommandDTO(): 
+}
+class RemoveGreaterCommand {
+  + RemoveGreaterCommand(): 
+  - response: CommandStatusResponse
+  + execute(String[]): void
+   name: String
+   args: String
+   descr: String
+   response: CommandStatusResponse
+}
+class RemoveGreaterCommandDTO {
+  + RemoveGreaterCommandDTO(): 
+}
+class RequestDTOMapper {
+  + RequestDTOMapper(): 
+  + toRequest(BaseRequestDTO): BaseRequest
+}
+class RequestReader<T> {
+  + RequestReader(InputStream): 
+  + readObject(): T
+}
+interface RequestWorker << interface >> {
+  + workWithRequest(BaseRequest, BaseRequestDTO): void
+}
+class RequestWorkerManager {
+  + RequestWorkerManager(): 
+  + workWithRequest(BaseRequest, BaseRequestDTO, String): void
+}
+class ResponseSender {
+  + ResponseSender(): 
+  + sendResponse(BaseResponseDTO, ServerConnection, CallerBack): void
+}
+class Route {
+  + Route(): 
+  - from: Location
+  - distance: int
+  - creationDate: Date
+  - id: Long
+  - name: String
+  - to: Location
+  - coordinates: Coordinates
+  + compareTo(Route): int
+  + hashCode(): int
+  + toString(): String
+  + equals(Object): boolean
+   distance: int
+   name: String
+   coordinates: Coordinates
+   to: Location
+   id: Long
+   from: Location
+   creationDate: Date
+}
+class RouteComparator {
+  + RouteComparator(): 
+  + compare(Route, Route): int
+}
+class RouteCreationDateComparator {
+  + RouteCreationDateComparator(): 
+  + compare(Route, Route): int
+}
+class RouteDTO {
+  + RouteDTO(): 
+  - distance: int
+  - name: String
+  - to: LocationDTO
+  - coordinates: CoordinatesDTO
+  - from: LocationDTO
+   distance: int
+   name: String
+   to: LocationDTO
+   coordinates: CoordinatesDTO
+   from: LocationDTO
+}
+class RouteDTOMapper {
+  + RouteDTOMapper(): 
+  + toRoute(RouteDTO): Route
+}
+class RouteDistanceComparator {
+  + RouteDistanceComparator(): 
+  + compare(Route, Route): int
+}
+class RouteIDHandler {
+  + RouteIDHandler(): 
+  - instance: RouteIDHandler
+  - nextID: Long
+   instance: RouteIDHandler
+   nextID: Long
+}
+class RoutesHandler {
+  - RoutesHandler(): 
+  - initDate: Date
+  + addElementToCollection(Route): void
+  + getMin(Comparator<Route>): Route
+  + validateElements(): void
+  + sort(): void
+  + clearCollection(): void
+  + getMax(Comparator<Route>): Route
+   firstOrNew: Route
+   instance: RoutesHandler
+   collection: HashSet<Route>
+   initDate: Date
+   lastElement: Route
+}
+class SaveCommand {
+  + SaveCommand(): 
+  - response: CommandStatusResponse
+  + execute(String[]): void
+   name: String
+   response: CommandStatusResponse
+   descr: String
+}
+class Saver<T, E> {
+  + Saver(Class<E>): 
+  + saveCollection(T, String): void
+  - addToCollection(Object, Field, ArrayList<String>): void
+  - getValues(T): LinkedHashMap<String[], String>
+  - convert(Class<?>, Object): String
+}
+interface ServerConnection << interface >> {
+  + listenAndGetData(): StatusRequest
+  + sendData(byte[], InetAddress, int): void
+}
+interface ServerConnectionFactory << interface >> {
+  + initializeServer(int): ServerConnection
+}
+class ShowCommand {
+  + ShowCommand(): 
+  - response: CommandStatusResponse
+  + execute(String[]): void
+   name: String
+   response: CommandStatusResponse
+   descr: String
+}
+class ShowCommandDTO {
+  + ShowCommandDTO(): 
+}
+class StatusRequest {
+  + StatusRequest(): 
+  - inputStream: InputStream
+  - callerBack: CallerBack
+  - code: int
+   inputStream: InputStream
+   code: int
+   callerBack: CallerBack
+}
+class StatusRequestBuilder {
+  - StatusRequestBuilder(): 
+  + build(): StatusRequest
+  + setCallerBack(InetAddress, int): StatusRequestBuilder
+  + initialize(): StatusRequestBuilder
+   code: int
+   objectStream: InputStream
+}
+class StreamInterruptedException {
+  + StreamInterruptedException(String): 
+}
+class UnsupportedRequestException {
+  + UnsupportedRequestException(String): 
+}
+class UpdateCommand {
+  + UpdateCommand(): 
+  - response: CommandStatusResponse
+  + execute(String[]): void
+   name: String
+   args: String
+   descr: String
+   response: CommandStatusResponse
+}
+class UpdateCommandDTO {
+  + UpdateCommandDTO(): 
+}
+class Wrapper {
+  - Wrapper(): 
+  - WRAPPER_TYPES: Set<Class<?>>
+  + isWrapperType(Class<?>): boolean
+   WRAPPER_TYPES: Set<Class<?>>
+}
+class WrongAmountOfArgumentsException {
+  + WrongAmountOfArgumentsException(String): 
+}
+class XMLReader {
+  + XMLReader(): 
+  + readFromFile(String): LinkedHashMap<String[], String>
+  - handleCurrentKeyAndValue(): void
+  - pushValue(String[]): void
+}
+class XMLWriter {
+  + XMLWriter(): 
+  - writeElement(PrintWriter, String[], String[], String): void
+  - getNextAddress(LinkedHashMap<String[], String>, String[]): String[]
+  + writeToFile(String, LinkedHashMap<String[], String>): void
+}
+class build {
+  + build(): 
+  + getProperty(String): Object
+  + main(String[]): void
+  + invokeMethod(String, Object): Object
+  + run(): Object
+  + setProperty(String, Object): void
+   metaClass: MetaClass
+}
+
+AddCommand                             -[#008200,dashed]-^  BaseCommand                           
+AddCommand                            "1" *-[#595959,plain]-> "response\n1" CommandStatusResponse                 
+AddCommand                            "1" *-[#595959,plain]-> "obj\n1" RouteDTO                              
+AddCommandDTO                          -[#008200,dashed]-^  BaseCommandDTO                        
+AddCommandDTO                         "1" *-[#595959,plain]-> "obj\n1" RouteDTO                              
+AddIfMaxCommand                        -[#008200,dashed]-^  BaseCommand                           
+AddIfMaxCommand                       "1" *-[#595959,plain]-> "response\n1" CommandStatusResponse                 
+AddIfMaxCommand                       "1" *-[#595959,plain]-> "obj\n1" RouteDTO                              
+AddIfMaxCommandDTO                     -[#008200,dashed]-^  BaseCommandDTO                        
+AddIfMaxCommandDTO                    "1" *-[#595959,plain]-> "obj\n1" RouteDTO                              
+AddIfMinCommand                        -[#008200,dashed]-^  BaseCommand                           
+AddIfMinCommand                       "1" *-[#595959,plain]-> "response\n1" CommandStatusResponse                 
+AddIfMinCommand                       "1" *-[#595959,plain]-> "obj\n1" RouteDTO                              
+AddIfMinCommandDTO                     -[#008200,dashed]-^  BaseCommandDTO                        
+AddIfMinCommandDTO                    "1" *-[#595959,plain]-> "obj\n1" RouteDTO                              
+BaseRequest                           "1" *-[#595959,plain]-> "from\n1" CallerBack                            
+BaseRequest                           "1" *-[#595959,plain]-> "connection\n1" ServerConnection                      
+BaseRequestWorker                      -[#008200,dashed]-^  RequestWorker                         
+ClearCommand                           -[#008200,dashed]-^  BaseCommand                           
+ClearCommand                          "1" *-[#595959,plain]-> "response\n1" CommandStatusResponse                 
+ClearCommandDTO                        -[#008200,dashed]-^  BaseCommandDTO                        
+CommandClientRequest                  "1" *-[#595959,plain]-> "command\n1" BaseCommand                           
+CommandClientRequest                   -[#000082,plain]-^  BaseRequest                           
+CommandClientRequestDTO               "1" *-[#595959,plain]-> "command\n1" BaseCommandDTO                        
+CommandClientRequestDTO                -[#000082,plain]-^  BaseRequestDTO                        
+CommandClientRequestWorker             -[#008200,dashed]-^  RequestWorker                         
+CommandManager                        "1" *-[#595959,plain]-> "commands\n*" BaseCommand                           
+CommandStatusResponse                  -[#000082,plain]-^  BaseResponse                          
+CommandStatusResponseDTO               -[#000082,plain]-^  BaseResponseDTO                       
+CountGreaterThanDistanceCommand        -[#008200,dashed]-^  BaseCommand                           
+CountGreaterThanDistanceCommand       "1" *-[#595959,plain]-> "response\n1" CommandStatusResponse                 
+CountGreaterThanDistanceCommandDTO     -[#008200,dashed]-^  BaseCommandDTO                        
+DatagramServerConnection               -[#008200,dashed]-^  ServerConnection                      
+DatagramServerConnectionFactory        -[#008200,dashed]-^  ServerConnectionFactory               
+ExitCommand                            -[#008200,dashed]-^  BaseCommand                           
+ExitCommand                           "1" *-[#595959,plain]-> "response\n1" CommandStatusResponse                 
+ExitCommandDTO                         -[#008200,dashed]-^  BaseCommandDTO                        
+HelpCommand                            -[#008200,dashed]-^  BaseCommand                           
+HelpCommand                           "1" *-[#595959,plain]-> "response\n1" CommandStatusResponse                 
+HelpCommandDTO                         -[#008200,dashed]-^  BaseCommandDTO                        
+InfoCommand                            -[#008200,dashed]-^  BaseCommand                           
+InfoCommand                           "1" *-[#595959,plain]-> "response\n1" CommandStatusResponse                 
+InfoCommandDTO                         -[#008200,dashed]-^  BaseCommandDTO                        
+MinByCreationDateCommand               -[#008200,dashed]-^  BaseCommand                           
+MinByCreationDateCommand              "1" *-[#595959,plain]-> "response\n1" CommandStatusResponse                 
+MinByCreationDateCommandDTO            -[#008200,dashed]-^  BaseCommandDTO                        
+PrintFieldDistanceAscendingCommand     -[#008200,dashed]-^  BaseCommand                           
+PrintFieldDistanceAscendingCommand    "1" *-[#595959,plain]-> "response\n1" CommandStatusResponse                 
+PrintFieldDistanceAscendingCommandDTO  -[#008200,dashed]-^  BaseCommandDTO                        
+RemoveByIdCommand                      -[#008200,dashed]-^  BaseCommand                           
+RemoveByIdCommand                     "1" *-[#595959,plain]-> "response\n1" CommandStatusResponse                 
+RemoveByIdCommandDTO                   -[#008200,dashed]-^  BaseCommandDTO                        
+RemoveGreaterCommand                   -[#008200,dashed]-^  BaseCommand                           
+RemoveGreaterCommand                  "1" *-[#595959,plain]-> "response\n1" CommandStatusResponse                 
+RemoveGreaterCommand                  "1" *-[#595959,plain]-> "obj\n1" RouteDTO                              
+RemoveGreaterCommandDTO                -[#008200,dashed]-^  BaseCommandDTO                        
+RemoveGreaterCommandDTO               "1" *-[#595959,plain]-> "obj\n1" RouteDTO                              
+RequestWorkerManager                  "1" *-[#595959,plain]-> "workers\n*" RequestWorker                         
+Route                                 "1" *-[#595959,plain]-> "coordinates\n1" Coordinates                           
+Route                                 "1" *-[#595959,plain]-> "from\n1" Location                              
+RouteDTO                              "1" *-[#595959,plain]-> "coordinates\n1" CoordinatesDTO                        
+RouteDTO                              "1" *-[#595959,plain]-> "from\n1" LocationDTO                           
+RoutesHandler                          -[#008200,dashed]-^  CollectionHandler                     
+RoutesHandler                         "1" *-[#595959,plain]-> "routes\n*" Route                                 
+SaveCommand                            -[#008200,dashed]-^  BaseCommand                           
+SaveCommand                           "1" *-[#595959,plain]-> "response\n1" CommandStatusResponse                 
+ShowCommand                            -[#008200,dashed]-^  BaseCommand                           
+ShowCommand                           "1" *-[#595959,plain]-> "response\n1" CommandStatusResponse                 
+ShowCommandDTO                         -[#008200,dashed]-^  BaseCommandDTO                        
+StatusRequest                         "1" *-[#595959,plain]-> "callerBack\n1" CallerBack                            
+StatusRequestBuilder                  "1" *-[#595959,plain]-> "result\n1" StatusRequest                         
+UpdateCommand                          -[#008200,dashed]-^  BaseCommand                           
+UpdateCommand                         "1" *-[#595959,plain]-> "response\n1" CommandStatusResponse                 
+UpdateCommand                         "1" *-[#595959,plain]-> "obj\n1" RouteDTO                              
+UpdateCommandDTO                       -[#008200,dashed]-^  BaseCommandDTO                        
+UpdateCommandDTO                      "1" *-[#595959,plain]-> "obj\n1" RouteDTO                              
+Wrapper                                +-[#820000,plain]-  Saver                                 
+XMLReader                              -[#008200,dashed]-^  BaseReader                            
+XMLWriter                              -[#008200,dashed]-^  BaseWriter                            
+@enduml

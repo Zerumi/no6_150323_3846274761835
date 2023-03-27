@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/Users/zerumi/IdeaProjects/gitCodes/no6_150323_3846274761835/server</OriginalElement>
+  <nodes>
+    <node x="1955.0" y="210.0">requestLogic.requestWorkers.CommandClientRequestWorker</node>
+    <node x="-169.5" y="1294.0">commandManager.commands.CountGreaterThanDistanceCommand</node>
+    <node x="615.0" y="5587.25">responseLogic.dataTransferObjects.BaseResponseDTO</node>
+    <node x="1955.0" y="98.0">requestLogic.requestWorkers.BaseRequestWorker</node>
+    <node x="803.5" y="3517.5981404958675">requestLogic.dataTransferObjects.models.LocationDTO</node>
+    <node x="-116.5" y="4032.0">requestLogic.dataTransferObjects.commands.AddIfMinCommandDTO</node>
+    <node x="383.5" y="2339.25">commandManager.commands.BaseCommand</node>
+    <node x="405.5" y="3412.125">requestLogic.dataTransferObjects.models.RouteDTO</node>
+    <node x="374.5" y="4557.298553719008">serverLogic.DatagramServerConnection</node>
+    <node x="-192.0" y="5587.25">requestLogic.dtoMappers.RouteDTOMapper</node>
+    <node x="-135.0" y="2940.0">commandManager.commands.AddIfMaxCommand</node>
+    <node x="-187.0" y="4534.5">requestLogic.dataTransferObjects.commands.CountGreaterThanDistanceCommandDTO</node>
+    <node x="418.0" y="5140.25">requestLogic.StatusRequest</node>
+    <node x="797.0" y="1598.5">responseLogic.responses.BaseResponse</node>
+    <node x="-135.0" y="2698.0">commandManager.commands.AddCommand</node>
+    <node x="-135.5" y="4962.625">requestLogic.dataTransferObjects.CommandClientRequestDTO</node>
+    <node x="4009.0" y="5402.25">requestLogic.dtoMappers.RequestDTOMapper</node>
+    <node x="3475.0" y="5402.25">responseLogic.responseSenders.ResponseSender</node>
+    <node x="789.5" y="3328.5981404958675">requestLogic.dataTransferObjects.models.CoordinatesDTO</node>
+    <node x="-135.0" y="204.0">commandManager.commands.HelpCommand</node>
+    <node x="4344.0" y="-7.0">fileLogic.Saver.Wrapper</node>
+    <node x="-135.0" y="2456.0">commandManager.commands.RemoveGreaterCommand</node>
+    <node x="5006.0" y="5402.25">requestLogic.RequestReader</node>
+    <node x="-118.5" y="3866.0">requestLogic.dataTransferObjects.commands.AddIfMaxCommandDTO</node>
+    <node x="1218.0" y="5440.75">fileLogic.BaseReader</node>
+    <node x="-96.0" y="4368.5">requestLogic.dataTransferObjects.commands.ExitCommandDTO</node>
+    <node x="5283.0" y="5402.25">responseLogic.dtoMappers.DTOMapper</node>
+    <node x="781.0" y="5402.25">fileLogic.XMLReader</node>
+    <node x="-103.0" y="4617.5">requestLogic.dataTransferObjects.commands.ShowCommandDTO</node>
+    <node x="1933.0" y="-14.0">requestLogic.requestWorkers.RequestWorkerManager</node>
+    <node x="403.5" y="3975.5092975206608">requestLogic.requests.BaseRequest</node>
+    <node x="1246.0" y="5587.25">exceptions.CommandInterruptedException</node>
+    <node x="-135.0" y="1996.0">commandManager.commands.ShowCommand</node>
+    <node x="1070.0" y="339.5">models.handlers.RoutesHandler</node>
+    <node x="2239.0" y="5402.25">serverLogic.DatagramServerConnectionFactory</node>
+    <node x="-96.5" y="4783.5">requestLogic.dataTransferObjects.commands.InfoCommandDTO</node>
+    <node x="-187.5" y="5152.25">requestLogic.StatusRequestBuilder</node>
+    <node x="2421.0" y="112.5">requestLogic.requestWorkers.RequestWorker</node>
+    <node x="-102.0" y="4866.5">requestLogic.dataTransferObjects.commands.ClearCommandDTO</node>
+    <node x="-135.0" y="858.0">commandManager.commands.InfoCommand</node>
+    <node x="364.0" y="1555.0">responseLogic.responses.CommandStatusResponse</node>
+    <node x="754.5" y="5149.75">requestLogic.CallerBack</node>
+    <node x="1650.0" y="5402.25">requestLogic.dtoMappers.DTOMapper</node>
+    <node x="-97.5" y="3783.0">requestLogic.dataTransferObjects.commands.AddCommandDTO</node>
+    <node x="2938.0" y="5402.25">responseLogic.responseSenders.CommandResponseSender</node>
+    <node x="3341.0" y="-14.0">fileLogic.Loader</node>
+    <node x="-99.5" y="4198.0">requestLogic.dataTransferObjects.commands.HelpCommandDTO</node>
+    <node x="1420.0" y="59.0">models.Route</node>
+    <node x="2860.0" y="-14.0">fileLogic.editors.DateEditor</node>
+    <node x="1944.0" y="5587.25">exceptions.StreamInterruptedException</node>
+    <node x="64.0" y="5587.25">main.Main</node>
+    <node x="-135.0" y="2214.0">commandManager.commands.AddIfMinCommand</node>
+    <node x="2614.0" y="5416.75">serverLogic.ServerConnectionFactory</node>
+    <node x="-185.5" y="3424.0">commandManager.CommandManager</node>
+    <node x="-110.0" y="4115.0">requestLogic.dataTransferObjects.commands.UpdateCommandDTO</node>
+    <node x="-142.0" y="3949.0">requestLogic.dataTransferObjects.commands.RemoveGreaterCommandDTO</node>
+    <node x="3777.0" y="-14.0">build</node>
+    <node x="-135.0" y="1754.0">commandManager.commands.RemoveByIdCommand</node>
+    <node x="-135.0" y="422.0">commandManager.commands.SaveCommand</node>
+    <node x="1607.0" y="5587.25">exceptions.UnsupportedRequestException</node>
+    <node x="4705.0" y="5402.25">models.comparators.RouteDistanceComparator</node>
+    <node x="4098.0" y="-14.0">models.handlers.RouteIDHandler</node>
+    <node x="4658.0" y="-14.0">fileLogic.Saver</node>
+    <node x="1396.0" y="589.0">models.handlers.CollectionHandler</node>
+    <node x="-135.0" y="1536.0">commandManager.commands.ExitCommand</node>
+    <node x="425.5" y="5020.625">requestLogic.dataTransferObjects.BaseRequestDTO</node>
+    <node x="-130.0" y="4285.5">requestLogic.dataTransferObjects.commands.RemoveByIdCommandDTO</node>
+    <node x="-135.0" y="1076.0">commandManager.commands.ClearCommand</node>
+    <node x="1694.0" y="-14.0">models.Location</node>
+    <node x="-118.0" y="3594.0">requestLogic.requests.CommandClientRequest</node>
+    <node x="-192.0" y="4700.5">requestLogic.dataTransferObjects.commands.PrintFieldDistanceAscendingCommandDTO</node>
+    <node x="275.0" y="5587.25">responseLogic.dataTransferObjects.CommandStatusResponseDTO</node>
+    <node x="-139.0" y="640.0">commandManager.commands.MinByCreationDateCommand</node>
+    <node x="-135.0" y="3182.0">commandManager.commands.UpdateCommand</node>
+    <node x="860.0" y="5587.25">exceptions.WrongAmountOfArgumentsException</node>
+    <node x="4369.0" y="5402.25">models.comparators.RouteCreationDateComparator</node>
+    <node x="-192.0" y="5402.25">fileLogic.XMLWriter</node>
+    <node x="1949.0" y="5402.25">commandManager.CommandMode</node>
+    <node x="-156.5" y="4451.5">requestLogic.dataTransferObjects.commands.MinByCreationDateCommandDTO</node>
+    <node x="328.0" y="5440.75">fileLogic.BaseWriter</node>
+    <node x="-174.5" y="-14.0">commandManager.commands.PrintFieldDistanceAscendingCommand</node>
+    <node x="419.0" y="4509.298553719008">requestLogic.dataTransferObjects.commands.BaseCommandDTO</node>
+    <node x="5542.0" y="5402.25">models.comparators.RouteComparator</node>
+    <node x="1694.0" y="348.0">models.Coordinates</node>
+    <node x="735.0" y="4466.548553719008">serverLogic.ServerConnection</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="requestLogic.dataTransferObjects.commands.ClearCommandDTO" target="requestLogic.dataTransferObjects.commands.BaseCommandDTO" relationship="REALIZATION">
+      <point x="103.0" y="-0.0" />
+      <point x="214.0" y="4898.0" />
+      <point x="214.0" y="4358.5" />
+      <point x="224.0" y="4358.5" />
+      <point x="224.0" y="4516.298553719008" />
+      <point x="-100.5" y="-7.0" />
+    </edge>
+    <edge source="commandManager.commands.HelpCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="136.0" y="49.5" />
+      <point x="224.0" y="352.5" />
+      <point x="224.0" y="1703.0" />
+      <point x="344.0" y="1703.0" />
+      <point x="344.0" y="2380.25" />
+      <point x="-136.0" y="-41.0" />
+    </edge>
+    <edge source="requestLogic.dataTransferObjects.commands.CountGreaterThanDistanceCommandDTO" target="requestLogic.dataTransferObjects.commands.BaseCommandDTO" relationship="REALIZATION">
+      <point x="188.0" y="-0.0" />
+      <point x="214.0" y="4566.0" />
+      <point x="214.0" y="4358.5" />
+      <point x="224.0" y="4358.5" />
+      <point x="224.0" y="4516.298553719008" />
+      <point x="-100.5" y="-7.0" />
+    </edge>
+    <edge source="requestLogic.dataTransferObjects.commands.ExitCommandDTO" target="requestLogic.dataTransferObjects.commands.BaseCommandDTO" relationship="REALIZATION">
+      <point x="97.0" y="-0.0" />
+      <point x="214.0" y="4400.0" />
+      <point x="214.0" y="4358.5" />
+      <point x="224.0" y="4358.5" />
+      <point x="224.0" y="4516.298553719008" />
+      <point x="-100.5" y="-7.0" />
+    </edge>
+    <edge source="requestLogic.dataTransferObjects.commands.AddIfMinCommandDTO" target="requestLogic.dataTransferObjects.models.RouteDTO" relationship="TO_ONE">
+      <point x="117.5" y="-15.75" />
+      <point x="244.0" y="4047.75" />
+      <point x="244.0" y="3568.625" />
+      <point x="-114.0" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.MinByCreationDateCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="140.0" y="49.5" />
+      <point x="224.0" y="788.5" />
+      <point x="224.0" y="1703.0" />
+      <point x="344.0" y="1703.0" />
+      <point x="344.0" y="2380.25" />
+      <point x="-136.0" y="-41.0" />
+    </edge>
+    <edge source="commandManager.commands.MinByCreationDateCommand" target="responseLogic.responses.CommandStatusResponse" relationship="TO_ONE">
+      <point x="140.0" y="-49.5" />
+      <point x="234.0" y="689.5" />
+      <point x="234.0" y="1630.0" />
+      <point x="-155.5" y="-0.0" />
+    </edge>
+    <edge source="fileLogic.XMLReader" target="fileLogic.BaseReader" relationship="REALIZATION">
+      <point x="193.5" y="-0.0" />
+      <point x="-193.5" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.ExitCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="136.0" y="49.5" />
+      <point x="224.0" y="1684.5" />
+      <point x="224.0" y="1703.0" />
+      <point x="344.0" y="1703.0" />
+      <point x="344.0" y="2380.25" />
+      <point x="-136.0" y="-41.0" />
+    </edge>
+    <edge source="commandManager.commands.UpdateCommand" target="requestLogic.dataTransferObjects.models.RouteDTO" relationship="TO_ONE">
+      <point x="136.0" y="-55.5" />
+      <point x="214.0" y="3237.5" />
+      <point x="214.0" y="3288.0" />
+      <point x="294.0" y="3288.0" />
+      <point x="294.0" y="3568.625" />
+      <point x="-114.0" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.AddIfMaxCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="136.0" y="-55.5" />
+      <point x="224.0" y="2995.5" />
+      <point x="224.0" y="1703.0" />
+      <point x="344.0" y="1703.0" />
+      <point x="344.0" y="2380.25" />
+      <point x="-136.0" y="-41.0" />
+    </edge>
+    <edge source="commandManager.commands.HelpCommand" target="responseLogic.responses.CommandStatusResponse" relationship="TO_ONE">
+      <point x="136.0" y="-49.5" />
+      <point x="234.0" y="253.5" />
+      <point x="234.0" y="1630.0" />
+      <point x="-155.5" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.ExitCommand" target="responseLogic.responses.CommandStatusResponse" relationship="TO_ONE">
+      <point x="136.0" y="-49.5" />
+      <point x="234.0" y="1585.5" />
+      <point x="234.0" y="1630.0" />
+      <point x="-155.5" y="-0.0" />
+    </edge>
+    <edge source="requestLogic.dataTransferObjects.commands.RemoveByIdCommandDTO" target="requestLogic.dataTransferObjects.commands.BaseCommandDTO" relationship="REALIZATION">
+      <point x="131.0" y="-0.0" />
+      <point x="214.0" y="4317.0" />
+      <point x="214.0" y="4358.5" />
+      <point x="224.0" y="4358.5" />
+      <point x="224.0" y="4516.298553719008" />
+      <point x="-100.5" y="-7.0" />
+    </edge>
+    <edge source="commandManager.commands.AddIfMinCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="136.0" y="-55.5" />
+      <point x="224.0" y="2269.5" />
+      <point x="224.0" y="1703.0" />
+      <point x="344.0" y="1703.0" />
+      <point x="344.0" y="2380.25" />
+      <point x="-136.0" y="-41.0" />
+    </edge>
+    <edge source="requestLogic.requestWorkers.BaseRequestWorker" target="requestLogic.requestWorkers.RequestWorker" relationship="REALIZATION">
+      <point x="197.0" y="-0.0" />
+      <point x="2391.0" y="144.0" />
+      <point x="2391.0" y="200.0" />
+      <point x="2401.0" y="200.0" />
+      <point x="2401.0" y="159.75" />
+      <point x="-197.0" y="15.75" />
+    </edge>
+    <edge source="requestLogic.dataTransferObjects.CommandClientRequestDTO" target="requestLogic.dataTransferObjects.BaseRequestDTO" relationship="GENERALIZATION">
+      <point x="136.5" y="42.25" />
+      <point x="214.0" y="5089.375" />
+      <point x="214.0" y="5052.125" />
+      <point x="-94.0" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.SaveCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="136.0" y="49.5" />
+      <point x="224.0" y="570.5" />
+      <point x="224.0" y="1703.0" />
+      <point x="344.0" y="1703.0" />
+      <point x="344.0" y="2380.25" />
+      <point x="-136.0" y="-41.0" />
+    </edge>
+    <edge source="commandManager.commands.ClearCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="136.0" y="49.5" />
+      <point x="224.0" y="1224.5" />
+      <point x="224.0" y="1703.0" />
+      <point x="344.0" y="1703.0" />
+      <point x="344.0" y="2380.25" />
+      <point x="-136.0" y="-41.0" />
+    </edge>
+    <edge source="requestLogic.dataTransferObjects.commands.HelpCommandDTO" target="requestLogic.dataTransferObjects.commands.BaseCommandDTO" relationship="REALIZATION">
+      <point x="100.5" y="-0.0" />
+      <point x="214.0" y="4229.5" />
+      <point x="214.0" y="4358.5" />
+      <point x="224.0" y="4358.5" />
+      <point x="224.0" y="4516.298553719008" />
+      <point x="-100.5" y="-7.0" />
+    </edge>
+    <edge source="commandManager.commands.InfoCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="136.0" y="49.5" />
+      <point x="224.0" y="1006.5" />
+      <point x="224.0" y="1703.0" />
+      <point x="344.0" y="1703.0" />
+      <point x="344.0" y="2380.25" />
+      <point x="-136.0" y="-41.0" />
+    </edge>
+    <edge source="commandManager.commands.AddIfMaxCommand" target="requestLogic.dataTransferObjects.models.RouteDTO" relationship="TO_ONE">
+      <point x="136.0" y="55.5" />
+      <point x="214.0" y="3106.5" />
+      <point x="214.0" y="3056.0" />
+      <point x="304.0" y="3056.0" />
+      <point x="304.0" y="3568.625" />
+      <point x="-114.0" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.RemoveGreaterCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="136.0" y="-55.5" />
+      <point x="224.0" y="2511.5" />
+      <point x="224.0" y="1703.0" />
+      <point x="344.0" y="1703.0" />
+      <point x="344.0" y="2380.25" />
+      <point x="-136.0" y="-41.0" />
+    </edge>
+    <edge source="models.handlers.RoutesHandler" target="models.handlers.CollectionHandler" relationship="REALIZATION">
+      <point x="138.0" y="91.5" />
+      <point x="1371.0" y="614.0" />
+      <point x="1371.0" y="731.0" />
+      <point x="-124.0" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.ShowCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="136.0" y="49.5" />
+      <point x="224.0" y="2144.5" />
+      <point x="224.0" y="1703.0" />
+      <point x="344.0" y="1703.0" />
+      <point x="344.0" y="2380.25" />
+      <point x="-136.0" y="-41.0" />
+    </edge>
+    <edge source="commandManager.commands.CountGreaterThanDistanceCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="170.5" y="55.5" />
+      <point x="224.0" y="1460.5" />
+      <point x="224.0" y="1703.0" />
+      <point x="344.0" y="1703.0" />
+      <point x="344.0" y="2380.25" />
+      <point x="-136.0" y="-41.0" />
+    </edge>
+    <edge source="commandManager.commands.RemoveByIdCommand" target="responseLogic.responses.CommandStatusResponse" relationship="TO_ONE">
+      <point x="136.0" y="-55.5" />
+      <point x="234.0" y="1809.5" />
+      <point x="234.0" y="1630.0" />
+      <point x="-155.5" y="-0.0" />
+    </edge>
+    <edge source="requestLogic.requests.BaseRequest" target="serverLogic.ServerConnection" relationship="TO_ONE">
+      <point x="116.0" y="-0.0" />
+      <point x="715.0" y="4060.0092975206608" />
+      <point x="715.0" y="4488.298553719008" />
+      <point x="-145.0" y="-21.75" />
+    </edge>
+    <edge source="models.handlers.RoutesHandler" target="models.Route" relationship="TO_MANY">
+      <point x="138.0" y="-91.5" />
+      <point x="1371.0" y="431.0" />
+      <point x="1371.0" y="314.0" />
+      <point x="-100.0" y="-0.0" />
+    </edge>
+    <edge source="requestLogic.dataTransferObjects.models.RouteDTO" target="requestLogic.dataTransferObjects.models.LocationDTO" relationship="TO_ONE">
+      <point x="114.0" y="-0.0" />
+      <point x="695.0" y="3568.625" />
+      <point x="695.0" y="3650.0981404958675" />
+      <point x="-76.5" y="-0.0" />
+    </edge>
+    <edge source="requestLogic.dataTransferObjects.commands.UpdateCommandDTO" target="requestLogic.dataTransferObjects.commands.BaseCommandDTO" relationship="REALIZATION">
+      <point x="111.0" y="15.75" />
+      <point x="214.0" y="4162.25" />
+      <point x="214.0" y="4358.5" />
+      <point x="224.0" y="4358.5" />
+      <point x="224.0" y="4516.298553719008" />
+      <point x="-100.5" y="-7.0" />
+    </edge>
+    <edge source="requestLogic.StatusRequestBuilder" target="requestLogic.StatusRequest" relationship="TO_ONE">
+      <point x="188.5" y="-0.0" />
+      <point x="-101.5" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.AddIfMinCommand" target="requestLogic.dataTransferObjects.models.RouteDTO" relationship="TO_ONE">
+      <point x="136.0" y="55.5" />
+      <point x="214.0" y="2380.5" />
+      <point x="214.0" y="2330.0" />
+      <point x="334.0" y="2330.0" />
+      <point x="334.0" y="3568.625" />
+      <point x="-114.0" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.ClearCommand" target="responseLogic.responses.CommandStatusResponse" relationship="TO_ONE">
+      <point x="136.0" y="-49.5" />
+      <point x="234.0" y="1125.5" />
+      <point x="234.0" y="1630.0" />
+      <point x="-155.5" y="-0.0" />
+    </edge>
+    <edge source="requestLogic.dataTransferObjects.commands.ShowCommandDTO" target="requestLogic.dataTransferObjects.commands.BaseCommandDTO" relationship="REALIZATION">
+      <point x="104.0" y="-0.0" />
+      <point x="214.0" y="4649.0" />
+      <point x="214.0" y="4358.5" />
+      <point x="224.0" y="4358.5" />
+      <point x="224.0" y="4516.298553719008" />
+      <point x="-100.5" y="-7.0" />
+    </edge>
+    <edge source="fileLogic.Saver.Wrapper" target="fileLogic.Saver" relationship="INNER_CLASS">
+      <point x="132.0" y="-0.0" />
+      <point x="-192.0" y="-0.0" />
+    </edge>
+    <edge source="serverLogic.DatagramServerConnectionFactory" target="serverLogic.ServerConnectionFactory" relationship="REALIZATION">
+      <point x="162.5" y="-0.0" />
+      <point x="-139.5" y="-0.0" />
+    </edge>
+    <edge source="commandManager.CommandManager" target="commandManager.commands.BaseCommand" relationship="TO_MANY">
+      <point x="186.5" y="-0.0" />
+      <point x="234.0" y="3499.0" />
+      <point x="234.0" y="3310.0" />
+      <point x="344.0" y="3310.0" />
+      <point x="344.0" y="2462.25" />
+      <point x="-136.0" y="41.0" />
+    </edge>
+    <edge source="requestLogic.dataTransferObjects.CommandClientRequestDTO" target="requestLogic.dataTransferObjects.commands.BaseCommandDTO" relationship="TO_ONE">
+      <point x="136.5" y="-42.25" />
+      <point x="224.0" y="5004.875" />
+      <point x="224.0" y="4530.298553719008" />
+      <point x="-100.5" y="7.0" />
+    </edge>
+    <edge source="commandManager.commands.AddIfMinCommand" target="responseLogic.responses.CommandStatusResponse" relationship="TO_ONE">
+      <point x="136.0" y="55.5" />
+      <point x="214.0" y="2380.5" />
+      <point x="214.0" y="2330.0" />
+      <point x="244.0" y="2330.0" />
+      <point x="244.0" y="1630.0" />
+      <point x="-155.5" y="-0.0" />
+    </edge>
+    <edge source="responseLogic.dataTransferObjects.CommandStatusResponseDTO" target="responseLogic.dataTransferObjects.BaseResponseDTO" relationship="GENERALIZATION">
+      <point x="145.0" y="-0.0" />
+      <point x="-100.0" y="-0.0" />
+    </edge>
+    <edge source="requestLogic.requests.CommandClientRequest" target="commandManager.commands.BaseCommand" relationship="TO_ONE">
+      <point x="119.0" y="-42.25" />
+      <point x="234.0" y="3636.25" />
+      <point x="234.0" y="3310.0" />
+      <point x="344.0" y="3310.0" />
+      <point x="344.0" y="2462.25" />
+      <point x="-136.0" y="41.0" />
+    </edge>
+    <edge source="commandManager.commands.PrintFieldDistanceAscendingCommand" target="responseLogic.responses.CommandStatusResponse" relationship="TO_ONE">
+      <point x="175.5" y="-49.5" />
+      <point x="234.0" y="35.5" />
+      <point x="234.0" y="1630.0" />
+      <point x="-155.5" y="-0.0" />
+    </edge>
+    <edge source="requestLogic.dataTransferObjects.commands.InfoCommandDTO" target="requestLogic.dataTransferObjects.commands.BaseCommandDTO" relationship="REALIZATION">
+      <point x="97.5" y="-0.0" />
+      <point x="214.0" y="4815.0" />
+      <point x="214.0" y="4358.5" />
+      <point x="224.0" y="4358.5" />
+      <point x="224.0" y="4516.298553719008" />
+      <point x="-100.5" y="-7.0" />
+    </edge>
+    <edge source="serverLogic.DatagramServerConnection" target="serverLogic.ServerConnection" relationship="REALIZATION">
+      <point x="145.0" y="-0.0" />
+      <point x="695.0" y="4615.298553719008" />
+      <point x="695.0" y="4531.798553719008" />
+      <point x="-145.0" y="21.75" />
+    </edge>
+    <edge source="models.Route" target="models.Location" relationship="TO_ONE">
+      <point x="100.0" y="-0.0" />
+      <point x="1669.0" y="314.0" />
+      <point x="1669.0" y="157.0" />
+      <point x="-97.0" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.RemoveGreaterCommand" target="requestLogic.dataTransferObjects.models.RouteDTO" relationship="TO_ONE">
+      <point x="136.0" y="55.5" />
+      <point x="214.0" y="2622.5" />
+      <point x="214.0" y="2572.0" />
+      <point x="324.0" y="2572.0" />
+      <point x="324.0" y="3568.625" />
+      <point x="-114.0" y="-0.0" />
+    </edge>
+    <edge source="requestLogic.dataTransferObjects.commands.RemoveGreaterCommandDTO" target="requestLogic.dataTransferObjects.models.RouteDTO" relationship="TO_ONE">
+      <point x="143.0" y="-15.75" />
+      <point x="244.0" y="3964.75" />
+      <point x="244.0" y="3568.625" />
+      <point x="-114.0" y="-0.0" />
+    </edge>
+    <edge source="requestLogic.dataTransferObjects.commands.AddIfMaxCommandDTO" target="requestLogic.dataTransferObjects.models.RouteDTO" relationship="TO_ONE">
+      <point x="119.5" y="-15.75" />
+      <point x="244.0" y="3881.75" />
+      <point x="244.0" y="3568.625" />
+      <point x="-114.0" y="-0.0" />
+    </edge>
+    <edge source="requestLogic.dataTransferObjects.commands.AddCommandDTO" target="requestLogic.dataTransferObjects.commands.BaseCommandDTO" relationship="REALIZATION">
+      <point x="98.5" y="15.75" />
+      <point x="214.0" y="3830.25" />
+      <point x="214.0" y="4358.5" />
+      <point x="224.0" y="4358.5" />
+      <point x="224.0" y="4516.298553719008" />
+      <point x="-100.5" y="-7.0" />
+    </edge>
+    <edge source="requestLogic.dataTransferObjects.commands.UpdateCommandDTO" target="requestLogic.dataTransferObjects.models.RouteDTO" relationship="TO_ONE">
+      <point x="111.0" y="-15.75" />
+      <point x="244.0" y="4130.75" />
+      <point x="244.0" y="3568.625" />
+      <point x="-114.0" y="-0.0" />
+    </edge>
+    <edge source="requestLogic.StatusRequest" target="requestLogic.CallerBack" relationship="TO_ONE">
+      <point x="101.5" y="-0.0" />
+      <point x="-125.5" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.RemoveByIdCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="136.0" y="55.5" />
+      <point x="224.0" y="1920.5" />
+      <point x="224.0" y="1703.0" />
+      <point x="344.0" y="1703.0" />
+      <point x="344.0" y="2380.25" />
+      <point x="-136.0" y="-41.0" />
+    </edge>
+    <edge source="commandManager.commands.UpdateCommand" target="responseLogic.responses.CommandStatusResponse" relationship="TO_ONE">
+      <point x="136.0" y="-55.5" />
+      <point x="214.0" y="3237.5" />
+      <point x="214.0" y="3288.0" />
+      <point x="284.0" y="3288.0" />
+      <point x="284.0" y="1630.0" />
+      <point x="-155.5" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.AddCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="136.0" y="-55.5" />
+      <point x="224.0" y="2753.5" />
+      <point x="224.0" y="1703.0" />
+      <point x="344.0" y="1703.0" />
+      <point x="344.0" y="2380.25" />
+      <point x="-136.0" y="-41.0" />
+    </edge>
+    <edge source="requestLogic.dataTransferObjects.commands.AddIfMinCommandDTO" target="requestLogic.dataTransferObjects.commands.BaseCommandDTO" relationship="REALIZATION">
+      <point x="117.5" y="15.75" />
+      <point x="214.0" y="4079.25" />
+      <point x="214.0" y="4358.5" />
+      <point x="224.0" y="4358.5" />
+      <point x="224.0" y="4516.298553719008" />
+      <point x="-100.5" y="-7.0" />
+    </edge>
+    <edge source="commandManager.commands.AddCommand" target="requestLogic.dataTransferObjects.models.RouteDTO" relationship="TO_ONE">
+      <point x="136.0" y="55.5" />
+      <point x="214.0" y="2864.5" />
+      <point x="214.0" y="2814.0" />
+      <point x="314.0" y="2814.0" />
+      <point x="314.0" y="3568.625" />
+      <point x="-114.0" y="-0.0" />
+    </edge>
+    <edge source="fileLogic.XMLWriter" target="fileLogic.BaseWriter" relationship="REALIZATION">
+      <point x="235.0" y="-0.0" />
+      <point x="-204.0" y="-0.0" />
+    </edge>
+    <edge source="requestLogic.dataTransferObjects.commands.MinByCreationDateCommandDTO" target="requestLogic.dataTransferObjects.commands.BaseCommandDTO" relationship="REALIZATION">
+      <point x="157.5" y="-0.0" />
+      <point x="214.0" y="4483.0" />
+      <point x="214.0" y="4358.5" />
+      <point x="224.0" y="4358.5" />
+      <point x="224.0" y="4516.298553719008" />
+      <point x="-100.5" y="-7.0" />
+    </edge>
+    <edge source="requestLogic.dataTransferObjects.commands.PrintFieldDistanceAscendingCommandDTO" target="requestLogic.dataTransferObjects.commands.BaseCommandDTO" relationship="REALIZATION">
+      <point x="193.0" y="-0.0" />
+      <point x="214.0" y="4732.0" />
+      <point x="214.0" y="4358.5" />
+      <point x="224.0" y="4358.5" />
+      <point x="224.0" y="4516.298553719008" />
+      <point x="-100.5" y="-7.0" />
+    </edge>
+    <edge source="commandManager.commands.PrintFieldDistanceAscendingCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="175.5" y="49.5" />
+      <point x="224.0" y="134.5" />
+      <point x="224.0" y="1703.0" />
+      <point x="344.0" y="1703.0" />
+      <point x="344.0" y="2380.25" />
+      <point x="-136.0" y="-41.0" />
+    </edge>
+    <edge source="requestLogic.requests.CommandClientRequest" target="requestLogic.requests.BaseRequest" relationship="GENERALIZATION">
+      <point x="119.0" y="42.25" />
+      <point x="254.0" y="3720.75" />
+      <point x="254.0" y="4060.0092975206608" />
+      <point x="-116.0" y="-0.0" />
+    </edge>
+    <edge source="models.Route" target="models.Coordinates" relationship="TO_ONE">
+      <point x="100.0" y="-0.0" />
+      <point x="1669.0" y="314.0" />
+      <point x="1669.0" y="471.0" />
+      <point x="-97.0" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.AddCommand" target="responseLogic.responses.CommandStatusResponse" relationship="TO_ONE">
+      <point x="136.0" y="55.5" />
+      <point x="214.0" y="2864.5" />
+      <point x="214.0" y="2814.0" />
+      <point x="264.0" y="2814.0" />
+      <point x="264.0" y="1630.0" />
+      <point x="-155.5" y="-0.0" />
+    </edge>
+    <edge source="requestLogic.dataTransferObjects.commands.RemoveGreaterCommandDTO" target="requestLogic.dataTransferObjects.commands.BaseCommandDTO" relationship="REALIZATION">
+      <point x="143.0" y="15.75" />
+      <point x="214.0" y="3996.25" />
+      <point x="214.0" y="4358.5" />
+      <point x="224.0" y="4358.5" />
+      <point x="224.0" y="4516.298553719008" />
+      <point x="-100.5" y="-7.0" />
+    </edge>
+    <edge source="requestLogic.requestWorkers.RequestWorkerManager" target="requestLogic.requestWorkers.RequestWorker" relationship="TO_MANY">
+      <point x="219.0" y="-0.0" />
+      <point x="2391.0" y="32.0" />
+      <point x="2391.0" y="128.25" />
+      <point x="-197.0" y="-15.75" />
+    </edge>
+    <edge source="commandManager.commands.CountGreaterThanDistanceCommand" target="responseLogic.responses.CommandStatusResponse" relationship="TO_ONE">
+      <point x="170.5" y="-55.5" />
+      <point x="234.0" y="1349.5" />
+      <point x="234.0" y="1630.0" />
+      <point x="-155.5" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.AddIfMaxCommand" target="responseLogic.responses.CommandStatusResponse" relationship="TO_ONE">
+      <point x="136.0" y="55.5" />
+      <point x="214.0" y="3106.5" />
+      <point x="214.0" y="3056.0" />
+      <point x="274.0" y="3056.0" />
+      <point x="274.0" y="1630.0" />
+      <point x="-155.5" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.RemoveGreaterCommand" target="responseLogic.responses.CommandStatusResponse" relationship="TO_ONE">
+      <point x="136.0" y="55.5" />
+      <point x="214.0" y="2622.5" />
+      <point x="214.0" y="2572.0" />
+      <point x="254.0" y="2572.0" />
+      <point x="254.0" y="1630.0" />
+      <point x="-155.5" y="-0.0" />
+    </edge>
+    <edge source="requestLogic.requestWorkers.CommandClientRequestWorker" target="requestLogic.requestWorkers.RequestWorker" relationship="REALIZATION">
+      <point x="197.0" y="-0.0" />
+      <point x="2391.0" y="256.0" />
+      <point x="2391.0" y="200.0" />
+      <point x="2401.0" y="200.0" />
+      <point x="2401.0" y="159.75" />
+      <point x="-197.0" y="15.75" />
+    </edge>
+    <edge source="requestLogic.dataTransferObjects.commands.AddIfMaxCommandDTO" target="requestLogic.dataTransferObjects.commands.BaseCommandDTO" relationship="REALIZATION">
+      <point x="119.5" y="15.75" />
+      <point x="214.0" y="3913.25" />
+      <point x="214.0" y="4358.5" />
+      <point x="224.0" y="4358.5" />
+      <point x="224.0" y="4516.298553719008" />
+      <point x="-100.5" y="-7.0" />
+    </edge>
+    <edge source="requestLogic.dataTransferObjects.models.RouteDTO" target="requestLogic.dataTransferObjects.models.CoordinatesDTO" relationship="TO_ONE">
+      <point x="114.0" y="-0.0" />
+      <point x="695.0" y="3568.625" />
+      <point x="695.0" y="3413.0981404958675" />
+      <point x="-90.5" y="-0.0" />
+    </edge>
+    <edge source="requestLogic.dataTransferObjects.commands.AddCommandDTO" target="requestLogic.dataTransferObjects.models.RouteDTO" relationship="TO_ONE">
+      <point x="98.5" y="-15.75" />
+      <point x="244.0" y="3798.75" />
+      <point x="244.0" y="3568.625" />
+      <point x="-114.0" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.ShowCommand" target="responseLogic.responses.CommandStatusResponse" relationship="TO_ONE">
+      <point x="136.0" y="-49.5" />
+      <point x="234.0" y="2045.5" />
+      <point x="234.0" y="1630.0" />
+      <point x="-155.5" y="-0.0" />
+    </edge>
+    <edge source="responseLogic.responses.CommandStatusResponse" target="responseLogic.responses.BaseResponse" relationship="GENERALIZATION">
+      <point x="155.5" y="-0.0" />
+      <point x="-83.0" y="-0.0" />
+    </edge>
+    <edge source="requestLogic.requests.BaseRequest" target="requestLogic.CallerBack" relationship="TO_ONE">
+      <point x="116.0" y="-0.0" />
+      <point x="705.0" y="4060.0092975206608" />
+      <point x="705.0" y="5248.75" />
+      <point x="-125.5" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.InfoCommand" target="responseLogic.responses.CommandStatusResponse" relationship="TO_ONE">
+      <point x="136.0" y="-49.5" />
+      <point x="234.0" y="907.5" />
+      <point x="234.0" y="1630.0" />
+      <point x="-155.5" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.SaveCommand" target="responseLogic.responses.CommandStatusResponse" relationship="TO_ONE">
+      <point x="136.0" y="-49.5" />
+      <point x="234.0" y="471.5" />
+      <point x="234.0" y="1630.0" />
+      <point x="-155.5" y="-0.0" />
+    </edge>
+    <edge source="commandManager.commands.UpdateCommand" target="commandManager.commands.BaseCommand" relationship="REALIZATION">
+      <point x="136.0" y="55.5" />
+      <point x="224.0" y="3348.5" />
+      <point x="224.0" y="1703.0" />
+      <point x="344.0" y="1703.0" />
+      <point x="344.0" y="2380.25" />
+      <point x="-136.0" y="-41.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.5229718412791146" showDependencies="true" x="427.97548017073245" y="4939.52870829169" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
