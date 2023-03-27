@@ -1,1 +1,1223 @@
-memberSearchIndex = [{"p":"commandManager.commands","c":"AddCommand","l":"AddCommand()","u":"%3Cinit%3E()"},{"p":"commandManager.commands","c":"AddCommand","l":"AddCommand(ModuleHandler<Route>)","u":"%3Cinit%3E(models.handlers.ModuleHandler)"},{"p":"models.handlers","c":"CollectionHandler","l":"addElementToCollection(E)"},{"p":"models.handlers","c":"RoutesHandler","l":"addElementToCollection(Route)","u":"addElementToCollection(models.Route)"},{"p":"commandManager.commands","c":"AddIfMaxCommand","l":"AddIfMaxCommand()","u":"%3Cinit%3E()"},{"p":"commandManager.commands","c":"AddIfMaxCommand","l":"AddIfMaxCommand(ModuleHandler<Route>)","u":"%3Cinit%3E(models.handlers.ModuleHandler)"},{"p":"commandManager.commands","c":"AddIfMinCommand","l":"AddIfMinCommand()","u":"%3Cinit%3E()"},{"p":"commandManager.commands","c":"AddIfMinCommand","l":"AddIfMinCommand(ModuleHandler<Route>)","u":"%3Cinit%3E(models.handlers.ModuleHandler)"},{"p":"fileLogic.editors","c":"DateEditor","l":"addPropertyChangeListener(PropertyChangeListener)","u":"addPropertyChangeListener(java.beans.PropertyChangeListener)"},{"p":"models.handlers","c":"ModuleHandler","l":"buildObject()"},{"p":"models.handlers.nonUserMode","c":"RouteNonCLIHandler","l":"buildObject()"},{"p":"models.handlers.userMode","c":"CoordinatesCLIHandler","l":"buildObject()"},{"p":"models.handlers.userMode","c":"LocationCLIHandler","l":"buildObject()"},{"p":"models.handlers.userMode","c":"RouteCLIHandler","l":"buildObject()"},{"p":"exceptions","c":"BuildObjectException","l":"BuildObjectException(String)","u":"%3Cinit%3E(java.lang.String)"},{"p":"main","c":"Utilities","l":"checkArgumentsOrThrow(int, int)","u":"checkArgumentsOrThrow(int,int)"},{"p":"models.handlers","c":"CollectionHandler","l":"clearCollection()"},{"p":"models.handlers","c":"RoutesHandler","l":"clearCollection()"},{"p":"commandManager.commands","c":"ClearCommand","l":"ClearCommand()","u":"%3Cinit%3E()"},{"p":"commandManager","c":"CommandMode","l":"CLI_UserMode"},{"p":"commandManager","c":"CommandExecutor","l":"CommandExecutor()","u":"%3Cinit%3E()"},{"p":"exceptions","c":"CommandInterruptedException","l":"CommandInterruptedException(Exception)","u":"%3Cinit%3E(java.lang.Exception)"},{"p":"commandManager","c":"CommandManager","l":"CommandManager()","u":"%3Cinit%3E()"},{"p":"commandManager","c":"CommandManager","l":"CommandManager(CommandMode, Scanner)","u":"%3Cinit%3E(commandManager.CommandMode,java.util.Scanner)"},{"p":"models.comparators","c":"RouteComparator","l":"compare(Route, Route)","u":"compare(models.Route,models.Route)"},{"p":"models.comparators","c":"RouteDistanceComparator","l":"compare(Route, Route)","u":"compare(models.Route,models.Route)"},{"p":"models","c":"Route","l":"compareTo(Route)","u":"compareTo(models.Route)"},{"p":"models","c":"Coordinates","l":"Coordinates()","u":"%3Cinit%3E()"},{"p":"models.handlers.userMode","c":"CoordinatesCLIHandler","l":"CoordinatesCLIHandler()","u":"%3Cinit%3E()"},{"p":"models.validators","c":"CoordXValidator","l":"CoordXValidator()","u":"%3Cinit%3E()"},{"p":"models.validators","c":"CoordYValidator","l":"CoordYValidator()","u":"%3Cinit%3E()"},{"p":"commandManager.commands","c":"CountGreaterThanDistanceCommand","l":"CountGreaterThanDistanceCommand()","u":"%3Cinit%3E()"},{"p":"fileLogic.editors","c":"DateEditor","l":"DateEditor()","u":"%3Cinit%3E()"},{"p":"models.validators","c":"DistanceValidator","l":"DistanceValidator()","u":"%3Cinit%3E()"},{"p":"main","c":"Main","l":"ENV_KEY"},{"p":"models","c":"Coordinates","l":"equals(Object)","u":"equals(java.lang.Object)"},{"p":"models","c":"Location","l":"equals(Object)","u":"equals(java.lang.Object)"},{"p":"models","c":"Route","l":"equals(Object)","u":"equals(java.lang.Object)"},{"p":"commandManager.commands","c":"AddCommand","l":"execute(String[])","u":"execute(java.lang.String[])"},{"p":"commandManager.commands","c":"AddIfMaxCommand","l":"execute(String[])","u":"execute(java.lang.String[])"},{"p":"commandManager.commands","c":"AddIfMinCommand","l":"execute(String[])","u":"execute(java.lang.String[])"},{"p":"commandManager.commands","c":"BaseCommand","l":"execute(String[])","u":"execute(java.lang.String[])"},{"p":"commandManager.commands","c":"ClearCommand","l":"execute(String[])","u":"execute(java.lang.String[])"},{"p":"commandManager.commands","c":"CountGreaterThanDistanceCommand","l":"execute(String[])","u":"execute(java.lang.String[])"},{"p":"commandManager.commands","c":"ExecuteScriptCommand","l":"execute(String[])","u":"execute(java.lang.String[])"},{"p":"commandManager.commands","c":"ExitCommand","l":"execute(String[])","u":"execute(java.lang.String[])"},{"p":"commandManager.commands","c":"HelpCommand","l":"execute(String[])","u":"execute(java.lang.String[])"},{"p":"commandManager.commands","c":"InfoCommand","l":"execute(String[])","u":"execute(java.lang.String[])"},{"p":"commandManager.commands","c":"MinByCreationDateCommand","l":"execute(String[])","u":"execute(java.lang.String[])"},{"p":"commandManager.commands","c":"PrintFieldDistanceAscendingCommand","l":"execute(String[])","u":"execute(java.lang.String[])"},{"p":"commandManager.commands","c":"RemoveByIdCommand","l":"execute(String[])","u":"execute(java.lang.String[])"},{"p":"commandManager.commands","c":"RemoveGreaterCommand","l":"execute(String[])","u":"execute(java.lang.String[])"},{"p":"commandManager.commands","c":"SaveCommand","l":"execute(String[])","u":"execute(java.lang.String[])"},{"p":"commandManager.commands","c":"ShowCommand","l":"execute(String[])","u":"execute(java.lang.String[])"},{"p":"commandManager.commands","c":"UpdateCommand","l":"execute(String[])","u":"execute(java.lang.String[])"},{"p":"commandManager","c":"CommandManager","l":"executeCommand(String[])","u":"executeCommand(java.lang.String[])"},{"p":"commandManager.commands","c":"ExecuteScriptCommand","l":"ExecuteScriptCommand()","u":"%3Cinit%3E()"},{"p":"commandManager.commands","c":"ExitCommand","l":"ExitCommand()","u":"%3Cinit%3E()"},{"p":"models.handlers","c":"RouteHandlers","l":"generateID()"},{"p":"commandManager.commands","c":"AddCommand","l":"getArgs()"},{"p":"commandManager.commands","c":"AddIfMaxCommand","l":"getArgs()"},{"p":"commandManager.commands","c":"AddIfMinCommand","l":"getArgs()"},{"p":"commandManager.commands","c":"BaseCommand","l":"getArgs()"},{"p":"commandManager.commands","c":"CountGreaterThanDistanceCommand","l":"getArgs()"},{"p":"commandManager.commands","c":"ExecuteScriptCommand","l":"getArgs()"},{"p":"commandManager.commands","c":"RemoveByIdCommand","l":"getArgs()"},{"p":"commandManager.commands","c":"RemoveGreaterCommand","l":"getArgs()"},{"p":"commandManager.commands","c":"UpdateCommand","l":"getArgs()"},{"p":"fileLogic.editors","c":"DateEditor","l":"getAsText()"},{"p":"models.handlers","c":"CollectionHandler","l":"getCollection()"},{"p":"models.handlers","c":"RoutesHandler","l":"getCollection()"},{"p":"commandManager","c":"CommandManager","l":"getCommands()"},{"p":"models","c":"Route","l":"getCoordinates()"},{"p":"models","c":"Route","l":"getCreationDate()"},{"p":"fileLogic.editors","c":"DateEditor","l":"getCustomEditor()"},{"p":"commandManager.commands","c":"AddCommand","l":"getDescr()"},{"p":"commandManager.commands","c":"AddIfMaxCommand","l":"getDescr()"},{"p":"commandManager.commands","c":"AddIfMinCommand","l":"getDescr()"},{"p":"commandManager.commands","c":"BaseCommand","l":"getDescr()"},{"p":"commandManager.commands","c":"ClearCommand","l":"getDescr()"},{"p":"commandManager.commands","c":"CountGreaterThanDistanceCommand","l":"getDescr()"},{"p":"commandManager.commands","c":"ExecuteScriptCommand","l":"getDescr()"},{"p":"commandManager.commands","c":"ExitCommand","l":"getDescr()"},{"p":"commandManager.commands","c":"HelpCommand","l":"getDescr()"},{"p":"commandManager.commands","c":"InfoCommand","l":"getDescr()"},{"p":"commandManager.commands","c":"MinByCreationDateCommand","l":"getDescr()"},{"p":"commandManager.commands","c":"PrintFieldDistanceAscendingCommand","l":"getDescr()"},{"p":"commandManager.commands","c":"RemoveByIdCommand","l":"getDescr()"},{"p":"commandManager.commands","c":"RemoveGreaterCommand","l":"getDescr()"},{"p":"commandManager.commands","c":"SaveCommand","l":"getDescr()"},{"p":"commandManager.commands","c":"ShowCommand","l":"getDescr()"},{"p":"commandManager.commands","c":"UpdateCommand","l":"getDescr()"},{"p":"models","c":"Route","l":"getDistance()"},{"p":"models.handlers","c":"CollectionHandler","l":"getFirstOrNew()"},{"p":"models.handlers","c":"RoutesHandler","l":"getFirstOrNew()"},{"p":"models","c":"Route","l":"getFrom()"},{"p":"models","c":"Route","l":"getId()"},{"p":"models.handlers","c":"CollectionHandler","l":"getInitDate()"},{"p":"models.handlers","c":"RoutesHandler","l":"getInitDate()"},{"p":"models.handlers","c":"RoutesHandler","l":"getInstance()"},{"p":"fileLogic.editors","c":"DateEditor","l":"getJavaInitializationString()"},{"p":"models.handlers","c":"CollectionHandler","l":"getLastElement()"},{"p":"models.handlers","c":"RoutesHandler","l":"getLastElement()"},{"p":"models.handlers","c":"CollectionHandler","l":"getMax(Comparator<E>)","u":"getMax(java.util.Comparator)"},{"p":"models.handlers","c":"RoutesHandler","l":"getMax(Comparator<Route>)","u":"getMax(java.util.Comparator)"},{"p":"models.handlers","c":"CollectionHandler","l":"getMin(Comparator<E>)","u":"getMin(java.util.Comparator)"},{"p":"models.handlers","c":"RoutesHandler","l":"getMin(Comparator<Route>)","u":"getMin(java.util.Comparator)"},{"p":"commandManager.commands","c":"AddCommand","l":"getName()"},{"p":"commandManager.commands","c":"AddIfMaxCommand","l":"getName()"},{"p":"commandManager.commands","c":"AddIfMinCommand","l":"getName()"},{"p":"commandManager.commands","c":"BaseCommand","l":"getName()"},{"p":"commandManager.commands","c":"ClearCommand","l":"getName()"},{"p":"commandManager.commands","c":"CountGreaterThanDistanceCommand","l":"getName()"},{"p":"commandManager.commands","c":"ExecuteScriptCommand","l":"getName()"},{"p":"commandManager.commands","c":"ExitCommand","l":"getName()"},{"p":"commandManager.commands","c":"HelpCommand","l":"getName()"},{"p":"commandManager.commands","c":"InfoCommand","l":"getName()"},{"p":"commandManager.commands","c":"MinByCreationDateCommand","l":"getName()"},{"p":"commandManager.commands","c":"PrintFieldDistanceAscendingCommand","l":"getName()"},{"p":"commandManager.commands","c":"RemoveByIdCommand","l":"getName()"},{"p":"commandManager.commands","c":"RemoveGreaterCommand","l":"getName()"},{"p":"commandManager.commands","c":"SaveCommand","l":"getName()"},{"p":"commandManager.commands","c":"ShowCommand","l":"getName()"},{"p":"commandManager.commands","c":"UpdateCommand","l":"getName()"},{"p":"models","c":"Location","l":"getName()"},{"p":"models","c":"Route","l":"getName()"},{"p":"fileLogic.editors","c":"DateEditor","l":"getTags()"},{"p":"models","c":"Route","l":"getTo()"},{"p":"fileLogic.editors","c":"DateEditor","l":"getValue()"},{"p":"models","c":"Coordinates","l":"getX()"},{"p":"models","c":"Location","l":"getX()"},{"p":"models","c":"Coordinates","l":"getY()"},{"p":"models","c":"Location","l":"getY()"},{"p":"models","c":"Location","l":"getZ()"},{"p":"main","c":"Utilities","l":"handleUserInputID(String)","u":"handleUserInputID(java.lang.String)"},{"p":"models","c":"Coordinates","l":"hashCode()"},{"p":"models","c":"Location","l":"hashCode()"},{"p":"models","c":"Route","l":"hashCode()"},{"p":"main","c":"Utilities","l":"hasNextLineOrThrow(Scanner)","u":"hasNextLineOrThrow(java.util.Scanner)"},{"p":"commandManager.commands","c":"HelpCommand","l":"HelpCommand()","u":"%3Cinit%3E()"},{"p":"models.validators","c":"IdValidator","l":"IdValidator()","u":"%3Cinit%3E()"},{"p":"commandManager.commands","c":"InfoCommand","l":"InfoCommand()","u":"%3Cinit%3E()"},{"p":"main","c":"Utilities","l":"isNotNumeric(String)","u":"isNotNumeric(java.lang.String)"},{"p":"fileLogic.editors","c":"DateEditor","l":"isPaintable()"},{"p":"fileLogic","c":"Loader","l":"Loader(Class<T>, Class<E>)","u":"%3Cinit%3E(java.lang.Class,java.lang.Class)"},{"p":"fileLogic","c":"Loader","l":"loadFromFile(String, BaseReader)","u":"loadFromFile(java.lang.String,fileLogic.BaseReader)"},{"p":"fileLogic","c":"Loader","l":"loadFromXMLbyEnvKey(String)","u":"loadFromXMLbyEnvKey(java.lang.String)"},{"p":"models","c":"Location","l":"Location()","u":"%3Cinit%3E()"},{"p":"models.handlers.userMode","c":"LocationCLIHandler","l":"LocationCLIHandler()","u":"%3Cinit%3E()"},{"p":"models.validators","c":"LocationNameValidator","l":"LocationNameValidator()","u":"%3Cinit%3E()"},{"p":"models.validators","c":"LocationXValidator","l":"LocationXValidator()","u":"%3Cinit%3E()"},{"p":"models.validators","c":"LocationYZValidator","l":"LocationYZValidator()","u":"%3Cinit%3E()"},{"p":"main","c":"Main","l":"Main()","u":"%3Cinit%3E()"},{"p":"main","c":"Main","l":"main(String[])","u":"main(java.lang.String[])"},{"p":"commandManager.commands","c":"MinByCreationDateCommand","l":"MinByCreationDateCommand()","u":"%3Cinit%3E()"},{"p":"models.validators","c":"NameValidator","l":"NameValidator()","u":"%3Cinit%3E()"},{"p":"commandManager","c":"CommandMode","l":"NonUserMode"},{"p":"fileLogic.editors","c":"DateEditor","l":"paintValue(Graphics, Rectangle)","u":"paintValue(java.awt.Graphics,java.awt.Rectangle)"},{"p":"commandManager.commands","c":"PrintFieldDistanceAscendingCommand","l":"PrintFieldDistanceAscendingCommand()","u":"%3Cinit%3E()"},{"p":"fileLogic","c":"BaseReader","l":"readFromFile(String)","u":"readFromFile(java.lang.String)"},{"p":"fileLogic","c":"XMLReader","l":"readFromFile(String)","u":"readFromFile(java.lang.String)"},{"p":"commandManager.commands","c":"RemoveByIdCommand","l":"RemoveByIdCommand()","u":"%3Cinit%3E()"},{"p":"commandManager.commands","c":"RemoveGreaterCommand","l":"RemoveGreaterCommand()","u":"%3Cinit%3E()"},{"p":"commandManager.commands","c":"RemoveGreaterCommand","l":"RemoveGreaterCommand(ModuleHandler<Route>)","u":"%3Cinit%3E(models.handlers.ModuleHandler)"},{"p":"fileLogic.editors","c":"DateEditor","l":"removePropertyChangeListener(PropertyChangeListener)","u":"removePropertyChangeListener(java.beans.PropertyChangeListener)"},{"p":"models","c":"Route","l":"Route()","u":"%3Cinit%3E()"},{"p":"models.handlers.userMode","c":"RouteCLIHandler","l":"RouteCLIHandler()","u":"%3Cinit%3E()"},{"p":"models.comparators","c":"RouteComparator","l":"RouteComparator()","u":"%3Cinit%3E()"},{"p":"models.comparators","c":"RouteDistanceComparator","l":"RouteDistanceComparator()","u":"%3Cinit%3E()"},{"p":"models.handlers","c":"RouteHandlers","l":"RouteHandlers()","u":"%3Cinit%3E()"},{"p":"models.handlers.nonUserMode","c":"RouteNonCLIHandler","l":"RouteNonCLIHandler(Scanner)","u":"%3Cinit%3E(java.util.Scanner)"},{"p":"models.validators","c":"RouteValidator","l":"RouteValidator()","u":"%3Cinit%3E()"},{"p":"fileLogic","c":"Saver","l":"saveCollection(T, String)","u":"saveCollection(T,java.lang.String)"},{"p":"commandManager.commands","c":"SaveCommand","l":"SaveCommand()","u":"%3Cinit%3E()"},{"p":"fileLogic","c":"Saver","l":"Saver(Class<E>)","u":"%3Cinit%3E(java.lang.Class)"},{"p":"fileLogic.editors","c":"DateEditor","l":"setAsText(String)","u":"setAsText(java.lang.String)"},{"p":"models.handlers","c":"RoutesHandler","l":"setCollection(HashSet<Route>)","u":"setCollection(java.util.HashSet)"},{"p":"models.handlers","c":"CollectionHandler","l":"setCollection(T)"},{"p":"models","c":"Route","l":"setCoordinates(Coordinates)","u":"setCoordinates(models.Coordinates)"},{"p":"models","c":"Route","l":"setCreationDate(Date)","u":"setCreationDate(java.util.Date)"},{"p":"models","c":"Route","l":"setDistance(int)"},{"p":"models","c":"Route","l":"setFrom(Location)","u":"setFrom(models.Location)"},{"p":"models","c":"Route","l":"setId(Long)","u":"setId(java.lang.Long)"},{"p":"models","c":"Location","l":"setName(String)","u":"setName(java.lang.String)"},{"p":"models","c":"Route","l":"setName(String)","u":"setName(java.lang.String)"},{"p":"models","c":"Route","l":"setTo(Location)","u":"setTo(models.Location)"},{"p":"fileLogic","c":"Loader","l":"setupConverter(Class<?>, Class<? extends PropertyEditor>)","u":"setupConverter(java.lang.Class,java.lang.Class)"},{"p":"fileLogic.editors","c":"DateEditor","l":"setValue(Object)","u":"setValue(java.lang.Object)"},{"p":"models","c":"Coordinates","l":"setX(double)"},{"p":"models","c":"Location","l":"setX(float)"},{"p":"models","c":"Coordinates","l":"setY(Float)","u":"setY(java.lang.Float)"},{"p":"models","c":"Location","l":"setY(Long)","u":"setY(java.lang.Long)"},{"p":"models","c":"Location","l":"setZ(Long)","u":"setZ(java.lang.Long)"},{"p":"commandManager.commands","c":"ShowCommand","l":"ShowCommand()","u":"%3Cinit%3E()"},{"p":"models.handlers","c":"CollectionHandler","l":"sort()"},{"p":"models.handlers","c":"RoutesHandler","l":"sort()"},{"p":"commandManager","c":"CommandExecutor","l":"startExecuting(InputStream, CommandMode)","u":"startExecuting(java.io.InputStream,commandManager.CommandMode)"},{"p":"exceptions","c":"StreamInterruptedException","l":"StreamInterruptedException(String)","u":"%3Cinit%3E(java.lang.String)"},{"p":"fileLogic.editors","c":"DateEditor","l":"supportsCustomEditor()"},{"p":"models","c":"Coordinates","l":"toString()"},{"p":"models","c":"Location","l":"toString()"},{"p":"models","c":"Route","l":"toString()"},{"p":"exceptions","c":"UnknownCommandException","l":"UnknownCommandException(String)","u":"%3Cinit%3E(java.lang.String)"},{"p":"commandManager.commands","c":"UpdateCommand","l":"UpdateCommand()","u":"%3Cinit%3E()"},{"p":"commandManager.commands","c":"UpdateCommand","l":"UpdateCommand(ModuleHandler<Route>)","u":"%3Cinit%3E(models.handlers.ModuleHandler)"},{"p":"main","c":"Utilities","l":"Utilities()","u":"%3Cinit%3E()"},{"p":"models.validators","c":"CoordXValidator","l":"validate(Double)","u":"validate(java.lang.Double)"},{"p":"models.validators","c":"CoordYValidator","l":"validate(Float)","u":"validate(java.lang.Float)"},{"p":"models.validators","c":"LocationXValidator","l":"validate(Float)","u":"validate(java.lang.Float)"},{"p":"models.validators","c":"DistanceValidator","l":"validate(Integer)","u":"validate(java.lang.Integer)"},{"p":"models.validators","c":"IdValidator","l":"validate(Long)","u":"validate(java.lang.Long)"},{"p":"models.validators","c":"LocationYZValidator","l":"validate(Long)","u":"validate(java.lang.Long)"},{"p":"models.validators","c":"RouteValidator","l":"validate(Route)","u":"validate(models.Route)"},{"p":"models.validators","c":"LocationNameValidator","l":"validate(String)","u":"validate(java.lang.String)"},{"p":"models.validators","c":"NameValidator","l":"validate(String)","u":"validate(java.lang.String)"},{"p":"models.validators","c":"Validator","l":"validate(T)"},{"p":"models.handlers","c":"CollectionHandler","l":"validateElements()"},{"p":"models.handlers","c":"RoutesHandler","l":"validateElements()"},{"p":"commandManager","c":"CommandMode","l":"valueOf(String)","u":"valueOf(java.lang.String)"},{"p":"commandManager","c":"CommandMode","l":"values()"},{"p":"fileLogic","c":"BaseWriter","l":"writeToFile(String, LinkedHashMap<String[], String>)","u":"writeToFile(java.lang.String,java.util.LinkedHashMap)"},{"p":"fileLogic","c":"XMLWriter","l":"writeToFile(String, LinkedHashMap<String[], String>)","u":"writeToFile(java.lang.String,java.util.LinkedHashMap)"},{"p":"exceptions","c":"WrongAmountOfArgumentsException","l":"WrongAmountOfArgumentsException(String)","u":"%3Cinit%3E(java.lang.String)"},{"p":"fileLogic","c":"XMLReader","l":"XMLReader()","u":"%3Cinit%3E()"},{"p":"fileLogic","c":"XMLWriter","l":"XMLWriter()","u":"%3Cinit%3E()"}];updateSearchResults();
+memberSearchIndex = [{
+    "p": "commandManager.commands",
+    "c": "AddCommand",
+    "l": "AddCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "commandManager.commands",
+    "c": "AddCommand",
+    "l": "AddCommand(ModuleHandler<Route>)",
+    "u": "%3Cinit%3E(models.handlers.ModuleHandler)"
+}, {
+    "p": "requestLogic.dataTransferObjects.commands",
+    "c": "AddCommandDTO",
+    "l": "AddCommandDTO()",
+    "u": "%3Cinit%3E()"
+}, {"p": "models.handlers", "c": "CollectionHandler", "l": "addElementToCollection(E)"}, {
+    "p": "models.handlers",
+    "c": "RoutesHandler",
+    "l": "addElementToCollection(Route)",
+    "u": "addElementToCollection(models.Route)"
+}, {
+    "p": "commandManager.commands",
+    "c": "AddIfMaxCommand",
+    "l": "AddIfMaxCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "commandManager.commands",
+    "c": "AddIfMaxCommand",
+    "l": "AddIfMaxCommand(ModuleHandler<Route>)",
+    "u": "%3Cinit%3E(models.handlers.ModuleHandler)"
+}, {
+    "p": "requestLogic.dataTransferObjects.commands",
+    "c": "AddIfMaxCommandDTO",
+    "l": "AddIfMaxCommandDTO()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "commandManager.commands",
+    "c": "AddIfMinCommand",
+    "l": "AddIfMinCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "commandManager.commands",
+    "c": "AddIfMinCommand",
+    "l": "AddIfMinCommand(ModuleHandler<Route>)",
+    "u": "%3Cinit%3E(models.handlers.ModuleHandler)"
+}, {
+    "p": "requestLogic.dataTransferObjects.commands",
+    "c": "AddIfMinCommandDTO",
+    "l": "AddIfMinCommandDTO()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "fileLogic.editors",
+    "c": "DateEditor",
+    "l": "addPropertyChangeListener(PropertyChangeListener)",
+    "u": "addPropertyChangeListener(java.beans.PropertyChangeListener)"
+}, {
+    "p": "requestLogic.requests",
+    "c": "BaseRequest",
+    "l": "BaseRequest()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.dataTransferObjects",
+    "c": "BaseRequestDTO",
+    "l": "BaseRequestDTO()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.requestWorkers",
+    "c": "BaseRequestWorker",
+    "l": "BaseRequestWorker()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "responseLogic.responses",
+    "c": "BaseResponse",
+    "l": "BaseResponse()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "responseLogic.dataTransferObjects",
+    "c": "BaseResponseDTO",
+    "l": "BaseResponseDTO()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "responseLogic.responseWorkers",
+    "c": "BaseResponseWorker",
+    "l": "BaseResponseWorker()",
+    "u": "%3Cinit%3E()"
+}, {"p": "requestLogic", "c": "StatusRequestBuilder", "l": "build()"}, {
+    "p": "models.handlers",
+    "c": "ModuleHandler",
+    "l": "buildObject()"
+}, {
+    "p": "models.handlers.nonUserMode",
+    "c": "RouteNonCLIHandler",
+    "l": "buildObject()"
+}, {
+    "p": "models.handlers.userMode",
+    "c": "CoordinatesCLIHandler",
+    "l": "buildObject()"
+}, {"p": "models.handlers.userMode", "c": "LocationCLIHandler", "l": "buildObject()"}, {
+    "p": "models.handlers.userMode",
+    "c": "RouteCLIHandler",
+    "l": "buildObject()"
+}, {
+    "p": "exceptions",
+    "c": "BuildObjectException",
+    "l": "BuildObjectException(String)",
+    "u": "%3Cinit%3E(java.lang.String)"
+}, {
+    "p": "requestLogic",
+    "c": "CallerBack",
+    "l": "callback(ServerConnection)",
+    "u": "callback(serverLogic.ServerConnection)"
+}, {
+    "p": "requestLogic",
+    "c": "CallerBack",
+    "l": "CallerBack(InetAddress, int)",
+    "u": "%3Cinit%3E(java.net.InetAddress,int)"
+}, {
+    "p": "main",
+    "c": "Utilities",
+    "l": "checkArgumentsOrThrow(int, int)",
+    "u": "checkArgumentsOrThrow(int,int)"
+}, {"p": "models.handlers", "c": "CollectionHandler", "l": "clearCollection()"}, {
+    "p": "models.handlers",
+    "c": "RoutesHandler",
+    "l": "clearCollection()"
+}, {
+    "p": "commandManager.commands",
+    "c": "ClearCommand",
+    "l": "ClearCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.dataTransferObjects.commands",
+    "c": "ClearCommandDTO",
+    "l": "ClearCommandDTO()",
+    "u": "%3Cinit%3E()"
+}, {"p": "serverLogic", "c": "ServerConnection", "l": "closeConnection()"}, {
+    "p": "serverLogic",
+    "c": "UdpServerConnection",
+    "l": "closeConnection()"
+}, {
+    "p": "requestLogic.requests",
+    "c": "CommandClientRequest",
+    "l": "CommandClientRequest()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.dataTransferObjects",
+    "c": "CommandClientRequestDTO",
+    "l": "CommandClientRequestDTO()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.requestWorkers",
+    "c": "CommandClientRequestWorker",
+    "l": "CommandClientRequestWorker()",
+    "u": "%3Cinit%3E()"
+}, {"p": "commandManager", "c": "CommandExecutor", "l": "CommandExecutor()", "u": "%3Cinit%3E()"}, {
+    "p": "exceptions",
+    "c": "CommandInterruptedException",
+    "l": "CommandInterruptedException(Exception)",
+    "u": "%3Cinit%3E(java.lang.Exception)"
+}, {"p": "commandManager", "c": "CommandManager", "l": "CommandManager()", "u": "%3Cinit%3E()"}, {
+    "p": "commandManager",
+    "c": "CommandManager",
+    "l": "CommandManager(CommandMode, Scanner)",
+    "u": "%3Cinit%3E(commandManager.CommandMode,java.util.Scanner)"
+}, {
+    "p": "requestLogic.dtoMappers",
+    "c": "CommandRequestDTOMapper",
+    "l": "CommandRequestDTOMapper()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.dtoMappers",
+    "c": "CommandRequestDTOMapper",
+    "l": "commandRequestDTOMapper(BaseCommand, String[])",
+    "u": "commandRequestDTOMapper(commandManager.commands.BaseCommand,java.lang.String[])"
+}, {
+    "p": "requestLogic.requestSenders",
+    "c": "CommandRequestSender",
+    "l": "CommandRequestSender()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "responseLogic.responseSenders",
+    "c": "CommandResponseSender",
+    "l": "CommandResponseSender()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "responseLogic.responseWorkers",
+    "c": "CommandResponseWorker",
+    "l": "CommandResponseWorker()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "responseLogic.responses",
+    "c": "CommandStatusResponse",
+    "l": "CommandStatusResponse(String, int)",
+    "u": "%3Cinit%3E(java.lang.String,int)"
+}, {
+    "p": "responseLogic.dataTransferObjects",
+    "c": "CommandStatusResponseDTO",
+    "l": "CommandStatusResponseDTO()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "models.comparators",
+    "c": "RouteComparator",
+    "l": "compare(Route, Route)",
+    "u": "compare(models.Route,models.Route)"
+}, {
+    "p": "models.comparators",
+    "c": "RouteCreationDateComparator",
+    "l": "compare(Route, Route)",
+    "u": "compare(models.Route,models.Route)"
+}, {
+    "p": "models.comparators",
+    "c": "RouteDistanceComparator",
+    "l": "compare(Route, Route)",
+    "u": "compare(models.Route,models.Route)"
+}, {
+    "p": "models",
+    "c": "Route",
+    "l": "compareTo(Route)",
+    "u": "compareTo(models.Route)"
+}, {
+    "p": "requestLogic.dtoMappers",
+    "c": "DTOMapper",
+    "l": "convertToDTO(T, String)",
+    "u": "convertToDTO(T,java.lang.String)"
+}, {
+    "p": "responseLogic.dtoMappers",
+    "c": "DTOMapper",
+    "l": "convertToDTO(T, String)",
+    "u": "convertToDTO(T,java.lang.String)"
+}, {"p": "models", "c": "Coordinates", "l": "Coordinates()", "u": "%3Cinit%3E()"}, {
+    "p": "models.handlers.userMode",
+    "c": "CoordinatesCLIHandler",
+    "l": "CoordinatesCLIHandler()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.dataTransferObjects.models",
+    "c": "CoordinatesDTO",
+    "l": "CoordinatesDTO()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "models.validators",
+    "c": "CoordXValidator",
+    "l": "CoordXValidator()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "models.validators",
+    "c": "CoordYValidator",
+    "l": "CoordYValidator()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "commandManager.commands",
+    "c": "CountGreaterThanDistanceCommand",
+    "l": "CountGreaterThanDistanceCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.dataTransferObjects.commands",
+    "c": "CountGreaterThanDistanceCommandDTO",
+    "l": "CountGreaterThanDistanceCommandDTO()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "serverLogic",
+    "c": "DatagramServerConnection",
+    "l": "DatagramServerConnection(int)",
+    "u": "%3Cinit%3E(int)"
+}, {
+    "p": "serverLogic",
+    "c": "DatagramServerConnectionFactory",
+    "l": "DatagramServerConnectionFactory()",
+    "u": "%3Cinit%3E()"
+}, {"p": "fileLogic.editors", "c": "DateEditor", "l": "DateEditor()", "u": "%3Cinit%3E()"}, {
+    "p": "models.validators",
+    "c": "DistanceValidator",
+    "l": "DistanceValidator()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.dtoMappers",
+    "c": "DTOMapper",
+    "l": "DTOMapper()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "responseLogic.dtoMappers",
+    "c": "DTOMapper",
+    "l": "DTOMapper()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.dtoMappers",
+    "c": "DTOMapper",
+    "l": "dtoNameConverter(String)",
+    "u": "dtoNameConverter(java.lang.String)"
+}, {"p": "main", "c": "Main", "l": "ENV_KEY"}, {
+    "p": "models",
+    "c": "Coordinates",
+    "l": "equals(Object)",
+    "u": "equals(java.lang.Object)"
+}, {"p": "models", "c": "Location", "l": "equals(Object)", "u": "equals(java.lang.Object)"}, {
+    "p": "models",
+    "c": "Route",
+    "l": "equals(Object)",
+    "u": "equals(java.lang.Object)"
+}, {
+    "p": "commandManager.commands",
+    "c": "AddCommand",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
+}, {
+    "p": "commandManager.commands",
+    "c": "AddIfMaxCommand",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
+}, {
+    "p": "commandManager.commands",
+    "c": "AddIfMinCommand",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
+}, {
+    "p": "commandManager.commands",
+    "c": "BaseCommand",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
+}, {
+    "p": "commandManager.commands",
+    "c": "ClearCommand",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
+}, {
+    "p": "commandManager.commands",
+    "c": "CountGreaterThanDistanceCommand",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
+}, {
+    "p": "commandManager.commands",
+    "c": "ExecuteScriptCommand",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
+}, {
+    "p": "commandManager.commands",
+    "c": "ExitCommand",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
+}, {
+    "p": "commandManager.commands",
+    "c": "HelpCommand",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
+}, {
+    "p": "commandManager.commands",
+    "c": "InfoCommand",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
+}, {
+    "p": "commandManager.commands",
+    "c": "MinByCreationDateCommand",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
+}, {
+    "p": "commandManager.commands",
+    "c": "PrintFieldDistanceAscendingCommand",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
+}, {
+    "p": "commandManager.commands",
+    "c": "RemoveByIdCommand",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
+}, {
+    "p": "commandManager.commands",
+    "c": "RemoveGreaterCommand",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
+}, {
+    "p": "commandManager.commands",
+    "c": "SaveCommand",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
+}, {
+    "p": "commandManager.commands",
+    "c": "ShowCommand",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
+}, {
+    "p": "commandManager.commands",
+    "c": "UpdateCommand",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
+}, {
+    "p": "commandManager",
+    "c": "CommandManager",
+    "l": "executeCommand(String[])",
+    "u": "executeCommand(java.lang.String[])"
+}, {
+    "p": "commandManager.commands",
+    "c": "ExecuteScriptCommand",
+    "l": "ExecuteScriptCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "commandManager.commands",
+    "c": "ExitCommand",
+    "l": "ExitCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.dataTransferObjects.commands",
+    "c": "ExitCommandDTO",
+    "l": "ExitCommandDTO()",
+    "u": "%3Cinit%3E()"
+}, {"p": "requestLogic", "c": "CallerBack", "l": "getAddress()"}, {
+    "p": "commandManager.commands",
+    "c": "BaseCommand",
+    "l": "getArgs()"
+}, {"p": "commandManager.commands", "c": "UpdateCommand", "l": "getArgs()"}, {
+    "p": "fileLogic.editors",
+    "c": "DateEditor",
+    "l": "getAsText()"
+}, {"p": "requestLogic", "c": "StatusRequest", "l": "getCallerBack()"}, {
+    "p": "requestLogic",
+    "c": "StatusRequest",
+    "l": "getCode()"
+}, {"p": "models.handlers", "c": "CollectionHandler", "l": "getCollection()"}, {
+    "p": "models.handlers",
+    "c": "RoutesHandler",
+    "l": "getCollection()"
+}, {
+    "p": "requestLogic.dataTransferObjects",
+    "c": "CommandClientRequestDTO",
+    "l": "getCommand()"
+}, {"p": "requestLogic.requests", "c": "CommandClientRequest", "l": "getCommand()"}, {
+    "p": "commandManager",
+    "c": "CommandManager",
+    "l": "getCommands()"
+}, {"p": "requestLogic.requests", "c": "BaseRequest", "l": "getConnection()"}, {
+    "p": "models",
+    "c": "Route",
+    "l": "getCoordinates()"
+}, {"p": "requestLogic.dataTransferObjects.models", "c": "RouteDTO", "l": "getCoordinates()"}, {
+    "p": "models",
+    "c": "Route",
+    "l": "getCreationDate()"
+}, {"p": "serverLogic", "c": "ServerConnectionHandler", "l": "getCurrentConnection()"}, {
+    "p": "fileLogic.editors",
+    "c": "DateEditor",
+    "l": "getCustomEditor()"
+}, {"p": "commandManager.commands", "c": "BaseCommand", "l": "getDescr()"}, {
+    "p": "commandManager.commands",
+    "c": "HelpCommand",
+    "l": "getDescr()"
+}, {"p": "commandManager.commands", "c": "UpdateCommand", "l": "getDescr()"}, {
+    "p": "models",
+    "c": "Route",
+    "l": "getDistance()"
+}, {"p": "requestLogic.dataTransferObjects.models", "c": "RouteDTO", "l": "getDistance()"}, {
+    "p": "models.handlers",
+    "c": "CollectionHandler",
+    "l": "getFirstOrNew()"
+}, {"p": "models.handlers", "c": "RoutesHandler", "l": "getFirstOrNew()"}, {
+    "p": "models",
+    "c": "Route",
+    "l": "getFrom()"
+}, {"p": "requestLogic.dataTransferObjects.models", "c": "RouteDTO", "l": "getFrom()"}, {
+    "p": "requestLogic.requests",
+    "c": "BaseRequest",
+    "l": "getFrom()"
+}, {"p": "models", "c": "Route", "l": "getId()"}, {
+    "p": "models.handlers",
+    "c": "CollectionHandler",
+    "l": "getInitDate()"
+}, {"p": "models.handlers", "c": "RoutesHandler", "l": "getInitDate()"}, {
+    "p": "requestLogic",
+    "c": "StatusRequest",
+    "l": "getInputStream()"
+}, {"p": "models.handlers", "c": "RouteIDHandler", "l": "getInstance()"}, {
+    "p": "models.handlers",
+    "c": "RoutesHandler",
+    "l": "getInstance()"
+}, {"p": "fileLogic.editors", "c": "DateEditor", "l": "getJavaInitializationString()"}, {
+    "p": "models.handlers",
+    "c": "CollectionHandler",
+    "l": "getLastElement()"
+}, {"p": "models.handlers", "c": "RoutesHandler", "l": "getLastElement()"}, {
+    "p": "requestLogic.dataTransferObjects",
+    "c": "CommandClientRequestDTO",
+    "l": "getLineArgs()"
+}, {"p": "requestLogic.requests", "c": "CommandClientRequest", "l": "getLineArgs()"}, {
+    "p": "serverLogic",
+    "c": "UdpConnectionBlockDecorator",
+    "l": "getLockState()"
+}, {
+    "p": "models.handlers",
+    "c": "CollectionHandler",
+    "l": "getMax(Comparator<E>)",
+    "u": "getMax(java.util.Comparator)"
+}, {
+    "p": "models.handlers",
+    "c": "RoutesHandler",
+    "l": "getMax(Comparator<Route>)",
+    "u": "getMax(java.util.Comparator)"
+}, {
+    "p": "models.handlers",
+    "c": "CollectionHandler",
+    "l": "getMin(Comparator<E>)",
+    "u": "getMin(java.util.Comparator)"
+}, {
+    "p": "models.handlers",
+    "c": "RoutesHandler",
+    "l": "getMin(Comparator<Route>)",
+    "u": "getMin(java.util.Comparator)"
+}, {"p": "commandManager.commands", "c": "BaseCommand", "l": "getName()"}, {
+    "p": "commandManager.commands",
+    "c": "HelpCommand",
+    "l": "getName()"
+}, {"p": "commandManager.commands", "c": "UpdateCommand", "l": "getName()"}, {
+    "p": "models",
+    "c": "Location",
+    "l": "getName()"
+}, {"p": "models", "c": "Route", "l": "getName()"}, {
+    "p": "requestLogic.dataTransferObjects.models",
+    "c": "LocationDTO",
+    "l": "getName()"
+}, {"p": "requestLogic.dataTransferObjects.models", "c": "RouteDTO", "l": "getName()"}, {
+    "p": "models.handlers",
+    "c": "RouteIDHandler",
+    "l": "getNextID()"
+}, {"p": "requestLogic", "c": "CallerBack", "l": "getPort()"}, {
+    "p": "commandManager.commands",
+    "c": "BaseCommand",
+    "l": "getResponse()"
+}, {"p": "commandManager.commands", "c": "HelpCommand", "l": "getResponse()"}, {
+    "p": "commandManager.commands",
+    "c": "UpdateCommand",
+    "l": "getResponse()"
+}, {"p": "responseLogic.responses", "c": "CommandStatusResponse", "l": "getResponse()"}, {
+    "p": "fileLogic.editors",
+    "c": "DateEditor",
+    "l": "getTags()"
+}, {"p": "models", "c": "Route", "l": "getTo()"}, {
+    "p": "requestLogic.dataTransferObjects.models",
+    "c": "RouteDTO",
+    "l": "getTo()"
+}, {"p": "fileLogic.editors", "c": "DateEditor", "l": "getValue()"}, {
+    "p": "models",
+    "c": "Coordinates",
+    "l": "getX()"
+}, {"p": "models", "c": "Location", "l": "getX()"}, {
+    "p": "requestLogic.dataTransferObjects.models",
+    "c": "CoordinatesDTO",
+    "l": "getX()"
+}, {"p": "requestLogic.dataTransferObjects.models", "c": "LocationDTO", "l": "getX()"}, {
+    "p": "models",
+    "c": "Coordinates",
+    "l": "getY()"
+}, {"p": "models", "c": "Location", "l": "getY()"}, {
+    "p": "requestLogic.dataTransferObjects.models",
+    "c": "CoordinatesDTO",
+    "l": "getY()"
+}, {"p": "requestLogic.dataTransferObjects.models", "c": "LocationDTO", "l": "getY()"}, {
+    "p": "models",
+    "c": "Location",
+    "l": "getZ()"
+}, {"p": "requestLogic.dataTransferObjects.models", "c": "LocationDTO", "l": "getZ()"}, {
+    "p": "main",
+    "c": "Utilities",
+    "l": "handleUserInputID(String)",
+    "u": "handleUserInputID(java.lang.String)"
+}, {"p": "models", "c": "Coordinates", "l": "hashCode()"}, {
+    "p": "models",
+    "c": "Location",
+    "l": "hashCode()"
+}, {"p": "models", "c": "Route", "l": "hashCode()"}, {
+    "p": "main",
+    "c": "Utilities",
+    "l": "hasNextLineOrThrow(Scanner)",
+    "u": "hasNextLineOrThrow(java.util.Scanner)"
+}, {
+    "p": "commandManager.commands",
+    "c": "HelpCommand",
+    "l": "HelpCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.dataTransferObjects.commands",
+    "c": "HelpCommandDTO",
+    "l": "HelpCommandDTO()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "commandManager.commands",
+    "c": "InfoCommand",
+    "l": "InfoCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.dataTransferObjects.commands",
+    "c": "InfoCommandDTO",
+    "l": "InfoCommandDTO()",
+    "u": "%3Cinit%3E()"
+}, {"p": "requestLogic", "c": "StatusRequestBuilder", "l": "initialize()"}, {
+    "p": "serverLogic",
+    "c": "DatagramServerConnectionFactory",
+    "l": "initializeServer(int)"
+}, {
+    "p": "main",
+    "c": "Utilities",
+    "l": "isNotNumeric(String)",
+    "u": "isNotNumeric(java.lang.String)"
+}, {"p": "fileLogic.editors", "c": "DateEditor", "l": "isPaintable()"}, {
+    "p": "serverLogic",
+    "c": "DatagramServerConnection",
+    "l": "listenAndGetData()"
+}, {"p": "serverLogic", "c": "ServerConnection", "l": "listenServer()"}, {
+    "p": "serverLogic",
+    "c": "UdpServerConnection",
+    "l": "listenServer()"
+}, {
+    "p": "fileLogic",
+    "c": "Loader",
+    "l": "Loader(Class<T>, Class<E>)",
+    "u": "%3Cinit%3E(java.lang.Class,java.lang.Class)"
+}, {
+    "p": "fileLogic",
+    "c": "Loader",
+    "l": "loadFromFile(String, BaseReader)",
+    "u": "loadFromFile(java.lang.String,fileLogic.BaseReader)"
+}, {
+    "p": "fileLogic",
+    "c": "Loader",
+    "l": "loadFromXMLbyEnvKey(String)",
+    "u": "loadFromXMLbyEnvKey(java.lang.String)"
+}, {"p": "models", "c": "Location", "l": "Location()", "u": "%3Cinit%3E()"}, {
+    "p": "models.handlers.userMode",
+    "c": "LocationCLIHandler",
+    "l": "LocationCLIHandler()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.dataTransferObjects.models",
+    "c": "LocationDTO",
+    "l": "LocationDTO()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "models.validators",
+    "c": "LocationNameValidator",
+    "l": "LocationNameValidator()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "models.validators",
+    "c": "LocationXValidator",
+    "l": "LocationXValidator()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "models.validators",
+    "c": "LocationYZValidator",
+    "l": "LocationYZValidator()",
+    "u": "%3Cinit%3E()"
+}, {"p": "main", "c": "Main", "l": "Main()", "u": "%3Cinit%3E()"}, {
+    "p": "main",
+    "c": "Main",
+    "l": "main(String[])",
+    "u": "main(java.lang.String[])"
+}, {
+    "p": "commandManager.commands",
+    "c": "MinByCreationDateCommand",
+    "l": "MinByCreationDateCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.dataTransferObjects.commands",
+    "c": "MinByCreationDateCommandDTO",
+    "l": "MinByCreationDateCommandDTO()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "models.validators",
+    "c": "NameValidator",
+    "l": "NameValidator()",
+    "u": "%3Cinit%3E()"
+}, {"p": "commandManager", "c": "CommandMode", "l": "NETWORK_MODE"}, {
+    "p": "responseLogic.responses",
+    "c": "CommandStatusResponse",
+    "l": "ofString(String)",
+    "u": "ofString(java.lang.String)"
+}, {"p": "serverLogic", "c": "ServerConnection", "l": "openConnection()"}, {
+    "p": "serverLogic",
+    "c": "UdpServerConnection",
+    "l": "openConnection()"
+}, {
+    "p": "serverLogic",
+    "c": "ServerConnectionFactory",
+    "l": "openConnection(InetAddress, int)",
+    "u": "openConnection(java.net.InetAddress,int)"
+}, {
+    "p": "serverLogic",
+    "c": "UdpServerConnectionFactory",
+    "l": "openConnection(InetAddress, int)",
+    "u": "openConnection(java.net.InetAddress,int)"
+}, {
+    "p": "fileLogic.editors",
+    "c": "DateEditor",
+    "l": "paintValue(Graphics, Rectangle)",
+    "u": "paintValue(java.awt.Graphics,java.awt.Rectangle)"
+}, {"p": "main", "c": "Main", "l": "PORT"}, {
+    "p": "commandManager.commands",
+    "c": "PrintFieldDistanceAscendingCommand",
+    "l": "PrintFieldDistanceAscendingCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.dataTransferObjects.commands",
+    "c": "PrintFieldDistanceAscendingCommandDTO",
+    "l": "PrintFieldDistanceAscendingCommandDTO()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "fileLogic",
+    "c": "BaseReader",
+    "l": "readFromFile(String)",
+    "u": "readFromFile(java.lang.String)"
+}, {
+    "p": "fileLogic",
+    "c": "XMLReader",
+    "l": "readFromFile(String)",
+    "u": "readFromFile(java.lang.String)"
+}, {"p": "requestLogic", "c": "RequestReader", "l": "readObject()"}, {
+    "p": "responseLogic",
+    "c": "ResponseReader",
+    "l": "readObject()"
+}, {
+    "p": "commandManager.commands",
+    "c": "RemoveByIdCommand",
+    "l": "RemoveByIdCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.dataTransferObjects.commands",
+    "c": "RemoveByIdCommandDTO",
+    "l": "RemoveByIdCommandDTO()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "commandManager.commands",
+    "c": "RemoveGreaterCommand",
+    "l": "RemoveGreaterCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "commandManager.commands",
+    "c": "RemoveGreaterCommand",
+    "l": "RemoveGreaterCommand(ModuleHandler<Route>)",
+    "u": "%3Cinit%3E(models.handlers.ModuleHandler)"
+}, {
+    "p": "requestLogic.dataTransferObjects.commands",
+    "c": "RemoveGreaterCommandDTO",
+    "l": "RemoveGreaterCommandDTO()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "fileLogic.editors",
+    "c": "DateEditor",
+    "l": "removePropertyChangeListener(PropertyChangeListener)",
+    "u": "removePropertyChangeListener(java.beans.PropertyChangeListener)"
+}, {
+    "p": "requestLogic.dtoMappers",
+    "c": "RequestDTOMapper",
+    "l": "RequestDTOMapper()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic",
+    "c": "RequestReader",
+    "l": "RequestReader(InputStream)",
+    "u": "%3Cinit%3E(java.io.InputStream)"
+}, {
+    "p": "requestLogic.requestSenders",
+    "c": "RequestSender",
+    "l": "RequestSender()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.requestWorkers",
+    "c": "RequestWorkerManager",
+    "l": "RequestWorkerManager()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "responseLogic",
+    "c": "ResponseReader",
+    "l": "ResponseReader(InputStream)",
+    "u": "%3Cinit%3E(java.io.InputStream)"
+}, {
+    "p": "responseLogic.responseSenders",
+    "c": "ResponseSender",
+    "l": "ResponseSender()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "responseLogic.responseWorkers",
+    "c": "ResponseWorkerManager",
+    "l": "ResponseWorkerManager()",
+    "u": "%3Cinit%3E()"
+}, {"p": "models", "c": "Route", "l": "Route()", "u": "%3Cinit%3E()"}, {
+    "p": "models.handlers.userMode",
+    "c": "RouteCLIHandler",
+    "l": "RouteCLIHandler()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "models.comparators",
+    "c": "RouteComparator",
+    "l": "RouteComparator()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "models.comparators",
+    "c": "RouteCreationDateComparator",
+    "l": "RouteCreationDateComparator()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "models.comparators",
+    "c": "RouteDistanceComparator",
+    "l": "RouteDistanceComparator()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.dataTransferObjects.models",
+    "c": "RouteDTO",
+    "l": "RouteDTO()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.dtoMappers",
+    "c": "RouteDTOMapper",
+    "l": "RouteDTOMapper()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "models.handlers",
+    "c": "RouteIDHandler",
+    "l": "RouteIDHandler()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "models.handlers.nonUserMode",
+    "c": "RouteNonCLIHandler",
+    "l": "RouteNonCLIHandler(Scanner)",
+    "u": "%3Cinit%3E(java.util.Scanner)"
+}, {"p": "models.validators", "c": "RouteValidator", "l": "RouteValidator()", "u": "%3Cinit%3E()"}, {
+    "p": "fileLogic",
+    "c": "Saver",
+    "l": "saveCollection(T, String)",
+    "u": "saveCollection(T,java.lang.String)"
+}, {"p": "commandManager.commands", "c": "SaveCommand", "l": "SaveCommand()", "u": "%3Cinit%3E()"}, {
+    "p": "fileLogic",
+    "c": "Saver",
+    "l": "Saver(Class<E>)",
+    "u": "%3Cinit%3E(java.lang.Class)"
+}, {
+    "p": "requestLogic.requestSenders",
+    "c": "CommandRequestSender",
+    "l": "sendCommand(BaseCommand, String[], ServerConnection)",
+    "u": "sendCommand(commandManager.commands.BaseCommand,java.lang.String[],serverLogic.ServerConnection)"
+}, {"p": "serverLogic", "c": "ServerConnection", "l": "sendData(byte[])"}, {
+    "p": "serverLogic",
+    "c": "UdpServerConnection",
+    "l": "sendData(byte[])"
+}, {
+    "p": "serverLogic",
+    "c": "DatagramServerConnection",
+    "l": "sendData(byte[], InetAddress, int)",
+    "u": "sendData(byte[],java.net.InetAddress,int)"
+}, {
+    "p": "requestLogic.requestSenders",
+    "c": "RequestSender",
+    "l": "sendRequest(BaseRequestDTO, ServerConnection)",
+    "u": "sendRequest(requestLogic.dataTransferObjects.BaseRequestDTO,serverLogic.ServerConnection)"
+}, {
+    "p": "responseLogic.responseSenders",
+    "c": "ResponseSender",
+    "l": "sendResponse(BaseResponseDTO, ServerConnection, CallerBack)",
+    "u": "sendResponse(responseLogic.dataTransferObjects.BaseResponseDTO,serverLogic.ServerConnection,requestLogic.CallerBack)"
+}, {
+    "p": "responseLogic.responseSenders",
+    "c": "CommandResponseSender",
+    "l": "sendResponse(CommandStatusResponse, ServerConnection, CallerBack)",
+    "u": "sendResponse(responseLogic.responses.CommandStatusResponse,serverLogic.ServerConnection,requestLogic.CallerBack)"
+}, {
+    "p": "serverLogic",
+    "c": "ServerConnectionHandler",
+    "l": "ServerConnectionHandler()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic",
+    "c": "CallerBack",
+    "l": "setAddress(InetAddress)",
+    "u": "setAddress(java.net.InetAddress)"
+}, {
+    "p": "fileLogic.editors",
+    "c": "DateEditor",
+    "l": "setAsText(String)",
+    "u": "setAsText(java.lang.String)"
+}, {
+    "p": "requestLogic",
+    "c": "StatusRequest",
+    "l": "setCallerBack(CallerBack)",
+    "u": "setCallerBack(requestLogic.CallerBack)"
+}, {
+    "p": "requestLogic",
+    "c": "StatusRequestBuilder",
+    "l": "setCallerBack(InetAddress, int)",
+    "u": "setCallerBack(java.net.InetAddress,int)"
+}, {"p": "requestLogic", "c": "StatusRequest", "l": "setCode(int)"}, {
+    "p": "requestLogic",
+    "c": "StatusRequestBuilder",
+    "l": "setCode(int)"
+}, {
+    "p": "models.handlers",
+    "c": "RoutesHandler",
+    "l": "setCollection(HashSet<Route>)",
+    "u": "setCollection(java.util.HashSet)"
+}, {"p": "models.handlers", "c": "CollectionHandler", "l": "setCollection(T)"}, {
+    "p": "requestLogic.requests",
+    "c": "CommandClientRequest",
+    "l": "setCommand(BaseCommand)",
+    "u": "setCommand(commandManager.commands.BaseCommand)"
+}, {
+    "p": "requestLogic.dataTransferObjects",
+    "c": "CommandClientRequestDTO",
+    "l": "setCommand(BaseCommandDTO)",
+    "u": "setCommand(requestLogic.dataTransferObjects.commands.BaseCommandDTO)"
+}, {
+    "p": "requestLogic.requests",
+    "c": "BaseRequest",
+    "l": "setConnection(ServerConnection)",
+    "u": "setConnection(serverLogic.ServerConnection)"
+}, {
+    "p": "models",
+    "c": "Route",
+    "l": "setCoordinates(Coordinates)",
+    "u": "setCoordinates(models.Coordinates)"
+}, {
+    "p": "requestLogic.dataTransferObjects.models",
+    "c": "RouteDTO",
+    "l": "setCoordinates(CoordinatesDTO)",
+    "u": "setCoordinates(requestLogic.dataTransferObjects.models.CoordinatesDTO)"
+}, {"p": "models", "c": "Route", "l": "setCreationDate(Date)", "u": "setCreationDate(java.util.Date)"}, {
+    "p": "models",
+    "c": "Route",
+    "l": "setDistance(int)"
+}, {
+    "p": "requestLogic.dataTransferObjects.models",
+    "c": "RouteDTO",
+    "l": "setDistance(int)"
+}, {
+    "p": "requestLogic.requests",
+    "c": "BaseRequest",
+    "l": "setFrom(CallerBack)",
+    "u": "setFrom(requestLogic.CallerBack)"
+}, {
+    "p": "models",
+    "c": "Route",
+    "l": "setFrom(Location)",
+    "u": "setFrom(models.Location)"
+}, {
+    "p": "requestLogic.dataTransferObjects.models",
+    "c": "RouteDTO",
+    "l": "setFrom(LocationDTO)",
+    "u": "setFrom(requestLogic.dataTransferObjects.models.LocationDTO)"
+}, {"p": "models", "c": "Route", "l": "setId(Long)", "u": "setId(java.lang.Long)"}, {
+    "p": "requestLogic",
+    "c": "StatusRequest",
+    "l": "setInputStream(InputStream)",
+    "u": "setInputStream(java.io.InputStream)"
+}, {
+    "p": "requestLogic.dataTransferObjects",
+    "c": "CommandClientRequestDTO",
+    "l": "setLineArgs(String[])",
+    "u": "setLineArgs(java.lang.String[])"
+}, {"p": "models", "c": "Location", "l": "setName(String)", "u": "setName(java.lang.String)"}, {
+    "p": "models",
+    "c": "Route",
+    "l": "setName(String)",
+    "u": "setName(java.lang.String)"
+}, {
+    "p": "requestLogic.dataTransferObjects.models",
+    "c": "LocationDTO",
+    "l": "setName(String)",
+    "u": "setName(java.lang.String)"
+}, {
+    "p": "requestLogic.dataTransferObjects.models",
+    "c": "RouteDTO",
+    "l": "setName(String)",
+    "u": "setName(java.lang.String)"
+}, {
+    "p": "requestLogic",
+    "c": "StatusRequestBuilder",
+    "l": "setObjectStream(InputStream)",
+    "u": "setObjectStream(java.io.InputStream)"
+}, {"p": "requestLogic", "c": "CallerBack", "l": "setPort(int)"}, {
+    "p": "serverLogic",
+    "c": "ServerConnectionHandler",
+    "l": "setServerConnection(ServerConnection)",
+    "u": "setServerConnection(serverLogic.ServerConnection)"
+}, {
+    "p": "models",
+    "c": "Route",
+    "l": "setTo(Location)",
+    "u": "setTo(models.Location)"
+}, {
+    "p": "requestLogic.dataTransferObjects.models",
+    "c": "RouteDTO",
+    "l": "setTo(LocationDTO)",
+    "u": "setTo(requestLogic.dataTransferObjects.models.LocationDTO)"
+}, {
+    "p": "fileLogic",
+    "c": "Loader",
+    "l": "setupConverter(Class<?>, Class<? extends PropertyEditor>)",
+    "u": "setupConverter(java.lang.Class,java.lang.Class)"
+}, {
+    "p": "fileLogic.editors",
+    "c": "DateEditor",
+    "l": "setValue(Object)",
+    "u": "setValue(java.lang.Object)"
+}, {"p": "models", "c": "Coordinates", "l": "setX(double)"}, {
+    "p": "requestLogic.dataTransferObjects.models",
+    "c": "CoordinatesDTO",
+    "l": "setX(double)"
+}, {"p": "models", "c": "Location", "l": "setX(float)"}, {
+    "p": "requestLogic.dataTransferObjects.models",
+    "c": "LocationDTO",
+    "l": "setX(float)"
+}, {
+    "p": "models",
+    "c": "Coordinates",
+    "l": "setY(Float)",
+    "u": "setY(java.lang.Float)"
+}, {
+    "p": "requestLogic.dataTransferObjects.models",
+    "c": "CoordinatesDTO",
+    "l": "setY(Float)",
+    "u": "setY(java.lang.Float)"
+}, {
+    "p": "models",
+    "c": "Location",
+    "l": "setY(Long)",
+    "u": "setY(java.lang.Long)"
+}, {
+    "p": "requestLogic.dataTransferObjects.models",
+    "c": "LocationDTO",
+    "l": "setY(Long)",
+    "u": "setY(java.lang.Long)"
+}, {
+    "p": "models",
+    "c": "Location",
+    "l": "setZ(Long)",
+    "u": "setZ(java.lang.Long)"
+}, {
+    "p": "requestLogic.dataTransferObjects.models",
+    "c": "LocationDTO",
+    "l": "setZ(Long)",
+    "u": "setZ(java.lang.Long)"
+}, {
+    "p": "commandManager.commands",
+    "c": "ShowCommand",
+    "l": "ShowCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.dataTransferObjects.commands",
+    "c": "ShowCommandDTO",
+    "l": "ShowCommandDTO()",
+    "u": "%3Cinit%3E()"
+}, {"p": "models.handlers", "c": "CollectionHandler", "l": "sort()"}, {
+    "p": "models.handlers",
+    "c": "RoutesHandler",
+    "l": "sort()"
+}, {
+    "p": "commandManager",
+    "c": "CommandExecutor",
+    "l": "startExecuting(InputStream, CommandMode)",
+    "u": "startExecuting(java.io.InputStream,commandManager.CommandMode)"
+}, {"p": "requestLogic", "c": "StatusRequest", "l": "StatusRequest()", "u": "%3Cinit%3E()"}, {
+    "p": "exceptions",
+    "c": "StreamInterruptedException",
+    "l": "StreamInterruptedException(String)",
+    "u": "%3Cinit%3E(java.lang.String)"
+}, {"p": "fileLogic.editors", "c": "DateEditor", "l": "supportsCustomEditor()"}, {
+    "p": "requestLogic.dtoMappers",
+    "c": "RequestDTOMapper",
+    "l": "toRequest(BaseRequestDTO)",
+    "u": "toRequest(requestLogic.dataTransferObjects.BaseRequestDTO)"
+}, {
+    "p": "requestLogic.dtoMappers",
+    "c": "RouteDTOMapper",
+    "l": "toRoute(RouteDTO)",
+    "u": "toRoute(requestLogic.dataTransferObjects.models.RouteDTO)"
+}, {"p": "models", "c": "Coordinates", "l": "toString()"}, {
+    "p": "models",
+    "c": "Location",
+    "l": "toString()"
+}, {"p": "models", "c": "Route", "l": "toString()"}, {
+    "p": "serverLogic",
+    "c": "UdpConnectionBlockDecorator",
+    "l": "UdpConnectionBlockDecorator(UdpServerConnection, boolean)",
+    "u": "%3Cinit%3E(serverLogic.UdpServerConnection,boolean)"
+}, {
+    "p": "serverLogic",
+    "c": "UdpServerConnection",
+    "l": "UdpServerConnection(DatagramChannel, SocketAddress)",
+    "u": "%3Cinit%3E(java.nio.channels.DatagramChannel,java.net.SocketAddress)"
+}, {
+    "p": "serverLogic",
+    "c": "UdpServerConnectionFactory",
+    "l": "UdpServerConnectionFactory()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "exceptions",
+    "c": "UnknownCommandException",
+    "l": "UnknownCommandException(String)",
+    "u": "%3Cinit%3E(java.lang.String)"
+}, {
+    "p": "exceptions",
+    "c": "UnsupportedRequestException",
+    "l": "UnsupportedRequestException(String)",
+    "u": "%3Cinit%3E(java.lang.String)"
+}, {
+    "p": "exceptions",
+    "c": "UnsupportedResponseException",
+    "l": "UnsupportedResponseException(String)",
+    "u": "%3Cinit%3E(java.lang.String)"
+}, {
+    "p": "commandManager.commands",
+    "c": "UpdateCommand",
+    "l": "UpdateCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.dataTransferObjects.commands",
+    "c": "UpdateCommandDTO",
+    "l": "UpdateCommandDTO()",
+    "u": "%3Cinit%3E()"
+}, {"p": "main", "c": "Utilities", "l": "Utilities()", "u": "%3Cinit%3E()"}, {
+    "p": "models.validators",
+    "c": "CoordXValidator",
+    "l": "validate(Double)",
+    "u": "validate(java.lang.Double)"
+}, {
+    "p": "models.validators",
+    "c": "CoordYValidator",
+    "l": "validate(Float)",
+    "u": "validate(java.lang.Float)"
+}, {
+    "p": "models.validators",
+    "c": "LocationXValidator",
+    "l": "validate(Float)",
+    "u": "validate(java.lang.Float)"
+}, {
+    "p": "models.validators",
+    "c": "DistanceValidator",
+    "l": "validate(Integer)",
+    "u": "validate(java.lang.Integer)"
+}, {
+    "p": "models.validators",
+    "c": "LocationYZValidator",
+    "l": "validate(Long)",
+    "u": "validate(java.lang.Long)"
+}, {
+    "p": "models.validators",
+    "c": "RouteValidator",
+    "l": "validate(Route)",
+    "u": "validate(models.Route)"
+}, {
+    "p": "models.validators",
+    "c": "LocationNameValidator",
+    "l": "validate(String)",
+    "u": "validate(java.lang.String)"
+}, {
+    "p": "models.validators",
+    "c": "NameValidator",
+    "l": "validate(String)",
+    "u": "validate(java.lang.String)"
+}, {"p": "models.validators", "c": "Validator", "l": "validate(T)"}, {
+    "p": "models.handlers",
+    "c": "CollectionHandler",
+    "l": "validateElements()"
+}, {"p": "models.handlers", "c": "RoutesHandler", "l": "validateElements()"}, {
+    "p": "commandManager",
+    "c": "CommandMode",
+    "l": "valueOf(String)",
+    "u": "valueOf(java.lang.String)"
+}, {"p": "commandManager", "c": "CommandMode", "l": "values()"}, {
+    "p": "requestLogic.requestWorkers",
+    "c": "BaseRequestWorker",
+    "l": "workWithRequest(BaseRequest, BaseRequestDTO)",
+    "u": "workWithRequest(requestLogic.requests.BaseRequest,requestLogic.dataTransferObjects.BaseRequestDTO)"
+}, {
+    "p": "requestLogic.requestWorkers",
+    "c": "CommandClientRequestWorker",
+    "l": "workWithRequest(BaseRequest, BaseRequestDTO)",
+    "u": "workWithRequest(requestLogic.requests.BaseRequest,requestLogic.dataTransferObjects.BaseRequestDTO)"
+}, {
+    "p": "requestLogic.requestWorkers",
+    "c": "RequestWorker",
+    "l": "workWithRequest(BaseRequest, BaseRequestDTO)",
+    "u": "workWithRequest(requestLogic.requests.BaseRequest,requestLogic.dataTransferObjects.BaseRequestDTO)"
+}, {
+    "p": "requestLogic.requestWorkers",
+    "c": "RequestWorkerManager",
+    "l": "workWithRequest(BaseRequest, BaseRequestDTO, String)",
+    "u": "workWithRequest(requestLogic.requests.BaseRequest,requestLogic.dataTransferObjects.BaseRequestDTO,java.lang.String)"
+}, {
+    "p": "responseLogic.responseWorkers",
+    "c": "ResponseWorkerManager",
+    "l": "workWithRequest(BaseResponse, BaseResponseDTO, String)",
+    "u": "workWithRequest(responseLogic.responses.BaseResponse,responseLogic.dataTransferObjects.BaseResponseDTO,java.lang.String)"
+}, {
+    "p": "responseLogic.responseWorkers",
+    "c": "BaseResponseWorker",
+    "l": "workWithResponse(BaseResponse, BaseResponseDTO)",
+    "u": "workWithResponse(responseLogic.responses.BaseResponse,responseLogic.dataTransferObjects.BaseResponseDTO)"
+}, {
+    "p": "responseLogic.responseWorkers",
+    "c": "CommandResponseWorker",
+    "l": "workWithResponse(BaseResponse, BaseResponseDTO)",
+    "u": "workWithResponse(responseLogic.responses.BaseResponse,responseLogic.dataTransferObjects.BaseResponseDTO)"
+}, {
+    "p": "responseLogic.responseWorkers",
+    "c": "ResponseWorker",
+    "l": "workWithResponse(BaseResponse, BaseResponseDTO)",
+    "u": "workWithResponse(responseLogic.responses.BaseResponse,responseLogic.dataTransferObjects.BaseResponseDTO)"
+}, {
+    "p": "fileLogic",
+    "c": "BaseWriter",
+    "l": "writeToFile(String, LinkedHashMap<String[], String>)",
+    "u": "writeToFile(java.lang.String,java.util.LinkedHashMap)"
+}, {
+    "p": "fileLogic",
+    "c": "XMLWriter",
+    "l": "writeToFile(String, LinkedHashMap<String[], String>)",
+    "u": "writeToFile(java.lang.String,java.util.LinkedHashMap)"
+}, {
+    "p": "exceptions",
+    "c": "WrongAmountOfArgumentsException",
+    "l": "WrongAmountOfArgumentsException(String)",
+    "u": "%3Cinit%3E(java.lang.String)"
+}, {"p": "fileLogic", "c": "XMLReader", "l": "XMLReader()", "u": "%3Cinit%3E()"}, {
+    "p": "fileLogic",
+    "c": "XMLWriter",
+    "l": "XMLWriter()",
+    "u": "%3Cinit%3E()"
+}];
+updateSearchResults();

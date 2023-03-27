@@ -1,1 +1,5 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"commandManager"},{"l":"commandManager.commands"},{"l":"exceptions"},{"l":"fileLogic"},{"l":"fileLogic.editors"},{"l":"main"},{"l":"models"},{"l":"models.comparators"},{"l":"models.handlers"},{"l":"models.handlers.nonUserMode"},{"l":"models.handlers.userMode"},{"l":"models.validators"}];updateSearchResults();
+packageSearchIndex = [{
+    "l": "All Packages",
+    "u": "allpackages-index.html"
+}, {"l": "commandManager"}, {"l": "commandManager.commands"}, {"l": "exceptions"}, {"l": "fileLogic"}, {"l": "fileLogic.editors"}, {"l": "main"}, {"l": "models"}, {"l": "models.comparators"}, {"l": "models.handlers"}, {"l": "models.handlers.nonUserMode"}, {"l": "models.handlers.userMode"}, {"l": "models.validators"}, {"l": "requestLogic"}, {"l": "requestLogic.dataTransferObjects"}, {"l": "requestLogic.dataTransferObjects.commands"}, {"l": "requestLogic.dataTransferObjects.models"}, {"l": "requestLogic.dtoMappers"}, {"l": "requestLogic.requests"}, {"l": "requestLogic.requestSenders"}, {"l": "requestLogic.requestWorkers"}, {"l": "responseLogic"}, {"l": "responseLogic.dataTransferObjects"}, {"l": "responseLogic.dtoMappers"}, {"l": "responseLogic.responses"}, {"l": "responseLogic.responseSenders"}, {"l": "responseLogic.responseWorkers"}, {"l": "serverLogic"}];
+updateSearchResults();
