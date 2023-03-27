@@ -3,7 +3,7 @@ package requestLogic.requests;
 import requestLogic.CallerBack;
 import serverLogic.ServerConnection;
 
-public class BaseRequest {
+public abstract class BaseRequest {
     private CallerBack from;
     private ServerConnection connection;
 
@@ -21,9 +21,5 @@ public class BaseRequest {
 
     public void setFrom(CallerBack from) {
         this.from = from;
-    }
-
-    public void accept(RequestVisitor visitor) {
-        visitor.visit(this);
     }
 }

@@ -6,8 +6,8 @@ import models.handlers.ModuleHandler;
 import models.handlers.userMode.RouteCLIHandler;
 import requestLogic.dataTransferObjects.models.RouteDTO;
 import requestLogic.dtoMappers.RouteDTOMapper;
+import requestLogic.requestSenders.CommandRequestSender;
 import serverLogic.ServerConnectionHandler;
-import serverLogic.ServerConnectionUtils;
 
 /**
  * Add element if it's value greater than max value.
@@ -42,6 +42,6 @@ public class AddIfMaxCommand implements BaseCommand {
     public void execute(String[] args) throws BuildObjectException, ClassNotFoundException {
         route = handler.buildObject();
         obj = RouteDTOMapper.routeDTOMapper(route);
-        ServerConnectionUtils.sendCommand(this, args, ServerConnectionHandler.getCurrentConnection());
+        CommandRequestSender.sendCommand(this, args, ServerConnectionHandler.getCurrentConnection());
     }
 }

@@ -1,7 +1,7 @@
 package commandManager.commands;
 
+import requestLogic.requestSenders.CommandRequestSender;
 import serverLogic.ServerConnectionHandler;
-import serverLogic.ServerConnectionUtils;
 
 /**
  * Returns element from collection with min creation date.
@@ -12,6 +12,6 @@ import serverLogic.ServerConnectionUtils;
 public class MinByCreationDateCommand implements BaseCommand {
     @Override
     public void execute(String[] args) {
-        ServerConnectionUtils.sendCommand(this, args, ServerConnectionHandler.getCurrentConnection());
+        CommandRequestSender.sendCommand(this, args, ServerConnectionHandler.getCurrentConnection());
     }
 }

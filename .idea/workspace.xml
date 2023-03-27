@@ -4,23 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="client-server part 4">
-      <change afterPath="$PROJECT_DIR$/client/src/requestLogic/dataTransferObjects/models/CoordinatesDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/requestLogic/dataTransferObjects/models/LocationDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/requestLogic/dataTransferObjects/models/RouteDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/requestLogic/dtoMappers/DTOMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/requestLogic/dtoMappers/RouteDTOMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/models/handlers/RouteIDHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/requestLogic/dataTransferObjects/models/CoordinatesDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/requestLogic/dataTransferObjects/models/LocationDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/requestLogic/dataTransferObjects/models/RouteDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/requestLogic/dtoMappers/DTOMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/requestLogic/dtoMappers/RouteDTOMapper.java" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="client-server part 6, final">
+      <change afterPath="$PROJECT_DIR$/client/src/exceptions/UnsupportedResponseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/requestLogic/dtoMappers/CommandRequestDTOMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/RequestSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/responseLogic/ResponseReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/responseLogic/dataTransferObjects/BaseResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/responseLogic/dataTransferObjects/CommandStatusResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/responseLogic/dtoMappers/DTOMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/responseLogic/responseWorkers/BaseResponseWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/responseLogic/responseWorkers/CommandResponseWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/responseLogic/responseWorkers/ResponseWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/responseLogic/responseWorkers/ResponseWorkerManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/responseLogic/responses/BaseResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/responseLogic/responses/CommandStatusResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/serverLogic/UdpConnectionBlockDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/:Users:zerumi:IdeaProjects:gitCodes:no6_150323_3846274761835:no6_150323_3846274761835_client.uml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/:Users:zerumi:IdeaProjects:gitCodes:no6_150323_3846274761835:no6_150323_3846274761835_server.uml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/no6_150323_3846274761835_client.dot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/no6_150323_3846274761835_client.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/no6_150323_3846274761835_client.graphml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/no6_150323_3846274761835_client.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/no6_150323_3846274761835_client.plantuml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/no6_150323_3846274761835_client.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/no6_150323_3846274761835_server.dot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/no6_150323_3846274761835_server.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/no6_150323_3846274761835_server.graphml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/no6_150323_3846274761835_server.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/no6_150323_3846274761835_server.plantuml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diagrams/no6_150323_3846274761835_server.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/models/comparators/RouteCreationDateComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/responseLogic/dataTransferObjects/BaseResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/responseLogic/dataTransferObjects/CommandStatusResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/responseLogic/dtoMappers/DTOMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/responseLogic/responseSenders/CommandResponseSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/responseLogic/responseSenders/ResponseSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/responseLogic/responses/BaseResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/client/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/commandManager/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commandManager/commands/AddCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/commandManager/commands/AddIfMaxCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commandManager/commands/AddIfMaxCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/commandManager/commands/AddIfMinCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commandManager/commands/AddIfMinCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/commandManager/commands/BaseCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commandManager/commands/BaseCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/commandManager/commands/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commandManager/commands/ClearCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/commandManager/commands/CountGreaterThanDistanceCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commandManager/commands/CountGreaterThanDistanceCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/commandManager/commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commandManager/commands/ExitCommand.java" afterDir="false" />
@@ -32,38 +57,46 @@
       <change beforePath="$PROJECT_DIR$/client/src/commandManager/commands/RemoveGreaterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commandManager/commands/RemoveGreaterCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/commandManager/commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commandManager/commands/ShowCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/commandManager/commands/UpdateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commandManager/commands/UpdateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/models/handlers/nonUserMode/RouteNonCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/models/handlers/nonUserMode/RouteNonCLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/dataTransferObjects/commands/AddCommandDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/requestLogic/dataTransferObjects/commands/AddCommandDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/dataTransferObjects/commands/AddIfMaxCommandDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/requestLogic/dataTransferObjects/commands/AddIfMaxCommandDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/dataTransferObjects/commands/AddIfMinCommandDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/requestLogic/dataTransferObjects/commands/AddIfMinCommandDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/dataTransferObjects/commands/ClearCommandDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/requestLogic/dataTransferObjects/commands/ClearCommandDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/dataTransferObjects/commands/ExecuteScriptCommandDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/dataTransferObjects/commands/RemoveGreaterCommandDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/requestLogic/dataTransferObjects/commands/RemoveGreaterCommandDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/dataTransferObjects/commands/SaveCommandDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/dataTransferObjects/commands/UpdateCommandDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/requestLogic/dataTransferObjects/commands/UpdateCommandDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/serverLogic/ServerConnectionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/serverLogic/ServerConnectionUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/models/comparators/RouteComparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/models/comparators/RouteDistanceComparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/serverLogic/ServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/serverLogic/ServerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/serverLogic/ServerConnectionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/CommandRequestSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/serverLogic/UdpServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/serverLogic/UdpServerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/server/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/CommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commandResponse/CommandResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/responseLogic/responses/CommandStatusResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commandResponse/CommandResponseProcessor.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/AddCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/AddIfMaxCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/AddIfMaxCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/AddIfMinCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/AddIfMinCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/BaseCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/BaseCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/ClearCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/CountGreaterThanDistanceCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/CountGreaterThanDistanceCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/ExitCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/HelpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/InfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/InfoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/MinByCreationDateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/MinByCreationDateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/PrintFieldDistanceAscendingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/PrintFieldDistanceAscendingCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/RemoveByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/RemoveByIdCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/RemoveGreaterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/RemoveGreaterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/SaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/SaveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/ShowCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/UpdateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/UpdateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/exceptions/CommandInterruptedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/exceptions/StreamInterruptedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/exceptions/WrongAmountOfArgumentsException.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/models/handlers/ModuleHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/models/handlers/RouteNetworkHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/dataTransferObjects/commands/AddCommandDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/requestLogic/dataTransferObjects/commands/AddCommandDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/dataTransferObjects/commands/AddIfMaxCommandDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/requestLogic/dataTransferObjects/commands/AddIfMaxCommandDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/dataTransferObjects/commands/AddIfMinCommandDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/requestLogic/dataTransferObjects/commands/AddIfMinCommandDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/dataTransferObjects/commands/ExecuteScriptCommandDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/dataTransferObjects/commands/RemoveGreaterCommandDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/requestLogic/dataTransferObjects/commands/RemoveGreaterCommandDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/dataTransferObjects/commands/SaveCommandDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/dataTransferObjects/commands/UpdateCommandDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/requestLogic/dataTransferObjects/commands/UpdateCommandDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/requestWorkers/CommandClientRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/requestLogic/requestWorkers/CommandClientRequestWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/requests/RequestDTOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/requestLogic/dtoMappers/RequestDTOMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/requests/RequestTypeVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/requestLogic/requests/RequestTypeVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/requests/RequestUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/requests/RequestVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/requestLogic/requests/RequestVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/Utilities.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/requestWorkers/BaseRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/requestLogic/requestWorkers/BaseRequestWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/requests/BaseRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/requestLogic/requests/BaseRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/requests/CommandClientRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/requestLogic/requests/CommandClientRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/requests/RequestTypeVisitor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/requests/RequestVisitor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/responses/ResponseProcessor.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/serverLogic/DatagramServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/serverLogic/DatagramServerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/serverLogic/DatagramServerConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/serverLogic/DatagramServerConnectionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/serverLogic/ServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/serverLogic/ServerConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,41 +144,6 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="no6_150323_3846274761835" type="f1a62948:ProjectNode" />
-                <item name="client" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="application" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="no6_150323_3846274761835" type="f1a62948:ProjectNode" />
-                <item name="client" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="no6_150323_3846274761835" type="f1a62948:ProjectNode" />
-                <item name="client" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="help" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="no6_150323_3846274761835" type="f1a62948:ProjectNode" />
-                <item name="client" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="other" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="no6_150323_3846274761835" type="f1a62948:ProjectNode" />
-                <item name="client" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="verification" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="no6_150323_3846274761835" type="f1a62948:ProjectNode" />
                 <item name="server" type="2d1252cf:ModuleNode" />
               </path>
               <path>
@@ -153,20 +151,6 @@
                 <item name="no6_150323_3846274761835" type="f1a62948:ProjectNode" />
                 <item name="server" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="no6_150323_3846274761835" type="f1a62948:ProjectNode" />
-                <item name="server" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="application" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="no6_150323_3846274761835" type="f1a62948:ProjectNode" />
-                <item name="server" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -178,9 +162,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Tag Library Descriptor" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -217,7 +201,7 @@
     "WebServerToolWindowFactoryState": "false",
     "extract.method.default.visibility": "private",
     "jdk.selected.JAVA_MODULE": "openjdk-17.0.2",
-    "last_opened_file_path": "/Users/zerumi/IdeaProjects/gitCodes/no6_150323_3846274761835/server/src/requestLogic/dataTransferObjects",
+    "last_opened_file_path": "/Users/zerumi/IdeaProjects/gitCodes/no6_150323_3846274761835/client/src/responseLogic",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -237,11 +221,11 @@
       <recent name="models.validators" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/responseLogic" />
       <recent name="$PROJECT_DIR$/server/src/requestLogic/dataTransferObjects" />
       <recent name="$PROJECT_DIR$/server/src/requestLogic" />
       <recent name="$PROJECT_DIR$/client/src/requestLogic/dataTransferObjects" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/server/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/server" />
@@ -262,7 +246,7 @@
       <command value="gradle " />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.no6_150323_3846274761835:client [build]">
+  <component name="RunManager" selected="Gradle.no6_150323_3846274761835:server [installDist]">
     <configuration name="no6_150323_3846274761835:client [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -275,6 +259,27 @@
         <option name="taskNames">
           <list>
             <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="no6_150323_3846274761835:client [installDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/client" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="installDist" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -305,7 +310,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="no6_150323_3846274761835:server [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="no6_150323_3846274761835:server [installDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/server" />
@@ -316,7 +321,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value="installDist" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -368,17 +373,19 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.no6_170123_600900 (client)" />
+      <item itemvalue="Gradle.no6_150323_3846274761835:client [installDist]" />
+      <item itemvalue="Gradle.no6_150323_3846274761835:server [installDist]" />
       <item itemvalue="Gradle.no6_150323_3846274761835:client [build]" />
       <item itemvalue="Gradle.no6_150323_3846274761835:client [run]" />
-      <item itemvalue="Gradle.no6_150323_3846274761835:server [build]" />
       <item itemvalue="Gradle.no6_150323_3846274761835:server [run]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.no6_150323_3846274761835:client [installDist]" />
+        <item itemvalue="Gradle.no6_150323_3846274761835:server [installDist]" />
         <item itemvalue="Gradle.no6_150323_3846274761835:client [run]" />
         <item itemvalue="Gradle.no6_150323_3846274761835:server [run]" />
         <item itemvalue="Gradle.no6_150323_3846274761835:client [build]" />
-        <item itemvalue="Gradle.no6_150323_3846274761835:server [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -411,7 +418,7 @@
       <workItem from="1677709564940" duration="584000" />
       <workItem from="1679681280517" duration="4460000" />
       <workItem from="1679761964391" duration="11079000" />
-      <workItem from="1679784958930" duration="44433000" />
+      <workItem from="1679784958930" duration="65565000" />
     </task>
     <task id="LOCAL-00001" summary="add XML Reader">
       <created>1675714633059</created>
@@ -546,7 +553,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679862468655</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="client-server part 5">
+      <created>1679874957682</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1679874957682</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,7 +592,9 @@
     <MESSAGE value="client moved, client-server part 3" />
     <MESSAGE value="client-server part 3" />
     <MESSAGE value="client-server part 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="client-server part 4" />
+    <MESSAGE value="client-server part 5" />
+    <MESSAGE value="client-server part 6, final" />
+    <option name="LAST_COMMIT_MESSAGE" value="client-server part 6, final" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -588,18 +604,33 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/client/src/models/handlers/nonUserMode/RouteNonCLIHandler.java</url>
-          <line>80</line>
+          <line>78</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/client/src/models/handlers/nonUserMode/RouteNonCLIHandler.java</url>
-          <line>48</line>
+          <line>46</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/server/src/requestLogic/RequestReader.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="27" />
+          <url>file://$PROJECT_DIR$/server/src/responseLogic/responseSenders/CommandResponseSender.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/commandManager/CommandManager.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/commandManager/CommandManager.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/commandManager/commands/HelpCommand.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

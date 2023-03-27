@@ -2,8 +2,8 @@ package commandManager.commands;
 
 import exceptions.WrongAmountOfArgumentsException;
 import main.Utilities;
+import requestLogic.requestSenders.CommandRequestSender;
 import serverLogic.ServerConnectionHandler;
-import serverLogic.ServerConnectionUtils;
 
 /**
  * Shows count of the elements greater than distance value.
@@ -24,6 +24,6 @@ public class CountGreaterThanDistanceCommand implements BaseCommand{
             return;
         }
 
-        ServerConnectionUtils.sendCommand(this, args, ServerConnectionHandler.getCurrentConnection());
+        CommandRequestSender.sendCommand(this, args, ServerConnectionHandler.getCurrentConnection());
     }
 }

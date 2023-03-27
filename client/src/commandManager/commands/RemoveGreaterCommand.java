@@ -6,8 +6,8 @@ import models.handlers.ModuleHandler;
 import models.handlers.userMode.RouteCLIHandler;
 import requestLogic.dataTransferObjects.models.RouteDTO;
 import requestLogic.dtoMappers.RouteDTOMapper;
+import requestLogic.requestSenders.CommandRequestSender;
 import serverLogic.ServerConnectionHandler;
-import serverLogic.ServerConnectionUtils;
 
 /**
  * Removes elements from collection greater than given in argument.
@@ -42,6 +42,6 @@ public class RemoveGreaterCommand implements BaseCommand {
     public void execute(String[] args) throws BuildObjectException, ClassNotFoundException {
         route = handler.buildObject();
         obj = RouteDTOMapper.routeDTOMapper(route);
-        ServerConnectionUtils.sendCommand(this, args, ServerConnectionHandler.getCurrentConnection());
+        CommandRequestSender.sendCommand(this, args, ServerConnectionHandler.getCurrentConnection());
     }
 }

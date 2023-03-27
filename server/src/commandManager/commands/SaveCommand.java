@@ -1,11 +1,12 @@
 package commandManager.commands;
 
-import commandManager.commandResponse.CommandResponse;
-import exceptions.WrongAmountOfArgumentsException;
 import fileLogic.Saver;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import responseLogic.responses.CommandStatusResponse;
 
 import java.util.HashSet;
 
@@ -16,7 +17,9 @@ import java.util.HashSet;
  * @since 1.0
  */
 public class SaveCommand implements BaseCommand {
-    CommandResponse response;
+    private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6.commands.save");
+    private CommandStatusResponse response;
+
     @Override
     public String getName() {
         return "save";
@@ -28,18 +31,19 @@ public class SaveCommand implements BaseCommand {
     }
 
     @Override
-    public void execute(String[] args) throws WrongAmountOfArgumentsException {
-        System.out.println("Saving...");
+    public void execute(String[] args) {
+        logger.trace("Saving...");
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
         Saver<HashSet<Route>, Route> saver = new Saver<>(Route.class);
 
         saver.saveCollection(collectionHandler.getCollection(), "lab5");
 
-        System.out.println("Executed.");
+        response = CommandStatusResponse.ofString("[Server] Collection saving executed.");
+        logger.info(response.getResponse());
     }
 
     @Override
-    public CommandResponse getResponse() {
+    public CommandStatusResponse getResponse() {
         return response;
     }
 }

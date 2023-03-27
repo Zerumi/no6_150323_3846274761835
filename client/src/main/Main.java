@@ -4,11 +4,15 @@ import commandManager.CommandExecutor;
 import commandManager.CommandMode;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import serverLogic.ServerConnection;
-import serverLogic.ServerConnectionHandler;
-import serverLogic.UdpServerConnectionFactory;
+import responseLogic.ResponseReader;
+import responseLogic.dataTransferObjects.BaseResponseDTO;
+import responseLogic.dtoMappers.DTOMapper;
+import responseLogic.responseWorkers.ResponseWorkerManager;
+import responseLogic.responses.BaseResponse;
+import serverLogic.*;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
@@ -33,15 +37,30 @@ public class Main {
         // server connecting
         try {
             //ServerConnection connection = new UdpServerConnectionFactory().openConnection(InetAddress.getByName(HOST_ADDRESS), PORT);
-            ServerConnection connection = new UdpServerConnectionFactory().openConnection(InetAddress.getLocalHost(), PORT);
+            ServerConnection connection = new UdpConnectionBlockDecorator((UdpServerConnection) new UdpServerConnectionFactory().openConnection(InetAddress.getLocalHost(), PORT), true);
             ServerConnectionHandler.setServerConnection(connection);
             connection.openConnection();
 
+            Thread listenResponses = new Thread(() -> {
+                while (true) {
+                    try (InputStream stream = connection.listenServer()) {
+                        logger.info("received");
+                        ResponseReader<BaseResponseDTO> reader = new ResponseReader<>(stream);
+                        BaseResponseDTO responseDTO = reader.readObject();
+                        BaseResponse response = DTOMapper.convertFromDTO(responseDTO, "responseLogic.responses");
+                        ResponseWorkerManager manager = new ResponseWorkerManager();
+                        manager.workWithRequest(response, responseDTO, response.getClass().getSimpleName());
+                    } catch (IOException e) {
+                        logger.error("Something went wrong during I/O operations.");
+                    } catch (ClassNotFoundException e) {
+                        logger.error("Response class not found.");
+                    }
+                }
+            });
+            listenResponses.start();
+
             CommandExecutor executor = new CommandExecutor();
             executor.startExecuting(System.in, CommandMode.CLI_UserMode);
-
-
-            logger.info("sent some data");
         } catch (UnknownHostException ex) {
             logger.fatal("Can't find host.");
         } catch (IOException ex) {

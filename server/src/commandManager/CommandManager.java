@@ -1,13 +1,13 @@
 package commandManager;
 
 import commandManager.commands.*;
-import exceptions.CommandInterruptedException;
-import exceptions.WrongAmountOfArgumentsException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import requestLogic.requests.CommandClientRequest;
+import responseLogic.responseSenders.CommandResponseSender;
+import responseLogic.responses.CommandStatusResponse;
 
 import java.util.LinkedHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Command Manager for interactive collection manage.
@@ -17,7 +17,7 @@ import java.util.logging.Logger;
  */
 public class CommandManager {
 
-    private static final Logger myLogger = Logger.getLogger("com.github.zerumi.lab5");
+    private static final Logger logger = LogManager.getLogger("com.github.zerumi.lab5");
     LinkedHashMap<String, BaseCommand> commands;
 
     /**
@@ -58,17 +58,18 @@ public class CommandManager {
      * @param command request
      */
     public void executeCommand(CommandClientRequest command) {
+        CommandStatusResponse response = null;
         try {
-            command.getCommand().execute(command.getLineArgs());
+            BaseCommand baseCommand = command.getCommand();
+            baseCommand.execute(command.getLineArgs());
+            response = baseCommand.getResponse();
         } catch (IllegalArgumentException | NullPointerException e) {
-            myLogger.log(Level.SEVERE, "Выполнение команды пропущено из-за неправильных предоставленных аргументов! (" + e.getMessage() + ")");
-            throw new CommandInterruptedException(e);
-        } catch (WrongAmountOfArgumentsException e) {
-            myLogger.log(Level.SEVERE, "Wrong amount of arguments! " + e.getMessage());
-            throw new CommandInterruptedException(e);
+            response = new CommandStatusResponse("Выполнение команды пропущено из-за неправильных предоставленных аргументов! (" + e.getMessage() + ")", -90);
+            logger.fatal(response.getResponse(), e);
         } catch (Exception e) {
-            myLogger.log(Level.SEVERE, "В командном менеджере произошла непредвиденная ошибка! " + e.getMessage());
-            throw new CommandInterruptedException(e);
+            response = new CommandStatusResponse("В командном менеджере произошла непредвиденная ошибка!", -92);
+            logger.fatal(response.getResponse(), e);
         }
+        CommandResponseSender.sendResponse(response, command.getConnection(), command.getFrom());
     }
 }

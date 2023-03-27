@@ -1,7 +1,6 @@
 package commandManager.commands;
 
-import commandManager.commandResponse.CommandResponse;
-import exceptions.WrongAmountOfArgumentsException;
+import responseLogic.responses.CommandStatusResponse;
 
 import java.io.Serializable;
 
@@ -42,7 +41,7 @@ public interface BaseCommand extends Serializable {
      * @param args full array of entered line.
      * @throws IllegalArgumentException when command can't understand given arguments
      */
-    void execute(String[] args) throws IllegalArgumentException, WrongAmountOfArgumentsException, ClassNotFoundException;
+    void execute(String[] args) throws IllegalArgumentException, ClassNotFoundException;
 
     /**
      * Base method for get command Output
@@ -50,5 +49,5 @@ public interface BaseCommand extends Serializable {
      * @return Full command output
      * @since 2.0
      */
-    CommandResponse getResponse();
+    CommandStatusResponse getResponse();
 }

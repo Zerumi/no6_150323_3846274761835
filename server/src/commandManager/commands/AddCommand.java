@@ -1,11 +1,13 @@
 package commandManager.commands;
 
-import commandManager.commandResponse.CommandResponse;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import requestLogic.dataTransferObjects.models.RouteDTO;
 import requestLogic.dtoMappers.RouteDTOMapper;
+import responseLogic.responses.CommandStatusResponse;
 
 import java.util.HashSet;
 
@@ -16,7 +18,8 @@ import java.util.HashSet;
  * @since 1.0
  */
 public class AddCommand implements BaseCommand {
-    private CommandResponse response;
+    private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6.commands.add");
+    private CommandStatusResponse response;
 
     private RouteDTO obj;
 
@@ -41,11 +44,12 @@ public class AddCommand implements BaseCommand {
 
         collectionHandler.addElementToCollection(RouteDTOMapper.toRoute(obj));
 
-        System.out.println("Element added!");
+        response = CommandStatusResponse.ofString("Element added!");
+        logger.info(response.getResponse());
     }
 
     @Override
-    public CommandResponse getResponse() {
+    public CommandStatusResponse getResponse() {
         return response;
     }
 }

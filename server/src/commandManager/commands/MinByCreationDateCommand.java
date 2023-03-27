@@ -1,9 +1,12 @@
 package commandManager.commands;
 
-import commandManager.commandResponse.CommandResponse;
 import models.Route;
+import models.comparators.RouteCreationDateComparator;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import responseLogic.responses.CommandStatusResponse;
 
 import java.util.Date;
 import java.util.HashSet;
@@ -15,7 +18,9 @@ import java.util.HashSet;
  * @since 1.0
  */
 public class MinByCreationDateCommand implements BaseCommand {
-    CommandResponse response;
+    private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6.commands.minByCD");
+    private CommandStatusResponse response;
+
     @Override
     public String getName() {
         return "min_by_creation_date";
@@ -31,18 +36,15 @@ public class MinByCreationDateCommand implements BaseCommand {
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
         Date min = collectionHandler.getCollection().stream().map(Route::getCreationDate).min(Date::compareTo).orElse(null);
 
-        if (min == null) {
-            System.out.println("There's nothing to show...");
-        } else {
-            for (Route obj : collectionHandler.getCollection()) {
-                if (obj.getCreationDate().equals(min))
-                    System.out.println(obj);
-            }
-        }
+        if (min == null) response = CommandStatusResponse.ofString("There's nothing to show...");
+        else
+            response = CommandStatusResponse.ofString(collectionHandler.getCollection().stream().min(new RouteCreationDateComparator()).toString());
+
+        logger.info(response.getResponse());
     }
 
     @Override
-    public CommandResponse getResponse() {
+    public CommandStatusResponse getResponse() {
         return response;
     }
 }

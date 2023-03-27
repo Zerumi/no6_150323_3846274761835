@@ -11,7 +11,6 @@ import requestLogic.StatusRequest;
 import requestLogic.dataTransferObjects.BaseRequestDTO;
 import requestLogic.dtoMappers.RequestDTOMapper;
 import requestLogic.requestWorkers.RequestWorkerManager;
-import requestLogic.requests.RequestTypeVisitor;
 import serverLogic.DatagramServerConnectionFactory;
 import serverLogic.ServerConnection;
 
@@ -57,9 +56,7 @@ public class Main {
                 request.setConnection(connection);
                 request.setFrom(rq.getCallerBack());
                 RequestWorkerManager worker = new RequestWorkerManager();
-                RequestTypeVisitor visitor = new RequestTypeVisitor();
-                request.accept(visitor);
-                worker.workWithRequest(request, brDTO, visitor.getRequestType());
+                worker.workWithRequest(request, brDTO, request.getClass().getSimpleName());
             } catch (IOException e) {
                 logger.error("Something went wrong during I/O", e);
             } catch (ClassNotFoundException e) {

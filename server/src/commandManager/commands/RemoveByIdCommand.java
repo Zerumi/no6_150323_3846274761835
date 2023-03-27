@@ -1,11 +1,11 @@
 package commandManager.commands;
 
-import commandManager.commandResponse.CommandResponse;
-import exceptions.WrongAmountOfArgumentsException;
-import main.Utilities;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import responseLogic.responses.CommandStatusResponse;
 
 import java.util.HashSet;
 import java.util.Objects;
@@ -17,7 +17,8 @@ import java.util.Objects;
  * @since 1.0
  */
 public class RemoveByIdCommand implements BaseCommand {
-    CommandResponse response;
+    private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6.commands.rmByID");
+    private CommandStatusResponse response;
 
     @Override
     public String getName() {
@@ -35,21 +36,20 @@ public class RemoveByIdCommand implements BaseCommand {
     }
 
     @Override
-    public void execute(String[] args) throws WrongAmountOfArgumentsException {
-        Utilities.checkArgumentsOrThrow(args.length, 1);
+    public void execute(String[] args) {
 
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
 
-        Long finalId = Utilities.handleUserInputID(args[1]);
-        if (finalId == null) return;
+        if (collectionHandler.getCollection().removeIf(route -> Objects.equals(route.getId(), Long.valueOf(args[1]))))
+            response = CommandStatusResponse.ofString("Element with that id doesn't exists.");
+        else
+            response = CommandStatusResponse.ofString("Executed.");
 
-        collectionHandler.getCollection().removeIf(route -> Objects.equals(route.getId(), finalId));
-
-        System.out.println("Executed.");
+        logger.info(response.getResponse());
     }
 
     @Override
-    public CommandResponse getResponse() {
+    public CommandStatusResponse getResponse() {
         return response;
     }
 }

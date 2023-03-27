@@ -1,9 +1,11 @@
 package commandManager.commands;
 
-import commandManager.commandResponse.CommandResponse;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import responseLogic.responses.CommandStatusResponse;
 
 import java.util.HashSet;
 
@@ -14,7 +16,8 @@ import java.util.HashSet;
  * @since 1.0
  */
 public class ShowCommand implements BaseCommand {
-    CommandResponse response;
+    private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6.commands.show");
+    private CommandStatusResponse response;
 
     @Override
     public String getName() {
@@ -30,15 +33,20 @@ public class ShowCommand implements BaseCommand {
     public void execute(String[] args) {
         CollectionHandler<HashSet<Route>, Route> handler = RoutesHandler.getInstance();
 
-        handler.getCollection().forEach(System.out::println);
+        StringBuilder sb = new StringBuilder();
+
+        handler.getCollection().forEach(e -> sb.append(e.toString()).append('\n'));
+        response = CommandStatusResponse.ofString(sb.toString());
 
         if (handler.getCollection().isEmpty()) {
-            System.out.println("There's nothing to show.");
+            response = CommandStatusResponse.ofString("There's nothing to show.");
         }
+
+        logger.info(response.getResponse());
     }
 
     @Override
-    public CommandResponse getResponse() {
+    public CommandStatusResponse getResponse() {
         return response;
     }
 }

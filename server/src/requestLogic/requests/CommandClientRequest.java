@@ -17,8 +17,4 @@ public class CommandClientRequest extends BaseRequest {
     public String[] getLineArgs() {
         return lineArgs;
     }
-
-    public void accept(RequestVisitor visitor) {
-        visitor.visit(this);
-    }
 }

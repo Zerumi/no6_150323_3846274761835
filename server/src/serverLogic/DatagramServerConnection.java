@@ -10,20 +10,23 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.net.SocketException;
 import java.util.Arrays;
 
 public class DatagramServerConnection implements ServerConnection {
     private final int BUFFER_SIZE = 4096;
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
     private final int port;
+    private final DatagramSocket ds;
 
-    protected DatagramServerConnection(int port) {
+    protected DatagramServerConnection(int port) throws SocketException {
         this.port = port;
+        ds = new DatagramSocket(port);
     }
 
     public StatusRequest listenAndGetData() {
         byte[] buffer = new byte[BUFFER_SIZE];
-        try (DatagramSocket ds = new DatagramSocket(port)) {
+        try {
             DatagramPacket dp;
             dp = new DatagramPacket(buffer, buffer.length);
             ds.receive(dp);
@@ -39,10 +42,11 @@ public class DatagramServerConnection implements ServerConnection {
     }
 
     @Override
-    public void sendData(byte[] data, InetAddress addr) {
-        try (DatagramSocket ds = new DatagramSocket(port)) {
+    public void sendData(byte[] data, InetAddress addr, int port) {
+        try {
             DatagramPacket dpToSend = new DatagramPacket(data, data.length, addr, port);
             ds.send(dpToSend);
+            logger.info("data sent");
         } catch (IOException ex) {
             logger.error("Something went wrong during I/O.");
         }

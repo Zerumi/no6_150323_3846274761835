@@ -1,7 +1,7 @@
 package commandManager.commands;
 
+import requestLogic.requestSenders.CommandRequestSender;
 import serverLogic.ServerConnectionHandler;
-import serverLogic.ServerConnectionUtils;
 
 /**
  * Removes element from collection by id.
@@ -12,6 +12,6 @@ import serverLogic.ServerConnectionUtils;
 public class RemoveByIdCommand implements BaseCommand {
     @Override
     public void execute(String[] args) {
-        ServerConnectionUtils.sendCommand(this, args, ServerConnectionHandler.getCurrentConnection());
+        CommandRequestSender.sendCommand(this, args, ServerConnectionHandler.getCurrentConnection());
     }
 }

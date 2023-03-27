@@ -11,6 +11,6 @@ public class BaseRequestWorker implements RequestWorker {
 
     @Override
     public void workWithRequest(BaseRequest request, BaseRequestDTO dto) {
-
+        logger.info("we've got base request wow");
     }
 }

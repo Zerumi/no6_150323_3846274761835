@@ -4,10 +4,12 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.net.SocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
+import java.util.Arrays;
 
 public class UdpServerConnection implements ServerConnection {
 
@@ -15,7 +17,7 @@ public class UdpServerConnection implements ServerConnection {
     DatagramChannel channel;
     SocketAddress address;
 
-    protected UdpServerConnection(DatagramChannel channel, SocketAddress address) {
+    protected UdpServerConnection(DatagramChannel channel, SocketAddress address) throws IOException {
         this.channel = channel;
         this.address = address;
     }
@@ -38,6 +40,7 @@ public class UdpServerConnection implements ServerConnection {
     @Override
     public void closeConnection() throws IOException {
         if (channel.isConnected()) {
+            channel.disconnect();
             channel.close();
         }
     }
@@ -48,5 +51,18 @@ public class UdpServerConnection implements ServerConnection {
             var buf = ByteBuffer.wrap(bytesToSend);
             channel.send(buf, address);
         }
+    }
+
+    @Override
+    public ByteArrayInputStream listenServer() throws IOException {
+        ByteArrayInputStream res = null;
+        if (channel.isConnected()) {
+            ByteBuffer buf = ByteBuffer.allocate(4096);
+            address = channel.receive(buf);
+            logger.info("response read");
+            logger.info("bytes: " + Arrays.toString(buf.array()));
+            res = new ByteArrayInputStream(buf.array());
+        }
+        return res;
     }
 }

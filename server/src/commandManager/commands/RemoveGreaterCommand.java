@@ -1,12 +1,14 @@
 package commandManager.commands;
 
-import commandManager.commandResponse.CommandResponse;
 import models.Route;
 import models.comparators.RouteDistanceComparator;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import requestLogic.dataTransferObjects.models.RouteDTO;
 import requestLogic.dtoMappers.RouteDTOMapper;
+import responseLogic.responses.CommandStatusResponse;
 
 import java.util.HashSet;
 
@@ -17,7 +19,8 @@ import java.util.HashSet;
  * @since 1.0
  */
 public class RemoveGreaterCommand implements BaseCommand {
-    private CommandResponse response;
+    private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6.commands.rmGreater");
+    private CommandStatusResponse response;
     private RouteDTO obj;
 
     @Override
@@ -42,29 +45,30 @@ public class RemoveGreaterCommand implements BaseCommand {
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
 
         Route greaterThan = RouteDTOMapper.toRoute(obj);
-        System.out.println("Distance: " + greaterThan.getDistance());
+        logger.info("Distance: " + greaterThan.getDistance());
+
         var iterator = collectionHandler.getCollection().iterator();
 
         int count = 0;
 
         while (iterator.hasNext()) {
             var current = iterator.next();
-            System.out.print("Comparing: current -- " + current.getDistance() + " vs " + greaterThan.getDistance());
+            logger.info("Comparing: current -- " + current.getDistance() + " vs " + greaterThan.getDistance());
             if (comparator.compare(current, greaterThan) > 0) {
-                System.out.println(" -- Greater / Removing...");
-                System.out.println("Removing element: " + current);
-                iterator.remove();
+                logger.info(" -- Greater / Will be removed...");
                 count++;
             } else {
-                System.out.println(" -- Lower.");
+                logger.info(" -- Lower.");
             }
         }
 
-        System.out.println("Removed " + count + " elements");
+        collectionHandler.getCollection().removeIf(current -> comparator.compare(current, greaterThan) > 0);
+        response = CommandStatusResponse.ofString("Removed " + count + " elements");
+        logger.info(response.getResponse());
     }
 
     @Override
-    public CommandResponse getResponse() {
+    public CommandStatusResponse getResponse() {
         return response;
     }
 }
