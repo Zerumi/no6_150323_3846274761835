@@ -33,7 +33,8 @@ test {
 jar {
     manifest {
         attributes(
-                'Main-Class': 'main.Main'
+                'Main-Class': 'main.Main',
+                'Class-Path': configurations.runtimeClasspath.files.collect { it.getName() }.join(' ')
         )
     }
 }
