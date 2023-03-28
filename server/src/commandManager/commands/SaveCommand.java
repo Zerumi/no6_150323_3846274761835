@@ -27,7 +27,7 @@ public class SaveCommand implements BaseCommand {
 
     @Override
     public String getDescr() {
-        return "Saves collection to file.";
+        return "Deprecated (for server-use only).";
     }
 
     @Override

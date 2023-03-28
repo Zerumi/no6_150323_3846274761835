@@ -3,10 +3,12 @@ package commandManager.commands;
 import exceptions.WrongAmountOfArgumentsException;
 
 /**
- * Saves collection to file. Deprecated since 2.0
+ * Saves collection to file.
  *
  * @author Zerumi
+ * @see ExitCommand
  * @since 1.0
+ * @deprecated Deprecated since 2.0. This command now is server-side invoking. Use exit command.
  */
 @Deprecated
 public class SaveCommand implements BaseCommand {

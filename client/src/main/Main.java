@@ -36,6 +36,9 @@ public class Main {
 
             ResponseListener.getInstance().getListeningThread().start();
 
+            // commands
+            System.out.println("Welcome to CLI! We've established connection to a server.");
+            System.out.println("Now you can enter the commands. Use help for reference.");
             CommandExecutor executor = new CommandExecutor();
             executor.startExecuting(System.in, CommandMode.CLI_UserMode);
         } catch (UnknownHostException ex) {

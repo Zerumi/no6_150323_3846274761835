@@ -34,6 +34,7 @@ public class CommandManager {
         commands.put("remove_by_id", new RemoveByIdCommand());
         commands.put("clear", new ClearCommand());
         commands.put("save", new SaveCommand());
+        commands.put("execute_script", new ExecuteScriptCommand());
         commands.put("exit", new ExitCommand());
         commands.put("add_if_max", new AddIfMaxCommand());
         commands.put("add_if_min", new AddIfMinCommand());
@@ -58,7 +59,7 @@ public class CommandManager {
      * @param command request
      */
     public void executeCommand(CommandClientRequest command) {
-        CommandStatusResponse response = null;
+        CommandStatusResponse response;
         try {
             BaseCommand baseCommand = command.getCommand();
             baseCommand.execute(command.getLineArgs());

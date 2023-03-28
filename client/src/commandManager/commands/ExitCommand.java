@@ -9,10 +9,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * Terminates the application (without saving collection).
+ * Terminates the application. Invoke server collection-saving request.
  *
- * @since 1.0
  * @author Zerumi
+ * @since 1.0
  */
 public class ExitCommand implements BaseCommand {
 

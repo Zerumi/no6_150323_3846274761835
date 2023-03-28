@@ -21,7 +21,7 @@ public class ExitCommand implements BaseCommand {
 
     @Override
     public String getDescr() {
-        return "Terminates the application (without saving collection).";
+        return "Terminates the application. Invoke server-side collection saving.";
     }
 
     @Override

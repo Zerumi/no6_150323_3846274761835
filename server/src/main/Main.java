@@ -1,5 +1,6 @@
 package main;
 
+import commandManager.commands.SaveCommand;
 import fileLogic.Loader;
 import models.Route;
 import models.handlers.CollectionHandler;
@@ -30,6 +31,10 @@ public class Main {
         CollectionHandler<HashSet<Route>, Route> handler = RoutesHandler.getInstance();
 
         logger.trace("This is a server!");
+
+        // setup background tasks
+        var timer = new javax.swing.Timer(600000, event -> new SaveCommand().execute(new String[0]));
+        timer.start();
 
         // load collection
         Loader<HashSet<Route>, Route> loader = new Loader<>(handler.getCollection().getClass(), Route.class);
