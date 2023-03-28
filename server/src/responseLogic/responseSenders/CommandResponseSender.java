@@ -15,8 +15,10 @@ public class CommandResponseSender {
 
     public static void sendResponse(CommandStatusResponse response, ServerConnection connection, CallerBack to) {
         try {
-            CommandStatusResponseDTO dto = DTOMapper.convertToDTO(response, "responseLogic.dataTransferObjects");
-            ResponseSender.sendResponse(dto, connection, to);
+            if (response != null) {
+                CommandStatusResponseDTO dto = DTOMapper.convertToDTO(response, "responseLogic.dataTransferObjects");
+                ResponseSender.sendResponse(dto, connection, to);
+            }
         } catch (ClassNotFoundException e) {
             logger.fatal("Class not found", e);
         } catch (IOException e) {

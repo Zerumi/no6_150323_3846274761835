@@ -17,7 +17,7 @@ public class UdpServerConnection implements ServerConnection {
     DatagramChannel channel;
     SocketAddress address;
 
-    protected UdpServerConnection(DatagramChannel channel, SocketAddress address) throws IOException {
+    protected UdpServerConnection(DatagramChannel channel, SocketAddress address) {
         this.channel = channel;
         this.address = address;
     }
@@ -30,7 +30,7 @@ public class UdpServerConnection implements ServerConnection {
     public void openConnection() throws IOException {
         if (!channel.isConnected()) {
             channel.connect(address);
-            logger.log(Level.INFO, "Connected to: " + address);
+            logger.log(Level.INFO, "Opened channel to: " + address);
         }
     }
 
@@ -39,30 +39,34 @@ public class UdpServerConnection implements ServerConnection {
      */
     @Override
     public void closeConnection() throws IOException {
-        if (channel.isConnected()) {
-            channel.disconnect();
-            channel.close();
+        if (channel.isConnected() && channel.isOpen()) {
+            try {
+                channel.disconnect();
+                channel.close();
+            } catch (IOException e) {
+                channel.close();
+            }
         }
     }
 
     @Override
     public void sendData(byte[] bytesToSend) throws IOException {
-        if (channel.isConnected()) {
+        if (channel.isConnected() && channel.isOpen()) {
             var buf = ByteBuffer.wrap(bytesToSend);
             channel.send(buf, address);
-        }
+        } else this.openConnection();
     }
 
     @Override
     public ByteArrayInputStream listenServer() throws IOException {
         ByteArrayInputStream res = null;
-        if (channel.isConnected()) {
+        if (channel.isConnected() && channel.isOpen()) {
             ByteBuffer buf = ByteBuffer.allocate(4096);
             address = channel.receive(buf);
-            logger.info("response read");
-            logger.info("bytes: " + Arrays.toString(buf.array()));
+            logger.debug("response read");
+            logger.trace("bytes: " + Arrays.toString(buf.array()));
             res = new ByteArrayInputStream(buf.array());
-        }
+        } else this.openConnection();
         return res;
     }
 }

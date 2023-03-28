@@ -16,11 +16,9 @@ import java.util.Arrays;
 public class DatagramServerConnection implements ServerConnection {
     private final int BUFFER_SIZE = 4096;
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
-    private final int port;
     private final DatagramSocket ds;
 
     protected DatagramServerConnection(int port) throws SocketException {
-        this.port = port;
         ds = new DatagramSocket(port);
     }
 
@@ -31,7 +29,7 @@ public class DatagramServerConnection implements ServerConnection {
             dp = new DatagramPacket(buffer, buffer.length);
             ds.receive(dp);
 
-            logger.trace("Received connection.");
+            logger.debug("Received connection.");
             logger.trace("Bytes: " + Arrays.toString(dp.getData()));
 
             return StatusRequestBuilder.initialize().setObjectStream(new ByteArrayInputStream(dp.getData())).setCallerBack(dp.getAddress(), dp.getPort()).setCode(200).build();
@@ -46,7 +44,7 @@ public class DatagramServerConnection implements ServerConnection {
         try {
             DatagramPacket dpToSend = new DatagramPacket(data, data.length, addr, port);
             ds.send(dpToSend);
-            logger.info("data sent");
+            logger.debug("data sent");
         } catch (IOException ex) {
             logger.error("Something went wrong during I/O.");
         }

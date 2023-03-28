@@ -1,17 +1,17 @@
 package commandManager;
 
 import exceptions.CommandInterruptedException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.InputStream;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Class for executing commands. Provides different inputs for command executing.
  */
 public class CommandExecutor {
-    private static final Logger myLogger = Logger.getLogger("com.github.zerumi.lab5");
+    private static final Logger logger = LogManager.getLogger("com.github.zerumi.lab6");
 
     /**
      * Start executing commands from InputStream.
@@ -29,9 +29,9 @@ public class CommandExecutor {
                 commandManager.executeCommand(line.split(" "));
             } catch (CommandInterruptedException ex) {
                 if (mode.equals(CommandMode.CLI_UserMode))
-                    myLogger.log(Level.INFO, "Выполнение команды было прервано. Вы можете продолжать работу. Программа возвращена в безопасное состояние.");
+                    logger.info("Выполнение команды было прервано. Вы можете продолжать работу. Программа возвращена в безопасное состояние.");
                 else
-                    myLogger.log(Level.INFO, "Команда была пропущена... Обработчик продолжает работу");
+                    logger.info("Команда была пропущена... Обработчик продолжает работу");
             }
         }
     }

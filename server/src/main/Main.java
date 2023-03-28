@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.util.HashSet;
 
 public class Main {
-    public static final int PORT = 44456;
+    public static final int PORT = 50456;
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
 
     /**

@@ -4,13 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="rerun javadoc">
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="bug fix, part 1">
+      <change afterPath="$PROJECT_DIR$/client/src/responseLogic/responseListener/ResponseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/client/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/responseLogic/responseWorkers/BaseResponseWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/responseLogic/responseWorkers/BaseResponseWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/server/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/commandManager/CommandExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commandManager/CommandExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/commandManager/commands/BaseCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commandManager/commands/BaseCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/commandManager/commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commandManager/commands/ExitCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/CommandRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/CommandRequestSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/RequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/RequestSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/responseLogic/responseWorkers/CommandResponseWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/responseLogic/responseWorkers/CommandResponseWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/serverLogic/UdpServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/serverLogic/UdpServerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/MinByCreationDateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/MinByCreationDateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/RemoveGreaterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/RemoveGreaterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/ShowCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/handlers/CollectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/handlers/CollectionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/handlers/RouteIDHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/handlers/RouteIDHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/handlers/RoutesHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/handlers/RoutesHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/responseLogic/responseSenders/CommandResponseSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/responseLogic/responseSenders/CommandResponseSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/serverLogic/DatagramServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/serverLogic/DatagramServerConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,8 +313,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.no6_150323_3846274761835:client [installDist]" />
         <item itemvalue="Gradle.no6_150323_3846274761835:server [installDist]" />
+        <item itemvalue="Gradle.no6_150323_3846274761835:client [installDist]" />
         <item itemvalue="Gradle.no6_150323_3846274761835:client [run]" />
         <item itemvalue="Gradle.no6_150323_3846274761835:server [run]" />
         <item itemvalue="Gradle.no6_150323_3846274761835:client [build]" />
@@ -334,7 +350,7 @@
       <workItem from="1677709564940" duration="584000" />
       <workItem from="1679681280517" duration="4460000" />
       <workItem from="1679761964391" duration="11079000" />
-      <workItem from="1679784958930" duration="67412000" />
+      <workItem from="1679784958930" duration="83483000" />
     </task>
     <task id="LOCAL-00001" summary="add XML Reader">
       <created>1675714633059</created>
@@ -497,7 +513,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679926026808</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="logger fix">
+      <created>1679927765198</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1679927765198</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +532,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add XML Reader" />
     <MESSAGE value="loader, part 2" />
     <MESSAGE value="loader final + javadoc" />
     <MESSAGE value="Models get/set updated, javadoc" />
@@ -533,7 +555,9 @@
     <MESSAGE value="client-server part 6, final" />
     <MESSAGE value="add diagrams" />
     <MESSAGE value="rerun javadoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="rerun javadoc" />
+    <MESSAGE value="logger fix" />
+    <MESSAGE value="bug fix, part 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix, part 1" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -553,7 +577,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/responseLogic/responseSenders/CommandResponseSender.java</url>
-          <line>18</line>
+          <line>19</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -562,14 +586,19 @@
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/server/src/commandManager/CommandManager.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/commandManager/commands/HelpCommand.java</url>
           <line>44</line>
           <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/client/src/commandManager/commands/HelpCommand.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/client/src/serverLogic/UdpServerConnection.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

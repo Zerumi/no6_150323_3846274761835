@@ -14,9 +14,10 @@ public class CommandRequestSender {
     public static void sendCommand(BaseCommand command, String[] args, ServerConnection connection) {
         try {
             var rq = CommandRequestDTOMapper.commandRequestDTOMapper(command, args);
+            logger.info("Sending command request...");
             RequestSender.sendRequest(rq, connection);
         } catch (IOException e) {
-            logger.fatal("Can't send request");
+            logger.fatal("Can't send request", e);
         } catch (ClassNotFoundException e) {
             logger.fatal("Class not found.");
         }

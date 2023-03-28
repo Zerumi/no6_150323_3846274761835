@@ -45,7 +45,7 @@ public class RemoveGreaterCommand implements BaseCommand {
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
 
         Route greaterThan = RouteDTOMapper.toRoute(obj);
-        logger.info("Distance: " + greaterThan.getDistance());
+        logger.debug("Distance: " + greaterThan.getDistance());
 
         var iterator = collectionHandler.getCollection().iterator();
 
@@ -53,12 +53,12 @@ public class RemoveGreaterCommand implements BaseCommand {
 
         while (iterator.hasNext()) {
             var current = iterator.next();
-            logger.info("Comparing: current -- " + current.getDistance() + " vs " + greaterThan.getDistance());
+            logger.debug("Comparing: current -- " + current.getDistance() + " vs " + greaterThan.getDistance());
             if (comparator.compare(current, greaterThan) > 0) {
-                logger.info(" -- Greater / Will be removed...");
+                logger.debug(" -- Greater / Will be removed...");
                 count++;
             } else {
-                logger.info(" -- Lower.");
+                logger.debug(" -- Lower.");
             }
         }
 

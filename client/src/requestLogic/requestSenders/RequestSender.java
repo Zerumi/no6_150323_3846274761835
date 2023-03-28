@@ -17,6 +17,6 @@ public class RequestSender {
         ObjectOutputStream oos = new ObjectOutputStream(bos);
         oos.writeObject(request);
         connection.sendData(bos.toByteArray());
-        logger.info("request sent");
+        logger.info("Request sent");
     }
 }

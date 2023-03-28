@@ -35,7 +35,7 @@ public class ShowCommand implements BaseCommand {
 
         StringBuilder sb = new StringBuilder();
 
-        handler.getCollection().forEach(e -> sb.append(e.toString()).append('\n'));
+        handler.getSorted().forEach(e -> sb.append(e.toString()).append('\n'));
         response = CommandStatusResponse.ofString(sb.toString());
 
         if (handler.getCollection().isEmpty()) {

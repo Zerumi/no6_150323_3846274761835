@@ -13,6 +13,6 @@ public class CommandResponseWorker extends BaseResponseWorker {
     public void workWithResponse(BaseResponse response, BaseResponseDTO dto) {
         CommandStatusResponse responseToWork = (CommandStatusResponse) response;
         logger.info("Status code: " + responseToWork.getStatusCode());
-        logger.info(responseToWork.getResponse());
+        logger.info("Response:\n" + responseToWork.getResponse());
     }
 }

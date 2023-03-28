@@ -42,7 +42,16 @@ public interface CollectionHandler<T extends AbstractCollection<E>, E> {
     /**
      * Provides method for fast sorting collection. You can ignore this method.
      */
-    void sort();
+    default void sort() {
+
+    }
+
+    /**
+     * Provides method for getting sorted variant of collection.
+     *
+     * @return sorted collection
+     */
+    T getSorted();
 
     /**
      * Provides method for fast getting first element.

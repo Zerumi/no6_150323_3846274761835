@@ -4,15 +4,10 @@ import commandManager.CommandExecutor;
 import commandManager.CommandMode;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import responseLogic.ResponseReader;
-import responseLogic.dataTransferObjects.BaseResponseDTO;
-import responseLogic.dtoMappers.DTOMapper;
-import responseLogic.responseWorkers.ResponseWorkerManager;
-import responseLogic.responses.BaseResponse;
+import responseLogic.responseListener.ResponseListener;
 import serverLogic.*;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
@@ -24,9 +19,7 @@ import java.net.UnknownHostException;
  * @since 1.0
  */
 public class Main {
-    @SuppressWarnings("SpellCheckingInspection")
-    public static final String HOST_ADDRESS = "se.ifmo.ru";
-    public static final int PORT = 44456;
+    public static final int PORT = 50456;
     private static final Logger logger = LogManager.getLogger("lab6");
 
     /**
@@ -41,23 +34,7 @@ public class Main {
             ServerConnectionHandler.setServerConnection(connection);
             connection.openConnection();
 
-            Thread listenResponses = new Thread(() -> {
-                while (true) {
-                    try (InputStream stream = connection.listenServer()) {
-                        logger.info("received");
-                        ResponseReader<BaseResponseDTO> reader = new ResponseReader<>(stream);
-                        BaseResponseDTO responseDTO = reader.readObject();
-                        BaseResponse response = DTOMapper.convertFromDTO(responseDTO, "responseLogic.responses");
-                        ResponseWorkerManager manager = new ResponseWorkerManager();
-                        manager.workWithRequest(response, responseDTO, response.getClass().getSimpleName());
-                    } catch (IOException e) {
-                        logger.error("Something went wrong during I/O operations.");
-                    } catch (ClassNotFoundException e) {
-                        logger.error("Response class not found.");
-                    }
-                }
-            });
-            listenResponses.start();
+            ResponseListener.getInstance().getListeningThread().start();
 
             CommandExecutor executor = new CommandExecutor();
             executor.startExecuting(System.in, CommandMode.CLI_UserMode);

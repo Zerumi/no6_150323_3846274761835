@@ -10,6 +10,7 @@ import responseLogic.responses.CommandStatusResponse;
 
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Optional;
 
 /**
  * Returns element from collection with min creation date.
@@ -37,8 +38,10 @@ public class MinByCreationDateCommand implements BaseCommand {
         Date min = collectionHandler.getCollection().stream().map(Route::getCreationDate).min(Date::compareTo).orElse(null);
 
         if (min == null) response = CommandStatusResponse.ofString("There's nothing to show...");
-        else
-            response = CommandStatusResponse.ofString(collectionHandler.getCollection().stream().min(new RouteCreationDateComparator()).toString());
+        else {
+            Optional<Route> optional = collectionHandler.getCollection().stream().min(new RouteCreationDateComparator());
+            response = optional.map(route -> CommandStatusResponse.ofString(route.toString())).orElseGet(() -> CommandStatusResponse.ofString("There's nothing to show..."));
+        }
 
         logger.info(response.getResponse());
     }

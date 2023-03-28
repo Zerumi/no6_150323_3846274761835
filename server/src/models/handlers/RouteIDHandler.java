@@ -1,6 +1,7 @@
 package models.handlers;
 
 import models.Route;
+import models.comparators.RouteComparator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,7 +17,7 @@ public class RouteIDHandler {
     public static RouteIDHandler getInstance() {
         if (instance == null) {
             CollectionHandler<HashSet<Route>, Route> handler = RoutesHandler.getInstance();
-            Route last = handler.getLastElement();
+            Route last = handler.getMax(new RouteComparator());
             if (last != null) {
                 nextID = last.getId() + 1;
             }

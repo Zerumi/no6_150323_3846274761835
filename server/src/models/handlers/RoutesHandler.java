@@ -4,10 +4,8 @@ import models.Route;
 import models.comparators.RouteComparator;
 
 import java.time.Instant;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Iterator;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Current implementation of CollectionsHandler for HashSet of Route.
@@ -89,6 +87,11 @@ public class RoutesHandler implements CollectionHandler<HashSet<Route>, Route> {
         }
 
         this.routes = sorted;
+    }
+
+    @Override
+    public HashSet<Route> getSorted() {
+        return routes.stream().sorted(new RouteComparator()).collect(Collectors.toCollection(LinkedHashSet::new));
     }
 
     /**
