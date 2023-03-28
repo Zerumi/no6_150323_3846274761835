@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.*;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -23,7 +24,14 @@ public class XMLWriter implements BaseWriter {
     public void writeToFile(String path, LinkedHashMap<String[], String> values) {
         try (PrintWriter writer = new PrintWriter(path)) {
 
-            while (values.values().remove(null));
+            int countOfNull = 0;
+
+            while (values.values().remove(null)) {
+                countOfNull++;
+                /* removing all null elements */
+            }
+
+            myLogger.log(Level.FINE, "Removed " + countOfNull + "elements.");
 
             writer.println("<?xml version=\"1.0\"?>");
             writer.println();
