@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="bug fix, part 2.1">
-      <change afterPath="$PROJECT_DIR$/server/src/commandManager/commands/ExecuteScriptCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/commandManager/commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commandManager/commands/ExitCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/commandManager/commands/SaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commandManager/commands/SaveCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commandManager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/CommandManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/ExitCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/SaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/SaveCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,6 +62,27 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="no6_150323_3846274761835" type="f1a62948:ProjectNode" />
+                <item name="client" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="no6_150323_3846274761835" type="f1a62948:ProjectNode" />
+                <item name="client" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="no6_150323_3846274761835" type="f1a62948:ProjectNode" />
+                <item name="client" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="distribution" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="no6_150323_3846274761835" type="f1a62948:ProjectNode" />
                 <item name="server" type="2d1252cf:ModuleNode" />
               </path>
               <path>
@@ -105,6 +115,7 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
     <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -121,28 +132,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "extract.method.default.visibility": "private",
-    "jdk.selected.JAVA_MODULE": "openjdk-17.0.2",
-    "last_opened_file_path": "/Users/zerumi/IdeaProjects/gitCodes/no6_150323_3846274761835/client/src/responseLogic",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-17.0.2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/zerumi/IdeaProjects/gitCodes/no6_150323_3846274761835/client/src/responseLogic&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="requestLogic" />
@@ -542,6 +553,17 @@
   <component name="UpdateCopyrightCheckinHandler">
     <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -600,7 +622,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/commandManager/commands/HelpCommand.java</url>
-          <line>44</line>
+          <line>43</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
