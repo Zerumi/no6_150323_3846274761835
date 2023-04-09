@@ -1,10 +1,10 @@
 package requestLogic.dtoMappers;
 
+import dataTransferObjects.models.RouteDTO;
 import models.Coordinates;
 import models.Location;
 import models.Route;
 import models.handlers.RouteIDHandler;
-import requestLogic.dataTransferObjects.models.RouteDTO;
 
 import java.time.Instant;
 import java.util.Date;

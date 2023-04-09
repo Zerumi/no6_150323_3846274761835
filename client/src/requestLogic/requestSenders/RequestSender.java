@@ -1,8 +1,8 @@
 package requestLogic.requestSenders;
 
+import dataTransferObjects.requests.BaseRequestDTO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import requestLogic.dataTransferObjects.BaseRequestDTO;
 import serverLogic.ServerConnection;
 
 import java.io.ByteArrayOutputStream;

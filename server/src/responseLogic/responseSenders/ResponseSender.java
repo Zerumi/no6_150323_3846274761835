@@ -1,9 +1,9 @@
 package responseLogic.responseSenders;
 
+import dataTransferObjects.responses.BaseResponseDTO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requestLogic.CallerBack;
-import responseLogic.dataTransferObjects.BaseResponseDTO;
 import serverLogic.ServerConnection;
 
 import java.io.ByteArrayOutputStream;

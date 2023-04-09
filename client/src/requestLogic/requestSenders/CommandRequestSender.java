@@ -1,6 +1,6 @@
 package requestLogic.requestSenders;
 
-import commandManager.commands.BaseCommand;
+import commandLogic.commands.BaseCommand;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requestLogic.dtoMappers.CommandRequestDTOMapper;

@@ -1,10 +1,10 @@
 package requestLogic.requestWorkers;
 
 import commandManager.CommandManager;
+import dataTransferObjects.requests.BaseRequestDTO;
+import dataTransferObjects.requests.CommandClientRequestDTO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import requestLogic.dataTransferObjects.BaseRequestDTO;
-import requestLogic.dataTransferObjects.CommandClientRequestDTO;
 import requestLogic.dtoMappers.DTOMapper;
 import requestLogic.requests.BaseRequest;
 import requestLogic.requests.CommandClientRequest;

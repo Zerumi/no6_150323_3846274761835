@@ -1,8 +1,8 @@
 package responseLogic.responseWorkers;
 
+import dataTransferObjects.responses.BaseResponseDTO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import responseLogic.dataTransferObjects.BaseResponseDTO;
 import responseLogic.responses.BaseResponse;
 
 public class BaseResponseWorker implements ResponseWorker {

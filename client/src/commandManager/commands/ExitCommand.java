@@ -1,5 +1,6 @@
 package commandManager.commands;
 
+import commandLogic.commands.BaseCommand;
 import requestLogic.requestSenders.CommandRequestSender;
 import responseLogic.responseListener.ResponseListener;
 import serverLogic.ServerConnectionHandler;
@@ -16,7 +17,13 @@ import java.util.logging.Logger;
  */
 public class ExitCommand implements BaseCommand {
 
+
     private static final Logger myLogger = Logger.getLogger("com.github.zerumi.lab5");
+
+    @Override
+    public String getName() {
+        return "exit";
+    }
 
     @Override
     public void execute(String[] args) throws IOException {

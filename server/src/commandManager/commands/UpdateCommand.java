@@ -1,11 +1,11 @@
 package commandManager.commands;
 
+import dataTransferObjects.models.RouteDTO;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import requestLogic.dataTransferObjects.models.RouteDTO;
 import requestLogic.dtoMappers.RouteDTOMapper;
 import responseLogic.responses.CommandStatusResponse;
 

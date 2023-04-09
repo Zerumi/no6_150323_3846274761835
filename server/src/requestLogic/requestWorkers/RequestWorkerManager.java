@@ -1,9 +1,9 @@
 package requestLogic.requestWorkers;
 
+import dataTransferObjects.requests.BaseRequestDTO;
 import exceptions.UnsupportedRequestException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import requestLogic.dataTransferObjects.BaseRequestDTO;
 import requestLogic.requests.BaseRequest;
 
 import java.util.LinkedHashMap;

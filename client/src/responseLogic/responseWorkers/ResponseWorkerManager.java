@@ -1,9 +1,9 @@
 package responseLogic.responseWorkers;
 
+import dataTransferObjects.responses.BaseResponseDTO;
 import exceptions.UnsupportedResponseException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import responseLogic.dataTransferObjects.BaseResponseDTO;
 import responseLogic.responses.BaseResponse;
 
 import java.util.LinkedHashMap;

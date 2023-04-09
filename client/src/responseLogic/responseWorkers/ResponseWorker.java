@@ -1,6 +1,6 @@
 package responseLogic.responseWorkers;
 
-import responseLogic.dataTransferObjects.BaseResponseDTO;
+import dataTransferObjects.responses.BaseResponseDTO;
 import responseLogic.responses.BaseResponse;
 
 public interface ResponseWorker {

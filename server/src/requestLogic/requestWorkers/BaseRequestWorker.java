@@ -1,8 +1,8 @@
 package requestLogic.requestWorkers;
 
+import dataTransferObjects.requests.BaseRequestDTO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import requestLogic.dataTransferObjects.BaseRequestDTO;
 import requestLogic.requests.BaseRequest;
 
 public class BaseRequestWorker implements RequestWorker {

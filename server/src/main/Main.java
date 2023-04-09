@@ -1,6 +1,7 @@
 package main;
 
 import commandManager.commands.SaveCommand;
+import dataTransferObjects.requests.BaseRequestDTO;
 import fileLogic.Loader;
 import models.Route;
 import models.handlers.CollectionHandler;
@@ -9,7 +10,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requestLogic.RequestReader;
 import requestLogic.StatusRequest;
-import requestLogic.dataTransferObjects.BaseRequestDTO;
 import requestLogic.dtoMappers.RequestDTOMapper;
 import requestLogic.requestWorkers.RequestWorkerManager;
 import serverLogic.DatagramServerConnectionFactory;
@@ -65,7 +65,7 @@ public class Main {
             } catch (IOException e) {
                 logger.error("Something went wrong during I/O", e);
             } catch (ClassNotFoundException e) {
-                logger.error("Class not Found");
+                logger.error("Class not Found", e);
             } catch (RuntimeException e) {
                 logger.fatal(e);
             }

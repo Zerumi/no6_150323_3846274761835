@@ -1,7 +1,7 @@
 package requestLogic.dtoMappers;
 
+import dataTransferObjects.requests.BaseRequestDTO;
 import org.modelmapper.ModelMapper;
-import requestLogic.dataTransferObjects.BaseRequestDTO;
 import requestLogic.requests.BaseRequest;
 
 public class RequestDTOMapper {

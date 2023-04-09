@@ -1,5 +1,6 @@
 package commandManager.commands;
 
+import commandLogic.commands.BaseCommand;
 import commandManager.CommandExecutor;
 import commandManager.CommandMode;
 import exceptions.WrongAmountOfArgumentsException;
@@ -20,12 +21,18 @@ import java.util.regex.Pattern;
 /**
  * Reads and executes script from file.
  *
- * @since 1.0
  * @author Zerumi
+ * @since 1.0
  */
 public class ExecuteScriptCommand implements BaseCommand {
 
     private static final Logger myLogger = Logger.getLogger("com.github.zerumi.lab5");
+
+    @Override
+    public String getName() {
+        return "execute_script";
+    }
+
     @Override
     public void execute(String[] args) throws IllegalArgumentException, WrongAmountOfArgumentsException {
         Utilities.checkArgumentsOrThrow(args.length, 1);

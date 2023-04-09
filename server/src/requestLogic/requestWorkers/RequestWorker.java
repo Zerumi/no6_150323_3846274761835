@@ -1,6 +1,6 @@
 package requestLogic.requestWorkers;
 
-import requestLogic.dataTransferObjects.BaseRequestDTO;
+import dataTransferObjects.requests.BaseRequestDTO;
 import requestLogic.requests.BaseRequest;
 
 public interface RequestWorker {

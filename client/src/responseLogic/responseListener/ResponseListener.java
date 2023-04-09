@@ -1,9 +1,9 @@
 package responseLogic.responseListener;
 
+import dataTransferObjects.responses.BaseResponseDTO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import responseLogic.ResponseReader;
-import responseLogic.dataTransferObjects.BaseResponseDTO;
 import responseLogic.dtoMappers.DTOMapper;
 import responseLogic.responseWorkers.ResponseWorkerManager;
 import responseLogic.responses.BaseResponse;
