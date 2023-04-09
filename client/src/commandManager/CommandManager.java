@@ -1,16 +1,23 @@
 package commandManager;
 
 import commandLogic.ExternalCommandLoader;
+import commandLogic.commandReceiverLogic.ReceiverManager;
+import commandLogic.commandReceiverLogic.ReceiverType;
+import commandLogic.commandReceiverLogic.handlers.ArgumentReceiverHandler;
+import commandLogic.commandReceiverLogic.handlers.NonArgReceiversHandler;
 import commandLogic.commands.BaseCommand;
-import commandLogic.receivers.ReceiverManager;
-import commandLogic.receivers.ReceiverType;
 import commandManager.commands.ExecuteScriptCommand;
 import commandManager.commands.ExitCommand;
-import commandManager.externalRecievers.NonArgumentReciever;
+import commandManager.externalRecievers.ArgumentRouteCommandReceiver;
+import commandManager.externalRecievers.NonArgumentReceiver;
 import exceptions.BuildObjectException;
 import exceptions.CommandInterruptedException;
 import exceptions.UnknownCommandException;
 import exceptions.WrongAmountOfArgumentsException;
+import models.Route;
+import models.handlers.ModuleHandler;
+import models.handlers.nonUserMode.RouteNonCLIHandler;
+import models.handlers.userMode.RouteCLIHandler;
 
 import java.util.LinkedHashMap;
 import java.util.Optional;
@@ -28,7 +35,7 @@ import java.util.logging.Logger;
 public class CommandManager {
 
     private static final Logger myLogger = Logger.getLogger("com.github.zerumi.lab5");
-    LinkedHashMap<String, BaseCommand> commands;
+    final LinkedHashMap<String, BaseCommand> commands;
 
     /**
      * Constructor provides choice of commands behavior: ex. userMode or nonUserMode
@@ -47,21 +54,19 @@ public class CommandManager {
         ExternalCommandLoader loader = new ExternalCommandLoader();
         commands.putAll(loader.getExternalCommands());
 
-        ReceiverManager.registerReceiver(ReceiverType.NoArgs, new NonArgumentReciever());
+        ReceiverManager manager = ReceiverManager.getInstance();
 
-        // TODO: надо подумать, что с этим делать
-        /* ModuleHandler<Route> handler = null;
-        switch (mode)
-        {
+        manager.registerHandler(ReceiverType.NoArgs, new NonArgReceiversHandler());
+        manager.registerHandler(ReceiverType.ArgumentRoute, new ArgumentReceiverHandler<>(Route.class));
+
+        manager.registerReceiver(ReceiverType.NoArgs, new NonArgumentReceiver());
+
+        ModuleHandler<Route> handler = null;
+        switch (mode) {
             case CLI_UserMode -> handler = new RouteCLIHandler();
             case NonUserMode -> handler = new RouteNonCLIHandler(scanner);
         }
-
-        commands.put("add", new AddCommand(handler));
-        commands.put("update", new UpdateCommand(handler));
-        commands.put("add_if_max", new AddIfMaxCommand(handler));
-        commands.put("add_if_min", new AddIfMinCommand(handler));
-        commands.put("remove_greater", new RemoveGreaterCommand(handler));*/
+        manager.registerReceiver(ReceiverType.ArgumentRoute, new ArgumentRouteCommandReceiver(handler));
     }
 
     /**

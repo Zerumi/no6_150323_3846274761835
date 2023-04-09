@@ -18,6 +18,7 @@ import serverLogic.ServerConnection;
 import java.io.IOException;
 import java.util.HashSet;
 
+@SuppressWarnings("InfiniteLoopStatement")
 public class Main {
     public static final int PORT = 50456;
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
@@ -37,7 +38,7 @@ public class Main {
         timer.start();
 
         // load collection
-        Loader<HashSet<Route>, Route> loader = new Loader<>(handler.getCollection().getClass(), Route.class);
+        @SuppressWarnings("unchecked") Loader<HashSet<Route>, Route> loader = new Loader<>(handler.getCollection().getClass(), Route.class);
         handler.setCollection(loader.loadFromXMLbyEnvKey(ENV_KEY));
         System.out.println("Loaded " + handler.getCollection().size() + " elements total.");
         System.out.println();

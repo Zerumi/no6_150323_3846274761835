@@ -27,7 +27,7 @@ public class ExitCommand implements BaseCommand {
 
     @Override
     public void execute(String[] args) throws IOException {
-        CommandRequestSender.sendCommand(this, args, ServerConnectionHandler.getCurrentConnection());
+        new CommandRequestSender().sendCommand(this, args, ServerConnectionHandler.getCurrentConnection());
         ResponseListener.getInstance().getListeningThread().interrupt();
         ServerConnectionHandler.getCurrentConnection().closeConnection();
         myLogger.log(Level.FINE, "Выходим из программы...");

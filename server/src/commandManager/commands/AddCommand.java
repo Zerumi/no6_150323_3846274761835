@@ -1,12 +1,10 @@
 package commandManager.commands;
 
-import dataTransferObjects.models.RouteDTO;
 import models.Route;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import requestLogic.dtoMappers.RouteDTOMapper;
 import responseLogic.responses.CommandStatusResponse;
 
 import java.util.HashSet;
@@ -17,11 +15,16 @@ import java.util.HashSet;
  * @author Zerumi
  * @since 1.0
  */
-public class AddCommand implements BaseCommand {
+public class AddCommand implements BaseCommand, ArgumentConsumer<Route> {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6.commands.add");
     private CommandStatusResponse response;
 
-    private RouteDTO obj;
+    private Route obj;
+
+    @Override
+    public void setObj(Route obj) {
+        this.obj = obj;
+    }
 
     @Override
     public String getName() {
@@ -39,10 +42,10 @@ public class AddCommand implements BaseCommand {
     }
 
     @Override
-    public void execute(String[] args) throws ClassNotFoundException {
+    public void execute(String[] args) {
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
 
-        collectionHandler.addElementToCollection(RouteDTOMapper.toRoute(obj));
+        collectionHandler.addElementToCollection(obj);
 
         response = CommandStatusResponse.ofString("Element added!");
         logger.info(response.getResponse());

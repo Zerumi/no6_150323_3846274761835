@@ -19,7 +19,7 @@ public class ExecuteScriptCommand implements BaseCommand {
     }
 
     @Override
-    public void execute(String[] args) throws IllegalArgumentException, ClassNotFoundException {
+    public void execute(String[] args) throws IllegalArgumentException {
         // for client-use only
     }
 

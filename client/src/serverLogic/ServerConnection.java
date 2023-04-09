@@ -28,7 +28,7 @@ public interface ServerConnection {
     /**
      * Method for send data to a server
      *
-     * @param bytesToSend
+     * @param bytesToSend bytes to send
      * @throws IOException if I/O occurs
      */
     void sendData(byte[] bytesToSend) throws IOException;

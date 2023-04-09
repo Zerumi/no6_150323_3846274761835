@@ -18,6 +18,7 @@ public class RequestWorkerManager {
     public RequestWorkerManager() {
         workers.put("BaseRequest", new BaseRequestWorker());
         workers.put("CommandClientRequest", new CommandClientRequestWorker());
+        workers.put("ArgumentCommandClientRequest", new ArgumentCommandClientRequestWorker<>());
     }
 
     public void workWithRequest(BaseRequest request, BaseRequestDTO dto, String requestType) {

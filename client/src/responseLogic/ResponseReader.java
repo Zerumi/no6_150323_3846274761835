@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.io.ObjectInputStream;
 
 public class ResponseReader<T> {
-    InputStream in;
+    final InputStream in;
 
     public ResponseReader(InputStream in) {
         this.in = in;

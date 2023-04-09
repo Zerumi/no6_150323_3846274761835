@@ -184,10 +184,10 @@ public class Loader<T extends Collection<E>, E> {
     private <U> void setField (Class<?> currentType, String[] fullPath, int currentIndex, String value, U object) throws NoSuchFieldException, InstantiationException, IllegalAccessException {
         Field fieldToSet = currentType.getDeclaredField(fullPath[currentIndex++]);
         fieldToSet.setAccessible(true);
-        Class<U> nextType = (Class<U>) fieldToSet.getType();
+        @SuppressWarnings("unchecked") Class<U> nextType = (Class<U>) fieldToSet.getType();
         if (currentIndex != fullPath.length)
         {
-            U nextObject = (U) fieldToSet.get(object);
+            @SuppressWarnings("unchecked") U nextObject = (U) fieldToSet.get(object);
             if (nextObject == null)
             {
                 nextObject = nextType.newInstance();

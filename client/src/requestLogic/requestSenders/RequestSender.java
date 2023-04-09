@@ -12,7 +12,7 @@ import java.io.ObjectOutputStream;
 public class RequestSender {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
 
-    public static void sendRequest(BaseRequestDTO request, ServerConnection connection) throws IOException {
+    public void sendRequest(BaseRequestDTO request, ServerConnection connection) throws IOException {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         ObjectOutputStream oos = new ObjectOutputStream(bos);
         oos.writeObject(request);

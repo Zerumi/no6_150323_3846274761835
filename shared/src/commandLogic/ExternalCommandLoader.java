@@ -1,12 +1,14 @@
 package commandLogic;
 
+import commandLogic.commandReceiverLogic.ReceiverType;
 import commandLogic.commands.BaseCommand;
+import commandLogic.commands.argCommands.AddCommand;
 import commandLogic.commands.noArgCommands.*;
 
 import java.util.LinkedHashMap;
 
 public class ExternalCommandLoader {
-    LinkedHashMap<String, BaseCommand> commands;
+    final LinkedHashMap<String, BaseCommand> commands;
 
     public ExternalCommandLoader() {
         commands = new LinkedHashMap<>();
@@ -18,6 +20,7 @@ public class ExternalCommandLoader {
         commands.put("print_field_ascending_distance", new PrintFieldDistanceAscendingCommand());
         commands.put("remove_by_id", new RemoveByIdCommand());
         commands.put("show", new ShowCommand());
+        commands.put("add", new AddCommand(ReceiverType.ArgumentRoute));
     }
 
     public LinkedHashMap<String, BaseCommand> getExternalCommands() {

@@ -18,7 +18,7 @@ import java.util.LinkedHashMap;
 public class CommandManager {
 
     private static final Logger logger = LogManager.getLogger("com.github.zerumi.lab5");
-    LinkedHashMap<String, BaseCommand> commands;
+    final LinkedHashMap<String, BaseCommand> commands;
 
     /**
      * Setup command manager and all of its commands.

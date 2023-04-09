@@ -1,8 +1,8 @@
 package commandLogic.commands.noArgCommands;
 
+import commandLogic.commandReceiverLogic.ReceiverManager;
+import commandLogic.commandReceiverLogic.ReceiverType;
 import commandLogic.commands.BaseCommand;
-import commandLogic.receivers.ReceiverManager;
-import commandLogic.receivers.ReceiverType;
 
 public abstract class NoArgumentCommand implements BaseCommand {
     /**
@@ -13,6 +13,8 @@ public abstract class NoArgumentCommand implements BaseCommand {
      */
     @Override
     public void execute(String[] args) throws Exception {
-        ReceiverManager.getReceivers(ReceiverType.NoArgs).forEach(x -> x.recieveCommand(this, args));
+        for (var receiver : ReceiverManager.getInstance().getReceivers(ReceiverType.NoArgs)) {
+            receiver.receiveCommand(this, args);
+        }
     }
 }

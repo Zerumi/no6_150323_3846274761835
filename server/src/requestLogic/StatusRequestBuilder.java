@@ -5,7 +5,7 @@ import java.net.InetAddress;
 
 public class StatusRequestBuilder {
 
-    StatusRequest result;
+    final StatusRequest result;
 
     private StatusRequestBuilder() {
         result = new StatusRequest();

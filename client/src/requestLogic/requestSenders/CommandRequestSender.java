@@ -11,11 +11,11 @@ import java.io.IOException;
 public class CommandRequestSender {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
 
-    public static void sendCommand(BaseCommand command, String[] args, ServerConnection connection) {
+    public void sendCommand(BaseCommand command, String[] args, ServerConnection connection) {
         try {
-            var rq = CommandRequestDTOMapper.commandRequestDTOMapper(command, args);
+            var rq = new CommandRequestDTOMapper().commandRequestDTOMapper(command, args);
             logger.info("Sending command request...");
-            RequestSender.sendRequest(rq, connection);
+            new RequestSender().sendRequest(rq, connection);
         } catch (IOException e) {
             logger.fatal("Can't send request", e);
         } catch (ClassNotFoundException e) {

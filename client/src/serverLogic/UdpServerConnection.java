@@ -14,7 +14,7 @@ import java.util.Arrays;
 public class UdpServerConnection implements ServerConnection {
 
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
-    DatagramChannel channel;
+    final DatagramChannel channel;
     SocketAddress address;
 
     protected UdpServerConnection(DatagramChannel channel, SocketAddress address) {

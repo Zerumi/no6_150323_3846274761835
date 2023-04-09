@@ -23,7 +23,7 @@ public class RouteNonCLIHandler implements ModuleHandler<Route> {
 
     private static final Logger myLogger = Logger.getLogger("com.github.zerumi.lab5");
 
-    Scanner scanner;
+    final Scanner scanner;
 
     /**
      * Constructor for setup handler's scanner.
