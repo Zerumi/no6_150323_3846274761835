@@ -38,7 +38,8 @@ public class Main {
         timer.start();
 
         // load collection
-        @SuppressWarnings("unchecked") Loader<HashSet<Route>, Route> loader = new Loader<>(handler.getCollection().getClass(), Route.class);
+        @SuppressWarnings("unchecked")
+        Loader<HashSet<Route>, Route> loader = new Loader<>(handler.getCollection().getClass(), Route.class);
         handler.setCollection(loader.loadFromXMLbyEnvKey(ENV_KEY));
         System.out.println("Loaded " + handler.getCollection().size() + " elements total.");
         System.out.println();
