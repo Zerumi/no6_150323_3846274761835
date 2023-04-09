@@ -18,10 +18,10 @@ import java.util.HashSet;
  * @author Zerumi
  * @since 1.0
  */
-public class AddIfMinCommand implements BaseCommand {
+public class AddIfMinCommand implements BaseCommand, ArgumentConsumer<Route> {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6.commands.addIfMin");
     private CommandStatusResponse response;
-    private RouteDTO obj;
+    private Route obj;
 
     @Override
     public String getName() {
@@ -42,10 +42,8 @@ public class AddIfMinCommand implements BaseCommand {
     public void execute(String[] args) throws ClassNotFoundException {
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
 
-        Route route = RouteDTOMapper.toRoute(obj);
-
-        if (route.compareTo(collectionHandler.getMin(new RouteDistanceComparator())) < 0) {
-            collectionHandler.addElementToCollection(route);
+        if (obj.compareTo(collectionHandler.getMin(new RouteDistanceComparator())) < 0) {
+            collectionHandler.addElementToCollection(obj);
             response = CommandStatusResponse.ofString("Element added!");
         } else {
             response = CommandStatusResponse.ofString("Element not added: it's not lower than min value.");
@@ -57,5 +55,10 @@ public class AddIfMinCommand implements BaseCommand {
     @Override
     public CommandStatusResponse getResponse() {
         return response;
+    }
+
+    @Override
+    public void setObj(Route obj) {
+        this.obj = obj;
     }
 }

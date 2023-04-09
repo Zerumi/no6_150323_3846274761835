@@ -4,12 +4,12 @@ memberSearchIndex = [{
     "l": "AddCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "commandManager.commands",
+    "p": "commandLogic.commands.argCommands",
     "c": "AddCommand",
-    "l": "AddCommand(ModuleHandler<Route>)",
-    "u": "%3Cinit%3E(models.handlers.ModuleHandler)"
+    "l": "AddCommand(ReceiverType)",
+    "u": "%3Cinit%3E(commandLogic.commandReceiverLogic.ReceiverType)"
 }, {
-    "p": "requestLogic.dataTransferObjects.commands",
+    "p": "dataTransferObjects.commands",
     "c": "AddCommandDTO",
     "l": "AddCommandDTO()",
     "u": "%3Cinit%3E()"
@@ -24,12 +24,12 @@ memberSearchIndex = [{
     "l": "AddIfMaxCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "commandManager.commands",
+    "p": "commandLogic.commands.argCommands",
     "c": "AddIfMaxCommand",
-    "l": "AddIfMaxCommand(ModuleHandler<Route>)",
-    "u": "%3Cinit%3E(models.handlers.ModuleHandler)"
+    "l": "AddIfMaxCommand(ReceiverType)",
+    "u": "%3Cinit%3E(commandLogic.commandReceiverLogic.ReceiverType)"
 }, {
-    "p": "requestLogic.dataTransferObjects.commands",
+    "p": "dataTransferObjects.commands",
     "c": "AddIfMaxCommandDTO",
     "l": "AddIfMaxCommandDTO()",
     "u": "%3Cinit%3E()"
@@ -39,12 +39,12 @@ memberSearchIndex = [{
     "l": "AddIfMinCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "commandManager.commands",
+    "p": "commandLogic.commands.argCommands",
     "c": "AddIfMinCommand",
-    "l": "AddIfMinCommand(ModuleHandler<Route>)",
-    "u": "%3Cinit%3E(models.handlers.ModuleHandler)"
+    "l": "AddIfMinCommand(ReceiverType)",
+    "u": "%3Cinit%3E(commandLogic.commandReceiverLogic.ReceiverType)"
 }, {
-    "p": "requestLogic.dataTransferObjects.commands",
+    "p": "dataTransferObjects.commands",
     "c": "AddIfMinCommandDTO",
     "l": "AddIfMinCommandDTO()",
     "u": "%3Cinit%3E()"
@@ -54,12 +54,81 @@ memberSearchIndex = [{
     "l": "addPropertyChangeListener(PropertyChangeListener)",
     "u": "addPropertyChangeListener(java.beans.PropertyChangeListener)"
 }, {
+    "p": "commandLogic.commandReceiverLogic.handlers",
+    "c": "ArgumentReceiverHandler",
+    "l": "addReceiver(ExternalBaseReceiver)",
+    "u": "addReceiver(commandLogic.commandReceiverLogic.receivers.ExternalBaseReceiver)"
+}, {
+    "p": "commandLogic.commandReceiverLogic.handlers",
+    "c": "NonArgReceiversHandler",
+    "l": "addReceiver(ExternalBaseReceiver)",
+    "u": "addReceiver(commandLogic.commandReceiverLogic.receivers.ExternalBaseReceiver)"
+}, {
+    "p": "commandLogic.commandReceiverLogic.handlers",
+    "c": "ReceiverHandler",
+    "l": "addReceiver(ExternalBaseReceiver)",
+    "u": "addReceiver(commandLogic.commandReceiverLogic.receivers.ExternalBaseReceiver)"
+}, {
+    "p": "commandLogic.commands.argCommands",
+    "c": "ArgumentCommand",
+    "l": "ArgumentCommand(ReceiverType)",
+    "u": "%3Cinit%3E(commandLogic.commandReceiverLogic.ReceiverType)"
+}, {
+    "p": "requestLogic.requests",
+    "c": "ArgumentCommandClientRequest",
+    "l": "ArgumentCommandClientRequest()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "dataTransferObjects.requests",
+    "c": "ArgumentCommandClientRequestDTO",
+    "l": "ArgumentCommandClientRequestDTO(CommandClientRequestDTO)",
+    "u": "%3Cinit%3E(dataTransferObjects.requests.CommandClientRequestDTO)"
+}, {
+    "p": "requestLogic.requestWorkers",
+    "c": "ArgumentCommandClientRequestWorker",
+    "l": "ArgumentCommandClientRequestWorker()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.dtoMappers",
+    "c": "ArgumentCommandRequestDTOMapper",
+    "l": "ArgumentCommandRequestDTOMapper()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.dtoMappers",
+    "c": "ArgumentCommandRequestDTOMapper",
+    "l": "argumentCommandRequestDTOMapper(BaseCommand, String[], T)",
+    "u": "argumentCommandRequestDTOMapper(commandLogic.commands.BaseCommand,java.lang.String[],T)"
+}, {
+    "p": "commandLogic.commandReceiverLogic.handlers",
+    "c": "ArgumentReceiverHandler",
+    "l": "ArgumentReceiverHandler(Class<T>)",
+    "u": "%3Cinit%3E(java.lang.Class)"
+}, {
+    "p": "requestLogic.requestSenders",
+    "c": "ArgumentRequestSender",
+    "l": "ArgumentRequestSender(ArgumentMapper<T, Y>)",
+    "u": "%3Cinit%3E(requestLogic.dtoMappers.ArgumentMapper)"
+}, {
+    "p": "requestLogic.requestWorkers.argumentTypeResolver",
+    "c": "ArgumentResolverManager",
+    "l": "ArgumentResolverManager()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "commandLogic.commandReceiverLogic",
+    "c": "ReceiverType",
+    "l": "ArgumentRoute"
+}, {
+    "p": "commandManager.externalRecievers",
+    "c": "ArgumentRouteCommandReceiver",
+    "l": "ArgumentRouteCommandReceiver(ModuleHandler<Route>)",
+    "u": "%3Cinit%3E(models.handlers.ModuleHandler)"
+}, {
     "p": "requestLogic.requests",
     "c": "BaseRequest",
     "l": "BaseRequest()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.dataTransferObjects",
+    "p": "dataTransferObjects.requests",
     "c": "BaseRequestDTO",
     "l": "BaseRequestDTO()",
     "u": "%3Cinit%3E()"
@@ -74,7 +143,7 @@ memberSearchIndex = [{
     "l": "BaseResponse()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "responseLogic.dataTransferObjects",
+    "p": "dataTransferObjects.responses",
     "c": "BaseResponseDTO",
     "l": "BaseResponseDTO()",
     "u": "%3Cinit%3E()"
@@ -124,12 +193,17 @@ memberSearchIndex = [{
     "c": "RoutesHandler",
     "l": "clearCollection()"
 }, {
+    "p": "commandLogic.commands.noArgCommands",
+    "c": "ClearCommand",
+    "l": "ClearCommand()",
+    "u": "%3Cinit%3E()"
+}, {
     "p": "commandManager.commands",
     "c": "ClearCommand",
     "l": "ClearCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.dataTransferObjects.commands",
+    "p": "dataTransferObjects.commands",
     "c": "ClearCommandDTO",
     "l": "ClearCommandDTO()",
     "u": "%3Cinit%3E()"
@@ -143,10 +217,15 @@ memberSearchIndex = [{
     "l": "CommandClientRequest()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.dataTransferObjects",
+    "p": "dataTransferObjects.requests",
     "c": "CommandClientRequestDTO",
     "l": "CommandClientRequestDTO()",
     "u": "%3Cinit%3E()"
+}, {
+    "p": "dataTransferObjects.requests",
+    "c": "CommandClientRequestDTO",
+    "l": "CommandClientRequestDTO(BaseCommandDTO, String[])",
+    "u": "%3Cinit%3E(dataTransferObjects.commands.BaseCommandDTO,java.lang.String[])"
 }, {
     "p": "requestLogic.requestWorkers",
     "c": "CommandClientRequestWorker",
@@ -157,7 +236,7 @@ memberSearchIndex = [{
     "c": "CommandInterruptedException",
     "l": "CommandInterruptedException(Exception)",
     "u": "%3Cinit%3E(java.lang.Exception)"
-}, {"p": "commandManager", "c": "CommandManager", "l": "CommandManager()", "u": "%3Cinit%3E()"}, {
+}, {
     "p": "commandManager",
     "c": "CommandManager",
     "l": "CommandManager(CommandMode, Scanner)",
@@ -171,7 +250,7 @@ memberSearchIndex = [{
     "p": "requestLogic.dtoMappers",
     "c": "CommandRequestDTOMapper",
     "l": "commandRequestDTOMapper(BaseCommand, String[])",
-    "u": "commandRequestDTOMapper(commandManager.commands.BaseCommand,java.lang.String[])"
+    "u": "commandRequestDTOMapper(commandLogic.commands.BaseCommand,java.lang.String[])"
 }, {
     "p": "requestLogic.requestSenders",
     "c": "CommandRequestSender",
@@ -193,7 +272,7 @@ memberSearchIndex = [{
     "l": "CommandStatusResponse(String, int)",
     "u": "%3Cinit%3E(java.lang.String,int)"
 }, {
-    "p": "responseLogic.dataTransferObjects",
+    "p": "dataTransferObjects.responses",
     "c": "CommandStatusResponseDTO",
     "l": "CommandStatusResponseDTO()",
     "u": "%3Cinit%3E()"
@@ -233,7 +312,7 @@ memberSearchIndex = [{
     "l": "CoordinatesCLIHandler()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.dataTransferObjects.models",
+    "p": "dataTransferObjects.models",
     "c": "CoordinatesDTO",
     "l": "CoordinatesDTO()",
     "u": "%3Cinit%3E()"
@@ -248,12 +327,17 @@ memberSearchIndex = [{
     "l": "CoordYValidator()",
     "u": "%3Cinit%3E()"
 }, {
+    "p": "commandLogic.commands.noArgCommands",
+    "c": "CountGreaterThanDistanceCommand",
+    "l": "CountGreaterThanDistanceCommand()",
+    "u": "%3Cinit%3E()"
+}, {
     "p": "commandManager.commands",
     "c": "CountGreaterThanDistanceCommand",
     "l": "CountGreaterThanDistanceCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.dataTransferObjects.commands",
+    "p": "dataTransferObjects.commands",
     "c": "CountGreaterThanDistanceCommandDTO",
     "l": "CountGreaterThanDistanceCommandDTO()",
     "u": "%3Cinit%3E()"
@@ -287,16 +371,36 @@ memberSearchIndex = [{
     "c": "DTOMapper",
     "l": "dtoNameConverter(String)",
     "u": "dtoNameConverter(java.lang.String)"
-}, {"p": "main", "c": "Main", "l": "ENV_KEY"}, {
+}, {"p": "models", "c": "Coordinates", "l": "equals(Object)", "u": "equals(java.lang.Object)"}, {
     "p": "models",
-    "c": "Coordinates",
+    "c": "Location",
     "l": "equals(Object)",
     "u": "equals(java.lang.Object)"
-}, {"p": "models", "c": "Location", "l": "equals(Object)", "u": "equals(java.lang.Object)"}, {
+}, {
     "p": "models",
     "c": "Route",
     "l": "equals(Object)",
     "u": "equals(java.lang.Object)"
+}, {
+    "p": "commandLogic.commands.argCommands",
+    "c": "ArgumentCommand",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
+}, {
+    "p": "commandLogic.commands",
+    "c": "BaseCommand",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
+}, {
+    "p": "commandLogic.commands.noArgCommands",
+    "c": "NoArgumentCommand",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
+}, {
+    "p": "commandLogic.commands.noArgCommands",
+    "c": "RemoveByIdCommand",
+    "l": "execute(String[])",
+    "u": "execute(java.lang.String[])"
 }, {
     "p": "commandManager.commands",
     "c": "AddCommand",
@@ -398,15 +502,61 @@ memberSearchIndex = [{
     "l": "ExitCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.dataTransferObjects.commands",
+    "p": "dataTransferObjects.commands",
     "c": "ExitCommandDTO",
     "l": "ExitCommandDTO()",
     "u": "%3Cinit%3E()"
-}, {"p": "requestLogic", "c": "CallerBack", "l": "getAddress()"}, {
+}, {
+    "p": "commandLogic",
+    "c": "ExternalCommandLoader",
+    "l": "ExternalCommandLoader()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic",
+    "c": "CallerBack",
+    "l": "getAddress()"
+}, {
+    "p": "requestLogic.requestWorkers.argumentTypeResolver",
+    "c": "RouteResolver",
+    "l": "getArg(RouteDTO)",
+    "u": "getArg(dataTransferObjects.models.RouteDTO)"
+}, {
+    "p": "requestLogic.requestWorkers.argumentTypeResolver",
+    "c": "Resolver",
+    "l": "getArg(Y)"
+}, {"p": "commandManager.commands", "c": "AddCommand", "l": "getArgs()"}, {
+    "p": "commandManager.commands",
+    "c": "AddIfMaxCommand",
+    "l": "getArgs()"
+}, {"p": "commandManager.commands", "c": "AddIfMinCommand", "l": "getArgs()"}, {
     "p": "commandManager.commands",
     "c": "BaseCommand",
     "l": "getArgs()"
-}, {"p": "commandManager.commands", "c": "UpdateCommand", "l": "getArgs()"}, {
+}, {
+    "p": "commandManager.commands",
+    "c": "CountGreaterThanDistanceCommand",
+    "l": "getArgs()"
+}, {"p": "commandManager.commands", "c": "RemoveByIdCommand", "l": "getArgs()"}, {
+    "p": "commandManager.commands",
+    "c": "RemoveGreaterCommand",
+    "l": "getArgs()"
+}, {
+    "p": "commandManager.commands",
+    "c": "UpdateCommand",
+    "l": "getArgs()"
+}, {
+    "p": "commandLogic.commandReceiverLogic.receivers",
+    "c": "ExternalArgumentReceiver",
+    "l": "getArguemnt()"
+}, {
+    "p": "commandManager.externalRecievers",
+    "c": "ArgumentRouteCommandReceiver",
+    "l": "getArguemnt()"
+}, {
+    "p": "dataTransferObjects.requests",
+    "c": "ArgumentCommandClientRequestDTO",
+    "l": "getArgument()"
+}, {"p": "requestLogic.requests", "c": "ArgumentCommandClientRequest", "l": "getArgument()"}, {
     "p": "fileLogic.editors",
     "c": "DateEditor",
     "l": "getAsText()"
@@ -419,7 +569,7 @@ memberSearchIndex = [{
     "c": "RoutesHandler",
     "l": "getCollection()"
 }, {
-    "p": "requestLogic.dataTransferObjects",
+    "p": "dataTransferObjects.requests",
     "c": "CommandClientRequestDTO",
     "l": "getCommand()"
 }, {"p": "requestLogic.requests", "c": "CommandClientRequest", "l": "getCommand()"}, {
@@ -427,10 +577,10 @@ memberSearchIndex = [{
     "c": "CommandManager",
     "l": "getCommands()"
 }, {"p": "requestLogic.requests", "c": "BaseRequest", "l": "getConnection()"}, {
-    "p": "models",
-    "c": "Route",
+    "p": "dataTransferObjects.models",
+    "c": "RouteDTO",
     "l": "getCoordinates()"
-}, {"p": "requestLogic.dataTransferObjects.models", "c": "RouteDTO", "l": "getCoordinates()"}, {
+}, {"p": "models", "c": "Route", "l": "getCoordinates()"}, {
     "p": "models",
     "c": "Route",
     "l": "getCreationDate()"
@@ -438,47 +588,87 @@ memberSearchIndex = [{
     "p": "fileLogic.editors",
     "c": "DateEditor",
     "l": "getCustomEditor()"
-}, {"p": "commandManager.commands", "c": "BaseCommand", "l": "getDescr()"}, {
+}, {"p": "commandManager.commands", "c": "AddCommand", "l": "getDescr()"}, {
     "p": "commandManager.commands",
-    "c": "HelpCommand",
+    "c": "AddIfMaxCommand",
+    "l": "getDescr()"
+}, {"p": "commandManager.commands", "c": "AddIfMinCommand", "l": "getDescr()"}, {
+    "p": "commandManager.commands",
+    "c": "BaseCommand",
+    "l": "getDescr()"
+}, {"p": "commandManager.commands", "c": "ClearCommand", "l": "getDescr()"}, {
+    "p": "commandManager.commands",
+    "c": "CountGreaterThanDistanceCommand",
+    "l": "getDescr()"
+}, {"p": "commandManager.commands", "c": "HelpCommand", "l": "getDescr()"}, {
+    "p": "commandManager.commands",
+    "c": "InfoCommand",
+    "l": "getDescr()"
+}, {
+    "p": "commandManager.commands",
+    "c": "MinByCreationDateCommand",
+    "l": "getDescr()"
+}, {
+    "p": "commandManager.commands",
+    "c": "PrintFieldDistanceAscendingCommand",
+    "l": "getDescr()"
+}, {"p": "commandManager.commands", "c": "RemoveByIdCommand", "l": "getDescr()"}, {
+    "p": "commandManager.commands",
+    "c": "RemoveGreaterCommand",
+    "l": "getDescr()"
+}, {"p": "commandManager.commands", "c": "SaveCommand", "l": "getDescr()"}, {
+    "p": "commandManager.commands",
+    "c": "ShowCommand",
     "l": "getDescr()"
 }, {"p": "commandManager.commands", "c": "UpdateCommand", "l": "getDescr()"}, {
-    "p": "models",
-    "c": "Route",
+    "p": "dataTransferObjects.models",
+    "c": "RouteDTO",
     "l": "getDistance()"
-}, {"p": "requestLogic.dataTransferObjects.models", "c": "RouteDTO", "l": "getDistance()"}, {
+}, {"p": "models", "c": "Route", "l": "getDistance()"}, {
+    "p": "commandLogic",
+    "c": "ExternalCommandLoader",
+    "l": "getExternalCommands()"
+}, {"p": "models.handlers", "c": "CollectionHandler", "l": "getFirstOrNew()"}, {
     "p": "models.handlers",
-    "c": "CollectionHandler",
+    "c": "RoutesHandler",
     "l": "getFirstOrNew()"
-}, {"p": "models.handlers", "c": "RoutesHandler", "l": "getFirstOrNew()"}, {
+}, {"p": "dataTransferObjects.models", "c": "RouteDTO", "l": "getFrom()"}, {
     "p": "models",
     "c": "Route",
     "l": "getFrom()"
-}, {"p": "requestLogic.dataTransferObjects.models", "c": "RouteDTO", "l": "getFrom()"}, {
-    "p": "requestLogic.requests",
-    "c": "BaseRequest",
-    "l": "getFrom()"
-}, {"p": "models", "c": "Route", "l": "getId()"}, {
+}, {"p": "requestLogic.requests", "c": "BaseRequest", "l": "getFrom()"}, {
+    "p": "models",
+    "c": "Route",
+    "l": "getId()"
+}, {"p": "models.handlers", "c": "CollectionHandler", "l": "getInitDate()"}, {
     "p": "models.handlers",
-    "c": "CollectionHandler",
+    "c": "RoutesHandler",
     "l": "getInitDate()"
-}, {"p": "models.handlers", "c": "RoutesHandler", "l": "getInitDate()"}, {
-    "p": "requestLogic",
-    "c": "StatusRequest",
-    "l": "getInputStream()"
+}, {"p": "requestLogic", "c": "StatusRequest", "l": "getInputStream()"}, {
+    "p": "commandLogic.commandReceiverLogic",
+    "c": "ReceiverManager",
+    "l": "getInstance()"
 }, {"p": "models.handlers", "c": "RouteIDHandler", "l": "getInstance()"}, {
     "p": "models.handlers",
     "c": "RoutesHandler",
     "l": "getInstance()"
-}, {"p": "fileLogic.editors", "c": "DateEditor", "l": "getJavaInitializationString()"}, {
+}, {"p": "responseLogic.responseListener", "c": "ResponseListener", "l": "getInstance()"}, {
+    "p": "fileLogic.editors",
+    "c": "DateEditor",
+    "l": "getJavaInitializationString()"
+}, {"p": "models.handlers", "c": "CollectionHandler", "l": "getLastElement()"}, {
     "p": "models.handlers",
-    "c": "CollectionHandler",
+    "c": "RoutesHandler",
     "l": "getLastElement()"
-}, {"p": "models.handlers", "c": "RoutesHandler", "l": "getLastElement()"}, {
-    "p": "requestLogic.dataTransferObjects",
+}, {
+    "p": "dataTransferObjects.requests",
     "c": "CommandClientRequestDTO",
     "l": "getLineArgs()"
-}, {"p": "requestLogic.requests", "c": "CommandClientRequest", "l": "getLineArgs()"}, {
+}, {
+    "p": "requestLogic.requests",
+    "c": "CommandClientRequest",
+    "l": "getLineArgs()"
+}, {"p": "responseLogic.responseListener", "c": "ResponseListener", "l": "getListeningThread()"}, {
     "p": "serverLogic",
     "c": "UdpConnectionBlockDecorator",
     "l": "getLockState()"
@@ -502,59 +692,188 @@ memberSearchIndex = [{
     "c": "RoutesHandler",
     "l": "getMin(Comparator<Route>)",
     "u": "getMin(java.util.Comparator)"
-}, {"p": "commandManager.commands", "c": "BaseCommand", "l": "getName()"}, {
-    "p": "commandManager.commands",
+}, {
+    "p": "commandLogic.commands.argCommands",
+    "c": "AddCommand",
+    "l": "getName()"
+}, {
+    "p": "commandLogic.commands.argCommands",
+    "c": "AddIfMaxCommand",
+    "l": "getName()"
+}, {
+    "p": "commandLogic.commands.argCommands",
+    "c": "AddIfMinCommand",
+    "l": "getName()"
+}, {
+    "p": "commandLogic.commands.argCommands",
+    "c": "RemoveGreaterCommand",
+    "l": "getName()"
+}, {"p": "commandLogic.commands.argCommands", "c": "UpdateCommand", "l": "getName()"}, {
+    "p": "commandLogic.commands",
+    "c": "BaseCommand",
+    "l": "getName()"
+}, {
+    "p": "commandLogic.commands.noArgCommands",
+    "c": "ClearCommand",
+    "l": "getName()"
+}, {
+    "p": "commandLogic.commands.noArgCommands",
+    "c": "CountGreaterThanDistanceCommand",
+    "l": "getName()"
+}, {
+    "p": "commandLogic.commands.noArgCommands",
     "c": "HelpCommand",
     "l": "getName()"
+}, {
+    "p": "commandLogic.commands.noArgCommands",
+    "c": "InfoCommand",
+    "l": "getName()"
+}, {
+    "p": "commandLogic.commands.noArgCommands",
+    "c": "MinByCreationDateCommand",
+    "l": "getName()"
+}, {
+    "p": "commandLogic.commands.noArgCommands",
+    "c": "PrintFieldDistanceAscendingCommand",
+    "l": "getName()"
+}, {
+    "p": "commandLogic.commands.noArgCommands",
+    "c": "RemoveByIdCommand",
+    "l": "getName()"
+}, {"p": "commandLogic.commands.noArgCommands", "c": "ShowCommand", "l": "getName()"}, {
+    "p": "commandManager.commands",
+    "c": "AddCommand",
+    "l": "getName()"
+}, {"p": "commandManager.commands", "c": "AddIfMaxCommand", "l": "getName()"}, {
+    "p": "commandManager.commands",
+    "c": "AddIfMinCommand",
+    "l": "getName()"
+}, {"p": "commandManager.commands", "c": "BaseCommand", "l": "getName()"}, {
+    "p": "commandManager.commands",
+    "c": "ClearCommand",
+    "l": "getName()"
+}, {
+    "p": "commandManager.commands",
+    "c": "CountGreaterThanDistanceCommand",
+    "l": "getName()"
+}, {"p": "commandManager.commands", "c": "ExecuteScriptCommand", "l": "getName()"}, {
+    "p": "commandManager.commands",
+    "c": "ExitCommand",
+    "l": "getName()"
+}, {"p": "commandManager.commands", "c": "HelpCommand", "l": "getName()"}, {
+    "p": "commandManager.commands",
+    "c": "InfoCommand",
+    "l": "getName()"
+}, {"p": "commandManager.commands", "c": "MinByCreationDateCommand", "l": "getName()"}, {
+    "p": "commandManager.commands",
+    "c": "PrintFieldDistanceAscendingCommand",
+    "l": "getName()"
+}, {"p": "commandManager.commands", "c": "RemoveByIdCommand", "l": "getName()"}, {
+    "p": "commandManager.commands",
+    "c": "RemoveGreaterCommand",
+    "l": "getName()"
+}, {"p": "commandManager.commands", "c": "SaveCommand", "l": "getName()"}, {
+    "p": "commandManager.commands",
+    "c": "ShowCommand",
+    "l": "getName()"
 }, {"p": "commandManager.commands", "c": "UpdateCommand", "l": "getName()"}, {
+    "p": "dataTransferObjects.models",
+    "c": "LocationDTO",
+    "l": "getName()"
+}, {"p": "dataTransferObjects.models", "c": "RouteDTO", "l": "getName()"}, {
     "p": "models",
     "c": "Location",
     "l": "getName()"
 }, {"p": "models", "c": "Route", "l": "getName()"}, {
-    "p": "requestLogic.dataTransferObjects.models",
-    "c": "LocationDTO",
-    "l": "getName()"
-}, {"p": "requestLogic.dataTransferObjects.models", "c": "RouteDTO", "l": "getName()"}, {
     "p": "models.handlers",
     "c": "RouteIDHandler",
     "l": "getNextID()"
 }, {"p": "requestLogic", "c": "CallerBack", "l": "getPort()"}, {
+    "p": "commandLogic.commandReceiverLogic.handlers",
+    "c": "ArgumentReceiverHandler",
+    "l": "getReceivers()"
+}, {
+    "p": "commandLogic.commandReceiverLogic.handlers",
+    "c": "NonArgReceiversHandler",
+    "l": "getReceivers()"
+}, {
+    "p": "commandLogic.commandReceiverLogic.handlers",
+    "c": "ReceiverHandler",
+    "l": "getReceivers()"
+}, {
+    "p": "commandLogic.commandReceiverLogic",
+    "c": "ReceiverManager",
+    "l": "getReceivers(ReceiverType)",
+    "u": "getReceivers(commandLogic.commandReceiverLogic.ReceiverType)"
+}, {"p": "commandManager.commands", "c": "AddCommand", "l": "getResponse()"}, {
+    "p": "commandManager.commands",
+    "c": "AddIfMaxCommand",
+    "l": "getResponse()"
+}, {"p": "commandManager.commands", "c": "AddIfMinCommand", "l": "getResponse()"}, {
     "p": "commandManager.commands",
     "c": "BaseCommand",
     "l": "getResponse()"
+}, {"p": "commandManager.commands", "c": "ClearCommand", "l": "getResponse()"}, {
+    "p": "commandManager.commands",
+    "c": "CountGreaterThanDistanceCommand",
+    "l": "getResponse()"
 }, {"p": "commandManager.commands", "c": "HelpCommand", "l": "getResponse()"}, {
     "p": "commandManager.commands",
-    "c": "UpdateCommand",
+    "c": "InfoCommand",
     "l": "getResponse()"
-}, {"p": "responseLogic.responses", "c": "CommandStatusResponse", "l": "getResponse()"}, {
-    "p": "fileLogic.editors",
-    "c": "DateEditor",
-    "l": "getTags()"
-}, {"p": "models", "c": "Route", "l": "getTo()"}, {
-    "p": "requestLogic.dataTransferObjects.models",
+}, {
+    "p": "commandManager.commands",
+    "c": "MinByCreationDateCommand",
+    "l": "getResponse()"
+}, {
+    "p": "commandManager.commands",
+    "c": "PrintFieldDistanceAscendingCommand",
+    "l": "getResponse()"
+}, {"p": "commandManager.commands", "c": "RemoveByIdCommand", "l": "getResponse()"}, {
+    "p": "commandManager.commands",
+    "c": "RemoveGreaterCommand",
+    "l": "getResponse()"
+}, {"p": "commandManager.commands", "c": "SaveCommand", "l": "getResponse()"}, {
+    "p": "commandManager.commands",
+    "c": "ShowCommand",
+    "l": "getResponse()"
+}, {"p": "commandManager.commands", "c": "UpdateCommand", "l": "getResponse()"}, {
+    "p": "responseLogic.responses",
+    "c": "CommandStatusResponse",
+    "l": "getResponse()"
+}, {"p": "models.handlers", "c": "CollectionHandler", "l": "getSorted()"}, {
+    "p": "models.handlers",
+    "c": "RoutesHandler",
+    "l": "getSorted()"
+}, {"p": "fileLogic.editors", "c": "DateEditor", "l": "getTags()"}, {
+    "p": "dataTransferObjects.models",
     "c": "RouteDTO",
     "l": "getTo()"
-}, {"p": "fileLogic.editors", "c": "DateEditor", "l": "getValue()"}, {
-    "p": "models",
-    "c": "Coordinates",
+}, {"p": "models", "c": "Route", "l": "getTo()"}, {
+    "p": "fileLogic.editors",
+    "c": "DateEditor",
+    "l": "getValue()"
+}, {"p": "dataTransferObjects.models", "c": "CoordinatesDTO", "l": "getX()"}, {
+    "p": "dataTransferObjects.models",
+    "c": "LocationDTO",
     "l": "getX()"
-}, {"p": "models", "c": "Location", "l": "getX()"}, {
-    "p": "requestLogic.dataTransferObjects.models",
-    "c": "CoordinatesDTO",
-    "l": "getX()"
-}, {"p": "requestLogic.dataTransferObjects.models", "c": "LocationDTO", "l": "getX()"}, {
+}, {"p": "models", "c": "Coordinates", "l": "getX()"}, {
     "p": "models",
-    "c": "Coordinates",
+    "c": "Location",
+    "l": "getX()"
+}, {"p": "dataTransferObjects.models", "c": "CoordinatesDTO", "l": "getY()"}, {
+    "p": "dataTransferObjects.models",
+    "c": "LocationDTO",
     "l": "getY()"
-}, {"p": "models", "c": "Location", "l": "getY()"}, {
-    "p": "requestLogic.dataTransferObjects.models",
-    "c": "CoordinatesDTO",
+}, {"p": "models", "c": "Coordinates", "l": "getY()"}, {
+    "p": "models",
+    "c": "Location",
     "l": "getY()"
-}, {"p": "requestLogic.dataTransferObjects.models", "c": "LocationDTO", "l": "getY()"}, {
+}, {"p": "dataTransferObjects.models", "c": "LocationDTO", "l": "getZ()"}, {
     "p": "models",
     "c": "Location",
     "l": "getZ()"
-}, {"p": "requestLogic.dataTransferObjects.models", "c": "LocationDTO", "l": "getZ()"}, {
+}, {
     "p": "main",
     "c": "Utilities",
     "l": "handleUserInputID(String)",
@@ -569,14 +888,24 @@ memberSearchIndex = [{
     "l": "hasNextLineOrThrow(Scanner)",
     "u": "hasNextLineOrThrow(java.util.Scanner)"
 }, {
+    "p": "commandLogic.commands.noArgCommands",
+    "c": "HelpCommand",
+    "l": "HelpCommand()",
+    "u": "%3Cinit%3E()"
+}, {
     "p": "commandManager.commands",
     "c": "HelpCommand",
     "l": "HelpCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.dataTransferObjects.commands",
+    "p": "dataTransferObjects.commands",
     "c": "HelpCommandDTO",
     "l": "HelpCommandDTO()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "commandLogic.commands.noArgCommands",
+    "c": "InfoCommand",
+    "l": "InfoCommand()",
     "u": "%3Cinit%3E()"
 }, {
     "p": "commandManager.commands",
@@ -584,7 +913,7 @@ memberSearchIndex = [{
     "l": "InfoCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.dataTransferObjects.commands",
+    "p": "dataTransferObjects.commands",
     "c": "InfoCommandDTO",
     "l": "InfoCommandDTO()",
     "u": "%3Cinit%3E()"
@@ -592,6 +921,11 @@ memberSearchIndex = [{
     "p": "serverLogic",
     "c": "DatagramServerConnectionFactory",
     "l": "initializeServer(int)"
+}, {
+    "p": "exceptions",
+    "c": "InvalidRequestException",
+    "l": "InvalidRequestException()",
+    "u": "%3Cinit%3E()"
 }, {
     "p": "main",
     "c": "Utilities",
@@ -626,7 +960,7 @@ memberSearchIndex = [{
     "l": "LocationCLIHandler()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.dataTransferObjects.models",
+    "p": "dataTransferObjects.models",
     "c": "LocationDTO",
     "l": "LocationDTO()",
     "u": "%3Cinit%3E()"
@@ -646,17 +980,21 @@ memberSearchIndex = [{
     "l": "LocationYZValidator()",
     "u": "%3Cinit%3E()"
 }, {"p": "main", "c": "Main", "l": "Main()", "u": "%3Cinit%3E()"}, {
-    "p": "main",
-    "c": "Main",
-    "l": "main(String[])",
-    "u": "main(java.lang.String[])"
+    "p": "requestLogic.dtoMappers",
+    "c": "ArgumentMapper",
+    "l": "mapArgument(T)"
+}, {
+    "p": "commandLogic.commands.noArgCommands",
+    "c": "MinByCreationDateCommand",
+    "l": "MinByCreationDateCommand()",
+    "u": "%3Cinit%3E()"
 }, {
     "p": "commandManager.commands",
     "c": "MinByCreationDateCommand",
     "l": "MinByCreationDateCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.dataTransferObjects.commands",
+    "p": "dataTransferObjects.commands",
     "c": "MinByCreationDateCommandDTO",
     "l": "MinByCreationDateCommandDTO()",
     "u": "%3Cinit%3E()"
@@ -666,6 +1004,25 @@ memberSearchIndex = [{
     "l": "NameValidator()",
     "u": "%3Cinit%3E()"
 }, {"p": "commandManager", "c": "CommandMode", "l": "NETWORK_MODE"}, {
+    "p": "commandLogic.commandReceiverLogic",
+    "c": "ReceiverType",
+    "l": "NoArgs"
+}, {
+    "p": "commandLogic.commands.noArgCommands",
+    "c": "NoArgumentCommand",
+    "l": "NoArgumentCommand()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "commandLogic.commandReceiverLogic.handlers",
+    "c": "NonArgReceiversHandler",
+    "l": "NonArgReceiversHandler()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "commandManager.externalRecievers",
+    "c": "NonArgumentReceiver",
+    "l": "NonArgumentReceiver()",
+    "u": "%3Cinit%3E()"
+}, {
     "p": "responseLogic.responses",
     "c": "CommandStatusResponse",
     "l": "ofString(String)",
@@ -689,13 +1046,18 @@ memberSearchIndex = [{
     "c": "DateEditor",
     "l": "paintValue(Graphics, Rectangle)",
     "u": "paintValue(java.awt.Graphics,java.awt.Rectangle)"
-}, {"p": "main", "c": "Main", "l": "PORT"}, {
+}, {
+    "p": "commandLogic.commands.noArgCommands",
+    "c": "PrintFieldDistanceAscendingCommand",
+    "l": "PrintFieldDistanceAscendingCommand()",
+    "u": "%3Cinit%3E()"
+}, {
     "p": "commandManager.commands",
     "c": "PrintFieldDistanceAscendingCommand",
     "l": "PrintFieldDistanceAscendingCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.dataTransferObjects.commands",
+    "p": "dataTransferObjects.commands",
     "c": "PrintFieldDistanceAscendingCommandDTO",
     "l": "PrintFieldDistanceAscendingCommandDTO()",
     "u": "%3Cinit%3E()"
@@ -714,12 +1076,52 @@ memberSearchIndex = [{
     "c": "ResponseReader",
     "l": "readObject()"
 }, {
+    "p": "commandLogic.commandReceiverLogic.receivers",
+    "c": "ExternalBaseReceiver",
+    "l": "receiveCommand(BaseCommand, String[])",
+    "u": "receiveCommand(commandLogic.commands.BaseCommand,java.lang.String[])"
+}, {
+    "p": "commandManager.externalRecievers",
+    "c": "ArgumentRouteCommandReceiver",
+    "l": "receiveCommand(BaseCommand, String[])",
+    "u": "receiveCommand(commandLogic.commands.BaseCommand,java.lang.String[])"
+}, {
+    "p": "commandManager.externalRecievers",
+    "c": "NonArgumentReceiver",
+    "l": "receiveCommand(BaseCommand, String[])",
+    "u": "receiveCommand(commandLogic.commands.BaseCommand,java.lang.String[])"
+}, {
+    "p": "commandLogic.commandReceiverLogic.handlers",
+    "c": "ReceiverHandler",
+    "l": "ReceiverHandler()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "commandLogic.commandReceiverLogic",
+    "c": "ReceiverManager",
+    "l": "ReceiverManager()",
+    "u": "%3Cinit%3E()"
+}, {
+    "p": "commandLogic.commandReceiverLogic",
+    "c": "ReceiverManager",
+    "l": "registerHandler(ReceiverType, ReceiverHandler)",
+    "u": "registerHandler(commandLogic.commandReceiverLogic.ReceiverType,commandLogic.commandReceiverLogic.handlers.ReceiverHandler)"
+}, {
+    "p": "commandLogic.commandReceiverLogic",
+    "c": "ReceiverManager",
+    "l": "registerReceiver(ReceiverType, ExternalBaseReceiver)",
+    "u": "registerReceiver(commandLogic.commandReceiverLogic.ReceiverType,commandLogic.commandReceiverLogic.receivers.ExternalBaseReceiver)"
+}, {
+    "p": "commandLogic.commands.noArgCommands",
+    "c": "RemoveByIdCommand",
+    "l": "RemoveByIdCommand()",
+    "u": "%3Cinit%3E()"
+}, {
     "p": "commandManager.commands",
     "c": "RemoveByIdCommand",
     "l": "RemoveByIdCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.dataTransferObjects.commands",
+    "p": "dataTransferObjects.commands",
     "c": "RemoveByIdCommandDTO",
     "l": "RemoveByIdCommandDTO()",
     "u": "%3Cinit%3E()"
@@ -729,12 +1131,12 @@ memberSearchIndex = [{
     "l": "RemoveGreaterCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "commandManager.commands",
+    "p": "commandLogic.commands.argCommands",
     "c": "RemoveGreaterCommand",
-    "l": "RemoveGreaterCommand(ModuleHandler<Route>)",
-    "u": "%3Cinit%3E(models.handlers.ModuleHandler)"
+    "l": "RemoveGreaterCommand(ReceiverType)",
+    "u": "%3Cinit%3E(commandLogic.commandReceiverLogic.ReceiverType)"
 }, {
-    "p": "requestLogic.dataTransferObjects.commands",
+    "p": "dataTransferObjects.commands",
     "c": "RemoveGreaterCommandDTO",
     "l": "RemoveGreaterCommandDTO()",
     "u": "%3Cinit%3E()"
@@ -763,6 +1165,10 @@ memberSearchIndex = [{
     "c": "RequestWorkerManager",
     "l": "RequestWorkerManager()",
     "u": "%3Cinit%3E()"
+}, {
+    "p": "requestLogic.requestWorkers.argumentTypeResolver",
+    "c": "ArgumentResolverManager",
+    "l": "resolve(Y)"
 }, {
     "p": "responseLogic",
     "c": "ResponseReader",
@@ -799,7 +1205,7 @@ memberSearchIndex = [{
     "l": "RouteDistanceComparator()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.dataTransferObjects.models",
+    "p": "dataTransferObjects.models",
     "c": "RouteDTO",
     "l": "RouteDTO()",
     "u": "%3Cinit%3E()"
@@ -818,6 +1224,11 @@ memberSearchIndex = [{
     "c": "RouteNonCLIHandler",
     "l": "RouteNonCLIHandler(Scanner)",
     "u": "%3Cinit%3E(java.util.Scanner)"
+}, {
+    "p": "requestLogic.requestWorkers.argumentTypeResolver",
+    "c": "RouteResolver",
+    "l": "RouteResolver()",
+    "u": "%3Cinit%3E()"
 }, {"p": "models.validators", "c": "RouteValidator", "l": "RouteValidator()", "u": "%3Cinit%3E()"}, {
     "p": "fileLogic",
     "c": "Saver",
@@ -832,7 +1243,12 @@ memberSearchIndex = [{
     "p": "requestLogic.requestSenders",
     "c": "CommandRequestSender",
     "l": "sendCommand(BaseCommand, String[], ServerConnection)",
-    "u": "sendCommand(commandManager.commands.BaseCommand,java.lang.String[],serverLogic.ServerConnection)"
+    "u": "sendCommand(commandLogic.commands.BaseCommand,java.lang.String[],serverLogic.ServerConnection)"
+}, {
+    "p": "requestLogic.requestSenders",
+    "c": "ArgumentRequestSender",
+    "l": "sendCommand(BaseCommand, String[], T, ServerConnection)",
+    "u": "sendCommand(commandLogic.commands.BaseCommand,java.lang.String[],T,serverLogic.ServerConnection)"
 }, {"p": "serverLogic", "c": "ServerConnection", "l": "sendData(byte[])"}, {
     "p": "serverLogic",
     "c": "UdpServerConnection",
@@ -846,12 +1262,12 @@ memberSearchIndex = [{
     "p": "requestLogic.requestSenders",
     "c": "RequestSender",
     "l": "sendRequest(BaseRequestDTO, ServerConnection)",
-    "u": "sendRequest(requestLogic.dataTransferObjects.BaseRequestDTO,serverLogic.ServerConnection)"
+    "u": "sendRequest(dataTransferObjects.requests.BaseRequestDTO,serverLogic.ServerConnection)"
 }, {
     "p": "responseLogic.responseSenders",
     "c": "ResponseSender",
     "l": "sendResponse(BaseResponseDTO, ServerConnection, CallerBack)",
-    "u": "sendResponse(responseLogic.dataTransferObjects.BaseResponseDTO,serverLogic.ServerConnection,requestLogic.CallerBack)"
+    "u": "sendResponse(dataTransferObjects.responses.BaseResponseDTO,serverLogic.ServerConnection,requestLogic.CallerBack)"
 }, {
     "p": "responseLogic.responseSenders",
     "c": "CommandResponseSender",
@@ -867,6 +1283,14 @@ memberSearchIndex = [{
     "c": "CallerBack",
     "l": "setAddress(InetAddress)",
     "u": "setAddress(java.net.InetAddress)"
+}, {
+    "p": "dataTransferObjects.requests",
+    "c": "ArgumentCommandClientRequestDTO",
+    "l": "setArgument(T)"
+}, {
+    "p": "requestLogic.requests",
+    "c": "ArgumentCommandClientRequest",
+    "l": "setArgument(T)"
 }, {
     "p": "fileLogic.editors",
     "c": "DateEditor",
@@ -897,10 +1321,10 @@ memberSearchIndex = [{
     "l": "setCommand(BaseCommand)",
     "u": "setCommand(commandManager.commands.BaseCommand)"
 }, {
-    "p": "requestLogic.dataTransferObjects",
+    "p": "dataTransferObjects.requests",
     "c": "CommandClientRequestDTO",
     "l": "setCommand(BaseCommandDTO)",
-    "u": "setCommand(requestLogic.dataTransferObjects.commands.BaseCommandDTO)"
+    "u": "setCommand(dataTransferObjects.commands.BaseCommandDTO)"
 }, {
     "p": "requestLogic.requests",
     "c": "BaseRequest",
@@ -912,17 +1336,18 @@ memberSearchIndex = [{
     "l": "setCoordinates(Coordinates)",
     "u": "setCoordinates(models.Coordinates)"
 }, {
-    "p": "requestLogic.dataTransferObjects.models",
+    "p": "dataTransferObjects.models",
     "c": "RouteDTO",
     "l": "setCoordinates(CoordinatesDTO)",
-    "u": "setCoordinates(requestLogic.dataTransferObjects.models.CoordinatesDTO)"
-}, {"p": "models", "c": "Route", "l": "setCreationDate(Date)", "u": "setCreationDate(java.util.Date)"}, {
+    "u": "setCoordinates(dataTransferObjects.models.CoordinatesDTO)"
+}, {
     "p": "models",
     "c": "Route",
-    "l": "setDistance(int)"
-}, {
-    "p": "requestLogic.dataTransferObjects.models",
-    "c": "RouteDTO",
+    "l": "setCreationDate(Date)",
+    "u": "setCreationDate(java.util.Date)"
+}, {"p": "dataTransferObjects.models", "c": "RouteDTO", "l": "setDistance(int)"}, {
+    "p": "models",
+    "c": "Route",
     "l": "setDistance(int)"
 }, {
     "p": "requestLogic.requests",
@@ -935,36 +1360,41 @@ memberSearchIndex = [{
     "l": "setFrom(Location)",
     "u": "setFrom(models.Location)"
 }, {
-    "p": "requestLogic.dataTransferObjects.models",
+    "p": "dataTransferObjects.models",
     "c": "RouteDTO",
     "l": "setFrom(LocationDTO)",
-    "u": "setFrom(requestLogic.dataTransferObjects.models.LocationDTO)"
+    "u": "setFrom(dataTransferObjects.models.LocationDTO)"
 }, {"p": "models", "c": "Route", "l": "setId(Long)", "u": "setId(java.lang.Long)"}, {
     "p": "requestLogic",
     "c": "StatusRequest",
     "l": "setInputStream(InputStream)",
     "u": "setInputStream(java.io.InputStream)"
 }, {
-    "p": "requestLogic.dataTransferObjects",
+    "p": "dataTransferObjects.requests",
     "c": "CommandClientRequestDTO",
     "l": "setLineArgs(String[])",
     "u": "setLineArgs(java.lang.String[])"
+}, {
+    "p": "dataTransferObjects.models",
+    "c": "LocationDTO",
+    "l": "setName(String)",
+    "u": "setName(java.lang.String)"
+}, {
+    "p": "dataTransferObjects.models",
+    "c": "RouteDTO",
+    "l": "setName(String)",
+    "u": "setName(java.lang.String)"
 }, {"p": "models", "c": "Location", "l": "setName(String)", "u": "setName(java.lang.String)"}, {
     "p": "models",
     "c": "Route",
     "l": "setName(String)",
     "u": "setName(java.lang.String)"
 }, {
-    "p": "requestLogic.dataTransferObjects.models",
-    "c": "LocationDTO",
-    "l": "setName(String)",
-    "u": "setName(java.lang.String)"
-}, {
-    "p": "requestLogic.dataTransferObjects.models",
-    "c": "RouteDTO",
-    "l": "setName(String)",
-    "u": "setName(java.lang.String)"
-}, {
+    "p": "commandManager.commands",
+    "c": "AddCommand",
+    "l": "setObj(Route)",
+    "u": "setObj(models.Route)"
+}, {"p": "commandManager.commands", "c": "ArgumentConsumer", "l": "setObj(T)"}, {
     "p": "requestLogic",
     "c": "StatusRequestBuilder",
     "l": "setObjectStream(InputStream)",
@@ -980,10 +1410,10 @@ memberSearchIndex = [{
     "l": "setTo(Location)",
     "u": "setTo(models.Location)"
 }, {
-    "p": "requestLogic.dataTransferObjects.models",
+    "p": "dataTransferObjects.models",
     "c": "RouteDTO",
     "l": "setTo(LocationDTO)",
-    "u": "setTo(requestLogic.dataTransferObjects.models.LocationDTO)"
+    "u": "setTo(dataTransferObjects.models.LocationDTO)"
 }, {
     "p": "fileLogic",
     "c": "Loader",
@@ -994,51 +1424,51 @@ memberSearchIndex = [{
     "c": "DateEditor",
     "l": "setValue(Object)",
     "u": "setValue(java.lang.Object)"
-}, {"p": "models", "c": "Coordinates", "l": "setX(double)"}, {
-    "p": "requestLogic.dataTransferObjects.models",
-    "c": "CoordinatesDTO",
+}, {"p": "dataTransferObjects.models", "c": "CoordinatesDTO", "l": "setX(double)"}, {
+    "p": "models",
+    "c": "Coordinates",
     "l": "setX(double)"
-}, {"p": "models", "c": "Location", "l": "setX(float)"}, {
-    "p": "requestLogic.dataTransferObjects.models",
-    "c": "LocationDTO",
+}, {"p": "dataTransferObjects.models", "c": "LocationDTO", "l": "setX(float)"}, {
+    "p": "models",
+    "c": "Location",
     "l": "setX(float)"
+}, {
+    "p": "dataTransferObjects.models",
+    "c": "CoordinatesDTO",
+    "l": "setY(Float)",
+    "u": "setY(java.lang.Float)"
 }, {
     "p": "models",
     "c": "Coordinates",
     "l": "setY(Float)",
     "u": "setY(java.lang.Float)"
 }, {
-    "p": "requestLogic.dataTransferObjects.models",
-    "c": "CoordinatesDTO",
-    "l": "setY(Float)",
-    "u": "setY(java.lang.Float)"
-}, {
-    "p": "models",
-    "c": "Location",
-    "l": "setY(Long)",
-    "u": "setY(java.lang.Long)"
-}, {
-    "p": "requestLogic.dataTransferObjects.models",
+    "p": "dataTransferObjects.models",
     "c": "LocationDTO",
     "l": "setY(Long)",
     "u": "setY(java.lang.Long)"
+}, {"p": "models", "c": "Location", "l": "setY(Long)", "u": "setY(java.lang.Long)"}, {
+    "p": "dataTransferObjects.models",
+    "c": "LocationDTO",
+    "l": "setZ(Long)",
+    "u": "setZ(java.lang.Long)"
 }, {
     "p": "models",
     "c": "Location",
     "l": "setZ(Long)",
     "u": "setZ(java.lang.Long)"
 }, {
-    "p": "requestLogic.dataTransferObjects.models",
-    "c": "LocationDTO",
-    "l": "setZ(Long)",
-    "u": "setZ(java.lang.Long)"
+    "p": "commandLogic.commands.noArgCommands",
+    "c": "ShowCommand",
+    "l": "ShowCommand()",
+    "u": "%3Cinit%3E()"
 }, {
     "p": "commandManager.commands",
     "c": "ShowCommand",
     "l": "ShowCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.dataTransferObjects.commands",
+    "p": "dataTransferObjects.commands",
     "c": "ShowCommandDTO",
     "l": "ShowCommandDTO()",
     "u": "%3Cinit%3E()"
@@ -1060,12 +1490,12 @@ memberSearchIndex = [{
     "p": "requestLogic.dtoMappers",
     "c": "RequestDTOMapper",
     "l": "toRequest(BaseRequestDTO)",
-    "u": "toRequest(requestLogic.dataTransferObjects.BaseRequestDTO)"
+    "u": "toRequest(dataTransferObjects.requests.BaseRequestDTO)"
 }, {
     "p": "requestLogic.dtoMappers",
     "c": "RouteDTOMapper",
     "l": "toRoute(RouteDTO)",
-    "u": "toRoute(requestLogic.dataTransferObjects.models.RouteDTO)"
+    "u": "toRoute(dataTransferObjects.models.RouteDTO)"
 }, {"p": "models", "c": "Coordinates", "l": "toString()"}, {
     "p": "models",
     "c": "Location",
@@ -1106,7 +1536,12 @@ memberSearchIndex = [{
     "l": "UpdateCommand()",
     "u": "%3Cinit%3E()"
 }, {
-    "p": "requestLogic.dataTransferObjects.commands",
+    "p": "commandLogic.commands.argCommands",
+    "c": "UpdateCommand",
+    "l": "UpdateCommand(ReceiverType)",
+    "u": "%3Cinit%3E(commandLogic.commandReceiverLogic.ReceiverType)"
+}, {
+    "p": "dataTransferObjects.commands",
     "c": "UpdateCommandDTO",
     "l": "UpdateCommandDTO()",
     "u": "%3Cinit%3E()"
@@ -1155,50 +1590,64 @@ memberSearchIndex = [{
     "c": "CollectionHandler",
     "l": "validateElements()"
 }, {"p": "models.handlers", "c": "RoutesHandler", "l": "validateElements()"}, {
+    "p": "commandLogic.commandReceiverLogic",
+    "c": "ReceiverType",
+    "l": "valueOf(String)",
+    "u": "valueOf(java.lang.String)"
+}, {
     "p": "commandManager",
     "c": "CommandMode",
     "l": "valueOf(String)",
     "u": "valueOf(java.lang.String)"
-}, {"p": "commandManager", "c": "CommandMode", "l": "values()"}, {
+}, {"p": "commandLogic.commandReceiverLogic", "c": "ReceiverType", "l": "values()"}, {
+    "p": "commandManager",
+    "c": "CommandMode",
+    "l": "values()"
+}, {
+    "p": "requestLogic.requestWorkers",
+    "c": "ArgumentCommandClientRequestWorker",
+    "l": "workWithRequest(BaseRequest, BaseRequestDTO)",
+    "u": "workWithRequest(requestLogic.requests.BaseRequest,dataTransferObjects.requests.BaseRequestDTO)"
+}, {
     "p": "requestLogic.requestWorkers",
     "c": "BaseRequestWorker",
     "l": "workWithRequest(BaseRequest, BaseRequestDTO)",
-    "u": "workWithRequest(requestLogic.requests.BaseRequest,requestLogic.dataTransferObjects.BaseRequestDTO)"
+    "u": "workWithRequest(requestLogic.requests.BaseRequest,dataTransferObjects.requests.BaseRequestDTO)"
 }, {
     "p": "requestLogic.requestWorkers",
     "c": "CommandClientRequestWorker",
     "l": "workWithRequest(BaseRequest, BaseRequestDTO)",
-    "u": "workWithRequest(requestLogic.requests.BaseRequest,requestLogic.dataTransferObjects.BaseRequestDTO)"
+    "u": "workWithRequest(requestLogic.requests.BaseRequest,dataTransferObjects.requests.BaseRequestDTO)"
 }, {
     "p": "requestLogic.requestWorkers",
     "c": "RequestWorker",
     "l": "workWithRequest(BaseRequest, BaseRequestDTO)",
-    "u": "workWithRequest(requestLogic.requests.BaseRequest,requestLogic.dataTransferObjects.BaseRequestDTO)"
+    "u": "workWithRequest(requestLogic.requests.BaseRequest,dataTransferObjects.requests.BaseRequestDTO)"
 }, {
     "p": "requestLogic.requestWorkers",
     "c": "RequestWorkerManager",
     "l": "workWithRequest(BaseRequest, BaseRequestDTO, String)",
-    "u": "workWithRequest(requestLogic.requests.BaseRequest,requestLogic.dataTransferObjects.BaseRequestDTO,java.lang.String)"
+    "u": "workWithRequest(requestLogic.requests.BaseRequest,dataTransferObjects.requests.BaseRequestDTO,java.lang.String)"
 }, {
     "p": "responseLogic.responseWorkers",
     "c": "ResponseWorkerManager",
     "l": "workWithRequest(BaseResponse, BaseResponseDTO, String)",
-    "u": "workWithRequest(responseLogic.responses.BaseResponse,responseLogic.dataTransferObjects.BaseResponseDTO,java.lang.String)"
+    "u": "workWithRequest(responseLogic.responses.BaseResponse,dataTransferObjects.responses.BaseResponseDTO,java.lang.String)"
 }, {
     "p": "responseLogic.responseWorkers",
     "c": "BaseResponseWorker",
     "l": "workWithResponse(BaseResponse, BaseResponseDTO)",
-    "u": "workWithResponse(responseLogic.responses.BaseResponse,responseLogic.dataTransferObjects.BaseResponseDTO)"
+    "u": "workWithResponse(responseLogic.responses.BaseResponse,dataTransferObjects.responses.BaseResponseDTO)"
 }, {
     "p": "responseLogic.responseWorkers",
     "c": "CommandResponseWorker",
     "l": "workWithResponse(BaseResponse, BaseResponseDTO)",
-    "u": "workWithResponse(responseLogic.responses.BaseResponse,responseLogic.dataTransferObjects.BaseResponseDTO)"
+    "u": "workWithResponse(responseLogic.responses.BaseResponse,dataTransferObjects.responses.BaseResponseDTO)"
 }, {
     "p": "responseLogic.responseWorkers",
     "c": "ResponseWorker",
     "l": "workWithResponse(BaseResponse, BaseResponseDTO)",
-    "u": "workWithResponse(responseLogic.responses.BaseResponse,responseLogic.dataTransferObjects.BaseResponseDTO)"
+    "u": "workWithResponse(responseLogic.responses.BaseResponse,dataTransferObjects.responses.BaseResponseDTO)"
 }, {
     "p": "fileLogic",
     "c": "BaseWriter",

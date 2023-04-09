@@ -18,10 +18,10 @@ import java.util.Objects;
  * @author Zerumi
  * @since 1.0
  */
-public class UpdateCommand implements BaseCommand {
+public class UpdateCommand implements BaseCommand, ArgumentConsumer<Route> {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6.commands.update");
     private CommandStatusResponse response;
-    private RouteDTO obj;
+    private Route obj;
 
     @Override
     public String getName() {
@@ -49,12 +49,11 @@ public class UpdateCommand implements BaseCommand {
             logger.warn(response.getResponse());
             return;
         }
-        Route newObj = RouteDTOMapper.toRoute(obj);
 
         logger.info("Updated ID value: " + finalId);
-        newObj.setId(finalId);
+        obj.setId(finalId);
 
-        collectionHandler.addElementToCollection(newObj);
+        collectionHandler.addElementToCollection(obj);
 
         response = CommandStatusResponse.ofString("Object updated!");
         logger.info(response.getResponse());
@@ -63,5 +62,10 @@ public class UpdateCommand implements BaseCommand {
     @Override
     public CommandStatusResponse getResponse() {
         return response;
+    }
+
+    @Override
+    public void setObj(Route obj) {
+        this.obj = obj;
     }
 }

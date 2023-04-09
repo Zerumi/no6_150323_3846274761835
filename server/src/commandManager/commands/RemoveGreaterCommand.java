@@ -18,10 +18,10 @@ import java.util.HashSet;
  * @author Zerumi
  * @since 1.0
  */
-public class RemoveGreaterCommand implements BaseCommand {
+public class RemoveGreaterCommand implements BaseCommand, ArgumentConsumer<Route> {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6.commands.rmGreater");
     private CommandStatusResponse response;
-    private RouteDTO obj;
+    private Route obj;
 
     @Override
     public String getName() {
@@ -44,8 +44,7 @@ public class RemoveGreaterCommand implements BaseCommand {
 
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();
 
-        Route greaterThan = RouteDTOMapper.toRoute(obj);
-        logger.debug("Distance: " + greaterThan.getDistance());
+        logger.debug("Distance: " + obj.getDistance());
 
         var iterator = collectionHandler.getCollection().iterator();
 
@@ -53,8 +52,8 @@ public class RemoveGreaterCommand implements BaseCommand {
 
         while (iterator.hasNext()) {
             var current = iterator.next();
-            logger.debug("Comparing: current -- " + current.getDistance() + " vs " + greaterThan.getDistance());
-            if (comparator.compare(current, greaterThan) > 0) {
+            logger.debug("Comparing: current -- " + current.getDistance() + " vs " + obj.getDistance());
+            if (comparator.compare(current, obj) > 0) {
                 logger.debug(" -- Greater / Will be removed...");
                 count++;
             } else {
@@ -62,7 +61,7 @@ public class RemoveGreaterCommand implements BaseCommand {
             }
         }
 
-        collectionHandler.getCollection().removeIf(current -> comparator.compare(current, greaterThan) > 0);
+        collectionHandler.getCollection().removeIf(current -> comparator.compare(current, obj) > 0);
         response = CommandStatusResponse.ofString("Removed " + count + " elements");
         logger.info(response.getResponse());
     }
@@ -70,5 +69,10 @@ public class RemoveGreaterCommand implements BaseCommand {
     @Override
     public CommandStatusResponse getResponse() {
         return response;
+    }
+
+    @Override
+    public void setObj(Route obj) {
+        this.obj = obj;
     }
 }
