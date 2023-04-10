@@ -67,6 +67,9 @@ public class CommandManager {
         } catch (IllegalArgumentException | NullPointerException e) {
             response = new CommandStatusResponse("Выполнение команды пропущено из-за неправильных предоставленных аргументов! (" + e.getMessage() + ")", -90);
             logger.fatal(response.getResponse(), e);
+        } catch (IndexOutOfBoundsException e) {
+            response = new CommandStatusResponse("В команде предоставлено неправильное количество аргументов. Возможно, вам нужно обновить клиент", -91);
+            logger.fatal(response.getResponse(), e);
         } catch (Exception e) {
             response = new CommandStatusResponse("В командном менеджере произошла непредвиденная ошибка!", -92);
             logger.fatal(response.getResponse(), e);

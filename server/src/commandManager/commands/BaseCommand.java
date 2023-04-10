@@ -2,8 +2,6 @@ package commandManager.commands;
 
 import responseLogic.responses.CommandStatusResponse;
 
-import java.io.Serializable;
-
 /**
  * Base interface for command implementation. You should implement it before applying command in CommandManager
  *
@@ -11,7 +9,7 @@ import java.io.Serializable;
  * @see commandManager.CommandManager
  * @since 1.0
  */
-public interface BaseCommand extends Serializable {
+public interface BaseCommand {
     /**
      * Base method for show command name
      *
@@ -41,7 +39,7 @@ public interface BaseCommand extends Serializable {
      * @param args full array of entered line.
      * @throws IllegalArgumentException when command can't understand given arguments
      */
-    void execute(String[] args) throws IllegalArgumentException, ClassNotFoundException;
+    void execute(String[] args) throws IllegalArgumentException;
 
     /**
      * Base method for get command Output

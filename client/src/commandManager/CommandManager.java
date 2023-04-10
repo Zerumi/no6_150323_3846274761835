@@ -14,6 +14,7 @@ import exceptions.BuildObjectException;
 import exceptions.CommandInterruptedException;
 import exceptions.UnknownCommandException;
 import exceptions.WrongAmountOfArgumentsException;
+import main.Utilities;
 import models.Route;
 import models.handlers.ModuleHandler;
 import models.handlers.nonUserMode.RouteNonCLIHandler;
@@ -85,7 +86,10 @@ public class CommandManager {
      */
     public void executeCommand(String[] args) {
         try {
-            Optional.ofNullable(commands.get(args[0])).orElseThrow(() -> new UnknownCommandException("Указанная команда не была обнаружена")).execute(args);
+            BaseCommand command = Optional.ofNullable(commands.get(args[0])).orElseThrow(() -> new UnknownCommandException("Указанная команда не была обнаружена"));
+            if (command.getArgCount() > 0)
+                Utilities.checkArgumentsOrThrow(args.length, command.getArgCount());
+            command.execute(args);
         } catch (IllegalArgumentException | NullPointerException e) {
             myLogger.log(Level.SEVERE, "Выполнение команды пропущено из-за неправильных предоставленных аргументов! (" + e.getMessage() + ")");
             throw new CommandInterruptedException(e);

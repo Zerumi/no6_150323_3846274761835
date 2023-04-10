@@ -10,6 +10,10 @@ public interface BaseCommand {
 
     String getName();
 
+    default int getArgCount() {
+        return 0;
+    }
+
     /**
      * Base method for command executing.
      *

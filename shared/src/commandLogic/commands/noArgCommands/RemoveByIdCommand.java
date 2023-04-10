@@ -1,6 +1,7 @@
 package commandLogic.commands.noArgCommands;
 
 import commandLogic.commands.BaseCommand;
+import main.LibUtilities;
 
 /**
  * Removes element from collection by id.
@@ -15,7 +16,13 @@ public class RemoveByIdCommand extends NoArgumentCommand implements BaseCommand 
     }
 
     @Override
-    public void execute(String[] args) {
-        // TODO: validate id?
+    public int getArgCount() {
+        return 1;
+    }
+
+    @Override
+    public void execute(String[] args) throws Exception {
+        if (LibUtilities.handleUserInputID(args[1]) != null)
+            super.execute(args);
     }
 }

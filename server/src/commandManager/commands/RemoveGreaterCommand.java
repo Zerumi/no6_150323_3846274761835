@@ -1,13 +1,11 @@
 package commandManager.commands;
 
-import dataTransferObjects.models.RouteDTO;
 import models.Route;
 import models.comparators.RouteDistanceComparator;
 import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import requestLogic.dtoMappers.RouteDTOMapper;
 import responseLogic.responses.CommandStatusResponse;
 
 import java.util.HashSet;
@@ -39,7 +37,7 @@ public class RemoveGreaterCommand implements BaseCommand, ArgumentConsumer<Route
     }
 
     @Override
-    public void execute(String[] args) throws ClassNotFoundException {
+    public void execute(String[] args) {
         RouteDistanceComparator comparator = new RouteDistanceComparator();
 
         CollectionHandler<HashSet<Route>, Route> collectionHandler = RoutesHandler.getInstance();

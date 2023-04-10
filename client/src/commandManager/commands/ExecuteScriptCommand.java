@@ -63,12 +63,16 @@ public class ExecuteScriptCommand implements BaseCommand {
         String str = Files.readString(path);
         Pattern pattern = Pattern.compile("execute_script .*");
         var patternMatcher = pattern.matcher(str);
-        while (patternMatcher.find())
-        {
+        while (patternMatcher.find()) {
             Path newPath = Path.of(patternMatcher.group().split(" ")[1]);
-            if(checkRecursion(newPath, stack)) return true;
+            if (checkRecursion(newPath, stack)) return true;
         }
         stack.removeLast();
         return false;
+    }
+
+    @Override
+    public int getArgCount() {
+        return 1;
     }
 }
