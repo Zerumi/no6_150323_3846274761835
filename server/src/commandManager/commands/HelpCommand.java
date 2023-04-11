@@ -3,7 +3,7 @@ package commandManager.commands;
 import commandManager.CommandManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import responseLogic.responses.CommandStatusResponse;
+import responses.CommandStatusResponse;
 
 import java.util.Optional;
 

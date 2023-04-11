@@ -1,28 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="chore: restored arguments validation">
-      <change afterPath="$PROJECT_DIR$/shared/src/main/LibUtilities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/CommandDescriptionsRequestSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/exceptions/UnknownCommandException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/requestLogic/requests/ServerRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/commandLogic/CommandDescription.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/requests/CommandDescriptionsRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/src/responses/CommandDescriptionsResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/client/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/commandManager/CommandExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commandManager/CommandExecutor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/commandManager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commandManager/CommandManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/commandManager/commands/ExecuteScriptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commandManager/commands/ExecuteScriptCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/commandManager/commands/ExitCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/commandManager/externalRecievers/ArgumentRouteCommandReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commandManager/externalRecievers/ArgumentRouteCommandReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/commandManager/externalRecievers/NonArgumentReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/commandManager/externalRecievers/NonArgumentReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/models/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/models/Route.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/dtoMappers/ArgumentCommandRequestDTOMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/dtoMappers/ArgumentMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/dtoMappers/CommandRequestDTOMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/dtoMappers/DTOMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/dtoMappers/RouteDTOMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/ArgumentRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/ArgumentRequestSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/CommandRequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/CommandRequestSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/RequestSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/requestLogic/requestSenders/RequestSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/responseLogic/ResponseReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/responseLogic/ResponseReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/responseLogic/dtoMappers/DTOMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/responseLogic/responseListener/ResponseListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/responseLogic/responseWorkers/BaseResponseWorker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/responseLogic/responseWorkers/CommandResponseWorker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/responseLogic/responseWorkers/ResponseWorker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/responseLogic/responseWorkers/ResponseWorkerManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/responseLogic/responses/BaseResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/responses/BaseResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/responseLogic/responses/CommandStatusResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/responses/CommandStatusResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/serverLogic/ServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/serverLogic/ServerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/serverLogic/UdpServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/serverLogic/UdpServerConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-20.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-20.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/ArgumentCommandClientRequestWorker.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/ArgumentCommandClientRequestWorker.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/BaseRequestWorker.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/BaseRequestWorker.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/CommandClientRequestWorker.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/CommandClientRequestWorker.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/RequestWorker.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/RequestWorker.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/RequestWorkerManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requestWorkers/RequestWorkerManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requests/ArgumentCommandClientRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requests/ArgumentCommandClientRequest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requests/BaseRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requests/BaseRequest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/requestLogic/requests/CommandClientRequest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requestLogic/requests/CommandClientRequest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/server/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/commandManager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/CommandManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commandManager/CommandMode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/AddCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/AddIfMaxCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/AddIfMaxCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/AddIfMinCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/AddIfMinCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/ArgumentConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/ArgumentConsumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/BaseCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/BaseCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/ClearCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/CountGreaterThanDistanceCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/CountGreaterThanDistanceCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/ExecuteScriptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/ExecuteScriptCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/ExitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/ExitCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/HelpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/InfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/InfoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/MinByCreationDateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/MinByCreationDateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/PrintFieldDistanceAscendingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/PrintFieldDistanceAscendingCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/RemoveByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/RemoveByIdCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/RemoveGreaterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/RemoveGreaterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/SaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/SaveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/ShowCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/UpdateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/UpdateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/commandLogic/commands/BaseCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/commandLogic/commands/BaseCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/commandLogic/commands/argCommands/UpdateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/commandLogic/commands/argCommands/UpdateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/commandLogic/commands/noArgCommands/CountGreaterThanDistanceCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/commandLogic/commands/noArgCommands/CountGreaterThanDistanceCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/commandLogic/commands/noArgCommands/RemoveByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/commandLogic/commands/noArgCommands/RemoveByIdCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/exceptions/InvalidRequestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/exceptions/InvalidRequestException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/models/Coordinates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/models/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/models/Route.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/RequestReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/requestLogic/RequestReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/dtoMappers/DTOMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/dtoMappers/RequestDTOMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/dtoMappers/RouteDTOMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/requestWorkers/ArgumentCommandClientRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/requestLogic/requestWorkers/ArgumentCommandClientRequestWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/requestWorkers/BaseRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/requestLogic/requestWorkers/BaseRequestWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/requestWorkers/CommandClientRequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/requestLogic/requestWorkers/CommandClientRequestWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/requestWorkers/RequestWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/requestLogic/requestWorkers/RequestWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/requestWorkers/RequestWorkerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/requestLogic/requestWorkers/RequestWorkerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/requestWorkers/argumentTypeResolver/ArgumentResolverManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/requestWorkers/argumentTypeResolver/Resolver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/requestWorkers/argumentTypeResolver/RouteResolver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/requests/ArgumentCommandClientRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/requests/ArgumentCommandClientRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/requests/BaseRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/requests/BaseRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/requests/CommandClientRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/requests/CommandClientRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/responseLogic/dtoMappers/DTOMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/responseLogic/responseSenders/CommandResponseSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/responseLogic/responseSenders/CommandResponseSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/responseLogic/responseSenders/ResponseSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/responseLogic/responseSenders/ResponseSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/responseLogic/responses/BaseResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/responseLogic/responses/CommandStatusResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/shared/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/commandLogic/ExternalCommandLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/commandLogic/commandReceiverLogic/receivers/ExternalBaseReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared/src/commandLogic/commandReceiverLogic/receivers/ExternalBaseReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/commandLogic/commands/BaseCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/commandLogic/commands/argCommands/AddCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/commandLogic/commands/argCommands/AddIfMaxCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/commandLogic/commands/argCommands/AddIfMinCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/commandLogic/commands/argCommands/ArgumentCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/commandLogic/commands/argCommands/RemoveGreaterCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/commandLogic/commands/argCommands/UpdateCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/commandLogic/commands/noArgCommands/ClearCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/commandLogic/commands/noArgCommands/CountGreaterThanDistanceCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/commandLogic/commands/noArgCommands/HelpCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/commandLogic/commands/noArgCommands/InfoCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/commandLogic/commands/noArgCommands/MinByCreationDateCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/commandLogic/commands/noArgCommands/NoArgumentCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/commandLogic/commands/noArgCommands/PrintFieldDistanceAscendingCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/commandLogic/commands/noArgCommands/RemoveByIdCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/commandLogic/commands/noArgCommands/ShowCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/commands/AddCommandDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/commands/AddIfMaxCommandDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/commands/AddIfMinCommandDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/commands/BaseCommandDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/commands/ClearCommandDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/commands/CountGreaterThanDistanceCommandDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/commands/ExitCommandDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/commands/HelpCommandDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/commands/InfoCommandDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/commands/MinByCreationDateCommandDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/commands/PrintFieldDistanceAscendingCommandDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/commands/RemoveByIdCommandDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/commands/RemoveGreaterCommandDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/commands/ShowCommandDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/commands/UpdateCommandDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/models/CoordinatesDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/models/LocationDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/models/RouteDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/requests/ArgumentCommandClientRequestDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/requests/BaseRequestDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/requests/CommandClientRequestDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/responses/BaseResponseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/src/dataTransferObjects/responses/CommandStatusResponseDTO.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,30 +266,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "extract.method.default.visibility": "private",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "openjdk-17.0.2",
-    "last_opened_file_path": "/Users/zerumi/IdeaProjects/gitCodes/no6_150323_3846274761835/client/src/responseLogic",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-17.0.2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/zerumi/IdeaProjects/gitCodes/no6_150323_3846274761835/client/src/responseLogic&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="requestLogic" />
@@ -199,6 +314,7 @@
       <recent name="requestLogic.dtoMappers.DTOMapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="exceptions" />
       <recent name="main" />
     </key>
   </component>
@@ -212,7 +328,7 @@
       <command value="gradle " />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.no6_150323_3846274761835 [installDist]">
+  <component name="RunManager" selected="Gradle.no6_150323_3846274761835:client [run]">
     <configuration name="no6_150323_3846274761835 [installDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -353,8 +469,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.no6_150323_3846274761835 [installDist]" />
         <item itemvalue="Gradle.no6_150323_3846274761835:client [run]" />
+        <item itemvalue="Gradle.no6_150323_3846274761835 [installDist]" />
         <item itemvalue="Gradle.no6_150323_3846274761835:server [installDist]" />
         <item itemvalue="Gradle.no6_150323_3846274761835:client [installDist]" />
         <item itemvalue="Gradle.no6_150323_3846274761835:server [run]" />
@@ -392,6 +508,7 @@
       <workItem from="1679761964391" duration="11079000" />
       <workItem from="1679784958930" duration="94028000" />
       <workItem from="1681076729945" duration="9737000" />
+      <workItem from="1681220230552" duration="3789000" />
     </task>
     <task id="LOCAL-00001" summary="add XML Reader">
       <created>1675714633059</created>
@@ -650,17 +767,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/responseLogic/responseSenders/CommandResponseSender.java</url>
-          <line>19</line>
+          <line>16</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/server/src/commandManager/CommandManager.java</url>
-          <line>76</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/client/src/serverLogic/UdpServerConnection.java</url>
-          <line>62</line>
+          <line>68</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>

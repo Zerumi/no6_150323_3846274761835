@@ -31,7 +31,5 @@ public interface ServerConnection {
      * @param bytesToSend bytes to send
      * @throws IOException if I/O occurs
      */
-    void sendData(byte[] bytesToSend) throws IOException;
-
-    InputStream listenServer() throws IOException;
+    InputStream sendData(byte[] bytesToSend) throws IOException;
 }

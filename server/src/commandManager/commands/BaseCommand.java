@@ -1,6 +1,6 @@
 package commandManager.commands;
 
-import responseLogic.responses.CommandStatusResponse;
+import responses.CommandStatusResponse;
 
 /**
  * Base interface for command implementation. You should implement it before applying command in CommandManager

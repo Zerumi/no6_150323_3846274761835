@@ -1,11 +1,9 @@
 package responseLogic.responseSenders;
 
-import dataTransferObjects.responses.CommandStatusResponseDTO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requestLogic.CallerBack;
-import responseLogic.dtoMappers.DTOMapper;
-import responseLogic.responses.CommandStatusResponse;
+import responses.CommandStatusResponse;
 import serverLogic.ServerConnection;
 
 import java.io.IOException;
@@ -16,11 +14,8 @@ public class CommandResponseSender {
     public static void sendResponse(CommandStatusResponse response, ServerConnection connection, CallerBack to) {
         try {
             if (response != null) {
-                CommandStatusResponseDTO dto = DTOMapper.convertToDTO(response, "dataTransferObjects.responses");
-                ResponseSender.sendResponse(dto, connection, to);
+                ResponseSender.sendResponse(response, connection, to);
             }
-        } catch (ClassNotFoundException e) {
-            logger.fatal("Class not found", e);
         } catch (IOException e) {
             logger.fatal("Something went wrong during I/O", e);
         }

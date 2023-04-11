@@ -6,7 +6,7 @@ import models.handlers.CollectionHandler;
 import models.handlers.RoutesHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import responseLogic.responses.CommandStatusResponse;
+import responses.CommandStatusResponse;
 
 import java.util.HashSet;
 

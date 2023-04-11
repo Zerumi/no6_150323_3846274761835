@@ -1,6 +1,6 @@
 apply plugin: 'java-library'
 
-version '1.0'
+version '1.2'
 
 sourceSets.main.java.srcDirs = ['src']
 
@@ -16,4 +16,13 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'main.Main',
+                'Class-Path': configurations.runtimeClasspath.files.collect { it.getName() }.join(' ')
+        )
+    }
 }

@@ -1,8 +1,7 @@
 package requestLogic.requestWorkers;
 
-import dataTransferObjects.requests.BaseRequestDTO;
-import requestLogic.requests.BaseRequest;
+import requestLogic.requests.ServerRequest;
 
 public interface RequestWorker {
-    void workWithRequest(BaseRequest request, BaseRequestDTO dto);
+    void workWithRequest(ServerRequest request);
 }

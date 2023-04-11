@@ -1,7 +1,7 @@
 package commandLogic.commandReceiverLogic.receivers;
 
-import commandLogic.commands.BaseCommand;
+import commandLogic.CommandDescription;
 
 public interface ExternalBaseReceiver {
-    void receiveCommand(BaseCommand command, String[] args) throws Exception;
+    void receiveCommand(CommandDescription command, String[] args) throws Exception;
 }

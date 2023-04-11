@@ -1,12 +1,9 @@
 package commandManager.commands;
 
-import commandLogic.commands.BaseCommand;
 import commandManager.CommandExecutor;
-import commandManager.CommandMode;
 import exceptions.WrongAmountOfArgumentsException;
 import main.Utilities;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -24,16 +21,9 @@ import java.util.regex.Pattern;
  * @author Zerumi
  * @since 1.0
  */
-public class ExecuteScriptCommand implements BaseCommand {
-
+public class ExecuteScriptCommand {
     private static final Logger myLogger = Logger.getLogger("com.github.zerumi.lab5");
 
-    @Override
-    public String getName() {
-        return "execute_script";
-    }
-
-    @Override
     public void execute(String[] args) throws IllegalArgumentException, WrongAmountOfArgumentsException {
         Utilities.checkArgumentsOrThrow(args.length, 1);
 
@@ -44,7 +34,7 @@ public class ExecuteScriptCommand implements BaseCommand {
                 return;
             }
             myLogger.log(Level.INFO, "Executing script " + args[1]);
-            executor.startExecuting(new FileInputStream(Path.of(args[1]).toFile()), CommandMode.NonUserMode);
+            //executor.startExecuting(new FileInputStream(Path.of(args[1]).toFile()), CommandMode.NonUserMode);
         } catch (InvalidPathException e) {
             System.out.println("Provided argument path isn't legal. Try again.");
             throw new IllegalArgumentException(e);
@@ -69,10 +59,5 @@ public class ExecuteScriptCommand implements BaseCommand {
         }
         stack.removeLast();
         return false;
-    }
-
-    @Override
-    public int getArgCount() {
-        return 1;
     }
 }

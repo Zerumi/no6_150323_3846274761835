@@ -1,7 +1,6 @@
 package main;
 
 import commandManager.commands.SaveCommand;
-import dataTransferObjects.requests.BaseRequestDTO;
 import fileLogic.Loader;
 import models.Route;
 import models.handlers.CollectionHandler;
@@ -10,11 +9,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requestLogic.RequestReader;
 import requestLogic.StatusRequest;
-import requestLogic.dtoMappers.RequestDTOMapper;
 import requestLogic.requestWorkers.RequestWorkerManager;
+import requestLogic.requests.ServerRequest;
+import requests.BaseRequest;
 import serverLogic.DatagramServerConnectionFactory;
 import serverLogic.ServerConnection;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.util.HashSet;
 
@@ -34,7 +35,7 @@ public class Main {
         logger.trace("This is a server!");
 
         // setup background tasks
-        var timer = new javax.swing.Timer(600000, event -> new SaveCommand().execute(new String[0]));
+        var timer = new Timer(600000, event -> new SaveCommand().execute(new String[0]));
         timer.start();
 
         // load collection
@@ -57,13 +58,11 @@ public class Main {
                     logger.debug("Status code: " + rq.getCode());
                     continue;
                 }
-                RequestReader<BaseRequestDTO> rqReader = new RequestReader<>(rq.getInputStream());
-                BaseRequestDTO brDTO = rqReader.readObject();
-                var request = RequestDTOMapper.toRequest(brDTO);
-                request.setConnection(connection);
-                request.setFrom(rq.getCallerBack());
+                RequestReader rqReader = new RequestReader(rq.getInputStream());
+                BaseRequest baseRequest = rqReader.readObject();
+                var request = new ServerRequest(baseRequest, rq.getCallerBack(), connection);
                 RequestWorkerManager worker = new RequestWorkerManager();
-                worker.workWithRequest(request, brDTO, request.getClass().getSimpleName());
+                worker.workWithRequest(request);
             } catch (IOException e) {
                 logger.error("Something went wrong during I/O", e);
             } catch (ClassNotFoundException e) {

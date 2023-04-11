@@ -4,7 +4,6 @@ import commandManager.CommandExecutor;
 import commandManager.CommandMode;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import responseLogic.responseListener.ResponseListener;
 import serverLogic.*;
 
 import java.io.IOException;
@@ -34,9 +33,9 @@ public class Main {
             ServerConnectionHandler.setServerConnection(connection);
             connection.openConnection();
 
-            ResponseListener.getInstance().getListeningThread().start();
+            // request commands
 
-            // commands
+
             System.out.println("Welcome to CLI! We've established connection to a server.");
             System.out.println("Now you can enter the commands. Use help for reference.");
             CommandExecutor executor = new CommandExecutor();

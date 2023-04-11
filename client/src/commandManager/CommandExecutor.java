@@ -26,7 +26,8 @@ public class CommandExecutor {
             String line = cmdScanner.nextLine();
             if (line.isEmpty()) continue;
             try {
-                commandManager.executeCommand(line.split(" "));
+                String[] lineargs = line.split(" ");
+
             } catch (CommandInterruptedException ex) {
                 if (mode.equals(CommandMode.CLI_UserMode))
                     logger.info("Выполнение команды было прервано. Вы можете продолжать работу. Программа возвращена в безопасное состояние.");

@@ -1,9 +1,9 @@
 package responseLogic.responseSenders;
 
-import dataTransferObjects.responses.BaseResponseDTO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requestLogic.CallerBack;
+import responses.BaseResponse;
 import serverLogic.ServerConnection;
 
 import java.io.ByteArrayOutputStream;
@@ -13,7 +13,7 @@ import java.io.ObjectOutputStream;
 public class ResponseSender {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
 
-    public static void sendResponse(BaseResponseDTO response, ServerConnection connection, CallerBack to) throws IOException {
+    public static void sendResponse(BaseResponse response, ServerConnection connection, CallerBack to) throws IOException {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         ObjectOutputStream oos = new ObjectOutputStream(bos);
         oos.writeObject(response);

@@ -50,15 +50,18 @@ public class UdpServerConnection implements ServerConnection {
     }
 
     @Override
-    public void sendData(byte[] bytesToSend) throws IOException {
+    public ByteArrayInputStream sendData(byte[] bytesToSend) throws IOException {
+        ByteArrayInputStream bos = null;
         if (channel.isConnected() && channel.isOpen()) {
             var buf = ByteBuffer.wrap(bytesToSend);
             channel.send(buf, address);
+            bos = listenServer(); // TODO: wait 5 seconds
+            // else: Server is not available
         } else this.openConnection();
+        return bos;
     }
 
-    @Override
-    public ByteArrayInputStream listenServer() throws IOException {
+    private ByteArrayInputStream listenServer() throws IOException {
         ByteArrayInputStream res = null;
         if (channel.isConnected() && channel.isOpen()) {
             ByteBuffer buf = ByteBuffer.allocate(4096);

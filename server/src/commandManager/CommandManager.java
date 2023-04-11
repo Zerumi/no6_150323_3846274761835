@@ -1,13 +1,17 @@
 package commandManager;
 
 import commandManager.commands.*;
+import exceptions.UnknownCommandException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import requestLogic.requests.CommandClientRequest;
+import requestLogic.CallerBack;
+import requests.CommandClientRequest;
 import responseLogic.responseSenders.CommandResponseSender;
-import responseLogic.responses.CommandStatusResponse;
+import responses.CommandStatusResponse;
+import serverLogic.ServerConnection;
 
 import java.util.LinkedHashMap;
+import java.util.Optional;
 
 /**
  * Command Manager for interactive collection manage.
@@ -58,10 +62,10 @@ public class CommandManager {
      *
      * @param command request
      */
-    public void executeCommand(CommandClientRequest command) {
+    public void executeCommand(CommandClientRequest command, CallerBack requester, ServerConnection answerConnection) {
         CommandStatusResponse response;
         try {
-            BaseCommand baseCommand = command.getCommand();
+            BaseCommand baseCommand = Optional.ofNullable(commands.get(command.getCommandDescription().getName())).orElseThrow(() -> new UnknownCommandException("Указанная команда не была обнаружена"));
             baseCommand.execute(command.getLineArgs());
             response = baseCommand.getResponse();
         } catch (IllegalArgumentException | NullPointerException e) {
@@ -74,6 +78,6 @@ public class CommandManager {
             response = new CommandStatusResponse("В командном менеджере произошла непредвиденная ошибка!", -92);
             logger.fatal(response.getResponse(), e);
         }
-        CommandResponseSender.sendResponse(response, command.getConnection(), command.getFrom());
+        CommandResponseSender.sendResponse(response, answerConnection, requester);
     }
 }

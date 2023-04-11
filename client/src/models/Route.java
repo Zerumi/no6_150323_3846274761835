@@ -1,5 +1,6 @@
 package models;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
@@ -7,10 +8,10 @@ import java.util.Objects;
  * Model of Route. Main model of the program. Contains getters/setters of each class fields.
  * Some fields have restrictions. It's signed under every method of field.
  *
- * @since 1.0
  * @author zerumi
+ * @since 1.0
  */
-public class Route implements Comparable<Route> {
+public class Route implements Comparable<Route>, Serializable {
     private Long id;
     private String name;
     private Coordinates coordinates;

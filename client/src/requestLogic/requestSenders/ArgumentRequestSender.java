@@ -1,32 +1,28 @@
 package requestLogic.requestSenders;
 
-import commandLogic.commands.BaseCommand;
+import commandLogic.CommandDescription;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import requestLogic.dtoMappers.ArgumentCommandRequestDTOMapper;
-import requestLogic.dtoMappers.ArgumentMapper;
+import requests.ArgumentCommandClientRequest;
 import serverLogic.ServerConnection;
 
 import java.io.IOException;
+import java.io.Serializable;
+import java.net.PortUnreachableException;
 
-public class ArgumentRequestSender<T, Y> {
+public class ArgumentRequestSender<T extends Serializable> {
 
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
-    final ArgumentMapper<T, Y> mapper;
 
-    public ArgumentRequestSender(ArgumentMapper<T, Y> mapper) {
-        this.mapper = mapper;
-    }
-
-    public void sendCommand(BaseCommand command, String[] args, T argument, ServerConnection connection) {
+    public void sendCommand(CommandDescription command, String[] args, T argument, ServerConnection connection) {
         try {
-            var rq = new ArgumentCommandRequestDTOMapper<Y>().argumentCommandRequestDTOMapper(command, args, mapper.mapArgument(argument));
+            ArgumentCommandClientRequest<T> rq = new ArgumentCommandClientRequest<>(command, args, argument);
             logger.info("Sending command request...");
             new RequestSender().sendRequest(rq, connection);
+        } catch (PortUnreachableException e) {
+            logger.warn("Server is unavailable. Please, wait until server will came back.");
         } catch (IOException e) {
-            logger.fatal("Can't send request", e);
-        } catch (ClassNotFoundException e) {
-            logger.fatal("Class not found.");
+            logger.error("Something went wrong during I/O operations.");
         }
     }
 }

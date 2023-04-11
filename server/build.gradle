@@ -2,7 +2,7 @@ apply plugin: 'idea'
 apply plugin: 'java'
 apply plugin: 'application'
 
-version '1.0'
+version '1.2'
 
 applicationDefaultJvmArgs = ["-Dlog4j.configurationFile=./log4j2.xml"]
 

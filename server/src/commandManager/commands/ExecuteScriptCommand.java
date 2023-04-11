@@ -1,6 +1,6 @@
 package commandManager.commands;
 
-import responseLogic.responses.CommandStatusResponse;
+import responses.CommandStatusResponse;
 
 public class ExecuteScriptCommand implements BaseCommand {
     @Override
