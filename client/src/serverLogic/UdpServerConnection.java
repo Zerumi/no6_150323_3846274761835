@@ -6,16 +6,20 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.net.PortUnreachableException;
 import java.net.SocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
 import java.util.Arrays;
+import java.util.concurrent.*;
 
 public class UdpServerConnection implements ServerConnection {
 
+    public static final int BUFFER_SIZE = 4096;
+
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
-    final DatagramChannel channel;
-    SocketAddress address;
+    protected final DatagramChannel channel;
+    protected SocketAddress address;
 
     protected UdpServerConnection(DatagramChannel channel, SocketAddress address) {
         this.channel = channel;
@@ -49,14 +53,36 @@ public class UdpServerConnection implements ServerConnection {
         }
     }
 
+    Future<ByteArrayInputStream> bosFuture;
+    boolean lastRequestSuccess = true;
+
     @Override
     public ByteArrayInputStream sendData(byte[] bytesToSend) throws IOException {
         ByteArrayInputStream bos = null;
         if (channel.isConnected() && channel.isOpen()) {
             var buf = ByteBuffer.wrap(bytesToSend);
             channel.send(buf, address);
-            bos = listenServer(); // TODO: wait 5 seconds
-            // else: Server is not available
+
+            if (lastRequestSuccess) {
+                Callable<ByteArrayInputStream> callable = this::listenServer;
+                ExecutorService service = Executors.newSingleThreadExecutor();
+                bosFuture = service.submit(callable);
+            }
+
+            try {
+                bos = bosFuture.get(5, TimeUnit.SECONDS);
+                lastRequestSuccess = true;
+            } catch (InterruptedException e) {
+                logger.info("Interrupted");
+            } catch (ExecutionException e) {
+                lastRequestSuccess = false;
+                logger.error("Something went wrong during execution");
+                throw (IOException) e.getCause();
+            } catch (TimeoutException e) {
+                lastRequestSuccess = false;
+                logger.error("Time limit exceed for getting response");
+                throw new PortUnreachableException("Server may be unavailable");
+            }
         } else this.openConnection();
         return bos;
     }
@@ -64,7 +90,7 @@ public class UdpServerConnection implements ServerConnection {
     private ByteArrayInputStream listenServer() throws IOException {
         ByteArrayInputStream res = null;
         if (channel.isConnected() && channel.isOpen()) {
-            ByteBuffer buf = ByteBuffer.allocate(4096);
+            ByteBuffer buf = ByteBuffer.allocate(BUFFER_SIZE);
             address = channel.receive(buf);
             logger.debug("response read");
             logger.trace("bytes: " + Arrays.toString(buf.array()));

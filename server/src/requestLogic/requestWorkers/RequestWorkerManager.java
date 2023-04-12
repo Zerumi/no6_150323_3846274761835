@@ -7,6 +7,7 @@ import requestLogic.requests.ServerRequest;
 import requests.ArgumentCommandClientRequest;
 import requests.BaseRequest;
 import requests.CommandClientRequest;
+import requests.CommandDescriptionsRequest;
 
 import java.util.LinkedHashMap;
 import java.util.Optional;
@@ -21,11 +22,12 @@ public class RequestWorkerManager {
         workers.put(BaseRequest.class, new BaseRequestWorker());
         workers.put(CommandClientRequest.class, new CommandClientRequestWorker());
         workers.put(ArgumentCommandClientRequest.class, new ArgumentCommandClientRequestWorker<>());
+        workers.put(CommandDescriptionsRequest.class, new CommandConfigureRequestWorker());
     }
 
     public void workWithRequest(ServerRequest request) {
         try {
-            Optional.ofNullable(workers.get(request.getClass())).orElseThrow(() -> new UnsupportedRequestException("Указанный запрос не может быть обработан")).workWithRequest(request);
+            Optional.ofNullable(workers.get(request.getUserRequest().getClass())).orElseThrow(() -> new UnsupportedRequestException("Указанный запрос не может быть обработан")).workWithRequest(request);
         } catch (UnsupportedRequestException ex) {
             logger.error("Got an invalid request.");
         }

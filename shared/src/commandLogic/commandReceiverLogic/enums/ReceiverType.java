@@ -1,4 +1,4 @@
-package commandLogic.commandReceiverLogic;
+package commandLogic.commandReceiverLogic.enums;
 
 public enum ReceiverType {
     NoArgs,

@@ -13,6 +13,6 @@ public class CommandClientRequestWorker implements RequestWorker {
     public void workWithRequest(ServerRequest request) {
         CommandClientRequest requestToWork = (CommandClientRequest) request.getUserRequest();
         CommandManager manager = new CommandManager();
-        //manager.executeCommand(requestToWork);
+        manager.executeCommand(requestToWork, request.getFrom(), request.getConnection());
     }
 }

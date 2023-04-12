@@ -2,6 +2,7 @@ package commandManager.commands;
 
 import models.Route;
 import models.handlers.CollectionHandler;
+import models.handlers.RouteIDHandler;
 import models.handlers.RoutesHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -65,5 +66,6 @@ public class UpdateCommand implements BaseCommand, ArgumentConsumer<Route> {
     @Override
     public void setObj(Route obj) {
         this.obj = obj;
+        obj.setId(RouteIDHandler.getInstance().getNextID());
     }
 }

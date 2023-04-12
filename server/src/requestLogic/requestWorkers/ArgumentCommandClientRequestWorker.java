@@ -13,9 +13,9 @@ public class ArgumentCommandClientRequestWorker<T, Y> implements RequestWorker {
     @Override
     public void workWithRequest(ServerRequest request) {
         ArgumentCommandClientRequest<T> requestToWork = (ArgumentCommandClientRequest<T>) request.getUserRequest();
-        ArgumentConsumer<T> argCommand = (ArgumentConsumer<T>) requestToWork.getCommandDescription();
-        argCommand.setObj(requestToWork.getArgument());
         CommandManager manager = new CommandManager();
-        //manager.executeCommand(requestToWork);
+        ArgumentConsumer<T> argCommand = (ArgumentConsumer<T>) manager.fromDescription(requestToWork.getCommandDescription());
+        argCommand.setObj(requestToWork.getArgument());
+        manager.executeCommand(requestToWork, request.getFrom(), request.getConnection());
     }
 }

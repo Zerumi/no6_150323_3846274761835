@@ -1,5 +1,6 @@
 package commandManager;
 
+import commandLogic.CommandDescription;
 import commandManager.commands.*;
 import exceptions.UnknownCommandException;
 import org.apache.logging.log4j.LogManager;
@@ -79,5 +80,9 @@ public class CommandManager {
             logger.fatal(response.getResponse(), e);
         }
         CommandResponseSender.sendResponse(response, answerConnection, requester);
+    }
+
+    public BaseCommand fromDescription(CommandDescription description) {
+        return commands.get(description.getName());
     }
 }

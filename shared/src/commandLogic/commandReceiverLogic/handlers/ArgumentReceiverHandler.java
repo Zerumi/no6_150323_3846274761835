@@ -18,11 +18,12 @@ public class ArgumentReceiverHandler<T> extends ReceiverHandler {
         this.argType = argType;
     }
 
+
     @Override
+    @SuppressWarnings("unchecked")
     public void addReceiver(ExternalBaseReceiver receiver) {
         if (receiver instanceof ExternalArgumentReceiver<?>) {
             if (((ExternalArgumentReceiver<?>) receiver).getArguemnt().getClass().getName().equals(argType.getName()))
-                //noinspection unchecked
                 receivers.add((ExternalArgumentReceiver<T>) receiver);
         }
     }

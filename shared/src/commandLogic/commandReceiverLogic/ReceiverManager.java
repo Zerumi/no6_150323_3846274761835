@@ -1,5 +1,6 @@
 package commandLogic.commandReceiverLogic;
 
+import commandLogic.commandReceiverLogic.enums.ReceiverType;
 import commandLogic.commandReceiverLogic.handlers.ReceiverHandler;
 import commandLogic.commandReceiverLogic.receivers.ExternalBaseReceiver;
 

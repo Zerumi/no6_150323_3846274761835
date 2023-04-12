@@ -1,9 +1,15 @@
-package commandManager.commands;
+package commandManager.externalRecievers;
 
+import commandLogic.CommandDescription;
+import commandLogic.commandReceiverLogic.receivers.ExternalBaseReceiver;
+import commandManager.CommandDescriptionHolder;
 import commandManager.CommandExecutor;
+import commandManager.CommandMode;
+import exceptions.CommandsNotLoadedException;
 import exceptions.WrongAmountOfArgumentsException;
 import main.Utilities;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -11,6 +17,7 @@ import java.nio.file.InvalidPathException;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.util.ArrayDeque;
+import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Pattern;
@@ -21,20 +28,24 @@ import java.util.regex.Pattern;
  * @author Zerumi
  * @since 1.0
  */
-public class ExecuteScriptCommand {
+public class ExecuteScriptReceiver implements ExternalBaseReceiver {
     private static final Logger myLogger = Logger.getLogger("com.github.zerumi.lab5");
 
-    public void execute(String[] args) throws IllegalArgumentException, WrongAmountOfArgumentsException {
+    @Override
+    public void receiveCommand(CommandDescription commandDescription, String[] args) throws IllegalArgumentException, WrongAmountOfArgumentsException {
+
+        if (!Objects.equals(commandDescription.getName(), "execute_script")) return;
+
         Utilities.checkArgumentsOrThrow(args.length, 1);
 
         try {
-            CommandExecutor executor = new CommandExecutor();
+            CommandExecutor executor = new CommandExecutor(CommandDescriptionHolder.getInstance().getCommands(), new FileInputStream(Path.of(args[1]).toFile()), CommandMode.NonUserMode);
             if (checkRecursion(Path.of(args[1]), new ArrayDeque<>())) {
                 myLogger.log(Level.WARNING, "При анализе скрипта обнаружена рекурсия. Устраните ее перед исполнением.");
                 return;
             }
             myLogger.log(Level.INFO, "Executing script " + args[1]);
-            //executor.startExecuting(new FileInputStream(Path.of(args[1]).toFile()), CommandMode.NonUserMode);
+            executor.startExecuting();
         } catch (InvalidPathException e) {
             System.out.println("Provided argument path isn't legal. Try again.");
             throw new IllegalArgumentException(e);
@@ -44,6 +55,8 @@ public class ExecuteScriptCommand {
             System.out.println("Access denied. Try again with another file.");
         } catch (IOException e) {
             System.out.println("Something went wrong during file handling. Try again. (" + e.getMessage() + ")");
+        } catch (CommandsNotLoadedException e) {
+            System.out.println("We've got a really interesting situation... Commands is gone...");
         }
     }
 

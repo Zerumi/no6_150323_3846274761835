@@ -1,23 +1,23 @@
 package commandLogic;
 
-import commandLogic.commandReceiverLogic.receivers.ExternalBaseReceiver;
+import commandLogic.commandReceiverLogic.callers.ExternalCaller;
 
 import java.io.Serializable;
 
 public class CommandDescription implements Serializable {
     private final String name;
-    private final ExternalBaseReceiver receiver;
+    private final ExternalCaller caller;
 
-    public CommandDescription(String name, ExternalBaseReceiver receiver) {
+    public CommandDescription(String name, ExternalCaller caller) {
         this.name = name;
-        this.receiver = receiver;
+        this.caller = caller;
     }
 
     public String getName() {
         return name;
     }
 
-    public ExternalBaseReceiver getReceiver() {
-        return receiver;
+    public ExternalCaller getReceiver() {
+        return caller;
     }
 }
