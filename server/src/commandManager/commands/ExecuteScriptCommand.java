@@ -20,7 +20,7 @@ public class ExecuteScriptCommand implements BaseCommand {
 
     @Override
     public void execute(String[] args) throws IllegalArgumentException {
-        // for client-use only
+        CommandStatusResponse.ofString("Server is alive and ready for command executing!");
     }
 
     @Override

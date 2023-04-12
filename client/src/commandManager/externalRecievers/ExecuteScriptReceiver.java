@@ -32,9 +32,9 @@ public class ExecuteScriptReceiver implements ExternalBaseReceiver {
     private static final Logger myLogger = Logger.getLogger("com.github.zerumi.lab5");
 
     @Override
-    public void receiveCommand(CommandDescription commandDescription, String[] args) throws IllegalArgumentException, WrongAmountOfArgumentsException {
+    public boolean receiveCommand(CommandDescription commandDescription, String[] args) throws IllegalArgumentException, WrongAmountOfArgumentsException {
 
-        if (!Objects.equals(commandDescription.getName(), "execute_script")) return;
+        if (!Objects.equals(commandDescription.getName(), "execute_script")) return true;
 
         Utilities.checkArgumentsOrThrow(args.length, 1);
 
@@ -42,7 +42,7 @@ public class ExecuteScriptReceiver implements ExternalBaseReceiver {
             CommandExecutor executor = new CommandExecutor(CommandDescriptionHolder.getInstance().getCommands(), new FileInputStream(Path.of(args[1]).toFile()), CommandMode.NonUserMode);
             if (checkRecursion(Path.of(args[1]), new ArrayDeque<>())) {
                 myLogger.log(Level.WARNING, "При анализе скрипта обнаружена рекурсия. Устраните ее перед исполнением.");
-                return;
+                return false;
             }
             myLogger.log(Level.INFO, "Executing script " + args[1]);
             executor.startExecuting();
@@ -58,6 +58,7 @@ public class ExecuteScriptReceiver implements ExternalBaseReceiver {
         } catch (CommandsNotLoadedException e) {
             System.out.println("We've got a really interesting situation... Commands is gone...");
         }
+        return false;
     }
 
     private boolean checkRecursion(Path path, ArrayDeque<Path> stack) throws IOException {

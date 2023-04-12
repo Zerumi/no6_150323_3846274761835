@@ -9,6 +9,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import responses.CommandStatusResponse;
 
+import java.time.Instant;
+import java.util.Date;
 import java.util.HashSet;
 
 /**
@@ -74,5 +76,6 @@ public class RemoveGreaterCommand implements BaseCommand, ArgumentConsumer<Route
     public void setObj(Route obj) {
         this.obj = obj;
         obj.setId(RouteIDHandler.getInstance().getNextID());
+        obj.setCreationDate(Date.from(Instant.now()));
     }
 }

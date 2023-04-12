@@ -1,5 +1,6 @@
 package requestLogic.requestSenders;
 
+import exceptions.ServerNotAvailableException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requests.BaseRequest;
@@ -15,7 +16,7 @@ import java.io.ObjectOutputStream;
 public class RequestSender {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
 
-    public BaseResponse sendRequest(BaseRequest request, ServerConnection connection) throws IOException {
+    public BaseResponse sendRequest(BaseRequest request, ServerConnection connection) throws IOException, ServerNotAvailableException {
         BaseResponse response = null;
         try {
             ByteArrayOutputStream bos = new ByteArrayOutputStream();

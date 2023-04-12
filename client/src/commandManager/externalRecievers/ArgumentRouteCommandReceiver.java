@@ -26,13 +26,15 @@ public class ArgumentRouteCommandReceiver implements ExternalArgumentReceiver<Ro
     }
 
     @Override
-    public void receiveCommand(CommandDescription command, String[] args) throws BuildObjectException {
+    public boolean receiveCommand(CommandDescription command, String[] args) throws BuildObjectException {
         route = handler.buildObject();
         CommandStatusResponse response = new ArgumentRequestSender<Route>().sendCommand(command, args, route, ServerConnectionHandler.getCurrentConnection());
         if (response != null) {
             logger.info("Status code: " + response.getStatusCode());
             logger.info("Response: \n" + response.getResponse());
+            return true;
         }
+        return false;
     }
 
     @Override

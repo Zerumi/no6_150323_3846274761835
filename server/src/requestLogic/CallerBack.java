@@ -1,12 +1,11 @@
 package requestLogic;
 
-import serverLogic.ServerConnection;
-
 import java.net.InetAddress;
+import java.util.Objects;
 
 public class CallerBack {
-    private InetAddress address;
-    private int port;
+    private final InetAddress address;
+    private final int port;
 
     public CallerBack(InetAddress address, int port) {
         this.address = address;
@@ -17,19 +16,28 @@ public class CallerBack {
         return address;
     }
 
-    public void setAddress(InetAddress address) {
-        this.address = address;
-    }
-
     public int getPort() {
         return port;
     }
 
-    public void setPort(int port) {
-        this.port = port;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CallerBack that = (CallerBack) o;
+        return port == that.port && Objects.equals(address, that.address);
     }
 
-    public void callback(ServerConnection connection) {
+    @Override
+    public int hashCode() {
+        return Objects.hash(address, port);
+    }
 
+    @Override
+    public String toString() {
+        return "CallerBack{" +
+                "address=" + address +
+                ", port=" + port +
+                '}';
     }
 }

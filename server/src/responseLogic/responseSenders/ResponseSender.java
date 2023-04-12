@@ -14,11 +14,12 @@ public class ResponseSender {
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
 
     public static void sendResponse(BaseResponse response, ServerConnection connection, CallerBack to) throws IOException {
-        ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        ObjectOutputStream oos = new ObjectOutputStream(bos);
-        oos.writeObject(response);
-
-        connection.sendData(bos.toByteArray(), to.getAddress(), to.getPort());
-        logger.info("response sent.");
+        if (response != null) {
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            ObjectOutputStream oos = new ObjectOutputStream(bos);
+            oos.writeObject(response);
+            connection.sendData(bos.toByteArray(), to.getAddress(), to.getPort());
+            logger.info("response sent.");
+        }
     }
 }

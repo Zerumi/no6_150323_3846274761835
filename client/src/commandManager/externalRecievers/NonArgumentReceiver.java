@@ -13,11 +13,13 @@ public class NonArgumentReceiver implements ExternalBaseReceiver {
     private static final Logger logger = LogManager.getLogger("com.github.zerumi.lab6");
 
     @Override
-    public void receiveCommand(CommandDescription command, String[] args) {
+    public boolean receiveCommand(CommandDescription command, String[] args) {
         CommandStatusResponse response = new CommandRequestSender().sendCommand(command, args, ServerConnectionHandler.getCurrentConnection());
         if (response != null) {
             logger.info("Status code: " + response.getStatusCode());
             logger.info("Response: \n" + response.getResponse());
+            return true;
         }
+        return false;
     }
 }

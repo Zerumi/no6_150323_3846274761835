@@ -57,9 +57,7 @@ public class Main {
 
                     AtomicInteger secondsRemained = new AtomicInteger(waitingCount / 1000 - 1);
 
-                    javax.swing.Timer timer = new Timer(1000, (x) -> {
-                        logger.info("Re-attempt in " + secondsRemained.getAndDecrement() + " seconds. You may interrupt awaiting by hitting Enter.");
-                    });
+                    javax.swing.Timer timer = new Timer(1000, (x) -> logger.info("Re-attempt in " + secondsRemained.getAndDecrement() + " seconds. You may interrupt awaiting by hitting Enter."));
 
                     timer.start();
 
@@ -75,26 +73,25 @@ public class Main {
                         }
                     };
 
-                    Runnable forceInterrupt = () -> {
+                    /*Runnable forceInterrupt = () -> {
                         try {
                             int ignored = System.in.read();
                             latch.countDown();
                         } catch (IOException ex) {
                             logger.error("Something went wrong during i/o.");
                         }
-                    };
+                    };*/
 
                     Thread tWait = new Thread(wait);
-                    Thread tForceInt = new Thread(forceInterrupt);
+                    //Thread tForceInt = new Thread(forceInterrupt);
 
                     tWait.start();
-                    tForceInt.start();
+                    //tForceInt.start();
 
                     try {
                         latch.await();
                         timer.stop();
                         tWait.interrupt();
-                        tForceInt.interrupt();
                     } catch (InterruptedException ex) {
                         logger.info("Interrupted");
                     }

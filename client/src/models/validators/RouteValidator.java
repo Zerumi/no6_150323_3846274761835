@@ -15,10 +15,8 @@ import java.util.Optional;
 public class RouteValidator implements Validator<Route> {
     @Override
     public boolean validate(Route route) {
-        Validator<Long> idValidate = (id) -> id != null && id > 0;
 
-        return idValidate.validate(route.getId())
-                && new NameValidator().validate(route.getName())
+        return new NameValidator().validate(route.getName())
                 && new DistanceValidator().validate(Optional.of(route).map(Route::getDistance).orElse(0))
                 && new CoordXValidator().validate(Optional.of(route).map(Route::getCoordinates).map(Coordinates::getX).orElse(0d))
                 && new CoordYValidator().validate(Optional.of(route).map(Route::getCoordinates).map(Coordinates::getY).orElse(null))

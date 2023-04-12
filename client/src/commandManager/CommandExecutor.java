@@ -9,9 +9,7 @@ import commandManager.externalRecievers.ArgumentRouteCommandReceiver;
 import commandManager.externalRecievers.ExecuteScriptReceiver;
 import commandManager.externalRecievers.ExitReceiver;
 import commandManager.externalRecievers.NonArgumentReceiver;
-import exceptions.CommandInterruptedException;
-import exceptions.CommandsNotLoadedException;
-import exceptions.UnknownCommandException;
+import exceptions.*;
 import models.Route;
 import models.handlers.ModuleHandler;
 import models.handlers.nonUserMode.RouteNonCLIHandler;
@@ -33,8 +31,9 @@ public class CommandExecutor {
     private static final Logger logger = LogManager.getLogger("com.github.zerumi.lab6");
 
     private final ArrayList<CommandDescription> commands;
-    private final InputStream input;
+    private final Scanner scannerInput;
     private final CommandMode mode;
+    private final ReceiverManager manager;
 
     /**
      * Constructor :/
@@ -47,9 +46,9 @@ public class CommandExecutor {
         if (commands == null) throw new CommandsNotLoadedException();
 
         this.commands = commands;
-        this.input = input;
+        this.scannerInput = new Scanner(input);
         this.mode = mode;
-        ReceiverManager manager = ReceiverManager.getInstance();
+        manager = new ReceiverManager();
 
         manager.registerHandler(ReceiverType.NoArgs, new NonArgReceiversHandler());
         manager.registerHandler(ReceiverType.ArgumentRoute, new ArgumentReceiverHandler<>(Route.class));
@@ -61,7 +60,7 @@ public class CommandExecutor {
         ModuleHandler<Route> handler = null;
         switch (mode) {
             case CLI_UserMode -> handler = new RouteCLIHandler();
-            case NonUserMode -> handler = new RouteNonCLIHandler(new Scanner(input));
+            case NonUserMode -> handler = new RouteNonCLIHandler(scannerInput);
         }
         manager.registerReceiver(ReceiverType.ArgumentRoute, new ArgumentRouteCommandReceiver(handler));
     }
@@ -70,23 +69,32 @@ public class CommandExecutor {
      * Start executing commands from InputStream.
      */
     public void startExecuting() {
-        Scanner cmdScanner = new Scanner(input);
-        while (cmdScanner.hasNext()) {
-            String line = cmdScanner.nextLine();
+        while (scannerInput.hasNext()) {
+            String line = scannerInput.nextLine();
             if (line.isEmpty()) continue;
             try {
-                String[] lineArgs = line.split(" ");
-                CommandDescription description = Optional.ofNullable(commands).orElseThrow(CommandsNotLoadedException::new).stream().filter(x -> x.getName().equals(lineArgs[0])).findAny().orElseThrow(() -> new UnknownCommandException("Указанная команда не была обнаружена"));
-                description.getReceiver().callReceivers(description, lineArgs);
+                try {
+                    String[] lineArgs = line.split(" ");
+                    CommandDescription description = Optional.ofNullable(commands).orElseThrow(CommandsNotLoadedException::new).stream().filter(x -> x.getName().equals(lineArgs[0])).findAny().orElseThrow(() -> new UnknownCommandException("Указанная команда не была обнаружена"));
+                    description.getReceiver().callReceivers(manager, description, lineArgs);
+                } catch (IllegalArgumentException | NullPointerException e) {
+                    logger.warn("Выполнение команды пропущено из-за неправильных предоставленных аргументов! (" + e.getMessage() + ")");
+                    throw new CommandInterruptedException(e);
+                } catch (BuildObjectException | UnknownCommandException e) {
+                    logger.error(e.getMessage());
+                    throw new CommandInterruptedException(e);
+                } catch (WrongAmountOfArgumentsException e) {
+                    logger.error("Wrong amount of arguments! " + e.getMessage());
+                    throw new CommandInterruptedException(e);
+                } catch (Exception e) {
+                    logger.error("В командном менеджере произошла непредвиденная ошибка! " + e.getMessage());
+                    throw new CommandInterruptedException(e);
+                }
             } catch (CommandInterruptedException ex) {
                 if (mode.equals(CLI_UserMode))
                     logger.info("Выполнение команды было прервано. Вы можете продолжать работу. Программа возвращена в безопасное состояние.");
                 else
                     logger.info("Команда была пропущена... Обработчик продолжает работу");
-            } catch (UnknownCommandException e) {
-                logger.info(e.getMessage());
-            } catch (Exception e) {
-                logger.info("Непредвиденная ошибка при исполнении команды, " + e.getMessage());
             }
         }
     }

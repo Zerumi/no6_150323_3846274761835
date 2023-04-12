@@ -1,6 +1,8 @@
 package main;
 
+import clientLogic.ClientHandler;
 import commandManager.commands.SaveCommand;
+import exceptions.NotAvailableException;
 import fileLogic.Loader;
 import models.Route;
 import models.handlers.CollectionHandler;
@@ -12,6 +14,8 @@ import requestLogic.StatusRequest;
 import requestLogic.requestWorkers.RequestWorkerManager;
 import requestLogic.requests.ServerRequest;
 import requests.BaseRequest;
+import responseLogic.responseSenders.ResponseSender;
+import responses.ErrorResponse;
 import serverLogic.DatagramServerConnectionFactory;
 import serverLogic.ServerConnection;
 
@@ -58,6 +62,10 @@ public class Main {
                     logger.debug("Status code: " + rq.getCode());
                     continue;
                 }
+
+                ClientHandler.getInstance().approveCallerBack(rq.getCallerBack());
+                ClientHandler.getInstance().restartTimer();
+
                 RequestReader rqReader = new RequestReader(rq.getInputStream());
                 BaseRequest baseRequest = rqReader.readObject();
                 var request = new ServerRequest(baseRequest, rq.getCallerBack(), connection);
@@ -69,6 +77,13 @@ public class Main {
                 logger.error("Class not Found", e);
             } catch (RuntimeException e) {
                 logger.fatal(e);
+            } catch (NotAvailableException e) {
+                try {
+                    ErrorResponse response = new ErrorResponse("Server is busy right now...");
+                    ResponseSender.sendResponse(response, connection, e.getDeniedClient());
+                } catch (IOException ex) {
+                    logger.fatal("Can't send response", e);
+                }
             }
         }
     }

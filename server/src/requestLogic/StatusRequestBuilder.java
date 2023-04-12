@@ -1,7 +1,6 @@
 package requestLogic;
 
 import java.io.InputStream;
-import java.net.InetAddress;
 
 public class StatusRequestBuilder {
 
@@ -24,8 +23,7 @@ public class StatusRequestBuilder {
         return this;
     }
 
-    public StatusRequestBuilder setCallerBack(InetAddress address, int port) {
-        CallerBack callerBack = new CallerBack(address, port);
+    public StatusRequestBuilder setCallerBack(CallerBack callerBack) {
         result.setCallerBack(callerBack);
         return this;
     }

@@ -75,7 +75,7 @@ public class UdpServerConnection implements ServerConnection {
             } catch (InterruptedException e) {
                 logger.info("Interrupted");
             } catch (ExecutionException e) {
-                lastRequestSuccess = false;
+                lastRequestSuccess = true;
                 logger.error("Something went wrong during execution");
                 throw (IOException) e.getCause();
             } catch (TimeoutException e) {

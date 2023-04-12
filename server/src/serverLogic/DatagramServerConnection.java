@@ -2,6 +2,7 @@ package serverLogic;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import requestLogic.CallerBack;
 import requestLogic.StatusRequest;
 import requestLogic.StatusRequestBuilder;
 
@@ -32,7 +33,7 @@ public class DatagramServerConnection implements ServerConnection {
             logger.debug("Received connection.");
             logger.trace("Bytes: " + Arrays.toString(dp.getData()));
 
-            return StatusRequestBuilder.initialize().setObjectStream(new ByteArrayInputStream(dp.getData())).setCallerBack(dp.getAddress(), dp.getPort()).setCode(200).build();
+            return StatusRequestBuilder.initialize().setObjectStream(new ByteArrayInputStream(dp.getData())).setCallerBack(new CallerBack(dp.getAddress(), dp.getPort())).setCode(200).build();
         } catch (IOException e) {
             logger.error("Something went wrong during I/O.", e);
         }

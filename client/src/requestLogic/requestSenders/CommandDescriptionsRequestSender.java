@@ -1,6 +1,7 @@
 package requestLogic.requestSenders;
 
 import commandLogic.CommandDescription;
+import exceptions.ServerNotAvailableException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import requests.CommandDescriptionsRequest;
@@ -26,6 +27,9 @@ public class CommandDescriptionsRequestSender {
         } catch (PortUnreachableException e) {
             logger.fatal("Server is unavailable. Please, wait until server will came back.");
             logger.fatal("We can't get available commands because the server is unavailable.");
+        } catch (ServerNotAvailableException e) {
+            logger.fatal("Server is busy. Please, wait until server will came back.");
+            logger.fatal("We can't get available commands because the server is busy.");
         } catch (IOException e) {
             logger.error("Something went wrong during I/O operations.");
         }
