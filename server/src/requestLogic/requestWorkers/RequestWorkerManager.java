@@ -27,7 +27,8 @@ public class RequestWorkerManager {
 
     public void workWithRequest(ServerRequest request) {
         try {
-            Optional.ofNullable(workers.get(request.getUserRequest().getClass())).orElseThrow(() -> new UnsupportedRequestException("Указанный запрос не может быть обработан")).workWithRequest(request);
+            Optional.ofNullable(workers.get(request.getUserRequest().getClass())).orElseThrow(()
+                    -> new UnsupportedRequestException("Указанный запрос не может быть обработан")).workWithRequest(request);
         } catch (UnsupportedRequestException ex) {
             logger.error("Got an invalid request.");
         }

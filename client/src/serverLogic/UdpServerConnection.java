@@ -14,12 +14,17 @@ import java.util.Arrays;
 import java.util.concurrent.*;
 
 public class UdpServerConnection implements ServerConnection {
-
     public static final int BUFFER_SIZE = 4096;
 
     private static final Logger logger = LogManager.getLogger("io.github.zerumi.lab6");
+
+    private final ExecutorService service;
     protected final DatagramChannel channel;
     protected SocketAddress address;
+
+    {
+        service = Executors.newCachedThreadPool();
+    }
 
     protected UdpServerConnection(DatagramChannel channel, SocketAddress address) {
         this.channel = channel;
@@ -65,7 +70,6 @@ public class UdpServerConnection implements ServerConnection {
 
             if (lastRequestSuccess) {
                 Callable<ByteArrayInputStream> callable = this::listenServer;
-                ExecutorService service = Executors.newSingleThreadExecutor();
                 bosFuture = service.submit(callable);
             }
 
