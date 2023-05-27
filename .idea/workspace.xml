@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="ANALYZE_INJECTED_CODE" value="false" />
-  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="chore: rerun javadoc">
-      <change afterPath="$PROJECT_DIR$/testscript/test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testscript/text.txt" afterDir="false" />
+    <list default="true" id="4cb71666-b4b2-4a51-9d82-a102e5de2bde" name="Changes" comment="chore: remove unused class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/serverLogic/UdpServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/serverLogic/UdpServerConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/commandManager/commands/ExecuteScriptCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/commandManager/commands/ExecuteScriptCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/requestLogic/requestWorkers/RequestWorkerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/requestLogic/requestWorkers/RequestWorkerManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +119,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
     <option name="SIGN_OFF_COMMIT" value="true" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -158,7 +151,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
@@ -168,8 +161,6 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="responses" />
-      <recent name="exceptions" />
       <recent name="requestLogic" />
       <recent name="models.handlers" />
       <recent name="models.validators" />
@@ -192,7 +183,6 @@
       <recent name="requestLogic.dtoMappers.DTOMapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="exceptions" />
       <recent name="main" />
     </key>
   </component>
@@ -349,9 +339,9 @@
       <list>
         <item itemvalue="Gradle.no6_150323_3846274761835 [installDist]" />
         <item itemvalue="Gradle.no6_150323_3846274761835:client [run]" />
-        <item itemvalue="Gradle.no6_150323_3846274761835:server [run]" />
         <item itemvalue="Gradle.no6_150323_3846274761835:server [installDist]" />
         <item itemvalue="Gradle.no6_150323_3846274761835:client [installDist]" />
+        <item itemvalue="Gradle.no6_150323_3846274761835:server [run]" />
       </list>
     </recent_temporary>
   </component>
@@ -386,9 +376,6 @@
       <workItem from="1679761964391" duration="11079000" />
       <workItem from="1679784958930" duration="94028000" />
       <workItem from="1681076729945" duration="9737000" />
-      <workItem from="1681220230552" duration="48342000" />
-      <workItem from="1681469347983" duration="6173000" />
-      <workItem from="1681736180458" duration="8720000" />
     </task>
     <task id="LOCAL-00001" summary="add XML Reader">
       <created>1675714633059</created>
@@ -579,35 +566,7 @@
       <option name="project" value="LOCAL" />
       <updated>1681075707131</updated>
     </task>
-    <task id="LOCAL-00028" summary="feat: simplification part 1">
-      <created>1681224264013</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1681224264013</updated>
-    </task>
-    <task id="LOCAL-00029" summary="feat: simplification part 2">
-      <created>1681261025851</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1681261025851</updated>
-    </task>
-    <task id="LOCAL-00030" summary="bug fixes (approved version)">
-      <created>1681326282894</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1681326282894</updated>
-    </task>
-    <task id="LOCAL-00031" summary="chore: rerun javadoc">
-      <created>1681326368835</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1681326368835</updated>
-    </task>
-    <option name="localTasksCounter" value="32" />
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -630,6 +589,10 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Models get/set updated, javadoc" />
+    <MESSAGE value="loader env_value fixed + base reader abstract level added" />
+    <MESSAGE value="docs" />
+    <MESSAGE value="commands, part 1; handlers + validators" />
     <MESSAGE value="docs for last commit" />
     <MESSAGE value="commands, part 2" />
     <MESSAGE value="critical solid violate fixed, building objects by nonCLI added" />
@@ -651,11 +614,7 @@
     <MESSAGE value="bug fix, part 2.1" />
     <MESSAGE value="fix: update javadoc &amp; argument consumers" />
     <MESSAGE value="chore: restored arguments validation" />
-    <MESSAGE value="feat: simplification part 1" />
-    <MESSAGE value="feat: simplification part 2" />
-    <MESSAGE value="bug fixes (approved version)" />
-    <MESSAGE value="chore: rerun javadoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: rerun javadoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: restored arguments validation" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -675,30 +634,20 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/responseLogic/responseSenders/CommandResponseSender.java</url>
-          <line>16</line>
+          <line>19</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/shared/src/commandLogic/commandReceiverLogic/callers/ExternalArgumentReceiverCaller.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="74" />
+          <url>file://$PROJECT_DIR$/server/src/commandManager/CommandManager.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/client/src/models/handlers/nonUserMode/RouteNonCLIHandler.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/shared/src/commandLogic/commandReceiverLogic/callers/ExternalBaseReceiverCaller.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="77" />
+          <url>file://$PROJECT_DIR$/client/src/serverLogic/UdpServerConnection.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <pin-to-top-manager>
-      <pinned-members>
-        <PinnedItemInfo parentTag="java.util.Scanner" memberName="buf" />
-      </pinned-members>
-    </pin-to-top-manager>
   </component>
 </project>
